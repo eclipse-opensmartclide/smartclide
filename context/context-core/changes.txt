@@ -1,0 +1,46 @@
+2.0.0
+=====
+- Apache 2.0 license
+
+1.0.13
+======
+- refactor ENUMs
+
+1.0.12
+======
+-
+
+1.0.11
+======
+-update reference to lucene-core 3.1.0
+
+1.0.9
+=====
+-prepare release
+
+1.0.8
+=====
+-diversity updates
+
+1.0.7
+=====
+-update dependencies
+-code cleanup
+
+1.0.6
+=====
+-add UI for configuration and start/stop of services
+
+1.0.5
+=====
+-clean up
+
+1.0.3
+=====
+-changed behaviour in loading configurations. In case it is not possible to load the service configuration from the
+ PESConfiguration object, it will be tried to load the default configuration file from hard-disk
+
+1.0.2
+=====
+-add ONA ExecStatus application scenario
+-add missing BCs

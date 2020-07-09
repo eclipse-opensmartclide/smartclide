@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config xmlns="http://www.atb-bremen.de" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<services>
+		<service id="deployer">
+         <host>localhost</host>
+         <location>http://localhost:19012</location>
+         <name>DeployerService</name>
+         <server>pt.uninova.context.services.infrastructure.DeployerService</server>
+         <proxy>pt.uninova.context.services.infrastructure.IDeployerService</proxy>
+      </service>
+      <service id="registry">
+         <host>localhost</host>
+		 <location>http://localhost:19013</location>
+         <name>ServiceRegistryService</name>
+         <server>pt.uninova.context.services.infrastructure.ServiceRegistryService</server>
+         <proxy>pt.uninova.context.services.infrastructure.IServiceRegistryService</proxy>
+      </service>
+      <service id="registry-repository">
+         <host>localhost</host>
+         <location>http://localhost:19014</location>
+         <name>ServiceRegistryRepositoryService</name>
+         <server>pt.uninova.context.services.infrastructure.datalayer.ServiceRegistryRepositoryService</server>
+         <proxy>pt.uninova.context.services.infrastructure.datalayer.IServiceRegistryRepositoryService</proxy>
+      </service>
+      <service id="AmI-monitoring">
+         <host>localhost</host>
+         <location>http://localhost:19004</location>
+         <name>AmIMonitoringService</name>
+         <server>de.atb.context.services.AmIMonitoringService</server>
+         <proxy>de.atb.context.services.IAmIMonitoringService</proxy>
+      </service>
+      <service id="AmI-repository">
+         <host>localhost</host>
+         <location>http://localhost:19005</location>
+         <name>AmIRepositoryService</name>
+         <server>de.atb.context.services.dataLayer.AmIRepositoryService</server>
+         <proxy>de.atb.context.services.dataLayer.IAmIRepositoryService</proxy>
+      </service>
+	</services>
+</config>

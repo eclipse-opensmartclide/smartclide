@@ -1,0 +1,862 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+    xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+    xmlns="http://www.proseco-project.eu/ontologies/proseco-context.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xml:base="http://www.proseco-project.eu/ontologies/proseco-context.owl">
+  <owl:Ontology rdf:about="">
+    <owl:imports rdf:resource="http://www.w3.org/2006/time"/>
+  </owl:Ontology>
+  <owl:Class rdf:ID="TimeSensor">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="SensoricalDevice"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="DistanceSensor"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="PressureSensor"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="SpeedSensor"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="TemperatureSensor"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="VolumeSensor"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="#TemperatureSensor">
+    <owl:disjointWith>
+      <owl:Class rdf:about="#DistanceSensor"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#PressureSensor"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#SpeedSensor"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#TimeSensor"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#VolumeSensor"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#SensoricalDevice"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="SensoricalInformation">
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Configuration"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="ProcessingTask"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="ProcessModel"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Pressure">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Unit"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Temperature"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Time"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Speed"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Volume"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Distance"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="#Speed">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Unit"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Temperature"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Time"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Pressure"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Volume"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Distance"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="#ProcessModel">
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Process"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="GenericDevice"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Person"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Product"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Resource"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="ContextResource"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Context">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="prosecoObject"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#ContextResource"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:ID="Bandwith">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Resource"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Protocol"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Unit"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Timeslot"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Component"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="#Resource">
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Process"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#GenericDevice"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Person"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Product"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#ProcessModel"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ContextResource"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#SpeedSensor">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#SensoricalDevice"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#DistanceSensor"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#PressureSensor"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#TimeSensor"/>
+    <owl:disjointWith rdf:resource="#TemperatureSensor"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#VolumeSensor"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:ID="Operator">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Person"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Volume">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Unit"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#Pressure"/>
+    <owl:disjointWith rdf:resource="#Speed"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Time"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Temperature"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Distance"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:ID="ProcessStep">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Process"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Degrees">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Temperature"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Product">
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Process"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#GenericDevice"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Person"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Resource"/>
+    <owl:disjointWith rdf:resource="#ProcessModel"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ContextResource"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Second">
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Milisecond"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Time"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Component">
+    <rdfs:subClassOf rdf:resource="#Resource"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Protocol"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Unit"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Timeslot"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Bandwith"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Container">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="ProcessingDevice"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Valve"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Pump"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="ProductionUnit"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="NetworkDevice"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="#VolumeSensor">
+    <owl:disjointWith>
+      <owl:Class rdf:about="#DistanceSensor"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#TemperatureSensor"/>
+    <owl:disjointWith rdf:resource="#TimeSensor"/>
+    <owl:disjointWith rdf:resource="#SpeedSensor"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#PressureSensor"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#SensoricalDevice"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#ProcessingTask">
+    <rdfs:subClassOf rdf:resource="#ProcessModel"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Configuration"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#SensoricalInformation"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Timeslot">
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Protocol"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Unit"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Component"/>
+    <owl:disjointWith rdf:resource="#Bandwith"/>
+    <rdfs:subClassOf rdf:resource="#Resource"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Milisecond">
+    <owl:disjointWith rdf:resource="#Second"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Time"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Fahrenheit">
+    <rdfs:subClassOf rdf:resource="#Degrees"/>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Celsius"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="#ContextResource">
+    <rdfs:subClassOf rdf:resource="#prosecoObject"/>
+    <owl:disjointWith rdf:resource="#Context"/>
+  </owl:Class>
+  <owl:Class rdf:ID="ProductPart">
+    <rdfs:subClassOf rdf:resource="#Product"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Configuration">
+    <rdfs:subClassOf rdf:resource="#ProcessModel"/>
+    <owl:disjointWith rdf:resource="#ProcessingTask"/>
+    <owl:disjointWith rdf:resource="#SensoricalInformation"/>
+  </owl:Class>
+  <owl:Class rdf:about="#SensoricalDevice">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#GenericDevice"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#ProcessingDevice"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:ID="Bar">
+    <rdfs:subClassOf rdf:resource="#Pressure"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Unit">
+    <rdfs:subClassOf rdf:resource="#Resource"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Protocol"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Timeslot"/>
+    <owl:disjointWith rdf:resource="#Component"/>
+    <owl:disjointWith rdf:resource="#Bandwith"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Time">
+    <rdfs:subClassOf rdf:resource="#Unit"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Temperature"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Speed"/>
+    <owl:disjointWith rdf:resource="#Pressure"/>
+    <owl:disjointWith rdf:resource="#Volume"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Distance"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="#DistanceSensor">
+    <rdfs:subClassOf rdf:resource="#SensoricalDevice"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#PressureSensor"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#VolumeSensor"/>
+    <owl:disjointWith rdf:resource="#SpeedSensor"/>
+    <owl:disjointWith rdf:resource="#TemperatureSensor"/>
+    <owl:disjointWith rdf:resource="#TimeSensor"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Person">
+    <rdfs:subClassOf rdf:resource="#ContextResource"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Process"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#GenericDevice"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Product"/>
+    <owl:disjointWith rdf:resource="#Resource"/>
+    <owl:disjointWith rdf:resource="#ProcessModel"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Celsius">
+    <owl:disjointWith rdf:resource="#Fahrenheit"/>
+    <rdfs:subClassOf rdf:resource="#Degrees"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Millimeter">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Distance"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="ProductModel">
+    <rdfs:subClassOf rdf:resource="#ProductPart"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Temperature">
+    <owl:disjointWith rdf:resource="#Time"/>
+    <owl:disjointWith rdf:resource="#Speed"/>
+    <owl:disjointWith rdf:resource="#Pressure"/>
+    <owl:disjointWith rdf:resource="#Volume"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Distance"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf rdf:resource="#Unit"/>
+  </owl:Class>
+  <owl:Class rdf:about="#PressureSensor">
+    <rdfs:subClassOf rdf:resource="#SensoricalDevice"/>
+    <owl:disjointWith rdf:resource="#DistanceSensor"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Distance"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#SpeedSensor"/>
+    <owl:disjointWith rdf:resource="#TimeSensor"/>
+    <owl:disjointWith rdf:resource="#TemperatureSensor"/>
+    <owl:disjointWith rdf:resource="#VolumeSensor"/>
+  </owl:Class>
+  <owl:Class rdf:about="#GenericDevice">
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Process"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Person"/>
+    <owl:disjointWith rdf:resource="#Product"/>
+    <owl:disjointWith rdf:resource="#Resource"/>
+    <owl:disjointWith rdf:resource="#ProcessModel"/>
+    <rdfs:subClassOf rdf:resource="#ContextResource"/>
+  </owl:Class>
+  <owl:Class rdf:ID="MeterPerSecond">
+    <rdfs:subClassOf rdf:resource="#Speed"/>
+  </owl:Class>
+  <owl:Class rdf:about="#ProductionUnit">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ProcessingDevice"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Valve"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Pump"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#NetworkDevice"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Container"/>
+  </owl:Class>
+  <owl:Class rdf:about="#NetworkDevice">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ProcessingDevice"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Valve"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Pump"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#ProductionUnit"/>
+    <owl:disjointWith rdf:resource="#Container"/>
+  </owl:Class>
+  <owl:Class rdf:about="#ProcessingDevice">
+    <rdfs:subClassOf rdf:resource="#GenericDevice"/>
+    <owl:disjointWith rdf:resource="#SensoricalDevice"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Process">
+    <owl:disjointWith rdf:resource="#GenericDevice"/>
+    <owl:disjointWith rdf:resource="#Person"/>
+    <owl:disjointWith rdf:resource="#Product"/>
+    <owl:disjointWith rdf:resource="#Resource"/>
+    <owl:disjointWith rdf:resource="#ProcessModel"/>
+    <rdfs:subClassOf rdf:resource="#ContextResource"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Pump">
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Valve"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#ProductionUnit"/>
+    <owl:disjointWith rdf:resource="#NetworkDevice"/>
+    <owl:disjointWith rdf:resource="#Container"/>
+    <rdfs:subClassOf rdf:resource="#ProcessingDevice"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Distance">
+    <rdfs:subClassOf rdf:resource="#Unit"/>
+    <owl:disjointWith rdf:resource="#PressureSensor"/>
+    <owl:disjointWith rdf:resource="#Volume"/>
+    <owl:disjointWith rdf:resource="#Time"/>
+    <owl:disjointWith rdf:resource="#Temperature"/>
+    <owl:disjointWith rdf:resource="#Pressure"/>
+    <owl:disjointWith rdf:resource="#Speed"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Valve">
+    <owl:disjointWith rdf:resource="#Pump"/>
+    <owl:disjointWith rdf:resource="#ProductionUnit"/>
+    <owl:disjointWith rdf:resource="#NetworkDevice"/>
+    <owl:disjointWith rdf:resource="#Container"/>
+    <rdfs:subClassOf rdf:resource="#ProcessingDevice"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Protocol">
+    <rdfs:subClassOf rdf:resource="#Resource"/>
+    <owl:disjointWith rdf:resource="#Unit"/>
+    <owl:disjointWith rdf:resource="#Timeslot"/>
+    <owl:disjointWith rdf:resource="#Component"/>
+    <owl:disjointWith rdf:resource="#Bandwith"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:ID="isPumpedBy">
+    <rdfs:domain rdf:resource="#Component"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:ID="pumps"/>
+    </owl:inverseOf>
+    <rdfs:range rdf:resource="#Pump"/>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:ID="isProcessedBy"/>
+    </rdfs:subPropertyOf>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="timeSensoredBy">
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:ID="isSensoredBy"/>
+    </rdfs:subPropertyOf>
+    <rdfs:domain rdf:resource="#Time"/>
+    <rdfs:range rdf:resource="#TimeSensor"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:ID="sensorsTime"/>
+    </owl:inverseOf>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="volumeSensoredBy">
+    <rdfs:domain rdf:resource="#Volume"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:ID="sensorsVolume"/>
+    </owl:inverseOf>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="#isSensoredBy"/>
+    </rdfs:subPropertyOf>
+    <rdfs:range rdf:resource="#VolumeSensor"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="isUsedByProcess">
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:ID="usesResource"/>
+    </owl:inverseOf>
+    <rdfs:range rdf:resource="#Process"/>
+    <rdfs:domain rdf:resource="#Resource"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="regulates">
+    <rdfs:range>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Component"/>
+          <owl:Class rdf:about="#Unit"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:range>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:ID="isRegulatedBy"/>
+    </owl:inverseOf>
+    <rdfs:domain rdf:resource="#Valve"/>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:ID="processes"/>
+    </rdfs:subPropertyOf>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#usesResource">
+    <rdfs:domain rdf:resource="#Process"/>
+    <rdfs:range rdf:resource="#Resource"/>
+    <owl:inverseOf rdf:resource="#isUsedByProcess"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="configuresResource">
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:ID="resourceConfiguredBy"/>
+    </owl:inverseOf>
+    <rdfs:range rdf:resource="#Resource"/>
+    <rdfs:domain rdf:resource="#Configuration"/>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:ID="configures"/>
+    </rdfs:subPropertyOf>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="sensorsDistance">
+    <rdfs:range rdf:resource="#Distance"/>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:ID="sensors"/>
+    </rdfs:subPropertyOf>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:ID="distanceSensoredBy"/>
+    </owl:inverseOf>
+    <rdfs:domain rdf:resource="#DistanceSensor"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasDevicePart">
+    <rdfs:range rdf:resource="#GenericDevice"/>
+    <rdfs:domain rdf:resource="#GenericDevice"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#sensorsVolume">
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="#sensors"/>
+    </rdfs:subPropertyOf>
+    <rdfs:domain rdf:resource="#VolumeSensor"/>
+    <owl:inverseOf rdf:resource="#volumeSensoredBy"/>
+    <rdfs:range rdf:resource="#Volume"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="sensorsSpeed">
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="#sensors"/>
+    </rdfs:subPropertyOf>
+    <rdfs:domain rdf:resource="#SpeedSensor"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:ID="speedSensoredBy"/>
+    </owl:inverseOf>
+    <rdfs:range rdf:resource="#Speed"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="sensorsTemperature">
+    <rdfs:range rdf:resource="#Temperature"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:ID="temperatureSensoredBy"/>
+    </owl:inverseOf>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="#sensors"/>
+    </rdfs:subPropertyOf>
+    <rdfs:domain rdf:resource="#TemperatureSensor"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="sensorsPressure">
+    <rdfs:range rdf:resource="#Pressure"/>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="#sensors"/>
+    </rdfs:subPropertyOf>
+    <rdfs:domain rdf:resource="#PressureSensor"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:ID="pressureSensoredBy"/>
+    </owl:inverseOf>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="providesSensoricalInformation">
+    <rdfs:domain rdf:resource="#SensoricalDevice"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:ID="hasSensor"/>
+    </owl:inverseOf>
+    <rdfs:range rdf:resource="#SensoricalInformation"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="contains">
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:ID="isContainedBy"/>
+    </owl:inverseOf>
+    <rdfs:domain rdf:resource="#Container"/>
+    <rdfs:range rdf:resource="#Component"/>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="#processes"/>
+    </rdfs:subPropertyOf>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#configures">
+    <rdfs:domain rdf:resource="#Configuration"/>
+    <rdfs:range rdf:resource="#ContextResource"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:ID="isConfiguredBy"/>
+    </owl:inverseOf>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#sensors">
+    <rdfs:range rdf:resource="#ContextResource"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="#isSensoredBy"/>
+    </owl:inverseOf>
+    <rdfs:domain rdf:resource="#SensoricalDevice"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#isRegulatedBy">
+    <rdfs:range rdf:resource="#Valve"/>
+    <owl:inverseOf rdf:resource="#regulates"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Unit"/>
+          <owl:Class rdf:about="#Component"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="#isProcessedBy"/>
+    </rdfs:subPropertyOf>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="deviceSensoredBy">
+    <rdfs:range rdf:resource="#SensoricalDevice"/>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="#isSensoredBy"/>
+    </rdfs:subPropertyOf>
+    <rdfs:domain rdf:resource="#ProcessingDevice"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:ID="sensorsDevice"/>
+    </owl:inverseOf>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#isProcessedBy">
+    <rdfs:range rdf:resource="#ProcessingDevice"/>
+    <rdfs:domain rdf:resource="#Resource"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="#processes"/>
+    </owl:inverseOf>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#processes">
+    <rdfs:domain rdf:resource="#ProcessingDevice"/>
+    <rdfs:range rdf:resource="#Resource"/>
+    <owl:inverseOf rdf:resource="#isProcessedBy"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#isContainedBy">
+    <rdfs:range rdf:resource="#Container"/>
+    <owl:inverseOf rdf:resource="#contains"/>
+    <rdfs:subPropertyOf rdf:resource="#isProcessedBy"/>
+    <rdfs:domain rdf:resource="#Component"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="configuredAt">
+    <rdfs:domain rdf:resource="#ContextResource"/>
+    <rdfs:range>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://www.w3.org/2006/time#TemporalEntity"/>
+          <owl:Class rdf:about="#Timeslot"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:range>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#hasSensor">
+    <rdfs:range rdf:resource="#SensoricalDevice"/>
+    <owl:inverseOf rdf:resource="#providesSensoricalInformation"/>
+    <rdfs:domain rdf:resource="#SensoricalInformation"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#isConfiguredBy">
+    <rdfs:range rdf:resource="#Configuration"/>
+    <owl:inverseOf rdf:resource="#configures"/>
+    <rdfs:domain rdf:resource="#ContextResource"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="sensoredAt">
+    <rdfs:range>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Timeslot"/>
+          <rdf:Description rdf:about="http://www.w3.org/2006/time#TemporalEntity"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:range>
+    <rdfs:domain rdf:resource="#ContextResource"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#pumps">
+    <rdfs:domain rdf:resource="#Pump"/>
+    <rdfs:range rdf:resource="#Component"/>
+    <owl:inverseOf rdf:resource="#isPumpedBy"/>
+    <rdfs:subPropertyOf rdf:resource="#processes"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#distanceSensoredBy">
+    <rdfs:domain rdf:resource="#Distance"/>
+    <owl:inverseOf rdf:resource="#sensorsDistance"/>
+    <rdfs:range rdf:resource="#DistanceSensor"/>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="#isSensoredBy"/>
+    </rdfs:subPropertyOf>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="unitSensoredBy">
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:ID="sensorsUnit"/>
+    </owl:inverseOf>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="#isSensoredBy"/>
+    </rdfs:subPropertyOf>
+    <rdfs:domain rdf:resource="#Unit"/>
+    <rdfs:range rdf:resource="#SensoricalDevice"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#sensorsTime">
+    <rdfs:range rdf:resource="#Time"/>
+    <rdfs:domain rdf:resource="#TimeSensor"/>
+    <rdfs:subPropertyOf rdf:resource="#sensors"/>
+    <owl:inverseOf rdf:resource="#timeSensoredBy"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#resourceConfiguredBy">
+    <owl:inverseOf rdf:resource="#configuresResource"/>
+    <rdfs:subPropertyOf rdf:resource="#isConfiguredBy"/>
+    <rdfs:range rdf:resource="#Configuration"/>
+    <rdfs:domain rdf:resource="#Resource"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="usesProcessModel">
+    <rdfs:range rdf:resource="#ProcessModel"/>
+    <rdfs:domain rdf:resource="#Process"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:ID="requiredForProcess"/>
+    </owl:inverseOf>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#speedSensoredBy">
+    <rdfs:range rdf:resource="#SpeedSensor"/>
+    <rdfs:domain rdf:resource="#Speed"/>
+    <owl:inverseOf rdf:resource="#sensorsSpeed"/>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="#isSensoredBy"/>
+    </rdfs:subPropertyOf>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#pressureSensoredBy">
+    <owl:inverseOf rdf:resource="#sensorsPressure"/>
+    <rdfs:range rdf:resource="#PressureSensor"/>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="#isSensoredBy"/>
+    </rdfs:subPropertyOf>
+    <rdfs:domain rdf:resource="#Pressure"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#sensorsUnit">
+    <owl:inverseOf rdf:resource="#unitSensoredBy"/>
+    <rdfs:domain rdf:resource="#SensoricalDevice"/>
+    <rdfs:subPropertyOf rdf:resource="#sensors"/>
+    <rdfs:range rdf:resource="#Unit"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasProcessingStep">
+    <rdfs:range rdf:resource="#ProcessStep"/>
+    <rdfs:domain rdf:resource="#Process"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#isSensoredBy">
+    <rdfs:domain rdf:resource="#ContextResource"/>
+    <owl:inverseOf rdf:resource="#sensors"/>
+    <rdfs:range rdf:resource="#SensoricalDevice"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="belongsToContext">
+    <rdfs:range rdf:resource="#Context"/>
+    <rdfs:domain rdf:resource="#ContextResource"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#requiredForProcess">
+    <rdfs:domain rdf:resource="#ProcessModel"/>
+    <rdfs:range rdf:resource="#Process"/>
+    <owl:inverseOf rdf:resource="#usesProcessModel"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#temperatureSensoredBy">
+    <owl:inverseOf rdf:resource="#sensorsTemperature"/>
+    <rdfs:range rdf:resource="#TemperatureSensor"/>
+    <rdfs:domain rdf:resource="#Temperature"/>
+    <rdfs:subPropertyOf rdf:resource="#isSensoredBy"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#sensorsDevice">
+    <rdfs:subPropertyOf rdf:resource="#sensors"/>
+    <rdfs:range rdf:resource="#ProcessingDevice"/>
+    <rdfs:domain rdf:resource="#SensoricalDevice"/>
+    <owl:inverseOf rdf:resource="#deviceSensoredBy"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:ID="capturedAt">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdfs:domain rdf:resource="#prosecoObject"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="identifier">
+    <rdfs:domain rdf:resource="#prosecoObject"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="unitIntegerValue">
+    <rdfs:domain rdf:resource="#Unit"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="unitFloatValue">
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Unit"/>
+          <owl:Class rdf:about="#Distance"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="configurationType">
+    <rdfs:domain rdf:resource="#Configuration"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:FunctionalProperty rdf:ID="basedOnMonitoringData">
+    <rdfs:domain rdf:resource="#Context"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="businessCaseIdentifier">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#Context"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="applicationScenarioIdentifier">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="#Context"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:FunctionalProperty>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.4.4, Build 579)  http://protege.stanford.edu -->
