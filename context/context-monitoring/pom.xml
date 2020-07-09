@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>eu.safire-factories</groupId>
+        <artifactId>safire-parent</artifactId>
+        <version>0.1.3</version>
+    </parent>
+
+    <groupId>eu.smartCLIDE</groupId>
+    <artifactId>context-monitoring</artifactId>
+    <version>1.2.4</version>
+    <packaging>jar</packaging>
+    <inceptionYear>2015</inceptionYear>
+
+    <name>ATB Context Monitoring Core Services</name>
+    <url>www.atb-bremen.de</url>
+    <organization>
+        <name>ATB</name>
+        <url>www.atb-bremen.de</url>
+    </organization>
+
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.plugin.license.min.version>2.0.0</maven.plugin.license.min.version>
+        <docker.host.url>tcp://192.168.15.17:2376</docker.host.url>
+        <docker.host.certPath>${user.home}/safire/docker-client-certs</docker.host.certPath>
+        <start-class>de.atb.context.main.ServiceMain</start-class>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.maven.doxia</groupId>
+            <artifactId>doxia-core</artifactId>
+            <version>1.4</version>
+        </dependency>
+        <dependency>
+            <groupId>de.atb.context</groupId>
+            <artifactId>context-core</artifactId>
+            <version>2.0.0</version>
+        </dependency>
+        <!-- Jena dependencies -->
+        <dependency>
+            <groupId>com.hp.hpl.jena</groupId>
+            <artifactId>jena</artifactId>
+            <version>2.6.4</version>
+        </dependency>
+        <dependency>
+            <groupId>com.hp.hpl.jena</groupId>
+            <artifactId>tdb</artifactId>
+            <version>0.8.10</version>
+        </dependency>
+        <dependency>
+            <groupId>com.hp.hpl.jena</groupId>
+            <artifactId>arq</artifactId>
+            <version>2.8.7</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.codehaus.woodstox</groupId>
+                    <artifactId>wstx-asl</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>com.hp.hpl.jena</groupId>
+            <artifactId>sdb</artifactId>
+            <version>1.3.4</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.codehaus.woodstox</groupId>
+                    <artifactId>wstx-asl</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>com.thewebsemantic</groupId>
+            <artifactId>jenabean</artifactId>
+            <version>1.0.6</version>
+        </dependency>
+        <dependency>
+            <groupId>com.googlecode.json-simple</groupId>
+            <artifactId>json-simple</artifactId>
+            <version>1.1.1</version>
+        </dependency>
+
+        <!-- KAFKA Dependencies -->
+        <dependency>
+            <groupId>org.springframework.kafka</groupId>
+            <artifactId>spring-kafka</artifactId>
+            <version>${spring-boot.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <version>${spring-boot.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-logging</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <version>${spring-boot.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.oracle</groupId>
+            <artifactId>ojdbc6</artifactId>
+            <version>11.1.0.7.0</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- Pronto data ingestion dependencies -->
+        <dependency>
+            <groupId>com.googlecode.wicked-charts</groupId>
+            <artifactId>wicked-charts-highcharts</artifactId>
+            <version>1.5.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.solder</groupId>
+            <artifactId>solder-api</artifactId>
+            <version>3.1.0.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.enterprise</groupId>
+            <artifactId>cdi-api</artifactId>
+            <version>2.0</version>
+            <scope>provided</scope>
+        </dependency>
+        <!--https://mvnrepository.com/artifact/org.jboss.solder/solder-parent-->
+        <dependency>
+            <groupId>org.jboss.solder</groupId>
+            <artifactId>solder-parent</artifactId>
+            <version>3.2.0.Final</version>
+            <type>pom</type>
+        </dependency>
+        <dependency>
+            <groupId>joda-time</groupId>
+            <artifactId>joda-time</artifactId>
+            <version>2.9.9</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.ejb</groupId>
+            <artifactId>ejb-api</artifactId>
+            <version>3.0</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot</artifactId>
+            <version>${spring-boot.version}</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>${start-class}</mainClass>
+                            <addClasspath>true</addClasspath>
+                            <classpathPrefix>lib/</classpathPrefix>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-checkstyle-plugin</artifactId>
+                <version>2.16</version>
+                <configuration>
+                    <sourceDirectory>src/main</sourceDirectory>
+                </configuration>
+            </plugin>
+    </plugins>
+    <pluginManagement>
+        <plugins>
+            <!--Tell surefire to skip test, we are using the failsafe plugin-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.20.1</version>
+                <configuration>
+                    <skip>true</skip>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.7.0</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.0.2</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>copy-dependencies</id>
+                        <phase>prepare-package</phase>
+                        <goals>
+                            <goal>copy-dependencies</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${project.build.directory}/lib</outputDirectory>
+                            <overWriteReleases>false</overWriteReleases>
+                            <overWriteSnapshots>false</overWriteSnapshots>
+                            <overWriteIfNewer>true</overWriteIfNewer>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+
+            <plugin>
+                <groupId>io.fabric8</groupId>
+                <artifactId>docker-maven-plugin</artifactId>
+                <version>${maven.plugin.docker.min.version}</version>
+                <configuration>
+                    <dockerHost>${docker.host.url}</dockerHost>
+                    <certPath>${docker.host.certPath}/</certPath>
+                    <logDate>default</logDate>
+                    <autoPull>on</autoPull>
+                    <!--when stopping a container through d-m-p, delete any volumes created by that container-->
+                    <removeVolumes>true</removeVolumes>
+
+                    <images>
+                        <!--configuration to build docker image from this project-->
+                        <!--this will include the final jar file in the docker container-->
+                        <!--and run it when the docker container is started-->
+                        <image>
+                            <alias>${project.artifactId}-${project.version}</alias>
+                            <name>${safire-docker-registry}/safire/${project.artifactId}:${project.version}</name>
+                            <build>
+                                <dockerFileDir>${project.basedir}</dockerFileDir>
+                                <maintainer>itsupport@atb-bremen.de</maintainer>
+                                <tags>
+                                    <tag>${project.version}</tag>
+                                </tags>
+                                <volumes>
+                                    <volume>/tmp</volume>
+                                </volumes>
+                                <optimise>true</optimise>
+
+                            </build>
+                            <run>
+                                <ports>
+                                    <!--Map ports used inside container to ports on docker host-->
+                                </ports>
+                            </run>
+                        </image>
+                    </images>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>license-maven-plugin</artifactId>
+                <version>${maven.plugin.license.min.version}</version>
+                <configuration>
+                    <!--license to use for the project-->
+                    <licenseName>epl_v2</licenseName>
+
+                    <!--generate license file even if it exists-->
+                    <force>true</force>
+
+                    <!--specifies the folders to consider for header replacement-->
+                    <roots>
+                        <root>src/main/java</root>
+                        <root>src/main/resources</root>
+                        <root>src/main/webapp</root>
+                        <root>src/main/assembly</root>
+                        <root>src/main/docker</root>
+                    </roots>
+
+                    <extraExtensions>
+                        <yml>properties</yml>
+                        <yaml>properties</yaml>
+                    </extraExtensions>
+
+                    <excludes>
+                        <!--do not add license header to json files because json standard does not allow comments-->
+                        <exclude>**/*.json</exclude>
+                    </excludes>
+
+                    <!--exclude test-scoped dependencies from the 3rd party license-list-->
+                    <excludedScopes>test</excludedScopes>
+
+                    <!--automatically update the copyright if current or inception years change-->
+                    <canUpdateCopyright>true</canUpdateCopyright>
+                    <!--automatically update the project name or description-->
+                    <canUpdateDescription>true</canUpdateDescription>
+
+                    <!--whether the missing file should be used-->
+                    <useMissingFile>true</useMissingFile>
+
+                    <licenseMerges>
+                        <!--consider the following license names to identify the same license-->
+                        <licenseMerge>Apache License, Version 2.0|The Apache Software License, Version 2.0|Apache 2|Apache
+                            License 2.0|AL 2.0
+                        </licenseMerge>
+                        <licenseMerge>CDDLv1|Common Development and Distribution License (CDDL) v1.0|COMMON DEVELOPMENT AND
+                            DISTRIBUTION LICENSE (CDDL) Version 1.0
+                        </licenseMerge>
+                    </licenseMerges>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>license-management</id>
+                        <goals>
+                            <!--updates the source's headers according to the specified license-->
+                            <goal>update-file-header</goal>
+
+                            <!--Adds the full-blown license file to the final product-->
+                            <goal>update-project-license</goal>
+
+                            <!--generate and add a list of third-party licenses-->
+                            <!--<goal>add-third-party</goal>-->
+                        </goals>
+                        <phase>process-sources</phase>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </pluginManagement>
+</build>
+
+<repositories>
+<repository>
+    <id>ATB-Ext-Releases</id>
+    <name>ATB-Repos-releases</name>
+    <url>http://www.atb-bremen.de/artifactory/ext-releases-local</url>
+</repository>
+<repository>
+    <snapshots/>
+    <id>ATB-Ext-Snapshots</id>
+    <name>ATB-Repos-snapshots</name>
+    <url>http://www.atb-bremen.de/artifactory/ext-snapshots-local</url>
+</repository>
+<repository>
+    <id>maven2</id>
+    <name>maven2</name>
+    <url>https://repo.maven.apache.org/maven2/</url>
+</repository>
+<repository>
+    <id>jenabean</id>
+    <name>jenabean</name>
+    <url>http://jenabean.googlecode.com/svn/trunk/repo</url>
+</repository>
+<repository>
+    <id>JBoss-Releases</id>
+    <name>JBoss Releases Repository</name>
+    <url>https://repository.jboss.org/nexus/content/repositories/releases/</url>
+</repository>
+</repositories>
+
+<distributionManagement>
+<repository>
+    <id>ATB-Ext-Releases</id>
+    <name>ATB-Repos-releases</name>
+    <url>http://www.atb-bremen.de/artifactory/ext-releases-local</url>
+</repository>
+<snapshotRepository>
+    <id>ATB-Ext-Snapshots</id>
+    <name>ATB-Repos-snapshots</name>
+    <url>http://www.atb-bremen.de/artifactory/ext-snapshots-local</url>
+</snapshotRepository>
+</distributionManagement>
+        </project>

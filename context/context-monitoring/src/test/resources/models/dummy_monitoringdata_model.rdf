@@ -1,0 +1,30 @@
+<rdf:RDF
+    xmlns:bosch="http://proseco-project.eu/bc-bosch/"
+    xmlns:fastems="http://proseco-project.eu/bc-fastems/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:desma="http://proseco-project.eu/bc-desma/"
+    xmlns:dummy="http://proseco-project.eu/bc-dummy/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:j.0="http://thewebsemantic.com/"
+    xmlns:proseco="http://proseco-project.eu/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" > 
+  <rdf:Description rdf:about="http://thewebsemantic.com/javaclass">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+<rdf:Description rdf:about="http://proseco-project.eu/DummyMonitoringDataModel/8580e64e-2f08-4a4a-9456-9d9b2007d358">
+    <proseco:monitoringDataVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.8.15</proseco:monitoringDataVersion>
+    <proseco:monitoredAt rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2011-12-07T16:29:48.432Z</proseco:monitoredAt>
+    <proseco:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8580e64e-2f08-4a4a-9456-9d9b2007d358</proseco:identifier>
+    <proseco:dummyValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">myDummyVaLuE!</proseco:dummyValue>
+    <proseco:dummyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">myDummyName</proseco:dummyName>
+    <proseco:documentUri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">/var/tmp/dummy.doc</proseco:documentUri>
+    <proseco:documentIndexId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">index/dummy</proseco:documentIndexId>
+    <rdf:type rdf:resource="http://proseco-project.eu/DummyMonitoringDataModel"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://proseco-project.eu/DummyMonitoringDataModel">
+    <j.0:javaclass>DummyMonitoringDataModel</j.0:javaclass>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+</rdf:RDF>
+
+  
