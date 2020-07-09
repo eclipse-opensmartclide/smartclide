@@ -21,11 +21,12 @@ package de.atb.context.monitoring.parser.webservice;
  */
 
 
+import de.atb.context.monitoring.index.FieldTypeFactory;
 import de.atb.context.monitoring.index.IFieldable;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
-import org.apache.lucene.document.Field.Index;
 import org.apache.lucene.document.Field.Store;
+import org.apache.lucene.document.StringField;
 
 /**
  * Fields
@@ -97,7 +98,7 @@ public enum IndexedWebServiceFields implements IFieldable {
      */
     @Override
     public Field createField(final String value) {
-        return new Field(getName(), value, Field.Store.YES, Field.Index.NOT_ANALYZED);
+        return new Field(getName(), value, StringField.TYPE_STORED);
     }
 
     /*
@@ -109,19 +110,6 @@ public enum IndexedWebServiceFields implements IFieldable {
      */
     @Override
     public Field createField(final String value, final Store store) {
-        return new Field(getName(), value, store, Field.Index.NOT_ANALYZED);
-    }
-
-    /*
-     * (non-Javadoc)
-     *
-     * @see
-     * IFieldable#create(java.lang.String,
-     * org.apache.lucene.document.Field.Store,
-     * org.apache.lucene.document.Field.Index)
-     */
-    @Override
-    public Field createField(final String value, final Store store, final Index index) {
-        return new Field(getName(), value, store, index);
+        return new Field(getName(), value, StringField.TYPE_STORED);
     }
 }

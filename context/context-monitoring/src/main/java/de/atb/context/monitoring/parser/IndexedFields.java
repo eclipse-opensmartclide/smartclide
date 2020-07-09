@@ -23,12 +23,10 @@ package de.atb.context.monitoring.parser;
 
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
-import org.apache.lucene.document.Field.Index;
 import org.apache.lucene.document.Field.Store;
 
 import de.atb.context.monitoring.index.IFieldable;
 import org.apache.lucene.document.StringField;
-import org.apache.lucene.index.IndexableField;
 
 /**
  * IndexedFields
@@ -143,11 +141,6 @@ public enum IndexedFields implements IFieldable {
      */
     @Override
     public Field createField(final String value, final Store store) {
-        return new Field(getName(), value, StringField.TYPE_STORED);
-    }
-
-    @Override
-    public Field createField(String value, Store store, Index index) {
         return new Field(getName(), value, StringField.TYPE_STORED);
     }
 }

@@ -145,7 +145,7 @@ public class Indexer {
      */
     public final synchronized Document getDocumentByUri(final String uri) {
         try {
-            TopDocs topDocs = this.searcher.search(new TermQuery(new Term("uri", uri)), null, 1);
+            TopDocs topDocs = this.searcher.search(new TermQuery(new Term("uri", uri)),1);
             if (topDocs.totalHits > 0) {
                 ScoreDoc scoreDoc = topDocs.scoreDocs[0];
                 return this.searcher.doc(scoreDoc.doc);
@@ -212,7 +212,7 @@ public class Indexer {
             if (!tmpDir.exists() && !tmpDir.mkdirs()) {
                 this.logger.warn("Index directory " + tmpDir.getAbsolutePath() + " does not exist and could not be created!");
             }
-            FSDirectory dir = FSDirectory.open(tmpDir);
+            FSDirectory dir = FSDirectory.open(tmpDir.toPath());
             DirectoryReader reader = DirectoryReader.open(dir);
             this.searcher = new IndexSearcher(reader);
         } catch (Throwable e) {
@@ -282,8 +282,8 @@ public class Indexer {
     }
 
     protected final void createIndexWriter() {
-        PerFieldAnalyzerWrapper analyzerWrapper = new PerFieldAnalyzerWrapper(new StandardAnalyzer(Version.LUCENE_4_9));
-        IndexWriterConfig indexWriterConfig = new IndexWriterConfig(Version.LUCENE_4_9, analyzerWrapper);
+        PerFieldAnalyzerWrapper analyzerWrapper = new PerFieldAnalyzerWrapper(new StandardAnalyzer());
+        IndexWriterConfig indexWriterConfig = new IndexWriterConfig(analyzerWrapper);
         indexWriterConfig.setRAMBufferSizeMB(48.00);
 
         File tmpDir = new File(this.index.getLocation()); // TODO DRM API?
@@ -291,7 +291,7 @@ public class Indexer {
             this.logger.warn("Index directory " + tmpDir.getAbsolutePath() + " does not exist and could not be created!");
         }
         try {
-            FSDirectory dir = FSDirectory.open(tmpDir);
+            FSDirectory dir = FSDirectory.open(tmpDir.toPath());
             this.writer = new IndexWriter(dir, indexWriterConfig);
 
             // Index does not exist => create!
@@ -299,7 +299,7 @@ public class Indexer {
             this.logger.info("Lucene index at '" + this.index.getLocation() + "' does not exist yet, creating it.");
             this.logger.warn(fnfe.getMessage());
             try {
-                FSDirectory dir = FSDirectory.open(new File(this.index.getLocation())); // TODO DRM API?
+                FSDirectory dir = FSDirectory.open((new File(this.index.getLocation()).toPath()));
                 this.writer = new IndexWriter(dir, indexWriterConfig);
                 this.writer.commit();
             } catch (Throwable e) {

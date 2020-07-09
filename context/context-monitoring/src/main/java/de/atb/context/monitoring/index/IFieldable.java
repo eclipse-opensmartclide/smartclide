@@ -23,7 +23,6 @@ package de.atb.context.monitoring.index;
 
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
-import org.apache.lucene.document.Field.Index;
 import org.apache.lucene.document.Field.Store;
 
 /**
@@ -82,27 +81,6 @@ public interface IFieldable {
      * @throws IllegalArgumentException if the field is neither stored nor indexed
      */
     Field createField(String value, Store store);
-
-    /**
-     * Create a field by specifying its value and how it will be saved in the
-     * index. Term vectors will not be stored in the index.
-     *
-     * <p>
-     * This is equivalent to calling:
-     *
-     * <pre>
-     * new Field(this.getName(), value, store, index);
-     * </pre>
-     *
-     * @param value The string to process
-     * @param store Whether <code>value</code> should be stored in the index
-     * @param index Whether the field should be indexed, and if so, if it should
-     *              be tokenized before indexing
-     * @return a new Field.
-     * @throws NullPointerException     if name or value is <code>null</code>
-     * @throws IllegalArgumentException if the field is neither stored nor indexed
-     */
-    Field createField(String value, Store store, Index index);
 
     /**
      * Returns the string value of a field with the name of the fieldable
