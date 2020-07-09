@@ -33,11 +33,11 @@ import de.atb.context.ui.util.interfaces.ICommunicationBetweenUIs;
 import org.jdesktop.swingx.JXTable;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import pt.uninova.context.modules.Deployer;
-import pt.uninova.context.modules.config.DeployerConfigurationObject;
-import pt.uninova.context.services.config.models.SWService;
-import pt.uninova.context.services.infrastructure.IServiceRegistryService;
-import pt.uninova.context.services.manager.ServiceManager;
+import de.atb.context.modules.Deployer;
+import de.atb.context.modules.config.DeployerConfigurationObject;
+import de.atb.context.services.config.models.SWService;
+import de.atb.context.services.infrastructure.IServiceRegistryService;
+import de.atb.context.services.manager.ServiceManager;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;

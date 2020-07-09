@@ -1,4 +1,4 @@
-package pt.uninova.context.tools.datalayer.models;
+package de.atb.context.tools.datalayer.models;
 
 /*-
  * #%L
@@ -21,7 +21,7 @@ package pt.uninova.context.tools.datalayer.models;
  */
 
 
-import pt.uninova.context.tools.datalayer.models.output.Output;
+import de.atb.context.tools.datalayer.models.output.Output;
 
 
 /**

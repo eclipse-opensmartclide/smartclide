@@ -27,7 +27,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import pm2.common.application.SysCaller;
 import pm2.common.application.SysCallerImpl;
-import pt.uninova.context.tools.ontology.AmIMonitoringConfiguration;
+import de.atb.context.tools.ontology.AmIMonitoringConfiguration;
 
 import java.io.File;
 

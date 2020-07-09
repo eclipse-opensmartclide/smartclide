@@ -1,4 +1,4 @@
-package pt.uninova.context.services.infrastructure;
+package de.atb.context.services.infrastructure;
 
 /*-
  * #%L
@@ -22,8 +22,8 @@ package pt.uninova.context.services.infrastructure;
 
 
 import de.atb.context.services.faults.ContextFault;
-import pt.uninova.context.infrastructure.ConnectedServices;
-import pt.uninova.context.services.interfaces.IPrimitiveService;
+import de.atb.context.infrastructure.ConnectedServices;
+import de.atb.context.services.interfaces.IPrimitiveService;
 
 import javax.jws.WebMethod;
 import javax.jws.WebService;

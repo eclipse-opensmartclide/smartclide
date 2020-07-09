@@ -4,7 +4,7 @@
 // Any modifications to this file will be lost upon recompilation of the source schema. 
 // Generated on: 2015.05.29 at 03:15:07 PM BST 
 //
-package pt.uninova.context.tools.ontology;
+package de.atb.context.tools.ontology;
 
 /*-
  * #%L

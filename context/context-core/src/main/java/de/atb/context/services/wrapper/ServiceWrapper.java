@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package pt.uninova.context.services.wrapper;
+package de.atb.context.services.wrapper;
 
 /*-
  * #%L
@@ -26,12 +26,12 @@ package pt.uninova.context.services.wrapper;
  */
 
 
-import pt.uninova.context.infrastructure.ServiceInfo;
-import pt.uninova.context.modules.broker.process.services.PESFlowSpecs;
-import pt.uninova.context.services.interfaces.IService;
-import pt.uninova.context.services.manager.ServiceManager;
-import pt.uninova.context.tools.datalayer.models.OutputDataModel;
-import pt.uninova.context.tools.ontology.Configuration;
+import de.atb.context.infrastructure.ServiceInfo;
+import de.atb.context.modules.broker.process.services.PESFlowSpecs;
+import de.atb.context.services.interfaces.IService;
+import de.atb.context.services.manager.ServiceManager;
+import de.atb.context.tools.datalayer.models.OutputDataModel;
+import de.atb.context.tools.ontology.Configuration;
 
 import java.util.ArrayList;
 import java.util.HashMap;

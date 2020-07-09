@@ -30,8 +30,8 @@ import de.atb.context.ui.util.Icon;
 import de.atb.context.ui.util.interfaces.ICommunicationBetweeMainStarterConfigurationServices;
 import de.atb.context.ui.util.interfaces.IUserInterfaceStatus;
 import org.slf4j.LoggerFactory;
-import pt.uninova.context.services.config.SWServiceConfiguration;
-import pt.uninova.context.services.config.models.SWService;
+import de.atb.context.services.config.SWServiceConfiguration;
+import de.atb.context.services.config.models.SWService;
 
 import javax.swing.*;
 import javax.swing.border.Border;

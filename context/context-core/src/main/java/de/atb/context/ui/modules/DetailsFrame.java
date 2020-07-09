@@ -28,7 +28,7 @@ import de.atb.context.ui.util.Icon;
 import de.atb.context.ui.util.interfaces.IUserInterfaceStatus;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import pt.uninova.context.services.config.models.SWService;
+import de.atb.context.services.config.models.SWService;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;

@@ -10,7 +10,7 @@
  * Copyright 2011-15 Oliver Kotte. All rights reserved.
  *
  */
-package pt.uninova.context.services.manager;
+package de.atb.context.services.manager;
 
 /*-
  * #%L
@@ -51,11 +51,11 @@ import org.apache.cxf.transports.http.configuration.HTTPClientPolicy;
 import org.apache.cxf.ws.addressing.WSAddressingFeature;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import pt.uninova.context.modules.Deployer;
-import pt.uninova.context.services.SWServiceContainer;
-import pt.uninova.context.services.config.models.SWService;
-import pt.uninova.context.services.infrastructure.ServiceRegistryService;
-import pt.uninova.context.services.interfaces.IPrimitiveService;
+import de.atb.context.modules.Deployer;
+import de.atb.context.services.SWServiceContainer;
+import de.atb.context.services.config.models.SWService;
+import de.atb.context.services.infrastructure.ServiceRegistryService;
+import de.atb.context.services.interfaces.IPrimitiveService;
 
 import javax.jws.WebService;
 import javax.xml.ws.BindingProvider;
@@ -88,7 +88,7 @@ public class ServiceManager {
     @Getter
     private static Deployer deployer;
     @Getter
-    private static pt.uninova.context.modules.Server server;
+    private static de.atb.context.modules.Server server;
     //public static Notifier notifier;
 
     private static final Logger logger = LoggerFactory

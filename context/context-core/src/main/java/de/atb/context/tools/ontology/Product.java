@@ -1,4 +1,4 @@
-package pt.uninova.context.tools.ontology;
+package de.atb.context.tools.ontology;
 
 /*-
  * #%L

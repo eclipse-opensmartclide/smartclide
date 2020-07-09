@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package pt.uninova.context.modules;
+package de.atb.context.modules;
 
 /*-
  * #%L
@@ -28,11 +28,11 @@ package pt.uninova.context.modules;
 
 import de.atb.context.ui.modules.ServerFrame;
 import org.slf4j.LoggerFactory;
-import pt.uninova.context.services.infrastructure.IDeployerService;
-import pt.uninova.context.infrastructure.Node;
-import pt.uninova.context.infrastructure.Nodes;
-import pt.uninova.context.services.manager.ServiceManager;
-import pt.uninova.context.services.wrapper.ServiceRegistryRepositoryServiceWrapper;
+import de.atb.context.services.infrastructure.IDeployerService;
+import de.atb.context.infrastructure.Node;
+import de.atb.context.infrastructure.Nodes;
+import de.atb.context.services.manager.ServiceManager;
+import de.atb.context.services.wrapper.ServiceRegistryRepositoryServiceWrapper;
 
 import java.net.MalformedURLException;
 import java.net.URL;

@@ -1,4 +1,4 @@
-package pt.uninova.context.services.async;
+package de.atb.context.services.async;
 
 /*-
  * #%L
@@ -21,8 +21,8 @@ package pt.uninova.context.services.async;
  */
 
 
-import pt.uninova.context.services.infrastructure.response.InvokeResponse;
-import pt.uninova.context.services.interfaces.Output;
+import de.atb.context.services.infrastructure.response.InvokeResponse;
+import de.atb.context.services.interfaces.Output;
 
 import javax.xml.ws.AsyncHandler;
 import javax.xml.ws.Response;

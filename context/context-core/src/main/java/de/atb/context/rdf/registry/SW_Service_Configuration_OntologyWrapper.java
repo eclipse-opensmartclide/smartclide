@@ -1,4 +1,4 @@
-package pt.uninova.context.rdf.registry;
+package de.atb.context.rdf.registry;
 
 /*-
  * #%L

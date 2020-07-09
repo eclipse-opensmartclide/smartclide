@@ -1,4 +1,4 @@
-package pt.uninova.context.tools.ontology;
+package de.atb.context.tools.ontology;
 
 /*-
  * #%L
@@ -52,7 +52,7 @@ import java.util.List;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "ProcessProductUse", propOrder = { "useOf" })
-public class ProcessProductUse extends pt.uninova.context.tools.ontology.Process {
+public class ProcessProductUse extends de.atb.context.tools.ontology.Process {
 
 	@XmlElement(required = true)
 	protected List<Product> useOf;

@@ -1,4 +1,4 @@
-package pt.uninova.context.services.config.models;
+package de.atb.context.services.config.models;
 
 /*-
  * #%L

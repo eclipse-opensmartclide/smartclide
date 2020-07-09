@@ -1,4 +1,4 @@
-package pt.uninova.context.services.config.models;
+package de.atb.context.services.config.models;
 
 /*-
  * #%L
@@ -21,7 +21,7 @@ package pt.uninova.context.services.config.models;
  */
 
 
-import pt.uninova.context.services.interfaces.IService;
+import de.atb.context.services.interfaces.IService;
 
 import java.net.URL;
 

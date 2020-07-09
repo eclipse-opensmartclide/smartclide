@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package pt.uninova.context.rdf.manager;
+package de.atb.context.rdf.manager;
 
 /*-
  * #%L
@@ -34,16 +34,16 @@ import org.semanticweb.owlapi.model.OWLOntologyManager;
 import org.semanticweb.owlapi.model.OWLOntologyStorageException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import pt.uninova.context.common.io.FileUtils;
-import pt.uninova.context.infrastructure.ConnectedDeployer;
-import pt.uninova.context.infrastructure.ConnectedServices;
-import pt.uninova.context.infrastructure.Node;
-import pt.uninova.context.infrastructure.ServiceInfo;
-import pt.uninova.context.modules.broker.status.ontology.StatusVocabulary;
-import pt.uninova.context.rdf.registry.Deployer_OntologyWrapper;
-import pt.uninova.context.rdf.registry.MyFactory;
-import pt.uninova.context.rdf.registry.SW_Service_Configuration_OntologyWrapper;
-import pt.uninova.context.rdf.registry.SW_Service_OntologyWrapper;
+import de.atb.context.common.io.FileUtils;
+import de.atb.context.infrastructure.ConnectedDeployer;
+import de.atb.context.infrastructure.ConnectedServices;
+import de.atb.context.infrastructure.Node;
+import de.atb.context.infrastructure.ServiceInfo;
+import de.atb.context.modules.broker.status.ontology.StatusVocabulary;
+import de.atb.context.rdf.registry.Deployer_OntologyWrapper;
+import de.atb.context.rdf.registry.MyFactory;
+import de.atb.context.rdf.registry.SW_Service_Configuration_OntologyWrapper;
+import de.atb.context.rdf.registry.SW_Service_OntologyWrapper;
 
 import java.io.File;
 import java.io.IOException;

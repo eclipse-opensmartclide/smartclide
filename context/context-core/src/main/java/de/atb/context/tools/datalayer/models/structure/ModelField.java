@@ -1,4 +1,4 @@
-package pt.uninova.context.tools.datalayer.models.structure;
+package de.atb.context.tools.datalayer.models.structure;
 
 /*-
  * #%L
@@ -21,8 +21,8 @@ package pt.uninova.context.tools.datalayer.models.structure;
  */
 
 
-import pt.uninova.context.tools.datalayer.models.MetaData;
-import pt.uninova.context.tools.datalayer.models.ValueDescription;
+import de.atb.context.tools.datalayer.models.MetaData;
+import de.atb.context.tools.datalayer.models.ValueDescription;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package pt.uninova.context.services.infrastructure;
+package de.atb.context.services.infrastructure;
 
 /*-
  * #%L
@@ -24,9 +24,9 @@ package pt.uninova.context.services.infrastructure;
 import de.atb.context.services.faults.ContextFault;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import pt.uninova.context.infrastructure.ConnectedServices;
-import pt.uninova.context.modules.Deployer;
-import pt.uninova.context.services.manager.ServiceManager;
+import de.atb.context.infrastructure.ConnectedServices;
+import de.atb.context.modules.Deployer;
+import de.atb.context.services.manager.ServiceManager;
 
 /**
  *

@@ -1,4 +1,4 @@
-package pt.uninova.context.common.io;
+package de.atb.context.common.io;
 
 /*-
  * #%L

@@ -1,4 +1,4 @@
-package pt.uninova.context.services.wrapper;
+package de.atb.context.services.wrapper;
 
 /*-
  * #%L
@@ -21,11 +21,11 @@ package pt.uninova.context.services.wrapper;
  */
 
 
-import pt.uninova.context.infrastructure.Node;
-import pt.uninova.context.infrastructure.Nodes;
-import pt.uninova.context.infrastructure.ServiceInfo;
-import pt.uninova.context.modules.broker.status.ontology.StatusVocabulary;
-import pt.uninova.context.services.infrastructure.datalayer.IServiceRegistryRepositoryService;
+import de.atb.context.infrastructure.Node;
+import de.atb.context.infrastructure.Nodes;
+import de.atb.context.infrastructure.ServiceInfo;
+import de.atb.context.modules.broker.status.ontology.StatusVocabulary;
+import de.atb.context.services.infrastructure.datalayer.IServiceRegistryRepositoryService;
 
 import java.util.List;
 

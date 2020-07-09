@@ -34,10 +34,10 @@ import org.jdesktop.swingx.decorator.FontHighlighter;
 import org.jdesktop.swingx.decorator.HighlightPredicate;
 import org.jdesktop.swingx.decorator.HighlighterFactory;
 import org.slf4j.LoggerFactory;
-import pt.uninova.context.infrastructure.Node;
-import pt.uninova.context.infrastructure.Nodes;
-import pt.uninova.context.infrastructure.ServiceInfo;
-import pt.uninova.context.modules.Server;
+import de.atb.context.infrastructure.Node;
+import de.atb.context.infrastructure.Nodes;
+import de.atb.context.infrastructure.ServiceInfo;
+import de.atb.context.modules.Server;
 
 import javax.swing.*;
 import javax.swing.border.Border;

@@ -1,4 +1,4 @@
-package pt.uninova.context.services.infrastructure.response;
+package de.atb.context.services.infrastructure.response;
 
 /*-
  * #%L
@@ -21,7 +21,7 @@ package pt.uninova.context.services.infrastructure.response;
  */
 
 
-import pt.uninova.context.services.interfaces.Output;
+import de.atb.context.services.interfaces.Output;
 
 /**
  *

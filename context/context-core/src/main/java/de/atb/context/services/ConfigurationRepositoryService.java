@@ -10,7 +10,7 @@
  * Copyright 2011-15 Sebastian Scholze (ATB). All rights reserved.
  *
  */
-package pt.uninova.context.services;
+package de.atb.context.services;
 
 /*-
  * #%L
@@ -38,12 +38,12 @@ import de.atb.context.common.util.ApplicationScenario;
 import de.atb.context.common.util.BusinessCase;
 import de.atb.context.persistence.ConfigurationRepository;
 import de.atb.context.services.faults.ContextFault;
-import pt.uninova.context.services.dataLayer.RepositoryService;
-import pt.uninova.context.services.infrastructure.response.InvokeResponse;
-import pt.uninova.context.services.interfaces.Input;
-import pt.uninova.context.services.interfaces.Output;
-import pt.uninova.context.services.manager.ServiceManager;
-import pt.uninova.context.tools.ontology.Configuration;
+import de.atb.context.services.dataLayer.RepositoryService;
+import de.atb.context.services.infrastructure.response.InvokeResponse;
+import de.atb.context.services.interfaces.Input;
+import de.atb.context.services.interfaces.Output;
+import de.atb.context.services.manager.ServiceManager;
+import de.atb.context.tools.ontology.Configuration;
 
 import javax.xml.ws.AsyncHandler;
 import javax.xml.ws.Response;

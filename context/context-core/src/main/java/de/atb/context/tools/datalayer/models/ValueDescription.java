@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package pt.uninova.context.tools.datalayer.models;
+package de.atb.context.tools.datalayer.models;
 
 /*-
  * #%L

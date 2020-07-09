@@ -1,4 +1,4 @@
-package pt.uninova.context.tools.datalayer.control;
+package de.atb.context.tools.datalayer.control;
 
 /*-
  * #%L
@@ -21,7 +21,7 @@ package pt.uninova.context.tools.datalayer.control;
  */
 
 
-import pt.uninova.context.tools.datalayer.models.OutputDataModel;
+import de.atb.context.tools.datalayer.models.OutputDataModel;
 
 import java.sql.Timestamp;
 

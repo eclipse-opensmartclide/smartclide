@@ -1,4 +1,4 @@
-package pt.uninova.context.modules.config;
+package de.atb.context.modules.config;
 
 /*-
  * #%L

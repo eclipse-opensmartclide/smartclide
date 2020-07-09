@@ -1,4 +1,4 @@
-package pt.uninova.context.services.config.models;
+package de.atb.context.services.config.models;
 
 /*-
  * #%L
@@ -25,7 +25,7 @@ import org.simpleframework.xml.Attribute;
 import org.simpleframework.xml.Element;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import pt.uninova.context.services.interfaces.IService;
+import de.atb.context.services.interfaces.IService;
 
 import java.net.URL;
 

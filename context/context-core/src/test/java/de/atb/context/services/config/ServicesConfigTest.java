@@ -6,7 +6,7 @@ import org.simpleframework.xml.Serializer;
 import org.simpleframework.xml.core.Persister;
 
 //import pm2.common.application.SysCallerImpl;
-import pt.uninova.context.services.config.models.SWServiceConfig;
+import de.atb.context.services.config.models.SWServiceConfig;
 
 public class ServicesConfigTest {
 	protected SWServiceConfig configurationBean;

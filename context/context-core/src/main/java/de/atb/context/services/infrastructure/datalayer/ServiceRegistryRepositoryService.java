@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package pt.uninova.context.services.infrastructure.datalayer;
+package de.atb.context.services.infrastructure.datalayer;
 
 /*-
  * #%L
@@ -27,12 +27,12 @@ package pt.uninova.context.services.infrastructure.datalayer;
 
 
 import de.atb.context.services.faults.ContextFault;
-import pt.uninova.context.infrastructure.Node;
-import pt.uninova.context.infrastructure.ServiceInfo;
-import pt.uninova.context.modules.broker.status.ontology.StatusVocabulary;
-import pt.uninova.context.rdf.manager.ServiceRegistryRepository;
-import pt.uninova.context.services.dataLayer.RepositoryService;
-import pt.uninova.context.services.manager.ServiceManager;
+import de.atb.context.infrastructure.Node;
+import de.atb.context.infrastructure.ServiceInfo;
+import de.atb.context.modules.broker.status.ontology.StatusVocabulary;
+import de.atb.context.rdf.manager.ServiceRegistryRepository;
+import de.atb.context.services.dataLayer.RepositoryService;
+import de.atb.context.services.manager.ServiceManager;
 
 import java.sql.Timestamp;
 import java.util.List;

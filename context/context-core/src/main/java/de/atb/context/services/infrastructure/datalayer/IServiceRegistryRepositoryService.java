@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package pt.uninova.context.services.infrastructure.datalayer;
+package de.atb.context.services.infrastructure.datalayer;
 
 /*-
  * #%L
@@ -27,10 +27,10 @@ package pt.uninova.context.services.infrastructure.datalayer;
 
 
 import de.atb.context.services.faults.ContextFault;
-import pt.uninova.context.infrastructure.Node;
-import pt.uninova.context.infrastructure.ServiceInfo;
-import pt.uninova.context.modules.broker.status.ontology.StatusVocabulary;
-import pt.uninova.context.services.interfaces.IRepositoryService;
+import de.atb.context.infrastructure.Node;
+import de.atb.context.infrastructure.ServiceInfo;
+import de.atb.context.modules.broker.status.ontology.StatusVocabulary;
+import de.atb.context.services.interfaces.IRepositoryService;
 
 import javax.jws.WebMethod;
 import javax.jws.WebParam;

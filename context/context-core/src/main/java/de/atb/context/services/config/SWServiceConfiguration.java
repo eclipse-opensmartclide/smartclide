@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package pt.uninova.context.services.config;
+package de.atb.context.services.config;
 
 /*-
  * #%L
@@ -29,11 +29,11 @@ package pt.uninova.context.services.config;
 import org.apache.commons.io.IOUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import pt.uninova.context.common.io.FileUtils;
-import pt.uninova.context.services.config.models.ISWServiceConfiguration;
-import pt.uninova.context.services.config.models.SWService;
-import pt.uninova.context.services.config.models.SWServiceConfig;
-import pt.uninova.context.services.manager.SWService_Configuration_FileMngr;
+import de.atb.context.common.io.FileUtils;
+import de.atb.context.services.config.models.ISWServiceConfiguration;
+import de.atb.context.services.config.models.SWService;
+import de.atb.context.services.config.models.SWServiceConfig;
+import de.atb.context.services.manager.SWService_Configuration_FileMngr;
 
 import javax.naming.ConfigurationException;
 import java.io.File;

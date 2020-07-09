@@ -1,4 +1,4 @@
-package pt.uninova.context.services.interfaces;
+package de.atb.context.services.interfaces;
 
 /*-
  * #%L

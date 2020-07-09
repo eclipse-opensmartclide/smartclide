@@ -1,4 +1,4 @@
-package pt.uninova.context.modules.broker.process.services;
+package de.atb.context.modules.broker.process.services;
 
 /*-
  * #%L
@@ -21,8 +21,8 @@ package pt.uninova.context.modules.broker.process.services;
  */
 
 
-import pt.uninova.context.tools.datalayer.models.OutputDataModel;
-import pt.uninova.context.tools.ontology.Configuration;
+import de.atb.context.tools.datalayer.models.OutputDataModel;
+import de.atb.context.tools.ontology.Configuration;
 
 import java.util.ArrayList;
 import java.util.HashMap;

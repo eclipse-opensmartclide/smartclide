@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package pt.uninova.context.services.manager;
+package de.atb.context.services.manager;
 
 /*-
  * #%L
@@ -31,7 +31,7 @@ import org.simpleframework.xml.Serializer;
 import org.simpleframework.xml.core.Persister;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import pt.uninova.context.services.config.SWServiceConfiguration;
+import de.atb.context.services.config.SWServiceConfiguration;
 
 import javax.naming.ConfigurationException;
 import java.io.*;

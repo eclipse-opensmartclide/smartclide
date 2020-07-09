@@ -1,4 +1,4 @@
-package pt.uninova.context.services.wrapper;
+package de.atb.context.services.wrapper;
 
 /*-
  * #%L
@@ -22,9 +22,9 @@ package pt.uninova.context.services.wrapper;
 
 
 import de.atb.context.services.faults.ContextFault;
-import pt.uninova.context.services.interfaces.IRepositoryService;
-import pt.uninova.context.services.manager.ServiceManager;
-import pt.uninova.context.tools.datalayer.models.OutputDataModel;
+import de.atb.context.services.interfaces.IRepositoryService;
+import de.atb.context.services.manager.ServiceManager;
+import de.atb.context.tools.datalayer.models.OutputDataModel;
 
 import java.sql.Timestamp;
 import java.util.ArrayList;

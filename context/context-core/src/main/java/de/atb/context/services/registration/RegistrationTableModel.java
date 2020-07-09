@@ -23,7 +23,7 @@ package de.atb.context.services.registration;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import pt.uninova.context.modules.config.DeployerConfigurationObject;
+import de.atb.context.modules.config.DeployerConfigurationObject;
 
 import javax.swing.table.AbstractTableModel;
 import java.util.ArrayList;

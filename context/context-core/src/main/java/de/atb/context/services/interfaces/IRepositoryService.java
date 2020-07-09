@@ -1,4 +1,4 @@
-package pt.uninova.context.services.interfaces;
+package de.atb.context.services.interfaces;
 
 /*-
  * #%L
@@ -22,7 +22,7 @@ package pt.uninova.context.services.interfaces;
 
 
 import de.atb.context.services.faults.ContextFault;
-import pt.uninova.context.tools.datalayer.models.OutputDataModel;
+import de.atb.context.tools.datalayer.models.OutputDataModel;
 
 import javax.jws.WebMethod;
 import javax.jws.WebParam;

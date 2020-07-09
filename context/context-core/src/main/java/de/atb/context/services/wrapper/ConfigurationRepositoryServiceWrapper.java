@@ -10,7 +10,7 @@
  * Copyright 2011-15 Sebastian Scholze (ATB). All rights reserved.
  *
  */
-package pt.uninova.context.services.wrapper;
+package de.atb.context.services.wrapper;
 
 /*-
  * #%L
@@ -39,7 +39,7 @@ import de.atb.context.common.util.BusinessCase;
 import de.atb.context.services.faults.ContextFault;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import pt.uninova.context.services.IConfigurationRepositoryService;
+import de.atb.context.services.IConfigurationRepositoryService;
 
 /**
  * ConfigurationRepositoryWrapper

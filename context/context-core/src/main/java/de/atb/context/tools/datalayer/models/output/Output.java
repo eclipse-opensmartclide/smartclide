@@ -1,4 +1,4 @@
-package pt.uninova.context.tools.datalayer.models.output;
+package de.atb.context.tools.datalayer.models.output;
 
 /*-
  * #%L
@@ -21,7 +21,7 @@ package pt.uninova.context.tools.datalayer.models.output;
  */
 
 
-import pt.uninova.context.tools.datalayer.models.structure.RootModelField;
+import de.atb.context.tools.datalayer.models.structure.RootModelField;
 
 import java.util.List;
 

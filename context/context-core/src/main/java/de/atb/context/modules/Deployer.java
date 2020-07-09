@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package pt.uninova.context.modules;
+package de.atb.context.modules;
 
 /*-
  * #%L
@@ -31,16 +31,16 @@ import de.atb.context.ui.modules.DeployPopUp;
 import de.atb.context.ui.modules.DeployerFrame;
 import de.atb.context.ui.util.interfaces.ICommunicationBetweenUIs;
 import org.slf4j.LoggerFactory;
-import pt.uninova.context.infrastructure.ConnectedDeployer;
-import pt.uninova.context.infrastructure.ConnectedServices;
-import pt.uninova.context.infrastructure.Node;
-import pt.uninova.context.infrastructure.ServiceInfo;
-import pt.uninova.context.modules.broker.status.ontology.StatusVocabulary;
-import pt.uninova.context.modules.config.DeployerConfigurationObject;
-import pt.uninova.context.services.SWServiceContainer;
-import pt.uninova.context.services.infrastructure.IServiceRegistryService;
-import pt.uninova.context.services.interfaces.IPrimitiveService;
-import pt.uninova.context.services.manager.ServiceManager;
+import de.atb.context.infrastructure.ConnectedDeployer;
+import de.atb.context.infrastructure.ConnectedServices;
+import de.atb.context.infrastructure.Node;
+import de.atb.context.infrastructure.ServiceInfo;
+import de.atb.context.modules.broker.status.ontology.StatusVocabulary;
+import de.atb.context.modules.config.DeployerConfigurationObject;
+import de.atb.context.services.SWServiceContainer;
+import de.atb.context.services.infrastructure.IServiceRegistryService;
+import de.atb.context.services.interfaces.IPrimitiveService;
+import de.atb.context.services.manager.ServiceManager;
 
 import java.util.ArrayList;
 import java.util.List;

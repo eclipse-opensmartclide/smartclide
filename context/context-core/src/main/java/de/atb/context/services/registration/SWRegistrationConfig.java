@@ -24,7 +24,7 @@ package de.atb.context.services.registration;
 import org.simpleframework.xml.ElementList;
 import org.simpleframework.xml.Root;
 import org.simpleframework.xml.core.Commit;
-import pt.uninova.context.modules.config.DeployerConfigurationObject;
+import de.atb.context.modules.config.DeployerConfigurationObject;
 
 import java.util.ArrayList;
 import java.util.List;

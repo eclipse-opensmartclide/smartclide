@@ -29,10 +29,10 @@ import de.atb.context.ui.util.Icon;
 import de.atb.context.ui.util.interfaces.ICommunicationBetweenUIs;
 import de.atb.context.ui.util.interfaces.IUserInterfaceStatus;
 import org.slf4j.LoggerFactory;
-import pt.uninova.context.modules.Deployer;
-import pt.uninova.context.services.config.models.SWService;
-import pt.uninova.context.services.SWServiceContainer;
-import pt.uninova.context.services.manager.ServiceManager;
+import de.atb.context.modules.Deployer;
+import de.atb.context.services.config.models.SWService;
+import de.atb.context.services.SWServiceContainer;
+import de.atb.context.services.manager.ServiceManager;
 
 import javax.swing.*;
 import javax.swing.border.Border;

@@ -1,4 +1,4 @@
-package pt.uninova.context.infrastructure;
+package de.atb.context.infrastructure;
 
 /*-
  * #%L

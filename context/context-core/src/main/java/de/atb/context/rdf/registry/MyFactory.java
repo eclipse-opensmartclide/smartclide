@@ -1,4 +1,4 @@
-package pt.uninova.context.rdf.registry;
+package de.atb.context.rdf.registry;
 
 /*-
  * #%L
@@ -30,9 +30,9 @@ import org.protege.owl.codegeneration.inference.SimpleInference;
 import org.semanticweb.owlapi.model.OWLClass;
 import org.semanticweb.owlapi.model.OWLOntology;
 import org.semanticweb.owlapi.model.OWLOntologyStorageException;
-import pt.uninova.context.rdf.registry.impl.DefaultDeployer_OntologyWrapper;
-import pt.uninova.context.rdf.registry.impl.DefaultSW_Service_Configuration_OntologyWrapper;
-import pt.uninova.context.rdf.registry.impl.DefaultSW_Service_OntologyWrapper;
+import de.atb.context.rdf.registry.impl.DefaultDeployer_OntologyWrapper;
+import de.atb.context.rdf.registry.impl.DefaultSW_Service_Configuration_OntologyWrapper;
+import de.atb.context.rdf.registry.impl.DefaultSW_Service_OntologyWrapper;
 
 import java.util.Collection;
 

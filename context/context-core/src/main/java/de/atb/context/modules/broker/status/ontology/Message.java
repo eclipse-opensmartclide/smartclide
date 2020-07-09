@@ -1,4 +1,4 @@
-package pt.uninova.context.modules.broker.status.ontology;
+package de.atb.context.modules.broker.status.ontology;
 
 /*-
  * #%L

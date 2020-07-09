@@ -1,4 +1,4 @@
-package pt.uninova.context.services;
+package de.atb.context.services;
 
 /*-
  * #%L
@@ -21,10 +21,10 @@ package pt.uninova.context.services;
  */
 
 
-import pt.uninova.context.services.config.SWServiceConfiguration;
-import pt.uninova.context.services.config.models.ISWService;
-import pt.uninova.context.services.config.models.SWService;
-import pt.uninova.context.services.interfaces.IService;
+import de.atb.context.services.config.SWServiceConfiguration;
+import de.atb.context.services.config.models.ISWService;
+import de.atb.context.services.config.models.SWService;
+import de.atb.context.services.interfaces.IService;
 
 import java.net.URL;
 

@@ -1,4 +1,4 @@
-package pt.uninova.context.services.interfaces;
+package de.atb.context.services.interfaces;
 
 /*-
  * #%L
@@ -21,7 +21,7 @@ package pt.uninova.context.services.interfaces;
  */
 
 
-import pt.uninova.context.infrastructure.ServiceInfo;
+import de.atb.context.infrastructure.ServiceInfo;
 
 /**
  *

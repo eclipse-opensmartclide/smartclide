@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package pt.uninova.context.services.interfaces;
+package de.atb.context.services.interfaces;
 
 /*-
  * #%L
@@ -27,10 +27,10 @@ package pt.uninova.context.services.interfaces;
 
 
 import de.atb.context.services.faults.ContextFault;
-import pt.uninova.context.infrastructure.ServiceInfo;
-import pt.uninova.context.modules.broker.process.services.PESFlowSpecs;
-import pt.uninova.context.tools.datalayer.models.OutputDataModel;
-import pt.uninova.context.tools.ontology.Configuration;
+import de.atb.context.infrastructure.ServiceInfo;
+import de.atb.context.modules.broker.process.services.PESFlowSpecs;
+import de.atb.context.tools.datalayer.models.OutputDataModel;
+import de.atb.context.tools.ontology.Configuration;
 
 import javax.jws.WebMethod;
 import javax.jws.WebParam;

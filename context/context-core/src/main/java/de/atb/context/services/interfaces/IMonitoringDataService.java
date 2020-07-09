@@ -22,7 +22,7 @@ package de.atb.context.services.interfaces;
 
 import de.atb.context.common.util.ApplicationScenario;
 import de.atb.context.services.faults.ContextFault;
-import pt.uninova.context.services.interfaces.IService;
+import de.atb.context.services.interfaces.IService;
 
 import javax.jws.WebMethod;
 import javax.jws.WebParam;

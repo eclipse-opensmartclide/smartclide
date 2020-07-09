@@ -1,4 +1,4 @@
-package pt.uninova.context.tools.datalayer.models.structure;
+package de.atb.context.tools.datalayer.models.structure;
 
 /*-
  * #%L

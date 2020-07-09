@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package pt.uninova.context.services.interfaces;
+package de.atb.context.services.interfaces;
 
 /*-
  * #%L
@@ -27,11 +27,11 @@ package pt.uninova.context.services.interfaces;
 
 
 import org.slf4j.LoggerFactory;
-import pt.uninova.context.infrastructure.ServiceInfo;
-import pt.uninova.context.modules.broker.utils.Constants;
-import pt.uninova.context.services.manager.ServiceManager;
-import pt.uninova.context.services.wrapper.RepositoryServiceWrapper;
-import pt.uninova.context.tools.datalayer.models.OutputDataModel;
+import de.atb.context.infrastructure.ServiceInfo;
+import de.atb.context.modules.broker.utils.Constants;
+import de.atb.context.services.manager.ServiceManager;
+import de.atb.context.services.wrapper.RepositoryServiceWrapper;
+import de.atb.context.tools.datalayer.models.OutputDataModel;
 
 /**
  *

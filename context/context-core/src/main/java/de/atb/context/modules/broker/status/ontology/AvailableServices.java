@@ -1,4 +1,4 @@
-package pt.uninova.context.modules.broker.status.ontology;
+package de.atb.context.modules.broker.status.ontology;
 
 /*-
  * #%L
@@ -21,7 +21,7 @@ package pt.uninova.context.modules.broker.status.ontology;
  */
 
 
-import pt.uninova.context.infrastructure.Nodes;
+import de.atb.context.infrastructure.Nodes;
 
 /**
  *

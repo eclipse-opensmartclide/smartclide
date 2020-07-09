@@ -27,10 +27,10 @@ import org.simpleframework.xml.Serializer;
 import org.simpleframework.xml.core.Persister;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import pt.uninova.context.modules.Deployer;
-import pt.uninova.context.modules.config.DeployerConfigurationObject;
-import pt.uninova.context.services.infrastructure.IServiceRegistryService;
-import pt.uninova.context.services.manager.ServiceManager;
+import de.atb.context.modules.Deployer;
+import de.atb.context.modules.config.DeployerConfigurationObject;
+import de.atb.context.services.infrastructure.IServiceRegistryService;
+import de.atb.context.services.manager.ServiceManager;
 
 import java.io.File;
 import java.io.FileInputStream;

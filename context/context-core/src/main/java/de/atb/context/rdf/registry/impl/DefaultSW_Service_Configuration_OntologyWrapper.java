@@ -1,4 +1,4 @@
-package pt.uninova.context.rdf.registry.impl;
+package de.atb.context.rdf.registry.impl;
 
 /*-
  * #%L
@@ -24,9 +24,9 @@ package pt.uninova.context.rdf.registry.impl;
 import org.protege.owl.codegeneration.impl.WrappedIndividualImpl;
 import org.protege.owl.codegeneration.inference.CodeGenerationInference;
 import org.semanticweb.owlapi.model.IRI;
-import pt.uninova.context.rdf.registry.SW_Service_Configuration_OntologyWrapper;
-import pt.uninova.context.rdf.registry.SW_Service_OntologyWrapper;
-import pt.uninova.context.rdf.registry.Vocabulary;
+import de.atb.context.rdf.registry.SW_Service_Configuration_OntologyWrapper;
+import de.atb.context.rdf.registry.SW_Service_OntologyWrapper;
+import de.atb.context.rdf.registry.Vocabulary;
 
 import java.util.Collection;
 

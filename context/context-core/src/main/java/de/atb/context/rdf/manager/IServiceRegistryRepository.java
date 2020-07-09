@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package pt.uninova.context.rdf.manager;
+package de.atb.context.rdf.manager;
 
 /*-
  * #%L
@@ -26,9 +26,9 @@ package pt.uninova.context.rdf.manager;
  */
 
 
-import pt.uninova.context.infrastructure.Node;
-import pt.uninova.context.infrastructure.ServiceInfo;
-import pt.uninova.context.modules.broker.status.ontology.StatusVocabulary;
+import de.atb.context.infrastructure.Node;
+import de.atb.context.infrastructure.ServiceInfo;
+import de.atb.context.modules.broker.status.ontology.StatusVocabulary;
 
 import java.util.List;
 

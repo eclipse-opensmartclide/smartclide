@@ -1,4 +1,4 @@
-package pt.uninova.context.tools.ontology;
+package de.atb.context.tools.ontology;
 
 /*-
  * #%L
@@ -52,7 +52,7 @@ import java.util.List;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "ProcessProductManufacture", propOrder = { "manufactures" })
-public class ProcessProductManufacture extends pt.uninova.context.tools.ontology.Process {
+public class ProcessProductManufacture extends de.atb.context.tools.ontology.Process {
 
 	@XmlElement(name = "Manufactures", required = true)
 	protected List<Product> manufactures;

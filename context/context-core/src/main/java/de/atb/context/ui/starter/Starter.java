@@ -26,8 +26,8 @@ import org.apache.commons.lang3.ArrayUtils;
 import org.apache.cxf.endpoint.Server;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import pt.uninova.context.services.SWServiceContainer;
-import pt.uninova.context.services.manager.ServiceManager;
+import de.atb.context.services.SWServiceContainer;
+import de.atb.context.services.manager.ServiceManager;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;

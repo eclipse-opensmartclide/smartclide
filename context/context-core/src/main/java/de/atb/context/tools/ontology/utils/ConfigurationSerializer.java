@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package pt.uninova.context.tools.ontology.utils;
+package de.atb.context.tools.ontology.utils;
 
 /*-
  * #%L
@@ -29,7 +29,7 @@ package pt.uninova.context.tools.ontology.utils;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonObject;
-import pt.uninova.context.tools.ontology.Configuration;
+import de.atb.context.tools.ontology.Configuration;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;

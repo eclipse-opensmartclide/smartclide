@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package pt.uninova.context.infrastructure;
+package de.atb.context.infrastructure;
 
 /*-
  * #%L
