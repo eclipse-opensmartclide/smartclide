@@ -38,7 +38,7 @@ import org.apache.commons.io.FilenameUtils;
 import org.apache.lucene.document.DateTools;
 import org.javatuples.Pair;
 
-import pt.uninova.context.tools.ontology.AmIMonitoringConfiguration;
+import de.atb.context.tools.ontology.AmIMonitoringConfiguration;
 import de.atb.context.common.util.Hashing;
 
 /**

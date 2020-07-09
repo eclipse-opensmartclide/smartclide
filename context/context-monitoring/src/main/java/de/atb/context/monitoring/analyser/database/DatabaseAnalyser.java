@@ -26,8 +26,8 @@ import de.atb.context.monitoring.config.models.InterpreterConfiguration;
 import de.atb.context.monitoring.index.Indexer;
 import de.atb.context.monitoring.models.IDatabase;
 import de.atb.context.monitoring.models.IMonitoringDataModel;
+import de.atb.context.tools.ontology.AmIMonitoringConfiguration;
 import org.apache.lucene.document.Document;
-import pt.uninova.context.tools.ontology.AmIMonitoringConfiguration;
 
 import java.util.List;
 

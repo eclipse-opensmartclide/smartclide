@@ -35,7 +35,7 @@ import name.pachler.nio.file.ext.ExtendedWatchEventKind;
 import org.apache.lucene.document.Document;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import pt.uninova.context.tools.ontology.AmIMonitoringConfiguration;
+import de.atb.context.tools.ontology.AmIMonitoringConfiguration;
 
 import java.io.File;
 import java.io.IOException;

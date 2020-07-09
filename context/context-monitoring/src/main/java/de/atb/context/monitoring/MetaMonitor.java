@@ -29,7 +29,7 @@ import de.atb.context.monitoring.index.Indexer;
 import de.atb.context.monitoring.monitors.ThreadedMonitor;
 import de.atb.context.services.wrapper.AmIMonitoringDataRepositoryServiceWrapper;
 import org.slf4j.LoggerFactory;
-import pt.uninova.context.tools.ontology.AmIMonitoringConfiguration;
+import de.atb.context.tools.ontology.AmIMonitoringConfiguration;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;

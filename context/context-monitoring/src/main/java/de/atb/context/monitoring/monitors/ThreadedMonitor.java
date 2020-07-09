@@ -26,7 +26,7 @@ import de.atb.context.monitoring.index.Indexer;
 import de.atb.context.monitoring.parser.IndexingParser;
 import de.atb.context.services.wrapper.AmIMonitoringDataRepositoryServiceWrapper;
 import org.apache.lucene.document.Document;
-import pt.uninova.context.tools.ontology.AmIMonitoringConfiguration;
+import de.atb.context.tools.ontology.AmIMonitoringConfiguration;
 
 import java.util.ArrayList;
 import java.util.List;

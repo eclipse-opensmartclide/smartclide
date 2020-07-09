@@ -29,12 +29,10 @@ import java.io.IOException;
 import de.atb.context.monitoring.config.models.Index;
 import de.atb.context.monitoring.parser.IndexedFields;
 import de.atb.context.monitoring.parser.IndexingParser;
-import org.apache.lucene.analysis.PerFieldAnalyzerWrapper;
+import org.apache.lucene.analysis.miscellaneous.PerFieldAnalyzerWrapper;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.document.Document;
-import org.apache.lucene.index.CorruptIndexException;
-import org.apache.lucene.index.IndexWriter;
-import org.apache.lucene.index.Term;
+import org.apache.lucene.index.*;
 import org.apache.lucene.search.IndexSearcher;
 import org.apache.lucene.search.ScoreDoc;
 import org.apache.lucene.search.TermQuery;
@@ -194,9 +192,9 @@ public class Indexer {
             if (this.writer != null) {
                 this.writer.close();
             }
-            if (this.searcher != null) {
-                this.searcher.close();
-            }
+            //if (this.searcher != null) {
+                //this.searcher.close();
+            //}
         } catch (IOException ioe) {
             this.logger.error(ioe.getMessage(), ioe);
         }
@@ -207,15 +205,16 @@ public class Indexer {
      */
     protected final void createSearcher() {
         try {
-            if (this.searcher != null) {
-                this.searcher.close();
-            }
+            //if (this.searcher != null) {
+                //this.searcher.close();
+            //}
             File tmpDir = new File(this.index.getLocation()); // TODO DRM API?
             if (!tmpDir.exists() && !tmpDir.mkdirs()) {
                 this.logger.warn("Index directory " + tmpDir.getAbsolutePath() + " does not exist and could not be created!");
             }
             FSDirectory dir = FSDirectory.open(tmpDir);
-            this.searcher = new IndexSearcher(dir);
+            DirectoryReader reader = DirectoryReader.open(dir);
+            this.searcher = new IndexSearcher(reader);
         } catch (Throwable e) {
             this.logger.error("Unable to read index-files from directory " + this.index.getLocation(), e);
         }
@@ -273,24 +272,27 @@ public class Indexer {
     }
 
     protected final void closeSearcher() {
-        if (this.searcher != null) {
+        /*if (this.searcher != null) {
             try {
                 this.searcher.close();
             } catch (Exception we) {
                 this.logger.error(we.getMessage(), we);
             }
-        }
+        }*/
     }
 
     protected final void createIndexWriter() {
-        PerFieldAnalyzerWrapper analyzerWrapper = new PerFieldAnalyzerWrapper(new StandardAnalyzer(Version.LUCENE_30));
+        PerFieldAnalyzerWrapper analyzerWrapper = new PerFieldAnalyzerWrapper(new StandardAnalyzer(Version.LUCENE_4_9));
+        IndexWriterConfig indexWriterConfig = new IndexWriterConfig(Version.LUCENE_4_9, analyzerWrapper);
+        indexWriterConfig.setRAMBufferSizeMB(48.00);
+
         File tmpDir = new File(this.index.getLocation()); // TODO DRM API?
         if (!tmpDir.exists() && !tmpDir.mkdirs()) {
             this.logger.warn("Index directory " + tmpDir.getAbsolutePath() + " does not exist and could not be created!");
         }
         try {
             FSDirectory dir = FSDirectory.open(tmpDir);
-            this.writer = new IndexWriter(dir, analyzerWrapper, false, IndexWriter.MaxFieldLength.LIMITED);
+            this.writer = new IndexWriter(dir, indexWriterConfig);
 
             // Index does not exist => create!
         } catch (FileNotFoundException fnfe) {
@@ -298,8 +300,7 @@ public class Indexer {
             this.logger.warn(fnfe.getMessage());
             try {
                 FSDirectory dir = FSDirectory.open(new File(this.index.getLocation())); // TODO DRM API?
-                this.writer = new IndexWriter(dir, analyzerWrapper, true, IndexWriter.MaxFieldLength.LIMITED);
-                this.writer.setRAMBufferSizeMB(48.00);
+                this.writer = new IndexWriter(dir, indexWriterConfig);
                 this.writer.commit();
             } catch (Throwable e) {
                 this.logger.error("Could not access the Index: " + this.index.getLocation(), e);

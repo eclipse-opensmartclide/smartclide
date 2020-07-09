@@ -32,7 +32,7 @@ import de.atb.context.monitoring.config.models.IMonitoringConfiguration;
 import de.atb.context.monitoring.config.models.Index;
 import org.simpleframework.xml.Serializer;
 import org.simpleframework.xml.core.Persister;
-import pt.uninova.context.tools.ontology.AmIMonitoringConfiguration;
+import de.atb.context.tools.ontology.AmIMonitoringConfiguration;
 import de.atb.context.common.Configuration;
 import de.atb.context.common.exceptions.ConfigurationException;
 import de.atb.context.monitoring.config.models.Config;

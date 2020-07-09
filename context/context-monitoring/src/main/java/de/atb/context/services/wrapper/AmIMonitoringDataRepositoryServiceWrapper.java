@@ -29,7 +29,7 @@ import de.atb.context.monitoring.models.IMonitoringDataModel;
 import de.atb.context.persistence.monitoring.IMonitoringDataRepository;
 import de.atb.context.services.IAmIMonitoringDataRepositoryService;
 import de.atb.context.services.faults.ContextFault;
-import pt.uninova.context.services.wrapper.RepositoryServiceWrapper;
+import de.atb.context.services.wrapper.RepositoryServiceWrapper;
 
 import com.hp.hpl.jena.query.ResultSet;
 import com.hp.hpl.jena.query.ResultSetFactory;

@@ -30,7 +30,7 @@ import de.atb.context.monitoring.parser.file.IndexedFileFields;
 import org.apache.lucene.document.DateTools;
 import org.apache.lucene.document.Document;
 
-import pt.uninova.context.tools.ontology.AmIMonitoringConfiguration;
+import de.atb.context.tools.ontology.AmIMonitoringConfiguration;
 import de.atb.context.monitoring.analyser.IndexingAnalyser;
 import de.atb.context.monitoring.config.models.DataSource;
 import de.atb.context.monitoring.config.models.InterpreterConfiguration;

@@ -28,7 +28,7 @@ import org.apache.lucene.document.Document;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import pt.uninova.context.tools.ontology.AmIMonitoringConfiguration;
+import de.atb.context.tools.ontology.AmIMonitoringConfiguration;
 import de.atb.context.common.Version;
 import de.atb.context.monitoring.analyser.IndexingAnalyser;
 import de.atb.context.monitoring.config.models.DataSource;

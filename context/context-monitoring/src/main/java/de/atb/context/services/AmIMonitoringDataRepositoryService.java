@@ -44,12 +44,12 @@ import de.atb.context.common.util.TimeFrame;
 import de.atb.context.services.faults.ContextFault;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import pt.uninova.context.services.infrastructure.response.InvokeResponse;
-import pt.uninova.context.services.interfaces.Input;
-import pt.uninova.context.services.interfaces.Output;
-import pt.uninova.context.services.manager.ServiceManager;
-import pt.uninova.context.tools.datalayer.models.OutputDataModel;
-import pt.uninova.context.tools.ontology.Configuration;
+import de.atb.context.services.infrastructure.response.InvokeResponse;
+import de.atb.context.services.interfaces.Input;
+import de.atb.context.services.interfaces.Output;
+import de.atb.context.services.manager.ServiceManager;
+import de.atb.context.tools.datalayer.models.OutputDataModel;
+import de.atb.context.tools.ontology.Configuration;
 
 import javax.xml.ws.AsyncHandler;
 import javax.xml.ws.Response;
@@ -442,7 +442,7 @@ public class AmIMonitoringDataRepositoryService<Type extends IMonitoringDataMode
     }
 
     /* (non-Javadoc)
-     * @see pt.uninova.context.services.interfaces.IRepositoryService#store(java.lang.Object)
+     * @see de.atb.context.services.interfaces.IRepositoryService#store(java.lang.Object)
      */
     @Override
     public String store(Object Element) {
@@ -450,7 +450,7 @@ public class AmIMonitoringDataRepositoryService<Type extends IMonitoringDataMode
     }
 
     /* (non-Javadoc)
-     * @see pt.uninova.context.services.interfaces.IRepositoryService#remove(java.lang.Object)
+     * @see de.atb.context.services.interfaces.IRepositoryService#remove(java.lang.Object)
      */
     @Override
     public boolean remove(Object Element) {

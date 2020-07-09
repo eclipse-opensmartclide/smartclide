@@ -35,14 +35,14 @@ import de.atb.context.services.wrapper.AmIMonitoringDataRepositoryServiceWrapper
 import de.atb.context.common.exceptions.ConfigurationException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import pt.uninova.context.infrastructure.ServiceInfo;
-import pt.uninova.context.services.DeployableService;
-import pt.uninova.context.services.SWServiceContainer;
-import pt.uninova.context.services.interfaces.DataOutput;
-import pt.uninova.context.services.interfaces.Output;
-import pt.uninova.context.services.manager.ServiceManager;
-import pt.uninova.context.tools.ontology.AmIMonitoringConfiguration;
-import pt.uninova.context.tools.ontology.Configuration;
+import de.atb.context.infrastructure.ServiceInfo;
+import de.atb.context.services.DeployableService;
+import de.atb.context.services.SWServiceContainer;
+import de.atb.context.services.interfaces.DataOutput;
+import de.atb.context.services.interfaces.Output;
+import de.atb.context.services.manager.ServiceManager;
+import de.atb.context.tools.ontology.AmIMonitoringConfiguration;
+import de.atb.context.tools.ontology.Configuration;
 
 import java.util.ArrayList;
 import java.util.List;

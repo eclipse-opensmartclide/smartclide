@@ -34,7 +34,7 @@ import de.atb.context.services.faults.ContextFault;
 import org.apache.lucene.document.Document;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import pt.uninova.context.tools.ontology.AmIMonitoringConfiguration;
+import de.atb.context.tools.ontology.AmIMonitoringConfiguration;
 
 import java.util.List;
 import java.util.concurrent.Executors;

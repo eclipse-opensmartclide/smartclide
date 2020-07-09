@@ -28,7 +28,7 @@ import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
 
-import pt.uninova.context.common.io.FileUtils;
+import de.atb.context.common.io.FileUtils;
 
 /**
  * ExtensionFilenameFilter

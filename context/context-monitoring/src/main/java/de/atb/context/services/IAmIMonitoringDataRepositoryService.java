@@ -30,7 +30,7 @@ import javax.jws.soap.SOAPBinding;
 
 import de.atb.context.monitoring.models.IMonitoringDataModel;
 import de.atb.context.services.faults.ContextFault;
-import pt.uninova.context.services.interfaces.IRepositoryService;
+import de.atb.context.services.interfaces.IRepositoryService;
 import de.atb.context.common.util.ApplicationScenario;
 import de.atb.context.common.util.BusinessCase;
 import de.atb.context.common.util.TimeFrame;

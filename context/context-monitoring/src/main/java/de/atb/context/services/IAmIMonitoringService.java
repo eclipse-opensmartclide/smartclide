@@ -26,9 +26,9 @@ import javax.jws.WebService;
 import javax.jws.soap.SOAPBinding;
 import javax.xml.bind.annotation.XmlSeeAlso;
 
-import pt.uninova.context.infrastructure.ServiceInfo;
-import pt.uninova.context.services.interfaces.IService;
-import pt.uninova.context.tools.ontology.AmIMonitoringConfiguration;
+import de.atb.context.infrastructure.ServiceInfo;
+import de.atb.context.services.interfaces.IService;
+import de.atb.context.tools.ontology.AmIMonitoringConfiguration;
 
 /**
  * $Id

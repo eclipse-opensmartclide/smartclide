@@ -31,7 +31,7 @@ import de.atb.context.monitoring.analyser.file.FileAnalyser;
 import de.atb.context.monitoring.parser.IndexingParser;
 import org.apache.lucene.document.DateTools;
 
-import pt.uninova.context.tools.ontology.AmIMonitoringConfiguration;
+import de.atb.context.tools.ontology.AmIMonitoringConfiguration;
 import de.atb.context.common.util.Hashing;
 import de.atb.context.monitoring.analyser.IndexingAnalyser;
 import de.atb.context.monitoring.config.models.DataSource;

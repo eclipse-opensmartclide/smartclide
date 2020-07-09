@@ -27,6 +27,8 @@ import org.apache.lucene.document.Field.Index;
 import org.apache.lucene.document.Field.Store;
 
 import de.atb.context.monitoring.index.IFieldable;
+import org.apache.lucene.document.StringField;
+import org.apache.lucene.index.IndexableField;
 
 /**
  * IndexedFields
@@ -86,7 +88,7 @@ public enum IndexedFields implements IFieldable {
      */
     @Override
     public Field get(final Document document) {
-        return document.getField(this.name);
+        return (Field) document.getField(this.name);
     }
 
     /*
@@ -129,7 +131,7 @@ public enum IndexedFields implements IFieldable {
      */
     @Override
     public Field createField(final String value) {
-        return new Field(getName(), value, Field.Store.YES, Field.Index.NOT_ANALYZED);
+        return new Field(getName(), value, StringField.TYPE_STORED);
     }
 
     /*
@@ -141,19 +143,11 @@ public enum IndexedFields implements IFieldable {
      */
     @Override
     public Field createField(final String value, final Store store) {
-        return new Field(getName(), value, store, Field.Index.NOT_ANALYZED);
+        return new Field(getName(), value, StringField.TYPE_STORED);
     }
 
-    /*
-     * (non-Javadoc)
-     *
-     * @see
-     * IFieldable#create(java.lang.String,
-     * org.apache.lucene.document.Field.Store,
-     * org.apache.lucene.document.Field.Index)
-     */
     @Override
-    public Field createField(final String value, final Store store, final Index index) {
-        return new Field(getName(), value, store, index);
+    public Field createField(String value, Store store, Index index) {
+        return new Field(getName(), value, StringField.TYPE_STORED);
     }
 }

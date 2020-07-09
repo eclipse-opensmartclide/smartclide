@@ -63,7 +63,7 @@ public enum IndexedFileFields implements IFieldable {
      * .document.Document)
      */
     public Field get(final Document document) {
-        return document.getField(this.name);
+        return (Field) document.getField(this.name);
     }
 
     /*
