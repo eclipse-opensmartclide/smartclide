@@ -7,12 +7,6 @@
     <version>2.0.0</version>
     <packaging>jar</packaging>
 
-    <parent>
-        <groupId>de.atb</groupId>
-        <artifactId>atb-parent</artifactId>
-        <version>21</version>
-    </parent>
-
     <name>ATB Context Extraction Core Lib</name>
     <url>www.atb-bremen.de</url>
     <organization>
