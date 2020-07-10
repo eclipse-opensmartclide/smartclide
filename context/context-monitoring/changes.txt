@@ -1,6 +1,6 @@
 1.2.5
 =====
-- Add Apache2 License
+- Add EPL_v2 License
 - License Header cleanup
 
 1.2.4
