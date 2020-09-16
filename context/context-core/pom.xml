@@ -6,6 +6,7 @@
     <groupId>de.atb.context</groupId>
     <version>2.0.0</version>
     <packaging>jar</packaging>
+    <inceptionYear>2020</inceptionYear>
 
     <name>ATB Context Extraction Core Lib</name>
     <url>www.atb-bremen.de</url>
@@ -57,7 +58,7 @@
                     <version>${maven.plugin.license.min.version}</version>
                     <configuration>
                         <!--license to use for the project-->
-                        <licenseName>apache_v2</licenseName>
+                        <licenseName>epl_v2</licenseName>
 
                         <!--generate license file even if it exists-->
                         <force>true</force>
@@ -91,16 +92,6 @@
 
                         <!--whether the missing file should be used-->
                         <useMissingFile>true</useMissingFile>
-
-                        <licenseMerges>
-                            <!--consider the following license names to identify the same license-->
-                            <licenseMerge>Apache License, Version 2.0|The Apache Software License, Version 2.0|Apache 2|Apache
-                                License 2.0|AL 2.0
-                            </licenseMerge>
-                            <licenseMerge>CDDLv1|Common Development and Distribution License (CDDL) v1.0|COMMON DEVELOPMENT AND
-                                DISTRIBUTION LICENSE (CDDL) Version 1.0
-                            </licenseMerge>
-                        </licenseMerges>
                     </configuration>
                     <executions>
                         <execution>
