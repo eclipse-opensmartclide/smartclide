@@ -7,13 +7,14 @@
     <artifactId>context-monitoring</artifactId>
     <version>1.2.5</version>
     <packaging>jar</packaging>
+
     <inceptionYear>2015</inceptionYear>
 
     <name>ATB Context Monitoring Core Services</name>
-    <url>www.atb-bremen.de</url>
+    <url>https://www.atb-bremen.de</url>
     <organization>
-        <name>ATB</name>
-        <url>www.atb-bremen.de</url>
+        <name>ATB – Institut für angewandte Systemtechnik Bremen GmbH</name>
+        <url>https://www.atb-bremen.de</url>
     </organization>
 
     <properties>
@@ -167,6 +168,10 @@
                     <sourceDirectory>src/main</sourceDirectory>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>license-maven-plugin</artifactId>
+            </plugin>
     </plugins>
     <pluginManagement>
         <plugins>
@@ -215,7 +220,7 @@
                 <version>${maven.plugin.license.min.version}</version>
                 <configuration>
                     <!--license to use for the project-->
-                    <licenseName>epl_v2</licenseName>
+                    <licenseName>epl_only_v2</licenseName>
 
                     <!--generate license file even if it exists-->
                     <force>true</force>
@@ -224,9 +229,6 @@
                     <roots>
                         <root>src/main/java</root>
                         <root>src/main/resources</root>
-                        <root>src/main/webapp</root>
-                        <root>src/main/assembly</root>
-                        <root>src/main/docker</root>
                     </roots>
 
                     <extraExtensions>
@@ -253,17 +255,14 @@
                 <executions>
                     <execution>
                         <id>license-management</id>
+                        <phase>process-resources</phase>
                         <goals>
                             <!--updates the source's headers according to the specified license-->
                             <goal>update-file-header</goal>
 
                             <!--Adds the full-blown license file to the final product-->
                             <goal>update-project-license</goal>
-
-                            <!--generate and add a list of third-party licenses-->
-                            <!--<goal>add-third-party</goal>-->
                         </goals>
-                        <phase>process-sources</phase>
                     </execution>
                 </executions>
             </plugin>
