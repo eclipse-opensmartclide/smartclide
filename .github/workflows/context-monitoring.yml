@@ -7,10 +7,6 @@ on:
     paths:
       - 'context/context-monitoring/**'
       - '.github/workflows/context-monitoring.yml'
-  pull_request:
-    paths:
-      - 'context/context-monitoring/**'
-      - '.github/workflows/context-monitoring.yml'
 
 defaults:
   run:
