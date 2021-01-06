@@ -6,9 +6,11 @@ on:
   push:
     paths:
       - 'context/context-core/**'
+      - '.github/workflows/context-core.yml'
   pull_request:
     paths:
       - 'context/context-core/**'
+      - '.github/workflows/context-core.yml'
 
 defaults:
   run:
