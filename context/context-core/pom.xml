@@ -3,124 +3,19 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>de.atb.context</groupId>
+    <parent>
+        <groupId>de.atb.context</groupId>
+        <artifactId>parent</artifactId>
+        <version>2.0.0</version>
+    </parent>
+
     <artifactId>context-core</artifactId>
-    <version>2.0.0</version>
+
     <packaging>jar</packaging>
 
-    <inceptionYear>2020</inceptionYear>
-
     <name>ATB Context Extraction Core Lib</name>
-    <url>https://www.atb-bremen.de</url>
-    <organization>
-        <name>ATB – Institut für angewandte Systemtechnik Bremen GmbH</name>
-        <url>https://www.atb-bremen.de</url>
-    </organization>
-
-    <properties>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
-        <maven.plugin.license.min.version>2.0.0</maven.plugin.license.min.version>
-    </properties>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-dependency-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <id>copy-dependencies</id>
-                        <phase>prepare-package</phase>
-                        <goals>
-                            <goal>copy-dependencies</goal>
-                        </goals>
-                        <configuration>
-                            <outputDirectory>${project.build.directory}/lib</outputDirectory>
-                            <overWriteReleases>false</overWriteReleases>
-                            <overWriteSnapshots>false</overWriteSnapshots>
-                            <overWriteIfNewer>true</overWriteIfNewer>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <!--<configuration> <archive> <manifest> <addClasspath>true</addClasspath>
-                    <classpathPrefix>lib/</classpathPrefix> <mainClass>pt.uninova.context.starter.StarterUI</mainClass>
-                    </manifest> </archive> </configuration> -->
-            </plugin>
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>license-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-        <pluginManagement>
-            <plugins>
-                <plugin>
-                    <groupId>org.codehaus.mojo</groupId>
-                    <artifactId>license-maven-plugin</artifactId>
-                    <version>${maven.plugin.license.min.version}</version>
-                    <configuration>
-                        <!--license to use for the project-->
-                        <licenseName>epl_only_v2</licenseName>
-
-                        <!--generate license file even if it exists-->
-                        <force>true</force>
-
-                        <!--specifies the folders to consider for header replacement-->
-                        <roots>
-                            <root>src/main/java</root>
-                            <root>src/main/resources</root>
-                        </roots>
-
-                        <extraExtensions>
-                            <yml>properties</yml>
-                            <yaml>properties</yaml>
-                        </extraExtensions>
-
-                        <excludes>
-                            <!--do not add license header to json files because json standard does not allow comments-->
-                            <exclude>**/*.json</exclude>
-                        </excludes>
-
-                        <!--exclude test-scoped dependencies from the 3rd party license-list-->
-                        <excludedScopes>test</excludedScopes>
-
-                        <!--automatically update the copyright if current or inception years change-->
-                        <canUpdateCopyright>true</canUpdateCopyright>
-                        <!--automatically update the project name or description-->
-                        <canUpdateDescription>true</canUpdateDescription>
-
-                        <!--whether the missing file should be used-->
-                        <useMissingFile>true</useMissingFile>
-                    </configuration>
-                    <executions>
-                        <execution>
-                            <id>license-management</id>
-                            <phase>process-resources</phase>
-                            <goals>
-                                <!--updates the source's headers according to the specified license-->
-                                <goal>update-file-header</goal>
-
-                                <!--Adds the full-blown license file to the final product-->
-                                <goal>update-project-license</goal>
-                            </goals>
-                        </execution>
-                    </executions>
-                </plugin>
-            </plugins>
-        </pluginManagement>
-    </build>
 
     <dependencies>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.13.1</version>
-            <scope>test</scope>
-        </dependency>
         <!-- log4j binding to slf4j -->
         <dependency>
             <groupId>org.slf4j</groupId>
@@ -194,11 +89,6 @@
         <!-- Pellet dependencies -->
         <dependency>
             <groupId>com.github.ansell.pellet</groupId>
-            <artifactId>pellet-core</artifactId>
-            <version>2.3.2</version>
-        </dependency>
-        <dependency>
-            <groupId>com.github.ansell.pellet</groupId>
             <artifactId>pellet-jena</artifactId>
             <version>2.3.2</version>
         </dependency>
@@ -231,24 +121,8 @@
         <!-- Jena dependencies -->
         <dependency>
             <groupId>com.hp.hpl.jena</groupId>
-            <artifactId>jena</artifactId>
-            <version>2.6.4</version>
-        </dependency>
-        <dependency>
-            <groupId>com.hp.hpl.jena</groupId>
             <artifactId>tdb</artifactId>
             <version>0.8.10</version>
-        </dependency>
-        <dependency>
-            <groupId>com.hp.hpl.jena</groupId>
-            <artifactId>arq</artifactId>
-            <version>2.8.7</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.codehaus.woodstox</groupId>
-                    <artifactId>wstx-asl</artifactId>
-                </exclusion>
-            </exclusions>
         </dependency>
         <dependency>
             <groupId>com.hp.hpl.jena</groupId>
@@ -319,6 +193,12 @@
             <groupId>edu.stanford.protege</groupId>
             <artifactId>org.protege.editor.owl.codegeneration</artifactId>
             <version>1.0.2</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.testng</groupId>
+                    <artifactId>testng</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <!-- END_Ontology Handlers ! -->
 
@@ -342,56 +222,4 @@
             <version>1.18.12</version>
         </dependency>
     </dependencies>
-
-    <repositories>
-        <repository>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-            <id>ATB-Releases</id>
-            <name>ATB-Releases</name>
-            <url>https://www.atb-bremen.de/artifactory/libs-releases-local</url>
-        </repository>
-        <repository>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-            <id>ATB-Plugin-Releases</id>
-            <name>ATB-Plugin-Releases</name>
-            <url>https://www.atb-bremen.de/artifactory/plugins-releases-local</url>
-        </repository>
-        <repository>
-            <snapshots/>
-            <id>ATB-Snapshots</id>
-            <name>ATB-Snapshots</name>
-            <url>https://www.atb-bremen.de/artifactory/libs-snapshots-local</url>
-        </repository>
-        <repository>
-            <id>maven2</id>
-            <name>maven2</name>
-            <url>https://repo.maven.apache.org/maven2/</url>
-        </repository>
-        <repository>
-            <id>jenabean</id>
-            <name>jenabean</name>
-            <url>http://jenabean.googlecode.com/svn/trunk/repo</url>
-        </repository>
-        <repository>
-            <id>projectlombok.org</id>
-            <url>http://projectlombok.org/mavenrepo</url>
-        </repository>
-    </repositories>
-
-    <distributionManagement>
-        <repository>
-            <id>ATB-Releases</id>
-            <name>ATB-Releases</name>
-            <url>http://www.atb-bremen.de/artifactory/libs-releases-local</url>
-        </repository>
-        <snapshotRepository>
-            <id>ATB-Snapshots</id>
-            <name>ATB-Snapshots</name>
-            <url>http://www.atb-bremen.de/artifactory/libs-snapshots-local</url>
-        </snapshotRepository>
-    </distributionManagement>
 </project>
