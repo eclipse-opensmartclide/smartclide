@@ -319,6 +319,12 @@
             <groupId>edu.stanford.protege</groupId>
             <artifactId>org.protege.editor.owl.codegeneration</artifactId>
             <version>1.0.2</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.testng</groupId>
+                    <artifactId>testng</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <!-- END_Ontology Handlers ! -->
 
