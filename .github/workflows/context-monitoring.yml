@@ -12,7 +12,7 @@ on:
 
 defaults:
   run:
-    working-directory: context-monitoring
+    working-directory: context/context-monitoring
 
 jobs:
   test:
