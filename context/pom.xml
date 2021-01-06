@@ -28,28 +28,6 @@
 
     <repositories>
         <repository>
-            <id>ATB-Ext-Releases</id>
-            <name>ATB-Repos-releases</name>
-            <url>http://www.atb-bremen.de/artifactory/ext-releases-local</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
-        <repository>
-            <id>ATB-Ext-Snapshots</id>
-            <name>ATB-Repos-snapshots</name>
-            <url>http://www.atb-bremen.de/artifactory/ext-snapshots-local</url>
-            <releases>
-                <enabled>false</enabled>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </repository>
-        <repository>
             <id>jenabean</id>
             <name>jenabean</name>
             <url>http://jenabean.googlecode.com/svn/trunk/repo</url>
@@ -94,8 +72,9 @@
                         <!--exclude test-scoped dependencies from the 3rd party license-list-->
                         <excludedScopes>test</excludedScopes>
 
-                        <!--automatically update the copyright if current or inception years change-->
-                        <canUpdateCopyright>true</canUpdateCopyright>
+                        <!--suppress the "No file to scan" warning-->
+                        <ignoreNoFileToScan>true</ignoreNoFileToScan>
+
                         <!--automatically update the project name or description-->
                         <canUpdateDescription>true</canUpdateDescription>
 
