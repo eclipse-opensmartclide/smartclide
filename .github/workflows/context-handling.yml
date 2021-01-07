@@ -1,16 +1,16 @@
 # For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-maven
 
-name: context-core
+name: context-handling
 
 on:
   push:
     paths:
-      - 'context/context-core/**'
-      - '.github/workflows/context-core.yml'
+      - 'context/**'
+      - '.github/workflows/context-handling.yml'
 
 defaults:
   run:
-    working-directory: context/context-core
+    working-directory: context
 
 jobs:
   test:
@@ -30,7 +30,7 @@ jobs:
       uses: actions/cache@v2
       with:
         path: ~/.m2
-        key: ${{ runner.os }}-m2-${{ hashFiles('context/context-core/pom.xml') }}
+        key: ${{ runner.os }}-m2-${{ hashFiles('context/**/pom.xml') }}
         restore-keys: ${{ runner.os }}-m2
 
     - name: Run Tests
