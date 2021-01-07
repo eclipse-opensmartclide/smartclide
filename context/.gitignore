@@ -1,12 +1,12 @@
 # Maven
-/target/
+target/
 
 # IntelliJ IDEA
-/.idea/
-context-core.iml
+.idea/
+*.iml
 
 # Eclipse and VSCode
+.settings/
 .project
 .classpath
 .factorypath
-.settings/
