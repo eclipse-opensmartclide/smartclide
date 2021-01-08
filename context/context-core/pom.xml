@@ -15,6 +15,15 @@
 
     <name>ATB Context Extraction Core Lib</name>
 
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
     <dependencies>
         <!-- log4j binding to slf4j -->
         <dependency>
