@@ -31,17 +31,17 @@ public class TestOntologyExtraction {
 	}
 
 	@Test
-	public void shouldReachInternet() throws IOException {
+/*	public void shouldReachInternet() throws IOException {
 		InetAddress addr = InetAddress.getByName("www.atb-bremen.de");
 		Assert.assertTrue(addr.isReachable(2500));
 		URL url = new URL("http", addr.getHostName(), "/");
 		HttpURLConnection connection = (HttpURLConnection) url.openConnection();
 		Assert.assertNotNull(connection);
 	}
-
+*/
 	@Test
 	@Ignore
-	public void shouldNotReachInternet() throws IOException {
+/*	public void shouldNotReachInternet() throws IOException {
 		System.setProperty("http.proxyHost", "123.123.123.123");
 		System.setProperty("http.proxyPort", "80");
 		System.setProperty("http.proxySet", "true");
@@ -56,5 +56,5 @@ public class TestOntologyExtraction {
 		connection.connect();
 		Assert.assertTrue(connection.usingProxy());
 	}
-
+*/
 }
