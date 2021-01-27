@@ -18,7 +18,6 @@ import de.atb.context.monitoring.config.models.*;
 import de.atb.context.monitoring.config.models.datasources.FilePairSystemDataSource;
 import de.atb.context.monitoring.parser.IndexingParser;
 import de.atb.context.monitoring.analyser.IndexingAnalyser;
-import de.atb.context.monitoring.index.Indexer;
 import de.atb.context.monitoring.models.IMonitoringDataModel;
 import de.atb.context.monitoring.monitors.ThreadedMonitor;
 import de.atb.context.monitoring.parser.file.FilePairParser;
@@ -65,8 +64,8 @@ public class FilePairSystemMonitor extends
 
     public FilePairSystemMonitor(final DataSource dataSource,
                                  final Interpreter fileSet, final Monitor monitor,
-                                 final Indexer indexer, final AmIMonitoringConfiguration amiConfiguration) {
-        super(dataSource, fileSet, monitor, indexer, amiConfiguration);
+                                 final AmIMonitoringConfiguration amiConfiguration) {
+        super(dataSource, fileSet, monitor, amiConfiguration);
         if (dataSource.getType().equals(DataSourceType.FilePairSystem)) {
             this.dataSource = dataSource;
         } else {
@@ -350,11 +349,10 @@ public class FilePairSystemMonitor extends
             if ((this.filePair != null) && (this.filePair.getValue0() != null)
                 && (this.filePair.getValue1() != null)) {
                 IndexingParser<Pair<File, File>> parser = setting.createParser(
-                    this.dataSource, this.indexer, this.amiConfiguration);
+                    this.dataSource, this.amiConfiguration);
                 IndexingAnalyser<IMonitoringDataModel<?, ?>, Pair<File, File>> analyser = (IndexingAnalyser<IMonitoringDataModel<?, ?>, Pair<File, File>>) parser
                     .getAnalyser();
                 if (parser.parse(this.filePair)) {
-                    this.indexer.addDocumentToIndex(parser.getDocument());
                     this.raiseParsedEvent(this.filePair, parser.getDocument());
                     this.raiseAnalysedEvent(analyser.analyse(this.filePair),
                         this.filePair, analyser.getDocument());

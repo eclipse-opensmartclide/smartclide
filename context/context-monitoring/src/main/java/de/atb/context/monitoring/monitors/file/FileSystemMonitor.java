@@ -18,7 +18,6 @@ import de.atb.context.monitoring.analyser.IndexingAnalyser;
 import de.atb.context.monitoring.config.models.*;
 import de.atb.context.monitoring.config.models.datasources.FileSystemDataSource;
 import de.atb.context.monitoring.events.MonitoringProgressListener;
-import de.atb.context.monitoring.index.Indexer;
 import de.atb.context.monitoring.models.IFileSystem;
 import de.atb.context.monitoring.models.IMonitoringDataModel;
 import de.atb.context.monitoring.monitors.ThreadedMonitor;
@@ -26,7 +25,7 @@ import de.atb.context.monitoring.parser.IndexingParser;
 import de.atb.context.services.faults.ContextFault;
 import name.pachler.nio.file.*;
 import name.pachler.nio.file.ext.ExtendedWatchEventKind;
-import org.apache.lucene.document.Document;
+import de.atb.context.monitoring.index.Document;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import de.atb.context.tools.ontology.AmIMonitoringConfiguration;
@@ -64,8 +63,8 @@ public class FileSystemMonitor extends
 
     public FileSystemMonitor(final DataSource dataSource,
                              final Interpreter fileSet, final Monitor monitor,
-                             final Indexer indexer, final AmIMonitoringConfiguration amiConfiguration) {
-        super(dataSource, fileSet, monitor, indexer, amiConfiguration);
+                             final AmIMonitoringConfiguration amiConfiguration) {
+        super(dataSource, fileSet, monitor, amiConfiguration);
         if (dataSource.getType().equals(DataSourceType.FileSystem)
             && (dataSource instanceof FileSystemDataSource)) {
             this.dataSource = dataSource;
@@ -327,11 +326,10 @@ public class FileSystemMonitor extends
             File file = new File(fileName);
             this.logger.debug("Handling file " + fileName + "...");
             IndexingParser<File> parser = setting.createFileParser(
-                this.dataSource, this.indexer, this.amiConfiguration);
+                this.dataSource, this.amiConfiguration);
             IndexingAnalyser<IMonitoringDataModel<?, ?>, File> analyser = (IndexingAnalyser<IMonitoringDataModel<?, ?>, File>) parser
                 .getAnalyser();
             if (parser.parse(file)) {
-                this.indexer.addDocumentToIndex(parser.getDocument());
                 this.raiseParsedEvent(file, parser.getDocument());
                 List<IMonitoringDataModel<?, ?>> analysedModels = analyser
                     .analyse(file);

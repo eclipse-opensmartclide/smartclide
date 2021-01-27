@@ -17,9 +17,8 @@ package de.atb.context.monitoring.analyser;
 
 import de.atb.context.monitoring.config.models.DataSource;
 import de.atb.context.monitoring.config.models.InterpreterConfiguration;
-import de.atb.context.monitoring.index.Indexer;
+import de.atb.context.monitoring.index.Document;
 import de.atb.context.monitoring.models.IMonitoringDataModel;
-import org.apache.lucene.document.Document;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import de.atb.context.tools.ontology.AmIMonitoringConfiguration;
@@ -45,10 +44,10 @@ public abstract class IndexingAnalyser<OutputType extends IMonitoringDataModel<?
     private final Logger logger = LoggerFactory.getLogger(IndexingAnalyser.class);
 
     public IndexingAnalyser() {
-        this(null, null, null, null, null);
+        this(null, null, null, null);
     }
 
-    public IndexingAnalyser(final DataSource dataSource, final InterpreterConfiguration interpreterConfiguration, final Indexer indexer, final Document document, final AmIMonitoringConfiguration amiConfiguration) {
+    public IndexingAnalyser(final DataSource dataSource, final InterpreterConfiguration interpreterConfiguration, final Document document, final AmIMonitoringConfiguration amiConfiguration) {
         this.dataSource = dataSource;
         this.interpreterConfiguration = interpreterConfiguration;
         this.document = document;

@@ -20,12 +20,11 @@ import de.atb.context.monitoring.config.models.*;
 import de.atb.context.monitoring.events.MonitoringProgressListener;
 import de.atb.context.monitoring.parser.webservice.WebServiceParser;
 import de.atb.context.monitoring.config.models.datasources.WebServiceDataSource;
-import de.atb.context.monitoring.index.Indexer;
 import de.atb.context.monitoring.models.IMonitoringDataModel;
 import de.atb.context.monitoring.models.IWebService;
 import de.atb.context.monitoring.monitors.ThreadedMonitor;
 import de.atb.context.services.faults.ContextFault;
-import org.apache.lucene.document.Document;
+import de.atb.context.monitoring.index.Document;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import de.atb.context.tools.ontology.AmIMonitoringConfiguration;
@@ -49,8 +48,8 @@ public class WebServiceMonitor extends ThreadedMonitor<IWebService, IMonitoringD
 
     private final Logger logger = LoggerFactory.getLogger(WebServiceMonitor.class);
 
-    public WebServiceMonitor(final DataSource dataSource, final Interpreter interpreter, final Monitor monitor, final Indexer indexer, final AmIMonitoringConfiguration amiConfiguration) {
-        super(dataSource, interpreter, monitor, indexer, amiConfiguration);
+    public WebServiceMonitor(final DataSource dataSource, final Interpreter interpreter, final Monitor monitor, final AmIMonitoringConfiguration amiConfiguration) {
+        super(dataSource, interpreter, monitor, amiConfiguration);
         if (dataSource.getType().equals(DataSourceType.WebService) && (dataSource instanceof WebServiceDataSource)) {
             this.dataSource = (WebServiceDataSource) dataSource;
         } else {
@@ -144,10 +143,9 @@ public class WebServiceMonitor extends ThreadedMonitor<IWebService, IMonitoringD
             this.logger.debug("Handling URI " + this.dataSource.getUri() + "...");
             if ((this.dataSource.getUri() != null)) {
                 WebServiceParser parser = setting.createParser(
-                    this.dataSource, this.indexer, this.amiConfiguration);
+                    this.dataSource, this.amiConfiguration);
                 WebServiceAnalyser analyser = (WebServiceAnalyser) parser.getAnalyser();
                 if (parser.parse(this.dataSource.toWebService())) {
-                    this.indexer.addDocumentToIndex(parser.getDocument());
                     this.raiseParsedEvent(this.dataSource.toWebService(), parser.getDocument());
                     this.raiseAnalysedEvent(analyser.analyse(this.dataSource.toWebService()),
                         this.dataSource.toWebService(), analyser.getDocument());

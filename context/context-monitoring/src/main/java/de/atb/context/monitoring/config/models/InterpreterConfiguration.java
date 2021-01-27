@@ -24,14 +24,13 @@ import de.atb.context.monitoring.parser.IndexingParser;
 import de.atb.context.monitoring.parser.database.DatabaseParser;
 import de.atb.context.monitoring.parser.file.FileParser;
 import de.atb.context.monitoring.parser.webservice.WebServiceParser;
-import org.apache.lucene.document.Document;
+import de.atb.context.monitoring.index.Document;
 import org.simpleframework.xml.Attribute;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import de.atb.context.tools.ontology.AmIMonitoringConfiguration;
 import de.atb.context.monitoring.analyser.IndexingAnalyser;
-import de.atb.context.monitoring.index.Indexer;
 import de.atb.context.monitoring.models.IMonitoringDataModel;
 
 /**
@@ -149,41 +148,41 @@ public class InterpreterConfiguration {
     }
 
     public final FileAnalyser<? extends IMonitoringDataModel<?, ?>> createFileAnalyser(
-        final DataSource ds, final Indexer indexer,
+        final DataSource ds,
         final Document document, final AmIMonitoringConfiguration amiConfiguration) {
-        return this.createAnalyser(ds, indexer, document, amiConfiguration);
+        return this.createAnalyser(ds, document, amiConfiguration);
     }
 
     public final WebServiceAnalyser<? extends IMonitoringDataModel<?, ?>> createWebServiceAnalyser(
-        final DataSource ds, final Indexer indexer,
+        final DataSource ds,
         final Document document, final AmIMonitoringConfiguration amiConfiguration) {
-        return this.createAnalyser(ds, indexer, document, amiConfiguration);
+        return this.createAnalyser(ds, document, amiConfiguration);
     }
 
     public final DatabaseAnalyser<? extends IMonitoringDataModel<?, ?>> createDatabaseAnalyser(
-        final DataSource ds, final Indexer indexer,
+        final DataSource ds,
         final Document document, final AmIMonitoringConfiguration amiConfiguration) {
-        return this.createAnalyser(ds, indexer, document, amiConfiguration);
+        return this.createAnalyser(ds, document, amiConfiguration);
     }
 
     public final FileParser createFileParser(final DataSource ds,
-                                             final Indexer indexer, final AmIMonitoringConfiguration amiCOnfiguration) {
-        return this.createParser(ds, indexer, amiCOnfiguration);
+                                             final AmIMonitoringConfiguration amiCOnfiguration) {
+        return this.createParser(ds, amiCOnfiguration);
     }
 
     public final WebServiceParser createWebServiceParser(final DataSource ds,
-                                                         final Indexer indexer, final AmIMonitoringConfiguration amiCOnfiguration) {
-        return this.createParser(ds, indexer, amiCOnfiguration);
+                                                         final AmIMonitoringConfiguration amiCOnfiguration) {
+        return this.createParser(ds, amiCOnfiguration);
     }
 
     public final DatabaseParser createDatabaseParser(final DataSource ds,
-                                                     final Indexer indexer, final AmIMonitoringConfiguration amiCOnfiguration) {
-        return this.createParser(ds, indexer, amiCOnfiguration);
+                                                     final AmIMonitoringConfiguration amiCOnfiguration) {
+        return this.createParser(ds, amiCOnfiguration);
     }
 
     @SuppressWarnings("unchecked")
     public final <T extends IndexingAnalyser<? extends IMonitoringDataModel<?, ?>, ?>> T createAnalyser(
-        final DataSource ds, final Indexer indexer,
+        final DataSource ds,
         final Document document, final AmIMonitoringConfiguration amiConfiguration) {
         if ((this.analyser == null) || (this.analyser.trim().length() == 0)) {
             return null;
@@ -197,10 +196,10 @@ public class InterpreterConfiguration {
                 && !Modifier.isStatic(modifier)) {
                 Constructor<?> constructor = factory
                     .getConstructor(DataSource.class,
-                        InterpreterConfiguration.class, Indexer.class,
+                        InterpreterConfiguration.class,
                         Document.class, AmIMonitoringConfiguration.class);
                 return (T) constructor.newInstance(new Object[]{ds, this,
-                    indexer, document, amiConfiguration});
+                    document, amiConfiguration});
             }
         } catch (Throwable e) {
             logger.error("Could not create an instance for " + this.analyser, e);
@@ -210,7 +209,7 @@ public class InterpreterConfiguration {
 
     @SuppressWarnings("unchecked")
     public final <T extends IndexingParser<?>> T createParser(
-        final DataSource ds, final Indexer indexer,
+        final DataSource ds,
         final AmIMonitoringConfiguration amiCOnfiguration) {
         if ((this.parser == null) || (this.parser.trim().length() == 0)) {
             return null;
@@ -224,10 +223,10 @@ public class InterpreterConfiguration {
                 && !Modifier.isStatic(modifier)) {
                 Constructor<?> constructor = factory
                     .getConstructor(DataSource.class,
-                        InterpreterConfiguration.class, Indexer.class,
+                        InterpreterConfiguration.class,
                         AmIMonitoringConfiguration.class);
                 return (T) constructor.newInstance(new Object[]{ds, this,
-                    indexer, amiCOnfiguration});
+                    amiCOnfiguration});
             }
         } catch (Throwable e) {
             logger.error("Could not create an instance for " + this.parser, e);

@@ -17,13 +17,11 @@ package de.atb.context.monitoring.analyser.webservice;
 
 import java.util.List;
 
-import org.apache.lucene.document.Document;
-
+import de.atb.context.monitoring.index.Document;
 import de.atb.context.tools.ontology.AmIMonitoringConfiguration;
 import de.atb.context.monitoring.analyser.IndexingAnalyser;
 import de.atb.context.monitoring.config.models.DataSource;
 import de.atb.context.monitoring.config.models.InterpreterConfiguration;
-import de.atb.context.monitoring.index.Indexer;
 import de.atb.context.monitoring.models.IMonitoringDataModel;
 import de.atb.context.monitoring.models.IWebService;
 
@@ -39,8 +37,8 @@ public abstract class WebServiceAnalyser<OutputType extends IMonitoringDataModel
         super();
     }
 
-    public WebServiceAnalyser(final DataSource dataSource, final InterpreterConfiguration interpreterConfiguration, final Indexer indexer, final Document document, final AmIMonitoringConfiguration amiConfiguration) {
-        super(dataSource, interpreterConfiguration, indexer, document, amiConfiguration);
+    public WebServiceAnalyser(final DataSource dataSource, final InterpreterConfiguration interpreterConfiguration, final Document document, final AmIMonitoringConfiguration amiConfiguration) {
+        super(dataSource, interpreterConfiguration, document, amiConfiguration);
     }
 
     /*
@@ -48,7 +46,7 @@ public abstract class WebServiceAnalyser<OutputType extends IMonitoringDataModel
      *
      * @see
      * IndexingAnalyser#analyseObject
-     * (java.lang.Object, org.apache.lucene.document.Document)
+     * (java.lang.Object, Document)
      */
     @Override
     public final List<OutputType> analyseObject(final IWebService service, final Document document) {

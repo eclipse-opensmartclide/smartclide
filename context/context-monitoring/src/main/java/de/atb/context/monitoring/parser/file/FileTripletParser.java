@@ -24,16 +24,12 @@ import java.util.List;
 import de.atb.context.monitoring.analyser.IndexingAnalyser;
 import de.atb.context.monitoring.config.models.DataSource;
 import de.atb.context.monitoring.config.models.InterpreterConfiguration;
-import de.atb.context.monitoring.index.Indexer;
 import de.atb.context.monitoring.models.IMonitoringDataModel;
-import de.atb.context.monitoring.parser.IndexedFields;
 import de.atb.context.monitoring.parser.IndexingParser;
 import org.apache.commons.io.FilenameUtils;
-import org.apache.lucene.document.DateTools;
 import org.javatuples.Triplet;
 
 import de.atb.context.tools.ontology.AmIMonitoringConfiguration;
-import de.atb.context.common.util.Hashing;
 
 /**
  * FileTripletParser
@@ -49,10 +45,10 @@ public abstract class FileTripletParser extends
 
     public FileTripletParser(final DataSource dataSource,
                              final InterpreterConfiguration interpreterConfiguration,
-                             final Indexer indexer, final AmIMonitoringConfiguration amiConfiguration) {
-        super(dataSource, interpreterConfiguration, indexer, amiConfiguration);
+                             final AmIMonitoringConfiguration amiConfiguration) {
+        super(dataSource, interpreterConfiguration, amiConfiguration);
         this.fileTripletAnalyser = this.interpreterConfiguration
-            .createAnalyser(dataSource, indexer, this.document, amiConfiguration);
+            .createAnalyser(dataSource, this.document, amiConfiguration);
     }
 
     /*
@@ -73,16 +69,13 @@ public abstract class FileTripletParser extends
         // like indexing file creation, modification etc.
         String uri = fileOne.getAbsolutePath();
 
-        if (this.isIndexUpToDate(uri, fileOne.lastModified())) {
-            return false;
-        }
         String filepath = fileOne.getAbsolutePath()
             .substring(
                 0,
                 fileOne.getAbsolutePath().length()
                     - fileOne.getName().length());
 
-        this.document.add(IndexedFields.createField(IndexedFields.Uri, uri));
+        /* TODO this.document.add(IndexedFields.createField(IndexedFields.Uri, uri));
         this.document
             .add(IndexedFields.createField(IndexedFileFields.FileName, fileOne.getName()));
         this.document.add(IndexedFields.createField(IndexedFileFields.FilePath, filepath));
@@ -98,7 +91,7 @@ public abstract class FileTripletParser extends
         this.document.add(IndexedFields.createField(IndexedFields.MonitoredAt,
             DateTools.timeToString(new Date().getTime(),
                 DateTools.Resolution.SECOND)));
-
+        */
         return parseObject(triplet);
     }
 

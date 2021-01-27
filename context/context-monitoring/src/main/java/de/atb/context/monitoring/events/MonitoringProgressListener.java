@@ -17,7 +17,7 @@ package de.atb.context.monitoring.events;
 
 import java.util.List;
 
-import org.apache.lucene.document.Document;
+import de.atb.context.monitoring.index.Document;
 
 /**
  * MonitoringProgressListener

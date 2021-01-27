@@ -21,7 +21,6 @@ import de.atb.context.monitoring.config.models.DataSource;
 import de.atb.context.monitoring.config.models.Index;
 import de.atb.context.monitoring.config.models.Interpreter;
 import de.atb.context.monitoring.config.models.Monitor;
-import de.atb.context.monitoring.index.Indexer;
 import de.atb.context.monitoring.models.IMonitoringDataModel;
 import de.atb.context.monitoring.monitors.ThreadedMonitor;
 import de.atb.context.services.faults.ContextFault;
@@ -96,7 +95,7 @@ public final class AmIMonitoringService extends DeployableService implements IAm
                 ThreadedMonitor<?, ?> tmonitor;
                 try {
                     tmonitor = MetaMonitor.createThreadedMonitor(monitor, ds,
-                        interpreter, new Indexer(index),
+                        interpreter,
                         this.amiConfiguration, repos);
                     this.monitors.add(tmonitor);
                 } catch (ConfigurationException e) {

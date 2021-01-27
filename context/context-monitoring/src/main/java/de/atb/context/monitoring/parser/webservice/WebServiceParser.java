@@ -14,24 +14,17 @@ package de.atb.context.monitoring.parser.webservice;
  * #L%
  */
 
-import static de.atb.context.monitoring.parser.IndexedFields.MonitoredAt;
-import static de.atb.context.monitoring.parser.IndexedFields.Uri;
-
 import java.util.Date;
 
 import de.atb.context.monitoring.parser.IndexingParser;
-import de.atb.context.monitoring.parser.file.IndexedFileFields;
-import org.apache.lucene.document.DateTools;
-import org.apache.lucene.document.Document;
+import de.atb.context.monitoring.index.Document;
 
 import de.atb.context.tools.ontology.AmIMonitoringConfiguration;
 import de.atb.context.monitoring.analyser.IndexingAnalyser;
 import de.atb.context.monitoring.config.models.DataSource;
 import de.atb.context.monitoring.config.models.InterpreterConfiguration;
-import de.atb.context.monitoring.index.Indexer;
 import de.atb.context.monitoring.models.IMonitoringDataModel;
 import de.atb.context.monitoring.models.IWebService;
-import de.atb.context.monitoring.parser.IndexedFields;
 
 /**
  * WebServiceParser
@@ -46,10 +39,10 @@ public abstract class WebServiceParser extends IndexingParser<IWebService> {
 
     public WebServiceParser(final DataSource dataSource,
                             final InterpreterConfiguration interpreterConfiguration,
-                            final Indexer indexer, final AmIMonitoringConfiguration amiConfiguration) {
-        super(dataSource, interpreterConfiguration, indexer, amiConfiguration);
+                            final AmIMonitoringConfiguration amiConfiguration) {
+        super(dataSource, interpreterConfiguration, amiConfiguration);
         this.serviceAnalyser = this.interpreterConfiguration.createAnalyser(
-            dataSource, indexer, this.document, amiConfiguration);
+            dataSource, this.document, amiConfiguration);
     }
 
     @Override
@@ -57,14 +50,14 @@ public abstract class WebServiceParser extends IndexingParser<IWebService> {
         // some generic webservice handling stuff could be done here
         // like indexing webservice status, modification etc.
 
-        this.document.add(IndexedFields.createField(Uri,
+        /* TODO this.document.add(IndexedFields.createField(Uri,
             String.valueOf(object.getURI())));
         this.document.add(IndexedFields.createField(IndexedFileFields.FilePath,
             String.valueOf(object.getURI())));
         this.document.add(IndexedFields.createField(MonitoredAt,
             DateTools.timeToString(new Date().getTime(),
                 DateTools.Resolution.SECOND)));
-
+        */
         // TODO add some webserivce-specific fields to the document's index
         return parseObject(object, this.document);
     }
