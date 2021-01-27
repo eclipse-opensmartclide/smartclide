@@ -201,6 +201,7 @@
     <modules>
         <module>context-core</module>
         <module>context-monitoring</module>
+        <module>context-extraction</module>
     </modules>
 
 </project>
