@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config xmlns="http://www.atb-bremen.de"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.atb-bremen.de monitoring-config.xsd">
+
+	<indexes>
+		<index id="index-desma" location="indexes/desma"></index>
+	</indexes>
+
+	<datasources>
+		<datasource id="datasource-desma" type="file"
+			monitor="FileSystemMonitor"
+			uri="target/test-classes/filepairmonitor"
+			options="hiddenfiles=true"
+			class="FileSystemDataSource" />
+	</datasources>
+
+	<interpreters>
+		<interpreter id="interpreter-desma">
+			<configuration type="vlv"
+				parser="de.atb.core.monitoring.parser.file.VlvParser"
+				analyser="de.atb.core.monitoring.analyser.file.VlvAnalyser" />
+			<configuration type="trf"
+				parser="de.atb.core.monitoring.parser.file.TrfParser"
+				analyser="de.atb.core.monitoring.analyser.file.TrfAnalyser" />
+		</interpreter>
+	</interpreters>
+	
+	<monitors>
+		<monitor id="monitor-desma" datasource="datasource-desma" interpreter="interpreter-desma"
+			index="index-desma" />
+	</monitors>
+	
+</config>

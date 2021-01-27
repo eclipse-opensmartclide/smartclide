@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.atb-bremen.de" >
+  <xs:element name="config">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="indexes"/>
+        <xs:element ref="datasources"/>
+        <xs:element ref="interpreters"/>
+        <xs:element ref="monitors"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="indexes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" minOccurs="1" ref="index"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="index">
+    <xs:complexType>
+      <xs:attribute name="id" use="required" type="xs:ID"/>
+      <xs:attribute name="location" use="required" type="xs:anyURI"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="monitors">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" minOccurs="1" ref="monitor"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="monitor">
+    <xs:complexType>
+      <xs:attribute name="id" use="required" type="xs:ID"/>
+      <xs:attribute name="datasource" use="required" type="xs:IDREF"/>
+      <xs:attribute name="index" use="required" type="xs:IDREF"/>
+      <xs:attribute name="interpreter" use="required" type="xs:IDREF"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="datasources">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" minOccurs="1" ref="datasource"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="datasource">
+    <xs:complexType>
+      <xs:attribute name="class" use="required"/>
+      <xs:attribute name="id" use="required" type="xs:ID"/>
+      <xs:attribute name="monitor" use="required"/>
+      <xs:attribute name="options" use="required"/>
+      <xs:attribute name="type" use="required" type="xs:NCName"/>
+      <xs:attribute name="uri" use="required" type="xs:anyURI"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="interpreters">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" minOccurs="1" ref="interpreter"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="interpreter">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" minOccurs="1" ref="configuration"/>
+      </xs:sequence>
+      <xs:attribute name="id" use="required" type="xs:ID"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="configuration">
+    <xs:complexType>
+      <xs:attribute name="analyser" use="required"/>
+      <xs:attribute name="parser" use="required"/>
+      <xs:attribute name="type" use="required"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

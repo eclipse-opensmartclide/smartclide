@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config xmlns="http://www.atb-bremen.de" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<services>
+	<service id="ContextExtractionService">
+		<host>localhost</host>
+		<location>http://localhost:19001</location>
+		<name>ContextExtractionService</name>
+		<server>de.atb.context.services.ContextExtractionService</server>
+		<proxy>de.atb.context.services.IContextExtractionService</proxy>
+	</service>
+	<service id="ContextRepositoryService">
+		<host>localhost</host>
+		<location>http://localhost:19002</location>
+		<name>ContextRepositoryService</name>
+		<server>de.atb.context.services.ContextRepositoryService</server>
+		<proxy>de.atb.context.services.IContextRepositoryService</proxy>
+	</service>
+</services>
+</config>
