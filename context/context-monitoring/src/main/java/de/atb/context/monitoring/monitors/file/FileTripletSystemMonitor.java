@@ -17,7 +17,6 @@ package de.atb.context.monitoring.monitors.file;
 import de.atb.context.monitoring.analyser.IndexingAnalyser;
 import de.atb.context.monitoring.config.models.*;
 import de.atb.context.monitoring.config.models.datasources.FileTripletSystemDataSource;
-import de.atb.context.monitoring.index.Indexer;
 import de.atb.context.monitoring.models.IMonitoringDataModel;
 import de.atb.context.monitoring.parser.IndexingParser;
 import de.atb.context.monitoring.parser.file.FileTripletParser;
@@ -66,8 +65,8 @@ public class FileTripletSystemMonitor extends
 
     public FileTripletSystemMonitor(final DataSource dataSource,
                                     final Interpreter fileSet, final Monitor monitor,
-                                    final Indexer indexer, final AmIMonitoringConfiguration amiConfiguration) {
-        super(dataSource, fileSet, monitor, indexer, amiConfiguration);
+                                    final AmIMonitoringConfiguration amiConfiguration) {
+        super(dataSource, fileSet, monitor, amiConfiguration);
         if (dataSource.getType().equals(DataSourceType.FilePairSystem)) {
             this.dataSource = dataSource;
         } else {
@@ -362,12 +361,11 @@ public class FileTripletSystemMonitor extends
             if ((this.filePair != null) && (this.filePair.getValue0() != null)
                 && (this.filePair.getValue1() != null)) {
                 IndexingParser<Triplet<File, File, File>> parser = setting
-                    .createParser(this.dataSource, this.indexer,
+                    .createParser(this.dataSource,
                         this.amiConfiguration);
                 IndexingAnalyser<IMonitoringDataModel<?, ?>, Triplet<File, File, File>> analyser = (IndexingAnalyser<IMonitoringDataModel<?, ?>, Triplet<File, File, File>>) parser
                     .getAnalyser();
                 if (parser.parse(this.filePair)) {
-                    this.indexer.addDocumentToIndex(parser.getDocument());
                     this.raiseParsedEvent(this.filePair, parser.getDocument());
                     this.raiseAnalysedEvent(analyser.analyse(this.filePair),
                         this.filePair, analyser.getDocument());

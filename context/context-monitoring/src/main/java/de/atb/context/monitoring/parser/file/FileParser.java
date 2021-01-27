@@ -14,25 +14,17 @@ package de.atb.context.monitoring.parser.file;
  * #L%
  */
 
-import static de.atb.context.monitoring.parser.IndexedFields.LastModified;
-import static de.atb.context.monitoring.parser.IndexedFields.MonitoredAt;
-import static de.atb.context.monitoring.parser.IndexedFields.Uri;
-
 import java.io.File;
 import java.util.Date;
 
 import de.atb.context.monitoring.analyser.file.FileAnalyser;
 import de.atb.context.monitoring.parser.IndexingParser;
-import org.apache.lucene.document.DateTools;
 
 import de.atb.context.tools.ontology.AmIMonitoringConfiguration;
-import de.atb.context.common.util.Hashing;
 import de.atb.context.monitoring.analyser.IndexingAnalyser;
 import de.atb.context.monitoring.config.models.DataSource;
 import de.atb.context.monitoring.config.models.InterpreterConfiguration;
-import de.atb.context.monitoring.index.Indexer;
 import de.atb.context.monitoring.models.IMonitoringDataModel;
-import de.atb.context.monitoring.parser.IndexedFields;
 
 /**
  * A FileParser parses a certain type of FileSystem and returns the model or
@@ -49,10 +41,10 @@ public abstract class FileParser extends IndexingParser<File> {
 
     public FileParser(final DataSource dataSource,
                       final InterpreterConfiguration interpreterConfiguration,
-                      final Indexer indexer, final AmIMonitoringConfiguration amiConfiguration) {
-        super(dataSource, interpreterConfiguration, indexer, amiConfiguration);
+                      final AmIMonitoringConfiguration amiConfiguration) {
+        super(dataSource, interpreterConfiguration, amiConfiguration);
         this.fileAnalyser = this.interpreterConfiguration.createFileAnalyser(
-            dataSource, indexer, this.document, amiConfiguration);
+            dataSource, this.document, amiConfiguration);
     }
 
     /*
@@ -67,14 +59,10 @@ public abstract class FileParser extends IndexingParser<File> {
         // like indexing file creation, modification etc.
         String uri = file.getAbsolutePath();
 
-        if (this.isIndexUpToDate(uri, file.lastModified())) {
-            return false;
-        }
-
         String filepath = file.getAbsolutePath().substring(0,
             file.getAbsolutePath().length() - file.getName().length());
 
-        this.document.add(IndexedFields.createField(Uri, uri));
+        /* TODO this.document.add(IndexedFields.createField(Uri, uri));
         this.document.add(IndexedFields.createField(IndexedFileFields.FileName, file.getName()));
         this.document.add(IndexedFields.createField(IndexedFileFields.FilePath, filepath));
         this.document.add(IndexedFields.createField(IndexedFileFields.Hidden,
@@ -90,7 +78,7 @@ public abstract class FileParser extends IndexingParser<File> {
         this.document.add(IndexedFields.createField(MonitoredAt,
             DateTools.timeToString(new Date().getTime(),
                 DateTools.Resolution.SECOND)));
-
+        */
         return parseObject(file);
     }
 

@@ -19,9 +19,8 @@ import java.io.File;
 import java.util.List;
 
 import de.atb.context.monitoring.config.models.InterpreterConfiguration;
-import de.atb.context.monitoring.index.Indexer;
 import de.atb.context.monitoring.models.IMonitoringDataModel;
-import org.apache.lucene.document.Document;
+import de.atb.context.monitoring.index.Document;
 import org.javatuples.Pair;
 
 import de.atb.context.tools.ontology.AmIMonitoringConfiguration;
@@ -37,8 +36,8 @@ import de.atb.context.monitoring.config.models.DataSource;
 public abstract class FilePairAnalyser<OutputType extends IMonitoringDataModel<?, ?>> extends
     IndexingAnalyser<OutputType, Pair<File, File>> {
 
-    public FilePairAnalyser(final DataSource dataSource, final InterpreterConfiguration interpreterConfiguration, final Indexer indexer, final Document document, final AmIMonitoringConfiguration amiConfiguration) {
-        super(dataSource, interpreterConfiguration, indexer, document, amiConfiguration);
+    public FilePairAnalyser(final DataSource dataSource, final InterpreterConfiguration interpreterConfiguration, final Document document, final AmIMonitoringConfiguration amiConfiguration) {
+        super(dataSource, interpreterConfiguration, document, amiConfiguration);
     }
 
     /*
@@ -46,7 +45,7 @@ public abstract class FilePairAnalyser<OutputType extends IMonitoringDataModel<?
      *
      * @see
      * IndexingAnalyser#analyseObject
-     * (java.lang.Object, org.apache.lucene.document.Document)
+     * (java.lang.Object, Document)
      */
     @Override
     public final List<OutputType> analyseObject(final Pair<File, File> filePair, final Document document) {

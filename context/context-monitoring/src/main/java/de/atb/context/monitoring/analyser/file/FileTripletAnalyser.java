@@ -18,14 +18,13 @@ package de.atb.context.monitoring.analyser.file;
 import java.io.File;
 import java.util.List;
 
-import org.apache.lucene.document.Document;
+import de.atb.context.monitoring.index.Document;
 import org.javatuples.Triplet;
 
 import de.atb.context.tools.ontology.AmIMonitoringConfiguration;
 import de.atb.context.monitoring.analyser.IndexingAnalyser;
 import de.atb.context.monitoring.config.models.DataSource;
 import de.atb.context.monitoring.config.models.InterpreterConfiguration;
-import de.atb.context.monitoring.index.Indexer;
 import de.atb.context.monitoring.models.IMonitoringDataModel;
 
 /**
@@ -37,8 +36,8 @@ import de.atb.context.monitoring.models.IMonitoringDataModel;
 public abstract class FileTripletAnalyser<OutputType extends IMonitoringDataModel<?, ?>> extends
     IndexingAnalyser<OutputType, Triplet<File, File, File>> {
 
-    public FileTripletAnalyser(final DataSource dataSource, final InterpreterConfiguration interpreterConfiguration, final Indexer indexer, final Document document, final AmIMonitoringConfiguration amiConfiguration) {
-        super(dataSource, interpreterConfiguration, indexer, document, amiConfiguration);
+    public FileTripletAnalyser(final DataSource dataSource, final InterpreterConfiguration interpreterConfiguration, final Document document, final AmIMonitoringConfiguration amiConfiguration) {
+        super(dataSource, interpreterConfiguration, document, amiConfiguration);
     }
 
     /*
@@ -46,7 +45,7 @@ public abstract class FileTripletAnalyser<OutputType extends IMonitoringDataMode
      *
      * @see
      * IndexingAnalyser#analyseObject
-     * (java.lang.Object, org.apache.lucene.document.Document)
+     * (java.lang.Object, Document)
      */
     @Override
     public final List<OutputType> analyseObject(final Triplet<File, File, File> fileTriplet, final Document document) {

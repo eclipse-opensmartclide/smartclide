@@ -19,13 +19,12 @@ import de.atb.context.monitoring.analyser.database.DatabaseAnalyser;
 import de.atb.context.monitoring.config.models.*;
 import de.atb.context.monitoring.config.models.datasources.DatabaseDataSource;
 import de.atb.context.monitoring.events.MonitoringProgressListener;
-import de.atb.context.monitoring.index.Indexer;
 import de.atb.context.monitoring.models.IDatabase;
 import de.atb.context.monitoring.models.IMonitoringDataModel;
 import de.atb.context.monitoring.monitors.ThreadedMonitor;
 import de.atb.context.monitoring.parser.database.DatabaseParser;
 import de.atb.context.services.faults.ContextFault;
-import org.apache.lucene.document.Document;
+import de.atb.context.monitoring.index.Document;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import de.atb.context.tools.ontology.AmIMonitoringConfiguration;
@@ -49,8 +48,8 @@ public class DatabaseMonitor extends ThreadedMonitor<IDatabase, IMonitoringDataM
 
     private final Logger logger = LoggerFactory.getLogger(DatabaseMonitor.class);
 
-    public DatabaseMonitor(final DataSource dataSource, final Interpreter interpreter, final Monitor monitor, final Indexer indexer, final AmIMonitoringConfiguration amiConfiguration) {
-        super(dataSource, interpreter, monitor, indexer, amiConfiguration);
+    public DatabaseMonitor(final DataSource dataSource, final Interpreter interpreter, final Monitor monitor, final AmIMonitoringConfiguration amiConfiguration) {
+        super(dataSource, interpreter, monitor, amiConfiguration);
         if (dataSource.getType().equals(DataSourceType.Database) && (dataSource instanceof DatabaseDataSource)) {
             this.dataSource = (DatabaseDataSource) dataSource;
         } else {
@@ -134,10 +133,9 @@ public class DatabaseMonitor extends ThreadedMonitor<IDatabase, IMonitoringDataM
             this.logger.debug("Handling URI " + this.dataSource.getUri() + "...");
             if ((this.dataSource.getUri() != null)) {
                 DatabaseParser parser = setting.createParser(
-                    this.dataSource, this.indexer, this.amiConfiguration);
+                    this.dataSource, this.amiConfiguration);
                 DatabaseAnalyser analyser = (DatabaseAnalyser) parser.getAnalyser();
                 if (parser.parse(this.dataSource.toDatabase())) {
-                    this.indexer.addDocumentToIndex(parser.getDocument());
                     this.raiseParsedEvent(this.dataSource.toDatabase(), parser.getDocument());
                     this.raiseAnalysedEvent(analyser.analyse(this.dataSource.toDatabase()),
                         this.dataSource.toDatabase(), analyser.getDocument());

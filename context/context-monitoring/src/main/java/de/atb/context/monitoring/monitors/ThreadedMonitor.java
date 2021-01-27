@@ -16,10 +16,9 @@ package de.atb.context.monitoring.monitors;
 
 import de.atb.context.monitoring.config.models.*;
 import de.atb.context.monitoring.events.MonitoringProgressListener;
-import de.atb.context.monitoring.index.Indexer;
 import de.atb.context.monitoring.parser.IndexingParser;
 import de.atb.context.services.wrapper.AmIMonitoringDataRepositoryServiceWrapper;
-import org.apache.lucene.document.Document;
+import de.atb.context.monitoring.index.Document;
 import de.atb.context.tools.ontology.AmIMonitoringConfiguration;
 
 import java.util.ArrayList;
@@ -35,7 +34,6 @@ import java.util.concurrent.TimeUnit;
  */
 public abstract class ThreadedMonitor<P, A> implements Runnable {
     protected boolean running = false;
-    protected Indexer indexer;
     protected DataSource dataSource;
     protected Interpreter interpreter;
     protected InterpreterConfiguration interpreterConfiguration;
@@ -48,11 +46,10 @@ public abstract class ThreadedMonitor<P, A> implements Runnable {
 
     protected ThreadedMonitor(final DataSource dataSource,
                               final Interpreter fileSet, final Monitor monitor,
-                              final Indexer indexer, final AmIMonitoringConfiguration configuration) {
+                              final AmIMonitoringConfiguration configuration) {
         this.dataSource = dataSource;
         this.interpreter = fileSet;
         this.monitor = monitor;
-        this.indexer = indexer;
         this.amiConfiguration = configuration;
     }
 
@@ -131,33 +128,6 @@ public abstract class ThreadedMonitor<P, A> implements Runnable {
     }
 
     /**
-     * Adds the given Document to the Index underlying this indexer and informs
-     * potential listeners about the indexed document.
-     * <p>
-     * Please note that calling this method will not check if the given document
-     * already exists in the index. Therefore checking has to be implemented by
-     * other classes (see {@link IndexingParser#isIndexUpToDate(String, long)}.
-     *
-     * @param document the Document to be indexed.
-     */
-    protected final void addDocumentToIndex(final Document document) {
-        this.indexer.addDocumentToIndex(document);
-        raiseIndexedEvent(document);
-    }
-
-    /**
-     * Notifies all registered MonitoringProgressListeners about the document
-     * that was indexed recently.
-     *
-     * @param document the document that just has been indexed.
-     */
-    protected final void raiseIndexedEvent(final Document document) {
-        for (MonitoringProgressListener<P, A> mpl : this.progressListeners) {
-            mpl.documentIndexed(this.indexer.getIndexId(), document);
-        }
-    }
-
-    /**
      * Notifies all registered MonitoringProgressListeners about the document
      * that and the underlying resource that was parsed recently.
      *
@@ -183,28 +153,6 @@ public abstract class ThreadedMonitor<P, A> implements Runnable {
                                             final P parsed, final Document document) {
         for (MonitoringProgressListener<P, A> mpl : this.progressListeners) {
             mpl.documentAnalysed(analysed, parsed, document);
-        }
-    }
-
-    /**
-     * Gets the INDEXER associated with this ThreadedMonitor.
-     *
-     * @return the INDEXER associated with this ThreadedMonitor.
-     */
-    public final Indexer getIndexer() {
-        return this.indexer;
-    }
-
-    /**
-     * Gets the Index associated with this ThreadedMonitor.
-     *
-     * @return the Index associated with this ThreadedMonitor.
-     */
-    public final Index getIndex() {
-        if (this.indexer != null) {
-            return this.indexer.getIndex();
-        } else {
-            return null;
         }
     }
 
