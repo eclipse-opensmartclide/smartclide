@@ -31,25 +31,25 @@ import java.util.List;
  */
 public interface IServiceRegistryRepository {
 
-    public boolean initializeRepository();
+    void initializeRepository();
 
-    public boolean insert(Node node);
+    boolean insert(Node node);
 
-    public boolean delete(Node node);
+    boolean delete(Node node);
 
-    Node selectforID(String id);
+    Node selectForId(String id);
 
-    List<ServiceInfo> selectforServiceType(String typeID);
+    List<ServiceInfo> selectForServiceType(String typeID);
 
     List<Node> selectAllConnectedDeployers();
 
-    public boolean updateStatus(List<String> id, StatusVocabulary status);
+    boolean updateStatus(List<String> id, StatusVocabulary status);
 
     List<ServiceInfo> selectForFreeServiceByType(String typeID);
 
-    public boolean updateSingleStatusById(String id, StatusVocabulary status);
+    boolean updateSingleStatusById(String id, StatusVocabulary status);
 
-    public boolean setStatusByIds(List<String> id, StatusVocabulary status);
+    boolean setStatusByIds(List<String> id, StatusVocabulary status);
 
-    public boolean updateSingleStatusByLocation(String location, StatusVocabulary status);
+    boolean updateSingleStatusByLocation(String location, StatusVocabulary status);
 }
