@@ -9,7 +9,7 @@ package de.atb.context.monitoring.index;
  * This program and the accompanying materials are made
  * available under the terms of the Eclipse Public License 2.0
  * which is available at https://www.eclipse.org/legal/epl-2.0/
- * 
+ *
  * SPDX-License-Identifier: EPL-2.0
  * #L%
  */
@@ -17,7 +17,6 @@ package de.atb.context.monitoring.index;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.FilenameFilter;
 import java.io.IOException;
 
 import de.atb.context.monitoring.config.models.Index;
@@ -26,13 +25,16 @@ import de.atb.context.monitoring.parser.IndexingParser;
 import org.apache.lucene.analysis.miscellaneous.PerFieldAnalyzerWrapper;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.document.Document;
-import org.apache.lucene.index.*;
+import org.apache.lucene.index.CorruptIndexException;
+import org.apache.lucene.index.DirectoryReader;
+import org.apache.lucene.index.IndexWriter;
+import org.apache.lucene.index.IndexWriterConfig;
+import org.apache.lucene.index.Term;
 import org.apache.lucene.search.IndexSearcher;
 import org.apache.lucene.search.ScoreDoc;
 import org.apache.lucene.search.TermQuery;
 import org.apache.lucene.search.TopDocs;
 import org.apache.lucene.store.FSDirectory;
-import org.apache.lucene.util.Version;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -125,7 +127,7 @@ public class Indexer {
             this.logger.error("Could not access the Index: " + this.index.getLocation(), ioe);
 
         } catch (Throwable e) {
-            this.logger.error("An error occured during indexing: " + this.index.getLocation(), e);
+            this.logger.error("An error occurred during indexing: " + this.index.getLocation(), e);
         }
     }
 
@@ -140,7 +142,7 @@ public class Indexer {
     public final synchronized Document getDocumentByUri(final String uri) {
         try {
             TopDocs topDocs = this.searcher.search(new TermQuery(new Term("uri", uri)),1);
-            if (topDocs.totalHits > 0) {
+            if (topDocs.totalHits.value > 0) {
                 ScoreDoc scoreDoc = topDocs.scoreDocs[0];
                 return this.searcher.doc(scoreDoc.doc);
             }
@@ -234,7 +236,7 @@ public class Indexer {
         if (dir.exists() && dir.isDirectory()) {
             String[] genFiles = dir.list((dir1, name) -> (name != null) && name.startsWith("segments") && name.endsWith(".gen"));
             // "segments.gen" was found, folder seems correct
-            if (genFiles.length > 0) {
+            if (genFiles != null && genFiles.length > 0) {
                 deleteDir(dir);
             }
         } else {
@@ -245,10 +247,12 @@ public class Indexer {
     protected static boolean deleteDir(final File dir) {
         if (dir.isDirectory()) {
             String[] children = dir.list();
-            for (String child : children) {
-                boolean success = deleteDir(new File(dir, child)); // TODO DRM API?
-                if (!success) {
-                    return false;
+            if (children != null) {
+                for (String child : children) {
+                    boolean success = deleteDir(new File(dir, child)); // TODO DRM API?
+                    if (!success) {
+                        return false;
+                    }
                 }
             }
         }

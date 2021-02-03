@@ -43,10 +43,9 @@
             <type>jar</type>
         </dependency>
         <dependency>
-            <groupId>commons-collections</groupId>
-            <artifactId>commons-collections</artifactId>
-            <version>3.2.2</version>
-            <type>jar</type>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-collections4</artifactId>
+            <version>4.4</version>
         </dependency>
         <dependency>
             <groupId>commons-io</groupId>
@@ -87,13 +86,8 @@
         </dependency>
         <dependency>
             <groupId>org.apache.lucene</groupId>
-            <artifactId>lucene-core</artifactId>
-            <version>7.1.0</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.lucene</groupId>
             <artifactId>lucene-analyzers-common</artifactId>
-            <version>7.1.0</version>
+            <version>8.8.0</version>
         </dependency>
         <!-- Pellet dependencies -->
         <dependency>
@@ -137,12 +131,6 @@
             <groupId>com.hp.hpl.jena</groupId>
             <artifactId>sdb</artifactId>
             <version>1.3.4</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.codehaus.woodstox</groupId>
-                    <artifactId>wstx-asl</artifactId>
-                </exclusion>
-            </exclusions>
         </dependency>
         <dependency>
             <groupId>com.thewebsemantic</groupId>
@@ -228,7 +216,7 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.16</version>
+            <version>1.18.18</version>
         </dependency>
 
         <!-- API, java.xml.bind module -->
