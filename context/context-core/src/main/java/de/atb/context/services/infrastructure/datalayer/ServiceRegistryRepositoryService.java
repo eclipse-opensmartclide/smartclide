@@ -78,7 +78,7 @@ public class ServiceRegistryRepositoryService extends RepositoryService implemen
     }
 
     private Node getConnectedServicesbyID(final String serviceid) {
-        return repos.selectforID(serviceid);
+        return repos.selectForId(serviceid);
     }
 
     @Override
@@ -109,7 +109,7 @@ public class ServiceRegistryRepositoryService extends RepositoryService implemen
 
     @Override
     public final List<ServiceInfo> getServicesByType(final String serviceType) {
-        return repos.selectforServiceType(serviceType);
+        return repos.selectForServiceType(serviceType);
     }
 
     @Override

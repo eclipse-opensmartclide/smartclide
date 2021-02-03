@@ -42,6 +42,7 @@ import de.atb.context.rdf.registry.SW_Service_OntologyWrapper;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
@@ -63,7 +64,6 @@ public final class ServiceRegistryRepository implements
             + ".context";
     public static final String CONFIGURATION = "//Configuration";
 
-    private OWLOntologyManager manager;
     private MyFactory factory;
     private boolean initialized = false;
 
@@ -72,36 +72,34 @@ public final class ServiceRegistryRepository implements
     }
 
     @Override
-    public boolean initializeRepository() {
+    public void initializeRepository() {
         try {
-            this.manager = OWLManager.createOWLOntologyManager();
+            OWLOntologyManager manager = OWLManager.createOWLOntologyManager();
             //Create a local working copy of the ontology;
             InputStream streamTemplate = getClass().getResourceAsStream(TEMPLATE_ONTOLOGY_PATH);
             InputStream streamWorking = getClass().getResourceAsStream(WORKING_ONTOLOGY_PATH);
             String templateOntology = "";
             String workingOntology = "";
             if (streamTemplate != null) {
-                String templateFileString = IOUtils.toString(streamTemplate);
+                String templateFileString = IOUtils.toString(streamTemplate, Charset.defaultCharset());
                 if (FileUtils.ensureDirectoryExists(HOME_CONFIG_PATH + TEMPLATE_ONTOLOGY_PATH.replace("/", File.separator))) {
                     FileUtils.writeStringToFile(templateFileString, HOME_CONFIG_PATH + TEMPLATE_ONTOLOGY_PATH.replace("/", File.separator));
                     templateOntology = HOME_CONFIG_PATH + TEMPLATE_ONTOLOGY_PATH.replace("/", File.separator);
-                    logger.info("filepath created by Jar internal configuration Template Ontology Registry Filepath: %s", templateOntology);
+                    logger.info("filepath created by Jar internal configuration Template Ontology Registry Filepath: {}", templateOntology);
                     if (streamWorking != null) {
-                        String workingFileString = IOUtils.toString(streamWorking);
+                        String workingFileString = IOUtils.toString(streamWorking, Charset.defaultCharset());
 
                         FileUtils.writeStringToFile(workingFileString, HOME_CONFIG_PATH + WORKING_ONTOLOGY_PATH.replace("/", File.separator));
                         workingOntology = HOME_CONFIG_PATH + WORKING_ONTOLOGY_PATH.replace("/", File.separator);
-                        logger.info("filepath created by Jar internal configuration Working Ontology Registry Filepath: %s", workingOntology);
+                        logger.info("filepath created by Jar internal configuration Working Ontology Registry Filepath: {}", workingOntology);
                     } else {
-                        logger.info("File does not exists: %s", WORKING_ONTOLOGY_PATH);
+                        logger.info("File does not exists: {}", WORKING_ONTOLOGY_PATH);
                         initialized = false;
-                        return initialized;
                     }
                 }
             } else {
-                logger.info("File does not exists: %s", TEMPLATE_ONTOLOGY_PATH);
+                logger.info("File does not exists: {}", TEMPLATE_ONTOLOGY_PATH);
                 initialized = false;
-                return initialized;
             }
             if (!templateOntology.equals("") && !workingOntology.equals("")) {
                 File templateOntoFile = new File(templateOntology);
@@ -111,24 +109,20 @@ public final class ServiceRegistryRepository implements
                 //Load the working copy
                 factory = new MyFactory(manager.loadOntologyFromOntologyDocument(workingOntoFile));
                 initialized = true;
-                return initialized;
             } else {
-                logger.info("Problem in creating the filepaths");
+                logger.info("Problem in creating the file paths");
                 initialized = false;
-                return initialized;
             }
 
         } catch (OWLOntologyStorageException | OWLOntologyCreationException | IOException ex) {
             logger.error(ex.getMessage());
             initialized = false;
-            return initialized;
         }
     }
 
     @Override
     public boolean insert(final Node node) {
         ConnectedDeployer deployer = node.getDeployer();
-        boolean inserted = false;
         if (initialized && (deployer != null && deployer.getConfig() != null
                 && deployer.getServices().getConfig() != null
                 && !deployer.getServices().getConfig().isEmpty())) {
@@ -187,19 +181,17 @@ public final class ServiceRegistryRepository implements
                             .addHasDeployerSWServices(serviceWrapper);
                 }
                 factory.saveOwlOntology();
-                inserted = true;
+                return true;
             } catch (OWLOntologyStorageException ex) {
                 logger.error(ex.getMessage());
-                return inserted;
             }
         }
-        return inserted;
+        return false;
     }
 
     @Override
     public boolean delete(final Node node) {
         ConnectedDeployer deployer = node.getDeployer();
-        boolean removed = false;
         if (initialized && (deployer != null && deployer.getConfig() != null
                 && !deployer.getServices().getConfig().isEmpty())) {
             try {
@@ -235,19 +227,16 @@ public final class ServiceRegistryRepository implements
                 }
 
                 factory.saveOwlOntology();
-                removed = true;
+                return true;
             } catch (OWLOntologyStorageException ex) {
-                java.util.logging.Logger.getLogger(
-                        ServiceRegistryRepository.class.getName()).log(
-                        Level.SEVERE, null, ex);
-                return removed;
+                java.util.logging.Logger.getLogger(ServiceRegistryRepository.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
-        return removed;
+        return false;
     }
 
     @Override
-    public Node selectforID(final String id) {
+    public Node selectForId(final String id) {
         if (initialized) {
             Deployer_OntologyWrapper deployerWrapper = factory
                     .getDeployerOntologyWrapper(id);
@@ -255,6 +244,8 @@ public final class ServiceRegistryRepository implements
             SW_Service_Configuration_OntologyWrapper deployerConfigWrapper = factory
                     .getSWServiceConfigurationOntologyWrapper(id
                             + CONFIGURATION);
+            // TODO: there is a lot of duplicated code `serviceInfo.set...` in this class
+            // this should be refactored into a separate method
             ServiceInfo deployerConfig = new ServiceInfo();
             deployerConfig.setId((new ArrayList<String>(deployerConfigWrapper
                     .getIdName())).get(0));
@@ -310,12 +301,12 @@ public final class ServiceRegistryRepository implements
     }
 
     @Override
-    public List<ServiceInfo> selectforServiceType(final String typeID) {
+    public List<ServiceInfo> selectForServiceType(final String typeID) {
         List<ServiceInfo> result = new ArrayList<>();
         if (initialized) {
-            List<SW_Service_Configuration_OntologyWrapper> lswServiceOntologywrapper = new ArrayList<>(
+            List<SW_Service_Configuration_OntologyWrapper> lswServiceOntologyWrapper = new ArrayList<>(
                     factory.getAllSWServiceConfigurationOntologyWrapperInstances());
-            for (SW_Service_Configuration_OntologyWrapper element : lswServiceOntologywrapper) {
+            for (SW_Service_Configuration_OntologyWrapper element : lswServiceOntologyWrapper) {
                 if (new ArrayList<Object>(element.getType()).get(0).toString()
                         .equals(typeID)) {
                     ServiceInfo info = new ServiceInfo();
@@ -448,9 +439,9 @@ public final class ServiceRegistryRepository implements
     public List<ServiceInfo> selectForFreeServiceByType(String typeID) {
         List<ServiceInfo> result = new ArrayList<>();
         if (initialized) {
-            List<SW_Service_Configuration_OntologyWrapper> lswServiceOntologywrapper = new ArrayList<>(
+            List<SW_Service_Configuration_OntologyWrapper> lswServiceOntologyWrapper = new ArrayList<>(
                     factory.getAllSWServiceConfigurationOntologyWrapperInstances());
-            for (SW_Service_Configuration_OntologyWrapper element : lswServiceOntologywrapper) {
+            for (SW_Service_Configuration_OntologyWrapper element : lswServiceOntologyWrapper) {
                 if (new ArrayList<Object>(element.getType()).get(0).toString()
                         .equals(typeID)) {
                     SW_Service_OntologyWrapper wrapper = new ArrayList<SW_Service_OntologyWrapper>(
@@ -486,9 +477,9 @@ public final class ServiceRegistryRepository implements
     public boolean updateSingleStatusById(String id, StatusVocabulary status) {
         boolean updated = false;
         if (initialized) {
-            List<SW_Service_Configuration_OntologyWrapper> lswServiceOntologywrapper = new ArrayList<>(
+            List<SW_Service_Configuration_OntologyWrapper> lswServiceOntologyWrapper = new ArrayList<>(
                     factory.getAllSWServiceConfigurationOntologyWrapperInstances());
-            for (SW_Service_Configuration_OntologyWrapper element : lswServiceOntologywrapper) {
+            for (SW_Service_Configuration_OntologyWrapper element : lswServiceOntologyWrapper) {
                 if (element.getOwlIndividual().getIRI().toString().equals(id)) {
                     try {
                         SW_Service_OntologyWrapper wrapper = new ArrayList<SW_Service_OntologyWrapper>(
@@ -533,9 +524,9 @@ public final class ServiceRegistryRepository implements
     public boolean updateSingleStatusByLocation(String location, StatusVocabulary status) {
         boolean updated = false;
         if (initialized) {
-            List<SW_Service_Configuration_OntologyWrapper> lswServiceOntologywrapper = new ArrayList<>(
+            List<SW_Service_Configuration_OntologyWrapper> lswServiceOntologyWrapper = new ArrayList<>(
                     factory.getAllSWServiceConfigurationOntologyWrapperInstances());
-            for (SW_Service_Configuration_OntologyWrapper element : lswServiceOntologywrapper) {
+            for (SW_Service_Configuration_OntologyWrapper element : lswServiceOntologyWrapper) {
                 if (new ArrayList<Object>(element.getLocation()).get(0).toString()
                         .equals(location)) {
                     try {
