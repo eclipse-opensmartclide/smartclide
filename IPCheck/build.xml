@@ -1,6 +1,6 @@
 <project name="MVNAnalysis" default="main.mvn">
 	<property name="mvn.dir" 					value="/Users/philippe/Documents/Dev/apache-maven-3.6.3/bin"/>
-	<property name="dash.lib" 					value="${basedir}/libs/org.eclipse.dash.licenses-0.0.1-SNAPSHOT.jar"/>
+	<property name="dash.lib" 					value="org.eclipse.dash.licenses-0.0.1-SNAPSHOT.jar"/>
 	
 <!-- Maven -->
 	<!-- property name="codeFolder" 				value="smartclide-service-registry-poc/demo"/ -->
