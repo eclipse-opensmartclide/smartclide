@@ -1,0 +1,98 @@
+<project name="MVNAnalysis" default="main.mvn">
+	<property name="mvn.dir" 					value="/Users/philippe/Documents/Dev/apache-maven-3.6.3/bin"/>
+	<property name="dash.lib" 					value="${basedir}/libs/org.eclipse.dash.licenses-0.0.1-SNAPSHOT.jar"/>
+	
+<!-- Maven -->
+	<!-- property name="codeFolder" 				value="smartclide-service-registry-poc/demo"/ -->
+	<!-- property name="codeFolder" 				value="smartclide-context"/ -->
+	
+<!-- Package.json -->
+	<property name="codeFolder" 				value="smartclide-service-registry-poc/test-backend-plugin"/>
+	
+	<property name="source.dir" 				value="/Users/philippe/git/${codeFolder}"/>
+	<property name="dest.dir" 					value="/Users/philippe/git/smartclide/IPCheck/${codeFolder}"/>
+	
+	<property name="dependencyListFile" 		value="${dest.dir}/dependency-list.txt"/>
+	<property name="dependencyListGrepFile" 	value="${dest.dir}/dependency-list.grep.txt"/>
+	<property name="dependencyTreeFile" 		value="${dest.dir}/dependency-tree.txt"/>
+	<property name="dependencyAnalysisFile" 	value="${dest.dir}/dependency-analysis.csv"/>
+	<property name="log" 						value="${dest.dir}/log.txt"/>
+	
+
+	<target name="main.mvn">
+		<mkdir dir="${dest.dir}"/>
+		<antcall target="mvn.clean.install" />
+		<antcall target="mvn.dependency.list.analysis" />
+		<antcall target="mvn.dependency.tree" />
+	</target>
+
+	<!-- package-lock.json is missing:
+	Force the creation if you only have the file "package.json"
+		npm i - -package-lock-only  (remove space between the 2 '-')
+	-->
+	<target name="main.json">
+		<property name="package.json" value="${source.dir}/package-lock.json"/>
+		<mkdir dir="${dest.dir}"/>
+		<copy file="${package.json}" todir="${dest.dir}"/>
+		<antcall target="package.json.analysis" />
+	</target>
+	
+	<target name="mvn.clean.install">
+		<exec executable="/bin/sh" os="Mac OS X">
+		    <arg value="-c"/>
+		    <arg value="cd ${source.dir}; ${mvn.dir}/mvn clean install > ${log}"/>
+		</exec>
+	</target>
+	
+	<target name="mvn.dependency.list.analysis">
+		<exec executable="/bin/sh" os="Mac OS X">
+		    <arg value="-c"/>
+		    <arg value="cd ${source.dir}; ${mvn.dir}/mvn dependency:list | grep -ohE '\S+:(system|provided|compile)' | sort | uniq | java -jar ${dash.lib} - -summary ${dependencyAnalysisFile} >> ${log}"/>
+		</exec>
+	</target>
+	
+	<target name="mvn.dependency.tree">
+		<exec executable="/bin/sh" os="Mac OS X">
+		    <arg value="-c"/>
+		    <arg value="cd ${source.dir}; ${mvn.dir}/mvn dependency:tree >> ${dependencyTreeFile}"/>
+		</exec>
+	</target>
+	
+	<target name="package.json.analysis">
+		<exec executable="/bin/sh" os="Mac OS X">
+		    <arg value="-c"/>
+		    <arg value="cd ${source.dir}; java -jar ${dash.lib} ${package.json} -summary ${dependencyAnalysisFile} > ${log}"/>
+		</exec>
+	</target>
+	
+	
+	
+	<target name="check">
+		<exec executable="/bin/sh" os="Mac OS X">
+		    <arg value="-c"/>
+		    <arg value="cd ${source.dir}; java -jar ${dash.lib} ${dependencyListFile} -"/>
+		</exec>
+	</target>
+	
+	<target name="help">
+		<exec executable="/bin/sh" os="Mac OS X">
+		    <arg value="-c"/>
+		    <arg value="cd ${source.dir}; java -jar ${dash.lib}"/>
+		</exec>
+	</target>
+	
+	<target name="mvn.dependency.list">
+		<exec executable="/bin/sh" os="Mac OS X">
+		    <arg value="-c"/>
+		    <arg value="cd ${source.dir}; ${mvn.dir}/mvn dependency:list > ${dependencyListFile}"/>
+		</exec>
+	</target>
+	
+	<target name="mvn.dependency.list.grep">
+		<exec executable="/bin/sh" os="Mac OS X">
+		    <arg value="-c"/>
+		    <arg value="cd ${source.dir}; ${mvn.dir}/mvn dependency:list | grep -ohE '\S+:(system|provided|compile)' | sort | uniq > ${dependencyListGrepFile}"/>
+		</exec>
+	</target>
+	
+</project>
