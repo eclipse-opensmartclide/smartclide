@@ -1,0 +1,53 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------------< gr.zisis:interest-api >------------------------
+[INFO] Building interest-api 0.0.1-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ interest-api ---
+[INFO] Deleting /Users/philippe/git/smartclide-TD-Interest/target
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:resources (default-resources) @ interest-api ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 1 resource
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ interest-api ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 28 source files to /Users/philippe/git/smartclide-TD-Interest/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:testResources (default-testResources) @ interest-api ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 2 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ interest-api ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 5 source files to /Users/philippe/git/smartclide-TD-Interest/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ interest-api ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-jar-plugin:3.2.0:jar (default-jar) @ interest-api ---
+[INFO] Building jar: /Users/philippe/git/smartclide-TD-Interest/target/interest-api-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:2.5.0:repackage (repackage) @ interest-api ---
+[INFO] Replacing main artifact with repackaged archive
+[INFO] 
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ interest-api ---
+[INFO] Installing /Users/philippe/git/smartclide-TD-Interest/target/interest-api-0.0.1-SNAPSHOT.jar to /Users/philippe/.m2/repository/gr/zisis/interest-api/0.0.1-SNAPSHOT/interest-api-0.0.1-SNAPSHOT.jar
+[INFO] Installing /Users/philippe/git/smartclide-TD-Interest/pom.xml to /Users/philippe/.m2/repository/gr/zisis/interest-api/0.0.1-SNAPSHOT/interest-api-0.0.1-SNAPSHOT.pom
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  14.980 s
+[INFO] Finished at: 2021-11-26T20:09:39+01:00
+[INFO] ------------------------------------------------------------------------
+License information could not be automatically verified for the following content:
+
+maven/mavencentral/com.sun.xml.messaging.saaj/saaj-impl/1.5.3
+
+This content is either not correctly mapped by the system, or requires review.
+
+

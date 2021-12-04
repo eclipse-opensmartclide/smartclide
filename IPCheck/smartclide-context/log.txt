@@ -1,1293 +1,0 @@
-[INFO] Scanning for projects...
-[INFO] ------------------------------------------------------------------------
-[INFO] Reactor Build Order:
-[INFO] 
-[INFO] ATB Context Parent                                                 [pom]
-[INFO] ATB Context Extraction Core Lib                                    [jar]
-[INFO] ATB Context Monitoring Core Services                               [jar]
-[INFO] ATB Context Extraction Core Service                                [jar]
-[INFO] 
-[INFO] -----------------------< de.atb.context:parent >------------------------
-[INFO] Building ATB Context Parent 2.0.0                                  [1/4]
-[INFO] --------------------------------[ pom ]---------------------------------
-[INFO] 
-[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ parent ---
-[INFO] 
-[INFO] --- maven-enforcer-plugin:3.0.0-M3:enforce (enforce-versions) @ parent ---
-[INFO] 
-[INFO] --- license-maven-plugin:2.0.0:update-file-header (license-management) @ parent ---
-[INFO] Adding a license repository jar:file:/Users/philippe/.m2/repository/org/codehaus/mojo/license-maven-plugin/2.0.0/license-maven-plugin-2.0.0.jar!/META-INF/licenses
-[INFO] register GNU Free Documentation License (FDL) version 1.3
-[INFO] register GNU General Lesser Public License (LGPL) version 3.0
-[INFO] register GNU Affero General Public License (AGPL) version 3.0
-[INFO] register GNU General Public License (GPL) version 3.0
-[INFO] register GNU General Public License (GPL) version 2.0
-[INFO] register GNU General Public License (GPL) version 1.0
-[INFO] register Apache License version 2.0
-[INFO] register Eclipse Public License - v 2.0 with Secondary License
-[INFO] register Eclipse Public License - v 2.0
-[INFO] register Eclipse Public License - v 1.0
-[INFO] register Eclipse Public + Distribution License - v 1.0
-[INFO] register COMMON DEVELOPMENT AND DISTRIBUTION LICENSE (CDDL) Version 1.0
-[INFO] register GNU General Lesser Public License (LGPL) version 2.1
-[INFO] register MIT-License
-[INFO] register BSD 2-Clause License
-[INFO] register BSD 3-Clause License
-[INFO] register European Union Public License v1.1
-[INFO] Scan 0 file header done in 18.621ms.
-[INFO] 
-[INFO] 
-[INFO] --- license-maven-plugin:2.0.0:update-project-license (license-management) @ parent ---
-[INFO] Adding a license repository jar:file:/Users/philippe/.m2/repository/org/codehaus/mojo/license-maven-plugin/2.0.0/license-maven-plugin-2.0.0.jar!/META-INF/licenses
-[INFO] register GNU Free Documentation License (FDL) version 1.3
-[INFO] register GNU General Lesser Public License (LGPL) version 3.0
-[INFO] register GNU Affero General Public License (AGPL) version 3.0
-[INFO] register GNU General Public License (GPL) version 3.0
-[INFO] register GNU General Public License (GPL) version 2.0
-[INFO] register GNU General Public License (GPL) version 1.0
-[INFO] register Apache License version 2.0
-[INFO] register Eclipse Public License - v 2.0 with Secondary License
-[INFO] register Eclipse Public License - v 2.0
-[INFO] register Eclipse Public License - v 1.0
-[INFO] register Eclipse Public + Distribution License - v 1.0
-[INFO] register COMMON DEVELOPMENT AND DISTRIBUTION LICENSE (CDDL) Version 1.0
-[INFO] register GNU General Lesser Public License (LGPL) version 2.1
-[INFO] register MIT-License
-[INFO] register BSD 2-Clause License
-[INFO] register BSD 3-Clause License
-[INFO] register European Union Public License v1.1
-[INFO] Will create or update license file [epl_only_v2] to /Users/philippe/git/smartclide-context/LICENSE
-[INFO] 
-[INFO] --- maven-install-plugin:2.4:install (default-install) @ parent ---
-[INFO] Installing /Users/philippe/git/smartclide-context/pom.xml to /Users/philippe/.m2/repository/de/atb/context/parent/2.0.0/parent-2.0.0.pom
-[INFO] 
-[INFO] --------------------< de.atb.context:context-core >---------------------
-[INFO] Building ATB Context Extraction Core Lib 2.0.0                     [2/4]
-[INFO] --------------------------------[ jar ]---------------------------------
-Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-surefire-plugin/3.0.0-M5/maven-surefire-plugin-3.0.0-M5.pom
-Progress (1): 2.7/8.0 kBProgress (1): 5.5/8.0 kBProgress (1): 8.0 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-surefire-plugin/3.0.0-M5/maven-surefire-plugin-3.0.0-M5.pom (8.0 kB at 9.9 kB/s)
-Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire/3.0.0-M5/surefire-3.0.0-M5.pom
-Progress (1): 2.7/27 kBProgress (1): 5.5/27 kBProgress (1): 8.2/27 kBProgress (1): 11/27 kB Progress (1): 14/27 kBProgress (1): 16/27 kBProgress (1): 19/27 kBProgress (1): 22/27 kBProgress (1): 25/27 kBProgress (1): 27 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire/3.0.0-M5/surefire-3.0.0-M5.pom (27 kB at 194 kB/s)
-Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-surefire-plugin/3.0.0-M5/maven-surefire-plugin-3.0.0-M5.jar
-Progress (1): 2.7/43 kBProgress (1): 5.5/43 kBProgress (1): 8.2/43 kBProgress (1): 11/43 kB Progress (1): 14/43 kBProgress (1): 16/43 kBProgress (1): 19/43 kBProgress (1): 22/43 kBProgress (1): 25/43 kBProgress (1): 27/43 kBProgress (1): 30/43 kBProgress (1): 33/43 kBProgress (1): 36/43 kBProgress (1): 38/43 kBProgress (1): 41/43 kBProgress (1): 43 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-surefire-plugin/3.0.0-M5/maven-surefire-plugin-3.0.0-M5.jar (43 kB at 235 kB/s)
-Downloading from repo-jena: http://openjena.org/repo/log4j/log4j/maven-metadata.xml
-Downloading from repo-jena-dev: http://openjena.org/repo-dev/log4j/log4j/maven-metadata.xml
-[WARNING] Could not transfer metadata log4j:log4j/maven-metadata.xml from/to repo-jena (http://openjena.org/repo): Authorization failed for http://openjena.org/repo/log4j/log4j/maven-metadata.xml 403 Forbidden
-[WARNING] Could not transfer metadata log4j:log4j/maven-metadata.xml from/to repo-jena-dev (http://openjena.org/repo-dev): Authorization failed for http://openjena.org/repo-dev/log4j/log4j/maven-metadata.xml 403 Forbidden
-[INFO] 
-[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ context-core ---
-[INFO] Deleting /Users/philippe/git/smartclide-context/context-core/target
-[INFO] 
-[INFO] --- maven-enforcer-plugin:3.0.0-M3:enforce (enforce-versions) @ context-core ---
-[INFO] 
-[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ context-core ---
-[INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 50 resources
-[INFO] 
-[INFO] --- license-maven-plugin:2.0.0:update-file-header (license-management) @ context-core ---
-[INFO] Adding a license repository jar:file:/Users/philippe/.m2/repository/org/codehaus/mojo/license-maven-plugin/2.0.0/license-maven-plugin-2.0.0.jar!/META-INF/licenses
-[INFO] register GNU Free Documentation License (FDL) version 1.3
-[INFO] register GNU General Lesser Public License (LGPL) version 3.0
-[INFO] register GNU Affero General Public License (AGPL) version 3.0
-[INFO] register GNU General Public License (GPL) version 3.0
-[INFO] register GNU General Public License (GPL) version 2.0
-[INFO] register GNU General Public License (GPL) version 1.0
-[INFO] register Apache License version 2.0
-[INFO] register Eclipse Public License - v 2.0 with Secondary License
-[INFO] register Eclipse Public License - v 2.0
-[INFO] register Eclipse Public License - v 1.0
-[INFO] register Eclipse Public + Distribution License - v 1.0
-[INFO] register COMMON DEVELOPMENT AND DISTRIBUTION LICENSE (CDDL) Version 1.0
-[INFO] register GNU General Lesser Public License (LGPL) version 2.1
-[INFO] register MIT-License
-[INFO] register BSD 2-Clause License
-[INFO] register BSD 3-Clause License
-[INFO] register European Union Public License v1.1
-[INFO] Will search files to update from root /Users/philippe/git/smartclide-context/context-core/src/main/java
-[INFO] Will search files to update from root /Users/philippe/git/smartclide-context/context-core/src/main/resources
-[INFO] Scan 188 files header done in 3.131s.
-[INFO] 
- * update header on 188 files.
-[INFO] 
-[INFO] --- license-maven-plugin:2.0.0:update-project-license (license-management) @ context-core ---
-[INFO] Adding a license repository jar:file:/Users/philippe/.m2/repository/org/codehaus/mojo/license-maven-plugin/2.0.0/license-maven-plugin-2.0.0.jar!/META-INF/licenses
-[INFO] register GNU Free Documentation License (FDL) version 1.3
-[INFO] register GNU General Lesser Public License (LGPL) version 3.0
-[INFO] register GNU Affero General Public License (AGPL) version 3.0
-[INFO] register GNU General Public License (GPL) version 3.0
-[INFO] register GNU General Public License (GPL) version 2.0
-[INFO] register GNU General Public License (GPL) version 1.0
-[INFO] register Apache License version 2.0
-[INFO] register Eclipse Public License - v 2.0 with Secondary License
-[INFO] register Eclipse Public License - v 2.0
-[INFO] register Eclipse Public License - v 1.0
-[INFO] register Eclipse Public + Distribution License - v 1.0
-[INFO] register COMMON DEVELOPMENT AND DISTRIBUTION LICENSE (CDDL) Version 1.0
-[INFO] register GNU General Lesser Public License (LGPL) version 2.1
-[INFO] register MIT-License
-[INFO] register BSD 2-Clause License
-[INFO] register BSD 3-Clause License
-[INFO] register European Union Public License v1.1
-[INFO] Will create or update license file [epl_only_v2] to /Users/philippe/git/smartclide-context/context-core/LICENSE
-[INFO] 
-[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ context-core ---
-[INFO] Changes detected - recompiling the module!
-[INFO] Compiling 188 source files to /Users/philippe/git/smartclide-context/context-core/target/classes
-[INFO] /Users/philippe/git/smartclide-context/context-core/src/main/java/de/atb/context/ui/modules/DetailsFrame.java: Some input files use or override a deprecated API.
-[INFO] /Users/philippe/git/smartclide-context/context-core/src/main/java/de/atb/context/ui/modules/DetailsFrame.java: Recompile with -Xlint:deprecation for details.
-[INFO] /Users/philippe/git/smartclide-context/context-core/src/main/java/de/atb/context/infrastructure/Nodes.java: Some input files use unchecked or unsafe operations.
-[INFO] /Users/philippe/git/smartclide-context/context-core/src/main/java/de/atb/context/infrastructure/Nodes.java: Recompile with -Xlint:unchecked for details.
-[INFO] 
-[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ context-core ---
-[INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] skip non existing resourceDirectory /Users/philippe/git/smartclide-context/context-core/src/test/resources
-[INFO] 
-[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ context-core ---
-[INFO] Changes detected - recompiling the module!
-[INFO] Compiling 29 source files to /Users/philippe/git/smartclide-context/context-core/target/test-classes
-[INFO] /Users/philippe/git/smartclide-context/context-core/src/test/java/de/atb/context/services/faults/marshal/ContextStackTraceElementTest.java: /Users/philippe/git/smartclide-context/context-core/src/test/java/de/atb/context/services/faults/marshal/ContextStackTraceElementTest.java uses or overrides a deprecated API.
-[INFO] /Users/philippe/git/smartclide-context/context-core/src/test/java/de/atb/context/services/faults/marshal/ContextStackTraceElementTest.java: Recompile with -Xlint:deprecation for details.
-[INFO] 
-[INFO] --- maven-surefire-plugin:3.0.0-M5:test (default-test) @ context-core ---
-Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/maven-surefire-common/3.0.0-M5/maven-surefire-common-3.0.0-M5.pom
-Progress (1): 2.7/9.6 kBProgress (1): 5.5/9.6 kBProgress (1): 8.2/9.6 kBProgress (1): 9.6 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/maven-surefire-common/3.0.0-M5/maven-surefire-common-3.0.0-M5.pom (9.6 kB at 68 kB/s)
-Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-api/3.0.0-M5/surefire-api-3.0.0-M5.pom
-Progress (1): 2.7/3.2 kBProgress (1): 3.2 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-api/3.0.0-M5/surefire-api-3.0.0-M5.pom (3.2 kB at 21 kB/s)
-Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-logger-api/3.0.0-M5/surefire-logger-api-3.0.0-M5.pom
-Progress (1): 2.7/3.7 kBProgress (1): 3.7 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-logger-api/3.0.0-M5/surefire-logger-api-3.0.0-M5.pom (3.7 kB at 30 kB/s)
-Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-shared-utils/3.0.0-M4/surefire-shared-utils-3.0.0-M4.pom
-Progress (1): 2.7/3.9 kBProgress (1): 3.9 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-shared-utils/3.0.0-M4/surefire-shared-utils-3.0.0-M4.pom (3.9 kB at 35 kB/s)
-Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire/3.0.0-M4/surefire-3.0.0-M4.pom
-Progress (1): 2.7/27 kBProgress (1): 5.5/27 kBProgress (1): 8.2/27 kBProgress (1): 11/27 kB Progress (1): 14/27 kBProgress (1): 16/27 kBProgress (1): 19/27 kBProgress (1): 22/27 kBProgress (1): 25/27 kBProgress (1): 27 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire/3.0.0-M4/surefire-3.0.0-M4.pom (27 kB at 191 kB/s)
-Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-extensions-api/3.0.0-M5/surefire-extensions-api-3.0.0-M5.pom
-Progress (1): 2.7/4.0 kBProgress (1): 4.0 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-extensions-api/3.0.0-M5/surefire-extensions-api-3.0.0-M5.pom (4.0 kB at 21 kB/s)
-Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-booter/3.0.0-M5/surefire-booter-3.0.0-M5.pom
-Progress (1): 2.7/4.8 kBProgress (1): 4.8 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-booter/3.0.0-M5/surefire-booter-3.0.0-M5.pom (4.8 kB at 31 kB/s)
-Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-extensions-spi/3.0.0-M5/surefire-extensions-spi-3.0.0-M5.pom
-Progress (1): 1.6 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-extensions-spi/3.0.0-M5/surefire-extensions-spi-3.0.0-M5.pom (1.6 kB at 12 kB/s)
-Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-toolchain/3.0-alpha-2/maven-toolchain-3.0-alpha-2.pom
-Progress (1): 2.2 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-toolchain/3.0-alpha-2/maven-toolchain-3.0-alpha-2.pom (2.2 kB at 21 kB/s)
-Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven/3.0-alpha-2/maven-3.0-alpha-2.pom
-Progress (1): 2.7/21 kBProgress (1): 5.5/21 kBProgress (1): 8.2/21 kBProgress (1): 11/21 kB Progress (1): 14/21 kBProgress (1): 16/21 kBProgress (1): 19/21 kBProgress (1): 21 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven/3.0-alpha-2/maven-3.0-alpha-2.pom (21 kB at 112 kB/s)
-Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-java/1.0.5/plexus-java-1.0.5.pom
-Progress (1): 2.7/4.6 kBProgress (1): 4.6 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-java/1.0.5/plexus-java-1.0.5.pom (4.6 kB at 41 kB/s)
-Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-languages/1.0.5/plexus-languages-1.0.5.pom
-Progress (1): 2.7/3.9 kBProgress (1): 3.9 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-languages/1.0.5/plexus-languages-1.0.5.pom (3.9 kB at 33 kB/s)
-Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/6.2/plexus-6.2.pom
-Progress (1): 2.7/24 kBProgress (1): 5.5/24 kBProgress (1): 8.2/24 kBProgress (1): 11/24 kB Progress (1): 14/24 kBProgress (1): 16/24 kBProgress (1): 19/24 kBProgress (1): 22/24 kBProgress (1): 24 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/6.2/plexus-6.2.pom (24 kB at 188 kB/s)
-Downloading from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm/7.2/asm-7.2.pom
-Progress (1): 2.9 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm/7.2/asm-7.2.pom (2.9 kB at 25 kB/s)
-Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/maven-surefire-common/3.0.0-M5/maven-surefire-common-3.0.0-M5.jar
-Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-booter/3.0.0-M5/surefire-booter-3.0.0-M5.jar
-Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-extensions-api/3.0.0-M5/surefire-extensions-api-3.0.0-M5.jar
-Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-logger-api/3.0.0-M5/surefire-logger-api-3.0.0-M5.jar
-Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-api/3.0.0-M5/surefire-api-3.0.0-M5.jar
-Progress (1): 4.1/311 kBProgress (1): 8.2/311 kBProgress (1): 12/311 kB Progress (1): 16/311 kBProgress (1): 20/311 kBProgress (1): 25/311 kBProgress (1): 29/311 kBProgress (1): 33/311 kBProgress (1): 37/311 kBProgress (1): 41/311 kBProgress (1): 45/311 kBProgress (1): 49/311 kBProgress (1): 53/311 kBProgress (1): 57/311 kBProgress (1): 61/311 kBProgress (1): 66/311 kBProgress (1): 70/311 kBProgress (1): 74/311 kBProgress (1): 78/311 kBProgress (1): 82/311 kBProgress (1): 86/311 kBProgress (1): 90/311 kBProgress (1): 94/311 kBProgress (1): 98/311 kBProgress (1): 102/311 kBProgress (1): 106/311 kBProgress (1): 111/311 kBProgress (1): 115/311 kBProgress (2): 115/311 kB | 2.7/14 kBProgress (2): 115/311 kB | 5.5/14 kBProgress (3): 115/311 kB | 5.5/14 kB | 2.7/106 kBProgress (3): 115/311 kB | 8.2/14 kB | 2.7/106 kBProgress (3): 115/311 kB | 8.2/14 kB | 5.5/106 kBProgress (3): 115/311 kB | 11/14 kB | 5.5/106 kB Progress (3): 115/311 kB | 11/14 kB | 8.2/106 kBProgress (3): 115/311 kB | 14 kB | 8.2/106 kB   Progress (3): 115/311 kB | 14 kB | 11/106 kB Progress (3): 115/311 kB | 14 kB | 14/106 kBProgress (4): 115/311 kB | 14 kB | 14/106 kB | 2.7/24 kBProgress (4): 115/311 kB | 14 kB | 14/106 kB | 5.5/24 kBProgress (4): 115/311 kB | 14 kB | 14/106 kB | 8.2/24 kBProgress (4): 115/311 kB | 14 kB | 14/106 kB | 11/24 kB Progress (4): 115/311 kB | 14 kB | 16/106 kB | 11/24 kBProgress (4): 115/311 kB | 14 kB | 16/106 kB | 14/24 kBProgress (4): 115/311 kB | 14 kB | 19/106 kB | 14/24 kBProgress (4): 115/311 kB | 14 kB | 19/106 kB | 16/24 kBProgress (4): 115/311 kB | 14 kB | 22/106 kB | 16/24 kBProgress (4): 115/311 kB | 14 kB | 22/106 kB | 19/24 kBProgress (4): 115/311 kB | 14 kB | 25/106 kB | 19/24 kBProgress (4): 115/311 kB | 14 kB | 25/106 kB | 22/24 kBProgress (4): 115/311 kB | 14 kB | 25/106 kB | 24 kB   Progress (4): 119/311 kB | 14 kB | 25/106 kB | 24 kBProgress (4): 123/311 kB | 14 kB | 25/106 kB | 24 kBProgress (4): 123/311 kB | 14 kB | 27/106 kB | 24 kBProgress (4): 123/311 kB | 14 kB | 30/106 kB | 24 kBProgress (4): 127/311 kB | 14 kB | 30/106 kB | 24 kBProgress (4): 127/311 kB | 14 kB | 33/106 kB | 24 kBProgress (4): 131/311 kB | 14 kB | 33/106 kB | 24 kBProgress (5): 131/311 kB | 14 kB | 33/106 kB | 24 kB | 2.7/144 kBProgress (5): 131/311 kB | 14 kB | 33/106 kB | 24 kB | 5.5/144 kBProgress (5): 131/311 kB | 14 kB | 36/106 kB | 24 kB | 5.5/144 kBProgress (5): 131/311 kB | 14 kB | 36/106 kB | 24 kB | 8.2/144 kBProgress (5): 131/311 kB | 14 kB | 36/106 kB | 24 kB | 11/144 kB Progress (5): 131/311 kB | 14 kB | 36/106 kB | 24 kB | 14/144 kBProgress (5): 131/311 kB | 14 kB | 36/106 kB | 24 kB | 16/144 kBProgress (5): 131/311 kB | 14 kB | 38/106 kB | 24 kB | 16/144 kBProgress (5): 131/311 kB | 14 kB | 38/106 kB | 24 kB | 19/144 kBProgress (5): 131/311 kB | 14 kB | 38/106 kB | 24 kB | 22/144 kBProgress (5): 131/311 kB | 14 kB | 38/106 kB | 24 kB | 25/144 kBProgress (5): 131/311 kB | 14 kB | 38/106 kB | 24 kB | 27/144 kBProgress (5): 131/311 kB | 14 kB | 38/106 kB | 24 kB | 30/144 kBProgress (5): 131/311 kB | 14 kB | 38/106 kB | 24 kB | 33/144 kBProgress (5): 135/311 kB | 14 kB | 38/106 kB | 24 kB | 33/144 kBProgress (5): 135/311 kB | 14 kB | 38/106 kB | 24 kB | 36/144 kBProgress (5): 139/311 kB | 14 kB | 38/106 kB | 24 kB | 36/144 kBProgress (5): 139/311 kB | 14 kB | 38/106 kB | 24 kB | 38/144 kBProgress (5): 143/311 kB | 14 kB | 38/106 kB | 24 kB | 38/144 kBProgress (5): 147/311 kB | 14 kB | 38/106 kB | 24 kB | 38/144 kBProgress (5): 147/311 kB | 14 kB | 41/106 kB | 24 kB | 38/144 kBProgress (5): 147/311 kB | 14 kB | 44/106 kB | 24 kB | 38/144 kBProgress (5): 147/311 kB | 14 kB | 47/106 kB | 24 kB | 38/144 kBProgress (5): 147/311 kB | 14 kB | 49/106 kB | 24 kB | 38/144 kBProgress (5): 147/311 kB | 14 kB | 52/106 kB | 24 kB | 38/144 kBProgress (5): 147/311 kB | 14 kB | 55/106 kB | 24 kB | 38/144 kBProgress (5): 147/311 kB | 14 kB | 58/106 kB | 24 kB | 38/144 kBProgress (5): 147/311 kB | 14 kB | 60/106 kB | 24 kB | 38/144 kBProgress (5): 147/311 kB | 14 kB | 63/106 kB | 24 kB | 38/144 kBProgress (5): 147/311 kB | 14 kB | 66/106 kB | 24 kB | 38/144 kBProgress (5): 147/311 kB | 14 kB | 69/106 kB | 24 kB | 38/144 kBProgress (5): 147/311 kB | 14 kB | 71/106 kB | 24 kB | 38/144 kBProgress (5): 147/311 kB | 14 kB | 74/106 kB | 24 kB | 38/144 kB                                                                Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-logger-api/3.0.0-M5/surefire-logger-api-3.0.0-M5.jar (14 kB at 45 kB/s)
-Progress (4): 152/311 kB | 74/106 kB | 24 kB | 38/144 kBProgress (4): 152/311 kB | 77/106 kB | 24 kB | 38/144 kBProgress (4): 156/311 kB | 77/106 kB | 24 kB | 38/144 kB                                                        Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-extensions-spi/3.0.0-M5/surefire-extensions-spi-3.0.0-M5.jar
-Progress (4): 160/311 kB | 77/106 kB | 24 kB | 38/144 kBProgress (4): 160/311 kB | 80/106 kB | 24 kB | 38/144 kBProgress (4): 164/311 kB | 80/106 kB | 24 kB | 38/144 kBProgress (4): 164/311 kB | 82/106 kB | 24 kB | 38/144 kBProgress (4): 164/311 kB | 85/106 kB | 24 kB | 38/144 kBProgress (4): 164/311 kB | 88/106 kB | 24 kB | 38/144 kBProgress (4): 164/311 kB | 90/106 kB | 24 kB | 38/144 kBProgress (4): 164/311 kB | 90/106 kB | 24 kB | 41/144 kBProgress (4): 164/311 kB | 90/106 kB | 24 kB | 44/144 kBProgress (4): 164/311 kB | 90/106 kB | 24 kB | 47/144 kBProgress (4): 164/311 kB | 90/106 kB | 24 kB | 49/144 kBProgress (4): 164/311 kB | 90/106 kB | 24 kB | 52/144 kBProgress (4): 164/311 kB | 90/106 kB | 24 kB | 55/144 kBProgress (4): 164/311 kB | 90/106 kB | 24 kB | 58/144 kB                                                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-extensions-api/3.0.0-M5/surefire-extensions-api-3.0.0-M5.jar (24 kB at 73 kB/s)
-Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-toolchain/3.0-alpha-2/maven-toolchain-3.0-alpha-2.jar
-Progress (3): 164/311 kB | 90/106 kB | 60/144 kBProgress (3): 168/311 kB | 90/106 kB | 60/144 kBProgress (3): 168/311 kB | 90/106 kB | 63/144 kBProgress (3): 168/311 kB | 93/106 kB | 63/144 kBProgress (3): 168/311 kB | 93/106 kB | 66/144 kBProgress (3): 172/311 kB | 93/106 kB | 66/144 kBProgress (3): 172/311 kB | 93/106 kB | 69/144 kBProgress (3): 172/311 kB | 96/106 kB | 69/144 kBProgress (3): 172/311 kB | 96/106 kB | 71/144 kBProgress (3): 176/311 kB | 96/106 kB | 71/144 kBProgress (3): 176/311 kB | 99/106 kB | 71/144 kBProgress (3): 180/311 kB | 99/106 kB | 71/144 kBProgress (3): 180/311 kB | 99/106 kB | 74/144 kBProgress (3): 180/311 kB | 99/106 kB | 77/144 kBProgress (3): 180/311 kB | 101/106 kB | 77/144 kBProgress (3): 180/311 kB | 104/106 kB | 77/144 kBProgress (3): 180/311 kB | 106 kB | 77/144 kB    Progress (3): 180/311 kB | 106 kB | 80/144 kBProgress (3): 180/311 kB | 106 kB | 82/144 kBProgress (3): 180/311 kB | 106 kB | 85/144 kBProgress (3): 180/311 kB | 106 kB | 88/144 kBProgress (3): 180/311 kB | 106 kB | 90/144 kBProgress (3): 180/311 kB | 106 kB | 93/144 kBProgress (4): 180/311 kB | 106 kB | 93/144 kB | 2.7/7.9 kBProgress (4): 180/311 kB | 106 kB | 96/144 kB | 2.7/7.9 kBProgress (4): 180/311 kB | 106 kB | 96/144 kB | 5.5/7.9 kBProgress (4): 180/311 kB | 106 kB | 96/144 kB | 7.9 kB    Progress (4): 180/311 kB | 106 kB | 99/144 kB | 7.9 kBProgress (4): 180/311 kB | 106 kB | 101/144 kB | 7.9 kBProgress (4): 180/311 kB | 106 kB | 104/144 kB | 7.9 kBProgress (5): 180/311 kB | 106 kB | 104/144 kB | 7.9 kB | 2.7/36 kBProgress (5): 180/311 kB | 106 kB | 107/144 kB | 7.9 kB | 2.7/36 kBProgress (5): 180/311 kB | 106 kB | 107/144 kB | 7.9 kB | 5.5/36 kBProgress (5): 180/311 kB | 106 kB | 110/144 kB | 7.9 kB | 5.5/36 kBProgress (5): 180/311 kB | 106 kB | 110/144 kB | 7.9 kB | 8.2/36 kBProgress (5): 180/311 kB | 106 kB | 112/144 kB | 7.9 kB | 8.2/36 kBProgress (5): 180/311 kB | 106 kB | 115/144 kB | 7.9 kB | 8.2/36 kBProgress (5): 180/311 kB | 106 kB | 115/144 kB | 7.9 kB | 11/36 kB Progress (5): 180/311 kB | 106 kB | 115/144 kB | 7.9 kB | 14/36 kBProgress (5): 180/311 kB | 106 kB | 118/144 kB | 7.9 kB | 14/36 kBProgress (5): 180/311 kB | 106 kB | 118/144 kB | 7.9 kB | 16/36 kBProgress (5): 180/311 kB | 106 kB | 121/144 kB | 7.9 kB | 16/36 kBProgress (5): 184/311 kB | 106 kB | 121/144 kB | 7.9 kB | 16/36 kBProgress (5): 188/311 kB | 106 kB | 121/144 kB | 7.9 kB | 16/36 kBProgress (5): 193/311 kB | 106 kB | 121/144 kB | 7.9 kB | 16/36 kBProgress (5): 197/311 kB | 106 kB | 121/144 kB | 7.9 kB | 16/36 kBProgress (5): 201/311 kB | 106 kB | 121/144 kB | 7.9 kB | 16/36 kBProgress (5): 205/311 kB | 106 kB | 121/144 kB | 7.9 kB | 16/36 kBProgress (5): 209/311 kB | 106 kB | 121/144 kB | 7.9 kB | 16/36 kBProgress (5): 209/311 kB | 106 kB | 121/144 kB | 7.9 kB | 19/36 kBProgress (5): 213/311 kB | 106 kB | 121/144 kB | 7.9 kB | 19/36 kBProgress (5): 217/311 kB | 106 kB | 121/144 kB | 7.9 kB | 19/36 kBProgress (5): 221/311 kB | 106 kB | 121/144 kB | 7.9 kB | 19/36 kBProgress (5): 225/311 kB | 106 kB | 121/144 kB | 7.9 kB | 19/36 kBProgress (5): 225/311 kB | 106 kB | 121/144 kB | 7.9 kB | 22/36 kBProgress (5): 225/311 kB | 106 kB | 121/144 kB | 7.9 kB | 25/36 kBProgress (5): 225/311 kB | 106 kB | 123/144 kB | 7.9 kB | 25/36 kBProgress (5): 229/311 kB | 106 kB | 123/144 kB | 7.9 kB | 25/36 kBProgress (5): 229/311 kB | 106 kB | 126/144 kB | 7.9 kB | 25/36 kBProgress (5): 229/311 kB | 106 kB | 129/144 kB | 7.9 kB | 25/36 kBProgress (5): 229/311 kB | 106 kB | 129/144 kB | 7.9 kB | 27/36 kBProgress (5): 233/311 kB | 106 kB | 129/144 kB | 7.9 kB | 27/36 kBProgress (5): 233/311 kB | 106 kB | 132/144 kB | 7.9 kB | 27/36 kBProgress (5): 238/311 kB | 106 kB | 132/144 kB | 7.9 kB | 27/36 kBProgress (5): 238/311 kB | 106 kB | 132/144 kB | 7.9 kB | 30/36 kBProgress (5): 242/311 kB | 106 kB | 132/144 kB | 7.9 kB | 30/36 kBProgress (5): 246/311 kB | 106 kB | 132/144 kB | 7.9 kB | 30/36 kBProgress (5): 246/311 kB | 106 kB | 134/144 kB | 7.9 kB | 30/36 kBProgress (5): 246/311 kB | 106 kB | 137/144 kB | 7.9 kB | 30/36 kBProgress (5): 246/311 kB | 106 kB | 140/144 kB | 7.9 kB | 30/36 kBProgress (5): 246/311 kB | 106 kB | 143/144 kB | 7.9 kB | 30/36 kB                                                                  Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-booter/3.0.0-M5/surefire-booter-3.0.0-M5.jar (106 kB at 242 kB/s)
-Progress (4): 246/311 kB | 144 kB | 7.9 kB | 30/36 kBProgress (4): 246/311 kB | 144 kB | 7.9 kB | 33/36 kB                                                     Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-java/1.0.5/plexus-java-1.0.5.jar
-Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-extensions-spi/3.0.0-M5/surefire-extensions-spi-3.0.0-M5.jar (7.9 kB at 18 kB/s)
-Progress (3): 246/311 kB | 144 kB | 36/36 kB                                            Downloading from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm/7.2/asm-7.2.jar
-Progress (3): 246/311 kB | 144 kB | 36 kBProgress (3): 250/311 kB | 144 kB | 36 kBProgress (3): 254/311 kB | 144 kB | 36 kBProgress (3): 258/311 kB | 144 kB | 36 kBProgress (3): 262/311 kB | 144 kB | 36 kBProgress (3): 266/311 kB | 144 kB | 36 kBProgress (3): 270/311 kB | 144 kB | 36 kBProgress (3): 274/311 kB | 144 kB | 36 kBProgress (3): 279/311 kB | 144 kB | 36 kBProgress (4): 279/311 kB | 144 kB | 36 kB | 2.7/52 kB                                                     Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-api/3.0.0-M5/surefire-api-3.0.0-M5.jar (144 kB at 279 kB/s)
-Progress (3): 279/311 kB | 36 kB | 5.5/52 kBProgress (4): 279/311 kB | 36 kB | 5.5/52 kB | 2.7/115 kBProgress (4): 279/311 kB | 36 kB | 8.2/52 kB | 2.7/115 kB                                                         Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-shared-utils/3.0.0-M4/surefire-shared-utils-3.0.0-M4.jar
-Progress (4): 279/311 kB | 36 kB | 11/52 kB | 2.7/115 kBProgress (4): 279/311 kB | 36 kB | 11/52 kB | 5.5/115 kBProgress (4): 279/311 kB | 36 kB | 14/52 kB | 5.5/115 kB                                                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-toolchain/3.0-alpha-2/maven-toolchain-3.0-alpha-2.jar (36 kB at 69 kB/s)
-Progress (3): 279/311 kB | 16/52 kB | 5.5/115 kBProgress (3): 279/311 kB | 16/52 kB | 8.2/115 kBProgress (3): 279/311 kB | 16/52 kB | 11/115 kB Progress (3): 279/311 kB | 19/52 kB | 11/115 kBProgress (3): 279/311 kB | 19/52 kB | 14/115 kBProgress (3): 279/311 kB | 22/52 kB | 14/115 kBProgress (3): 283/311 kB | 22/52 kB | 14/115 kBProgress (3): 287/311 kB | 22/52 kB | 14/115 kBProgress (3): 291/311 kB | 22/52 kB | 14/115 kBProgress (3): 295/311 kB | 22/52 kB | 14/115 kBProgress (3): 295/311 kB | 25/52 kB | 14/115 kBProgress (3): 295/311 kB | 25/52 kB | 16/115 kBProgress (3): 295/311 kB | 27/52 kB | 16/115 kBProgress (3): 295/311 kB | 27/52 kB | 19/115 kBProgress (3): 295/311 kB | 30/52 kB | 19/115 kBProgress (3): 295/311 kB | 33/52 kB | 19/115 kBProgress (3): 295/311 kB | 36/52 kB | 19/115 kBProgress (3): 295/311 kB | 36/52 kB | 22/115 kBProgress (3): 295/311 kB | 38/52 kB | 22/115 kBProgress (3): 295/311 kB | 38/52 kB | 25/115 kBProgress (3): 295/311 kB | 38/52 kB | 27/115 kBProgress (3): 299/311 kB | 38/52 kB | 27/115 kBProgress (3): 299/311 kB | 38/52 kB | 30/115 kBProgress (3): 303/311 kB | 38/52 kB | 30/115 kBProgress (3): 303/311 kB | 38/52 kB | 33/115 kBProgress (3): 307/311 kB | 38/52 kB | 33/115 kBProgress (3): 307/311 kB | 38/52 kB | 36/115 kBProgress (3): 311 kB | 38/52 kB | 36/115 kB    Progress (3): 311 kB | 38/52 kB | 38/115 kBProgress (3): 311 kB | 38/52 kB | 41/115 kBProgress (3): 311 kB | 38/52 kB | 44/115 kBProgress (3): 311 kB | 38/52 kB | 47/115 kBProgress (3): 311 kB | 41/52 kB | 47/115 kBProgress (3): 311 kB | 44/52 kB | 47/115 kBProgress (3): 311 kB | 47/52 kB | 47/115 kBProgress (3): 311 kB | 49/52 kB | 47/115 kBProgress (3): 311 kB | 49/52 kB | 49/115 kBProgress (3): 311 kB | 52/52 kB | 49/115 kBProgress (3): 311 kB | 52/52 kB | 52/115 kBProgress (3): 311 kB | 52 kB | 52/115 kB   Progress (3): 311 kB | 52 kB | 55/115 kBProgress (3): 311 kB | 52 kB | 58/115 kBProgress (4): 311 kB | 52 kB | 58/115 kB | 0/1.9 MBProgress (4): 311 kB | 52 kB | 60/115 kB | 0/1.9 MBProgress (4): 311 kB | 52 kB | 60/115 kB | 0/1.9 MBProgress (4): 311 kB | 52 kB | 60/115 kB | 0/1.9 MBProgress (4): 311 kB | 52 kB | 60/115 kB | 0/1.9 MBProgress (4): 311 kB | 52 kB | 60/115 kB | 0/1.9 MBProgress (4): 311 kB | 52 kB | 60/115 kB | 0/1.9 MB                                                   Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/maven-surefire-common/3.0.0-M5/maven-surefire-common-3.0.0-M5.jar (311 kB at 498 kB/s)
-Progress (3): 52 kB | 60/115 kB | 0.1/1.9 MBProgress (3): 52 kB | 60/115 kB | 0.1/1.9 MB                                            Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-java/1.0.5/plexus-java-1.0.5.jar (52 kB at 81 kB/s)
-Progress (2): 60/115 kB | 0.1/1.9 MBProgress (2): 60/115 kB | 0.1/1.9 MBProgress (2): 63/115 kB | 0.1/1.9 MBProgress (2): 66/115 kB | 0.1/1.9 MBProgress (2): 69/115 kB | 0.1/1.9 MBProgress (2): 71/115 kB | 0.1/1.9 MBProgress (2): 71/115 kB | 0.1/1.9 MBProgress (2): 74/115 kB | 0.1/1.9 MBProgress (2): 77/115 kB | 0.1/1.9 MBProgress (2): 77/115 kB | 0.1/1.9 MBProgress (2): 80/115 kB | 0.1/1.9 MBProgress (2): 82/115 kB | 0.1/1.9 MBProgress (2): 82/115 kB | 0.1/1.9 MBProgress (2): 85/115 kB | 0.1/1.9 MBProgress (2): 88/115 kB | 0.1/1.9 MBProgress (2): 90/115 kB | 0.1/1.9 MBProgress (2): 93/115 kB | 0.1/1.9 MBProgress (2): 96/115 kB | 0.1/1.9 MBProgress (2): 96/115 kB | 0.1/1.9 MBProgress (2): 96/115 kB | 0.1/1.9 MBProgress (2): 99/115 kB | 0.1/1.9 MBProgress (2): 99/115 kB | 0.1/1.9 MBProgress (2): 101/115 kB | 0.1/1.9 MBProgress (2): 104/115 kB | 0.1/1.9 MBProgress (2): 107/115 kB | 0.1/1.9 MBProgress (2): 110/115 kB | 0.1/1.9 MBProgress (2): 112/115 kB | 0.1/1.9 MBProgress (2): 115 kB | 0.1/1.9 MB    Progress (2): 115 kB | 0.1/1.9 MBProgress (2): 115 kB | 0.1/1.9 MBProgress (2): 115 kB | 0.2/1.9 MBProgress (2): 115 kB | 0.2/1.9 MBProgress (2): 115 kB | 0.2/1.9 MBProgress (2): 115 kB | 0.2/1.9 MBProgress (2): 115 kB | 0.2/1.9 MBProgress (2): 115 kB | 0.2/1.9 MBProgress (2): 115 kB | 0.2/1.9 MB                                 Downloaded from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm/7.2/asm-7.2.jar (115 kB at 152 kB/s)
-Progress (1): 0.2/1.9 MBProgress (1): 0.2/1.9 MBProgress (1): 0.2/1.9 MBProgress (1): 0.2/1.9 MBProgress (1): 0.2/1.9 MBProgress (1): 0.3/1.9 MBProgress (1): 0.3/1.9 MBProgress (1): 0.3/1.9 MBProgress (1): 0.3/1.9 MBProgress (1): 0.3/1.9 MBProgress (1): 0.3/1.9 MBProgress (1): 0.3/1.9 MBProgress (1): 0.3/1.9 MBProgress (1): 0.3/1.9 MBProgress (1): 0.3/1.9 MBProgress (1): 0.3/1.9 MBProgress (1): 0.3/1.9 MBProgress (1): 0.4/1.9 MBProgress (1): 0.4/1.9 MBProgress (1): 0.4/1.9 MBProgress (1): 0.4/1.9 MBProgress (1): 0.4/1.9 MBProgress (1): 0.4/1.9 MBProgress (1): 0.4/1.9 MBProgress (1): 0.4/1.9 MBProgress (1): 0.4/1.9 MBProgress (1): 0.4/1.9 MBProgress (1): 0.4/1.9 MBProgress (1): 0.4/1.9 MBProgress (1): 0.5/1.9 MBProgress (1): 0.5/1.9 MBProgress (1): 0.5/1.9 MBProgress (1): 0.5/1.9 MBProgress (1): 0.5/1.9 MBProgress (1): 0.5/1.9 MBProgress (1): 0.5/1.9 MBProgress (1): 0.5/1.9 MBProgress (1): 0.5/1.9 MBProgress (1): 0.5/1.9 MBProgress (1): 0.5/1.9 MBProgress (1): 0.5/1.9 MBProgress (1): 0.6/1.9 MBProgress (1): 0.6/1.9 MBProgress (1): 0.6/1.9 MBProgress (1): 0.6/1.9 MBProgress (1): 0.6/1.9 MBProgress (1): 0.6/1.9 MBProgress (1): 0.6/1.9 MBProgress (1): 0.6/1.9 MBProgress (1): 0.6/1.9 MBProgress (1): 0.6/1.9 MBProgress (1): 0.6/1.9 MBProgress (1): 0.6/1.9 MBProgress (1): 0.7/1.9 MBProgress (1): 0.7/1.9 MBProgress (1): 0.7/1.9 MBProgress (1): 0.7/1.9 MBProgress (1): 0.7/1.9 MBProgress (1): 0.7/1.9 MBProgress (1): 0.7/1.9 MBProgress (1): 0.7/1.9 MBProgress (1): 0.7/1.9 MBProgress (1): 0.7/1.9 MBProgress (1): 0.7/1.9 MBProgress (1): 0.8/1.9 MBProgress (1): 0.8/1.9 MBProgress (1): 0.8/1.9 MBProgress (1): 0.8/1.9 MBProgress (1): 0.8/1.9 MBProgress (1): 0.8/1.9 MBProgress (1): 0.8/1.9 MBProgress (1): 0.8/1.9 MBProgress (1): 0.8/1.9 MBProgress (1): 0.8/1.9 MBProgress (1): 0.8/1.9 MBProgress (1): 0.8/1.9 MBProgress (1): 0.8/1.9 MBProgress (1): 0.9/1.9 MBProgress (1): 0.9/1.9 MBProgress (1): 0.9/1.9 MBProgress (1): 0.9/1.9 MBProgress (1): 0.9/1.9 MBProgress (1): 0.9/1.9 MBProgress (1): 0.9/1.9 MBProgress (1): 0.9/1.9 MBProgress (1): 0.9/1.9 MBProgress (1): 0.9/1.9 MBProgress (1): 0.9/1.9 MBProgress (1): 1.0/1.9 MBProgress (1): 1.0/1.9 MBProgress (1): 1.0/1.9 MBProgress (1): 1.0/1.9 MBProgress (1): 1.0/1.9 MBProgress (1): 1.0/1.9 MBProgress (1): 1.0/1.9 MBProgress (1): 1.0/1.9 MBProgress (1): 1.0/1.9 MBProgress (1): 1.0/1.9 MBProgress (1): 1.0/1.9 MBProgress (1): 1.0/1.9 MBProgress (1): 1.1/1.9 MBProgress (1): 1.1/1.9 MBProgress (1): 1.1/1.9 MBProgress (1): 1.1/1.9 MBProgress (1): 1.1/1.9 MBProgress (1): 1.1/1.9 MBProgress (1): 1.1/1.9 MBProgress (1): 1.1/1.9 MBProgress (1): 1.1/1.9 MBProgress (1): 1.1/1.9 MBProgress (1): 1.1/1.9 MBProgress (1): 1.1/1.9 MBProgress (1): 1.2/1.9 MBProgress (1): 1.2/1.9 MBProgress (1): 1.2/1.9 MBProgress (1): 1.2/1.9 MBProgress (1): 1.2/1.9 MBProgress (1): 1.2/1.9 MBProgress (1): 1.2/1.9 MBProgress (1): 1.2/1.9 MBProgress (1): 1.2/1.9 MBProgress (1): 1.2/1.9 MBProgress (1): 1.2/1.9 MBProgress (1): 1.2/1.9 MBProgress (1): 1.3/1.9 MBProgress (1): 1.3/1.9 MBProgress (1): 1.3/1.9 MBProgress (1): 1.3/1.9 MBProgress (1): 1.3/1.9 MBProgress (1): 1.3/1.9 MBProgress (1): 1.3/1.9 MBProgress (1): 1.3/1.9 MBProgress (1): 1.3/1.9 MBProgress (1): 1.3/1.9 MBProgress (1): 1.3/1.9 MBProgress (1): 1.3/1.9 MBProgress (1): 1.4/1.9 MBProgress (1): 1.4/1.9 MBProgress (1): 1.4/1.9 MBProgress (1): 1.4/1.9 MBProgress (1): 1.4/1.9 MBProgress (1): 1.4/1.9 MBProgress (1): 1.4/1.9 MBProgress (1): 1.4/1.9 MBProgress (1): 1.4/1.9 MBProgress (1): 1.4/1.9 MBProgress (1): 1.4/1.9 MBProgress (1): 1.4/1.9 MBProgress (1): 1.5/1.9 MBProgress (1): 1.5/1.9 MBProgress (1): 1.5/1.9 MBProgress (1): 1.5/1.9 MBProgress (1): 1.5/1.9 MBProgress (1): 1.5/1.9 MBProgress (1): 1.5/1.9 MBProgress (1): 1.5/1.9 MBProgress (1): 1.5/1.9 MBProgress (1): 1.5/1.9 MBProgress (1): 1.5/1.9 MBProgress (1): 1.5/1.9 MBProgress (1): 1.6/1.9 MBProgress (1): 1.6/1.9 MBProgress (1): 1.6/1.9 MBProgress (1): 1.6/1.9 MBProgress (1): 1.6/1.9 MBProgress (1): 1.6/1.9 MBProgress (1): 1.6/1.9 MBProgress (1): 1.6/1.9 MBProgress (1): 1.6/1.9 MBProgress (1): 1.6/1.9 MBProgress (1): 1.6/1.9 MBProgress (1): 1.7/1.9 MBProgress (1): 1.7/1.9 MBProgress (1): 1.7/1.9 MBProgress (1): 1.7/1.9 MBProgress (1): 1.7/1.9 MBProgress (1): 1.7/1.9 MBProgress (1): 1.7/1.9 MBProgress (1): 1.7/1.9 MBProgress (1): 1.7/1.9 MBProgress (1): 1.7/1.9 MBProgress (1): 1.7/1.9 MBProgress (1): 1.7/1.9 MBProgress (1): 1.8/1.9 MBProgress (1): 1.8/1.9 MBProgress (1): 1.8/1.9 MBProgress (1): 1.8/1.9 MBProgress (1): 1.8/1.9 MBProgress (1): 1.8/1.9 MBProgress (1): 1.8/1.9 MBProgress (1): 1.8/1.9 MBProgress (1): 1.8/1.9 MBProgress (1): 1.8/1.9 MBProgress (1): 1.8/1.9 MBProgress (1): 1.8/1.9 MBProgress (1): 1.9/1.9 MBProgress (1): 1.9 MB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-shared-utils/3.0.0-M4/surefire-shared-utils-3.0.0-M4.jar (1.9 MB at 608 kB/s)
-Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit4/3.0.0-M5/surefire-junit4-3.0.0-M5.jar
-Progress (1): 4.1/17 kBProgress (1): 8.2/17 kBProgress (1): 12/17 kB Progress (1): 16/17 kBProgress (1): 17 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit4/3.0.0-M5/surefire-junit4-3.0.0-M5.jar (17 kB at 101 kB/s)
-Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit4/3.0.0-M5/surefire-junit4-3.0.0-M5.pom
-Progress (1): 2.9 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit4/3.0.0-M5/surefire-junit4-3.0.0-M5.pom (2.9 kB at 23 kB/s)
-Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-providers/3.0.0-M5/surefire-providers-3.0.0-M5.pom
-Progress (1): 2.5 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-providers/3.0.0-M5/surefire-providers-3.0.0-M5.pom (2.5 kB at 23 kB/s)
-Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-junit4/3.0.0-M5/common-junit4-3.0.0-M5.pom
-Progress (1): 2.9 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-junit4/3.0.0-M5/common-junit4-3.0.0-M5.pom (2.9 kB at 25 kB/s)
-Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-junit3/3.0.0-M5/common-junit3-3.0.0-M5.pom
-Progress (1): 2.6 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-junit3/3.0.0-M5/common-junit3-3.0.0-M5.pom (2.6 kB at 23 kB/s)
-Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-java5/3.0.0-M5/common-java5-3.0.0-M5.pom
-Progress (1): 2.6 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-java5/3.0.0-M5/common-java5-3.0.0-M5.pom (2.6 kB at 23 kB/s)
-Downloading from central: https://repo.maven.apache.org/maven2/org/easytesting/fest-assert/1.4/fest-assert-1.4.pom
-Progress (1): 2.4 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/easytesting/fest-assert/1.4/fest-assert-1.4.pom (2.4 kB at 21 kB/s)
-Downloading from central: https://repo.maven.apache.org/maven2/org/easytesting/fest/1.0.8/fest-1.0.8.pom
-Progress (1): 4.1/12 kBProgress (1): 8.2/12 kBProgress (1): 12 kB                       Downloaded from central: https://repo.maven.apache.org/maven2/org/easytesting/fest/1.0.8/fest-1.0.8.pom (12 kB at 90 kB/s)
-Downloading from central: https://repo.maven.apache.org/maven2/org/easytesting/fest-util/1.1.6/fest-util-1.1.6.pom
-Progress (1): 1.6 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/easytesting/fest-util/1.1.6/fest-util-1.1.6.pom (1.6 kB at 11 kB/s)
-Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-junit4/3.0.0-M5/common-junit4-3.0.0-M5.jar
-Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-junit3/3.0.0-M5/common-junit3-3.0.0-M5.jar
-Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-java5/3.0.0-M5/common-java5-3.0.0-M5.jar
-Progress (1): 2.7/12 kBProgress (1): 5.5/12 kBProgress (1): 8.2/12 kBProgress (1): 11/12 kB Progress (1): 12 kB   Progress (2): 12 kB | 4.1/25 kBProgress (3): 12 kB | 4.1/25 kB | 2.7/16 kBProgress (3): 12 kB | 8.2/25 kB | 2.7/16 kBProgress (3): 12 kB | 8.2/25 kB | 5.5/16 kBProgress (3): 12 kB | 12/25 kB | 5.5/16 kB Progress (3): 12 kB | 12/25 kB | 8.2/16 kBProgress (3): 12 kB | 16/25 kB | 8.2/16 kBProgress (3): 12 kB | 16/25 kB | 11/16 kB Progress (3): 12 kB | 16/25 kB | 14/16 kBProgress (3): 12 kB | 16/25 kB | 16 kB   Progress (3): 12 kB | 20/25 kB | 16 kBProgress (3): 12 kB | 25/25 kB | 16 kBProgress (3): 12 kB | 25 kB | 16 kB                                      Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-junit3/3.0.0-M5/common-junit3-3.0.0-M5.jar (12 kB at 79 kB/s)
-Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-junit4/3.0.0-M5/common-junit4-3.0.0-M5.jar (25 kB at 159 kB/s)
-Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-java5/3.0.0-M5/common-java5-3.0.0-M5.jar (16 kB at 78 kB/s)
-[INFO] 
-[INFO] -------------------------------------------------------
-[INFO]  T E S T S
-[INFO] -------------------------------------------------------
-[INFO] Running de.atb.context.context.util.OntologyNamespaceTest
-[WARNING] Tests run: 4, Failures: 0, Errors: 0, Skipped: 3, Time elapsed: 0.201 s - in de.atb.context.context.util.OntologyNamespaceTest
-[INFO] Running de.atb.context.learning.models.ModelInitializerBaseTest
-[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in de.atb.context.learning.models.ModelInitializerBaseTest
-[INFO] Running de.atb.context.common.util.BusinessCaseTest
-[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in de.atb.context.common.util.BusinessCaseTest
-[INFO] Running de.atb.context.common.util.SPARQLHelperTest
-[INFO] Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.036 s - in de.atb.context.common.util.SPARQLHelperTest
-[INFO] Running de.atb.context.common.util.HashingTest
-[INFO] Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.042 s - in de.atb.context.common.util.HashingTest
-[INFO] Running de.atb.context.common.util.StringUtilsTest
-[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 s - in de.atb.context.common.util.StringUtilsTest
-[INFO] Running de.atb.context.common.util.TimeFrameTest
-[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.023 s - in de.atb.context.common.util.TimeFrameTest
-[INFO] Running de.atb.context.common.util.ClasspathHelperTest
-[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.403 s - in de.atb.context.common.util.ClasspathHelperTest
-[INFO] Running de.atb.context.common.util.ApplicationScenarioTest
-[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.031 s - in de.atb.context.common.util.ApplicationScenarioTest
-[INFO] Running de.atb.context.common.io.NullOutputStreamTest
-[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s - in de.atb.context.common.io.NullOutputStreamTest
-[INFO] Running de.atb.context.common.io.ResourceLoaderTest
-[INFO] Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.076 s - in de.atb.context.common.io.ResourceLoaderTest
-[INFO] Running de.atb.context.common.exceptions.NotImplementedExceptionTest
-[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in de.atb.context.common.exceptions.NotImplementedExceptionTest
-[INFO] Running de.atb.context.common.exceptions.ConfigurationExceptionTest
-[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s - in de.atb.context.common.exceptions.ConfigurationExceptionTest
-[INFO] Running de.atb.context.common.authentication.CredentialsTest
-[INFO] Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.027 s - in de.atb.context.common.authentication.CredentialsTest
-[INFO] Running de.atb.context.common.VersionTest
-[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s - in de.atb.context.common.VersionTest
-[INFO] Running de.atb.context.common.ConfigurationTest
-[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in de.atb.context.common.ConfigurationTest
-[INFO] Running de.atb.context.kmb.KMBApiTest
-[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.394 s - in de.atb.context.kmb.KMBApiTest
-[INFO] Running de.atb.context.persistence.processors.BasePersistenceProcessorTest
-[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s - in de.atb.context.persistence.processors.BasePersistenceProcessorTest
-[INFO] Running de.atb.context.persistence.common.RepositoryTDBTest
-[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in de.atb.context.persistence.common.RepositoryTDBTest
-[INFO] Running de.atb.context.persistence.ModelOutputLanguageTest
-[INFO] Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 s - in de.atb.context.persistence.ModelOutputLanguageTest
-[INFO] Running de.atb.context.persistence.ConfigurationRepositoryTest
-[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in de.atb.context.persistence.ConfigurationRepositoryTest
-[INFO] Running de.atb.context.services.faults.marshal.ContextStackTraceElementTest
-[INFO] Tests run: 33, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.051 s - in de.atb.context.services.faults.marshal.ContextStackTraceElementTest
-[INFO] Running de.atb.context.services.faults.marshal.ContextFaultDetailsTest
-[INFO] Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 s - in de.atb.context.services.faults.marshal.ContextFaultDetailsTest
-[INFO] Running de.atb.context.services.faults.ContextFaultTest
-[INFO] Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s - in de.atb.context.services.faults.ContextFaultTest
-[INFO] Running de.atb.context.services.faults.ContextNotRunningTest
-[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s - in de.atb.context.services.faults.ContextNotRunningTest
-[INFO] Running de.atb.context.services.util.Sl4jInInterceptorTest
-[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.016 s - in de.atb.context.services.util.Sl4jInInterceptorTest
-[INFO] Running de.atb.context.services.util.Sl4jOutInterceptorTest
-[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in de.atb.context.services.util.Sl4jOutInterceptorTest
-[INFO] Running de.atb.context.services.config.ServicesConfigTest
-[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.043 s - in de.atb.context.services.config.ServicesConfigTest
-[INFO] 
-[INFO] Results:
-[INFO] 
-[WARNING] Tests run: 199, Failures: 0, Errors: 0, Skipped: 3
-[INFO] 
-[INFO] 
-[INFO] --- maven-dependency-plugin:3.1.2:copy-dependencies (copy-dependencies) @ context-core ---
-[INFO] Copying slf4j-api-1.7.30.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/slf4j-api-1.7.30.jar
-[INFO] Copying jcl-over-slf4j-1.7.30.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/jcl-over-slf4j-1.7.30.jar
-[INFO] Copying slf4j-log4j12-1.7.30.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/slf4j-log4j12-1.7.30.jar
-[INFO] Copying log4j-1.2.17.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/log4j-1.2.17.jar
-[INFO] Copying commons-collections4-4.4.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/commons-collections4-4.4.jar
-[INFO] Copying commons-io-2.8.0.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/commons-io-2.8.0.jar
-[INFO] Copying commons-lang3-3.11.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/commons-lang3-3.11.jar
-[INFO] Copying jgoodies-forms-1.9.0.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/jgoodies-forms-1.9.0.jar
-[INFO] Copying jgoodies-common-1.8.1.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/jgoodies-common-1.8.1.jar
-[INFO] Copying log4j-core-2.14.0.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/log4j-core-2.14.0.jar
-[INFO] Copying log4j-api-2.14.0.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/log4j-api-2.14.0.jar
-[INFO] Copying javaee-web-api-8.0.1.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/javaee-web-api-8.0.1.jar
-[INFO] Copying javatuples-1.2.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/javatuples-1.2.jar
-[INFO] Copying jpathwatch-0.95.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/jpathwatch-0.95.jar
-[INFO] Copying lucene-analyzers-common-8.8.0.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/lucene-analyzers-common-8.8.0.jar
-[INFO] Copying lucene-core-8.8.0.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/lucene-core-8.8.0.jar
-[INFO] Copying pellet-jena-2.3.6-ansell.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/pellet-jena-2.3.6-ansell.jar
-[INFO] Copying jena-2.6.4.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/jena-2.6.4.jar
-[INFO] Copying icu4j-3.4.4.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/icu4j-3.4.4.jar
-[INFO] Copying xercesImpl-2.7.1.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/xercesImpl-2.7.1.jar
-[INFO] Copying pellet-core-2.3.6-ansell.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/pellet-core-2.3.6-ansell.jar
-[INFO] Copying pellet-common-2.3.6-ansell.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/pellet-common-2.3.6-ansell.jar
-[INFO] Copying xsdlib-20030225.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/xsdlib-20030225.jar
-[INFO] Copying relaxngDatatype-20030225.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/relaxngDatatype-20030225.jar
-[INFO] Copying pellet-rules-2.3.6-ansell.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/pellet-rules-2.3.6-ansell.jar
-[INFO] Copying pellet-datatypes-2.3.6-ansell.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/pellet-datatypes-2.3.6-ansell.jar
-[INFO] Copying pellet-el-2.3.6-ansell.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/pellet-el-2.3.6-ansell.jar
-[INFO] Copying aterm-java-1.8.2-p1.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/aterm-java-1.8.2-p1.jar
-[INFO] Copying jjtraveler-0.6.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/jjtraveler-0.6.jar
-[INFO] Copying shared-objects-1.4.9-p1.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/shared-objects-1.4.9-p1.jar
-[INFO] Copying jgrapht-jdk1.5-0.7.3.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/jgrapht-jdk1.5-0.7.3.jar
-[INFO] Copying arq-2.8.7.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/arq-2.8.7.jar
-[INFO] Copying iri-0.8.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/iri-0.8.jar
-[INFO] Copying wstx-asl-3.2.9.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/wstx-asl-3.2.9.jar
-[INFO] Copying tdb-0.8.9.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/tdb-0.8.9.jar
-[INFO] Copying sdb-1.3.4.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/sdb-1.3.4.jar
-[INFO] Copying jenabean-1.0.6.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/jenabean-1.0.6.jar
-[INFO] Copying cxf-rt-frontend-jaxws-3.4.2.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/cxf-rt-frontend-jaxws-3.4.2.jar
-[INFO] Copying xml-resolver-1.2.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/xml-resolver-1.2.jar
-[INFO] Copying asm-9.0.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/asm-9.0.jar
-[INFO] Copying cxf-core-3.4.2.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/cxf-core-3.4.2.jar
-[INFO] Copying jaxb-runtime-2.3.3.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/jaxb-runtime-2.3.3.jar
-[INFO] Copying txw2-2.3.3.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/txw2-2.3.3.jar
-[INFO] Copying istack-commons-runtime-3.0.11.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/istack-commons-runtime-3.0.11.jar
-[INFO] Copying woodstox-core-6.2.3.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/woodstox-core-6.2.3.jar
-[INFO] Copying stax2-api-4.2.1.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/stax2-api-4.2.1.jar
-[INFO] Copying xmlschema-core-2.2.5.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/xmlschema-core-2.2.5.jar
-[INFO] Copying jakarta.xml.bind-api-2.3.3.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/jakarta.xml.bind-api-2.3.3.jar
-[INFO] Copying cxf-rt-bindings-soap-3.4.2.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/cxf-rt-bindings-soap-3.4.2.jar
-[INFO] Copying cxf-rt-wsdl-3.4.2.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/cxf-rt-wsdl-3.4.2.jar
-[INFO] Copying wsdl4j-1.6.3.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/wsdl4j-1.6.3.jar
-[INFO] Copying cxf-rt-databinding-jaxb-3.4.2.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/cxf-rt-databinding-jaxb-3.4.2.jar
-[INFO] Copying cxf-rt-bindings-xml-3.4.2.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/cxf-rt-bindings-xml-3.4.2.jar
-[INFO] Copying cxf-rt-frontend-simple-3.4.2.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/cxf-rt-frontend-simple-3.4.2.jar
-[INFO] Copying cxf-rt-ws-addr-3.4.2.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/cxf-rt-ws-addr-3.4.2.jar
-[INFO] Copying cxf-rt-ws-policy-3.4.2.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/cxf-rt-ws-policy-3.4.2.jar
-[INFO] Copying neethi-3.1.1.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/neethi-3.1.1.jar
-[INFO] Copying jakarta.annotation-api-1.3.5.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/jakarta.annotation-api-1.3.5.jar
-[INFO] Copying jakarta.xml.ws-api-2.3.3.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/jakarta.xml.ws-api-2.3.3.jar
-[INFO] Copying jakarta.jws-api-2.1.0.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/jakarta.jws-api-2.1.0.jar
-[INFO] Copying jakarta.xml.soap-api-1.4.2.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/jakarta.xml.soap-api-1.4.2.jar
-[INFO] Copying jakarta.activation-api-1.2.2.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/jakarta.activation-api-1.2.2.jar
-[INFO] Copying jakarta.activation-1.2.2.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/jakarta.activation-1.2.2.jar
-[INFO] Copying saaj-impl-1.5.2.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/saaj-impl-1.5.2.jar
-[INFO] Copying stax-ex-1.8.3.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/stax-ex-1.8.3.jar
-[INFO] Copying geronimo-jta_1.1_spec-1.1.1.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/geronimo-jta_1.1_spec-1.1.1.jar
-[INFO] Copying jboss-rmi-api_1.0_spec-1.0.6.Final.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/jboss-rmi-api_1.0_spec-1.0.6.Final.jar
-[INFO] Copying cxf-rt-transports-http-jetty-3.4.2.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/cxf-rt-transports-http-jetty-3.4.2.jar
-[INFO] Copying cxf-rt-transports-http-3.4.2.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/cxf-rt-transports-http-3.4.2.jar
-[INFO] Copying jetty-server-9.4.35.v20201120.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/jetty-server-9.4.35.v20201120.jar
-[INFO] Copying javax.servlet-api-3.1.0.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/javax.servlet-api-3.1.0.jar
-[INFO] Copying jetty-util-9.4.35.v20201120.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/jetty-util-9.4.35.v20201120.jar
-[INFO] Copying jetty-io-9.4.35.v20201120.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/jetty-io-9.4.35.v20201120.jar
-[INFO] Copying jetty-security-9.4.35.v20201120.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/jetty-security-9.4.35.v20201120.jar
-[INFO] Copying jetty-continuation-9.4.35.v20201120.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/jetty-continuation-9.4.35.v20201120.jar
-[INFO] Copying jetty-http-9.4.35.v20201120.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/jetty-http-9.4.35.v20201120.jar
-[INFO] Copying cxf-rt-transports-http-hc-3.4.2.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/cxf-rt-transports-http-hc-3.4.2.jar
-[INFO] Copying httpcore-nio-4.4.14.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/httpcore-nio-4.4.14.jar
-[INFO] Copying httpcore-4.4.14.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/httpcore-4.4.14.jar
-[INFO] Copying httpasyncclient-4.1.4.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/httpasyncclient-4.1.4.jar
-[INFO] Copying httpclient-4.5.6.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/httpclient-4.5.6.jar
-[INFO] Copying commons-codec-1.10.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/commons-codec-1.10.jar
-[INFO] Copying simple-xml-2.7.1.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/simple-xml-2.7.1.jar
-[INFO] Copying stax-api-1.0.1.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/stax-api-1.0.1.jar
-[INFO] Copying stax-1.2.0.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/stax-1.2.0.jar
-[INFO] Copying xpp3-1.1.3.3.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/xpp3-1.1.3.3.jar
-[INFO] Copying h2-1.4.200.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/h2-1.4.200.jar
-[INFO] Copying swingx-1.6.1.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/swingx-1.6.1.jar
-[INFO] Copying filters-2.0.235.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/filters-2.0.235.jar
-[INFO] Copying swing-worker-1.1.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/swing-worker-1.1.jar
-[INFO] Copying owlapi-distribution-5.1.17.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/owlapi-distribution-5.1.17.jar
-[INFO] Copying owlapi-compatibility-5.1.17.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/owlapi-compatibility-5.1.17.jar
-[INFO] Copying owlapi-apibinding-5.1.17.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/owlapi-apibinding-5.1.17.jar
-[INFO] Copying owlapi-api-5.1.17.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/owlapi-api-5.1.17.jar
-[INFO] Copying javax.inject-1.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/javax.inject-1.jar
-[INFO] Copying owlapi-impl-5.1.17.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/owlapi-impl-5.1.17.jar
-[INFO] Copying owlapi-parsers-5.1.17.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/owlapi-parsers-5.1.17.jar
-[INFO] Copying owlapi-oboformat-5.1.17.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/owlapi-oboformat-5.1.17.jar
-[INFO] Copying owlapi-tools-5.1.17.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/owlapi-tools-5.1.17.jar
-[INFO] Copying owlapi-rio-5.1.17.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/owlapi-rio-5.1.17.jar
-[INFO] Copying jackson-core-2.9.10.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/jackson-core-2.9.10.jar
-[INFO] Copying jackson-databind-2.9.10.5.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/jackson-databind-2.9.10.5.jar
-[INFO] Copying jackson-annotations-2.9.10.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/jackson-annotations-2.9.10.jar
-[INFO] Copying commons-rdf-api-0.5.0.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/commons-rdf-api-0.5.0.jar
-[INFO] Copying xz-1.6.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/xz-1.6.jar
-[INFO] Copying rdf4j-model-3.4.3.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/rdf4j-model-3.4.3.jar
-[INFO] Copying rdf4j-rio-api-3.4.3.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/rdf4j-rio-api-3.4.3.jar
-[INFO] Copying rdf4j-rio-languages-3.4.3.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/rdf4j-rio-languages-3.4.3.jar
-[INFO] Copying rdf4j-rio-datatypes-3.4.3.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/rdf4j-rio-datatypes-3.4.3.jar
-[INFO] Copying rdf4j-rio-binary-3.4.3.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/rdf4j-rio-binary-3.4.3.jar
-[INFO] Copying rdf4j-rio-n3-3.4.3.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/rdf4j-rio-n3-3.4.3.jar
-[INFO] Copying rdf4j-rio-nquads-3.4.3.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/rdf4j-rio-nquads-3.4.3.jar
-[INFO] Copying rdf4j-rio-ntriples-3.4.3.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/rdf4j-rio-ntriples-3.4.3.jar
-[INFO] Copying rdf4j-rio-rdfjson-3.4.3.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/rdf4j-rio-rdfjson-3.4.3.jar
-[INFO] Copying rdf4j-rio-jsonld-3.4.3.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/rdf4j-rio-jsonld-3.4.3.jar
-[INFO] Copying httpclient-cache-4.5.10.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/httpclient-cache-4.5.10.jar
-[INFO] Copying rdf4j-rio-rdfxml-3.4.3.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/rdf4j-rio-rdfxml-3.4.3.jar
-[INFO] Copying rdf4j-rio-trix-3.4.3.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/rdf4j-rio-trix-3.4.3.jar
-[INFO] Copying rdf4j-rio-turtle-3.4.3.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/rdf4j-rio-turtle-3.4.3.jar
-[INFO] Copying rdf4j-rio-trig-3.4.3.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/rdf4j-rio-trig-3.4.3.jar
-[INFO] Copying rdf4j-rio-hdt-3.4.3.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/rdf4j-rio-hdt-3.4.3.jar
-[INFO] Copying rdf4j-util-3.4.3.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/rdf4j-util-3.4.3.jar
-[INFO] Copying jsonld-java-0.13.0.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/jsonld-java-0.13.0.jar
-[INFO] Copying httpclient-osgi-4.5.10.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/httpclient-osgi-4.5.10.jar
-[INFO] Copying httpmime-4.5.10.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/httpmime-4.5.10.jar
-[INFO] Copying fluent-hc-4.5.10.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/fluent-hc-4.5.10.jar
-[INFO] Copying httpcore-osgi-4.4.12.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/httpcore-osgi-4.4.12.jar
-[INFO] Copying hppcrt-0.7.5.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/hppcrt-0.7.5.jar
-[INFO] Copying caffeine-2.8.1.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/caffeine-2.8.1.jar
-[INFO] Copying checker-qual-3.1.0.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/checker-qual-3.1.0.jar
-[INFO] Copying error_prone_annotations-2.3.4.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/error_prone_annotations-2.3.4.jar
-[INFO] Copying guava-30.0-jre.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/guava-30.0-jre.jar
-[INFO] Copying failureaccess-1.0.1.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/failureaccess-1.0.1.jar
-[INFO] Copying listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar
-[INFO] Copying j2objc-annotations-1.3.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/j2objc-annotations-1.3.jar
-[INFO] Copying jsr305-3.0.2.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/jsr305-3.0.2.jar
-[INFO] Copying org.protege.editor.owl.codegeneration-1.0.2.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/org.protege.editor.owl.codegeneration-1.0.2.jar
-[INFO] Copying cobertura-2.0.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/cobertura-2.0.jar
-[INFO] Copying oro-2.0.8.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/oro-2.0.8.jar
-[INFO] Copying asm-3.3.1.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/asm-3.3.1.jar
-[INFO] Copying asm-tree-3.3.1.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/asm-tree-3.3.1.jar
-[INFO] Copying asm-commons-3.3.1.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/asm-commons-3.3.1.jar
-[INFO] Copying ant-1.7.0.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/ant-1.7.0.jar
-[INFO] Copying ant-launcher-1.7.0.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/ant-launcher-1.7.0.jar
-[INFO] Copying commons-cli-1.2.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/commons-cli-1.2.jar
-[INFO] Copying org.protege.common-4.3.0.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/org.protege.common-4.3.0.jar
-[INFO] Copying org.apache.felix.main-4.0.3.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/org.apache.felix.main-4.0.3.jar
-[INFO] Copying org.apache.felix.framework-4.0.3.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/org.apache.felix.framework-4.0.3.jar
-[INFO] Copying looks-2.2.2.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/looks-2.2.2.jar
-[INFO] Copying org.protege.editor.core.application-4.3.0.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/org.protege.editor.core.application-4.3.0.jar
-[INFO] Copying registry-3.3.0-v20070522.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/registry-3.3.0-v20070522.jar
-[INFO] Copying common-3.6.200-v20130402-1505.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/common-3.6.200-v20130402-1505.jar
-[INFO] Copying mdock-1.1.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/mdock-1.1.jar
-[INFO] Copying org.protege.editor.owl-4.3.0.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/org.protege.editor.owl-4.3.0.jar
-[INFO] Copying org.eclipse.equinox.registry-3.5.0.v20100503.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/org.eclipse.equinox.registry-3.5.0.v20100503.jar
-[INFO] Copying org.eclipse.core.jobs-3.5.0.v20100515.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/org.eclipse.core.jobs-3.5.0.v20100515.jar
-[INFO] Copying org.eclipse.equinox.common-3.6.0.v20100503.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/org.eclipse.equinox.common-3.6.0.v20100503.jar
-[INFO] Copying org.eclipse.osgi-3.6.0.v20100517.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/org.eclipse.osgi-3.6.0.v20100517.jar
-[INFO] Copying protege-owlapi-extensions-3.2.4.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/protege-owlapi-extensions-3.2.4.jar
-[INFO] Copying org.protege.xmlcatalog-1.0.3.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/org.protege.xmlcatalog-1.0.3.jar
-[INFO] Copying org.semanticweb.hermit-1.3.8.3.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/org.semanticweb.hermit-1.3.8.3.jar
-[INFO] Copying commons-logging-1.1.3.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/commons-logging-1.1.3.jar
-[INFO] Copying axiom-api-1.2.14.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/axiom-api-1.2.14.jar
-[INFO] Copying geronimo-activation_1.1_spec-1.1.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/geronimo-activation_1.1_spec-1.1.jar
-[INFO] Copying geronimo-javamail_1.4_spec-1.7.1.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/geronimo-javamail_1.4_spec-1.7.1.jar
-[INFO] Copying jaxen-1.1.4.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/jaxen-1.1.4.jar
-[INFO] Copying geronimo-stax-api_1.0_spec-1.0.1.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/geronimo-stax-api_1.0_spec-1.0.1.jar
-[INFO] Copying apache-mime4j-core-0.7.2.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/apache-mime4j-core-0.7.2.jar
-[INFO] Copying axiom-c14n-1.2.14.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/axiom-c14n-1.2.14.jar
-[INFO] Copying axiom-impl-1.2.14.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/axiom-impl-1.2.14.jar
-[INFO] Copying woodstox-core-asl-4.1.4.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/woodstox-core-asl-4.1.4.jar
-[INFO] Copying axiom-dom-1.2.14.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/axiom-dom-1.2.14.jar
-[INFO] Copying automaton-1.11-8.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/automaton-1.11-8.jar
-[INFO] Copying jfact-1.0.0.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/jfact-1.0.0.jar
-[INFO] Copying gson-2.8.6.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/gson-2.8.6.jar
-[INFO] Copying super-csv-2.4.0.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/super-csv-2.4.0.jar
-[INFO] Copying lombok-1.18.18.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/lombok-1.18.18.jar
-[INFO] Copying jaxws-api-2.3.1.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/jaxws-api-2.3.1.jar
-[INFO] Copying jaxb-api-2.3.1.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/jaxb-api-2.3.1.jar
-[INFO] Copying javax.activation-api-1.2.0.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/javax.activation-api-1.2.0.jar
-[INFO] Copying javax.xml.soap-api-1.4.0.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/javax.xml.soap-api-1.4.0.jar
-[INFO] Copying javax.annotation-api-1.3.2.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/javax.annotation-api-1.3.2.jar
-[INFO] Copying javax.jws-api-1.1.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/javax.jws-api-1.1.jar
-[INFO] Copying junit-4.13.1.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/junit-4.13.1.jar
-[INFO] Copying hamcrest-core-1.3.jar to /Users/philippe/git/smartclide-context/context-core/target/lib/hamcrest-core-1.3.jar
-[INFO] 
-[INFO] --- maven-jar-plugin:3.2.0:jar (default-jar) @ context-core ---
-[INFO] Building jar: /Users/philippe/git/smartclide-context/context-core/target/context-core-2.0.0.jar
-[INFO] 
-[INFO] --- maven-install-plugin:2.4:install (default-install) @ context-core ---
-[INFO] Installing /Users/philippe/git/smartclide-context/context-core/target/context-core-2.0.0.jar to /Users/philippe/.m2/repository/de/atb/context/context-core/2.0.0/context-core-2.0.0.jar
-[INFO] Installing /Users/philippe/git/smartclide-context/context-core/pom.xml to /Users/philippe/.m2/repository/de/atb/context/context-core/2.0.0/context-core-2.0.0.pom
-[INFO] 
-[INFO] -----------------< de.atb.context:context-monitoring >------------------
-[INFO] Building ATB Context Monitoring Core Services 2.0.0                [3/4]
-[INFO] --------------------------------[ jar ]---------------------------------
-[WARNING] Failure to transfer log4j:log4j/maven-metadata.xml from http://openjena.org/repo was cached in the local repository, resolution will not be reattempted until the update interval of repo-jena has elapsed or updates are forced. Original error: Could not transfer metadata log4j:log4j/maven-metadata.xml from/to repo-jena (http://openjena.org/repo): Authorization failed for http://openjena.org/repo/log4j/log4j/maven-metadata.xml 403 Forbidden
-[WARNING] Failure to transfer log4j:log4j/maven-metadata.xml from http://openjena.org/repo-dev was cached in the local repository, resolution will not be reattempted until the update interval of repo-jena-dev has elapsed or updates are forced. Original error: Could not transfer metadata log4j:log4j/maven-metadata.xml from/to repo-jena-dev (http://openjena.org/repo-dev): Authorization failed for http://openjena.org/repo-dev/log4j/log4j/maven-metadata.xml 403 Forbidden
-[INFO] 
-[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ context-monitoring ---
-[INFO] Deleting /Users/philippe/git/smartclide-context/context-monitoring/target
-[INFO] 
-[INFO] --- maven-enforcer-plugin:3.0.0-M3:enforce (enforce-versions) @ context-monitoring ---
-[INFO] 
-[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ context-monitoring ---
-[INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] skip non existing resourceDirectory /Users/philippe/git/smartclide-context/context-monitoring/src/main/resources
-[INFO] 
-[INFO] --- license-maven-plugin:2.0.0:update-file-header (license-management) @ context-monitoring ---
-[INFO] Adding a license repository jar:file:/Users/philippe/.m2/repository/org/codehaus/mojo/license-maven-plugin/2.0.0/license-maven-plugin-2.0.0.jar!/META-INF/licenses
-[INFO] register GNU Free Documentation License (FDL) version 1.3
-[INFO] register GNU General Lesser Public License (LGPL) version 3.0
-[INFO] register GNU Affero General Public License (AGPL) version 3.0
-[INFO] register GNU General Public License (GPL) version 3.0
-[INFO] register GNU General Public License (GPL) version 2.0
-[INFO] register GNU General Public License (GPL) version 1.0
-[INFO] register Apache License version 2.0
-[INFO] register Eclipse Public License - v 2.0 with Secondary License
-[INFO] register Eclipse Public License - v 2.0
-[INFO] register Eclipse Public License - v 1.0
-[INFO] register Eclipse Public + Distribution License - v 1.0
-[INFO] register COMMON DEVELOPMENT AND DISTRIBUTION LICENSE (CDDL) Version 1.0
-[INFO] register GNU General Lesser Public License (LGPL) version 2.1
-[INFO] register MIT-License
-[INFO] register BSD 2-Clause License
-[INFO] register BSD 3-Clause License
-[INFO] register European Union Public License v1.1
-[INFO] Will search files to update from root /Users/philippe/git/smartclide-context/context-monitoring/src/main/java
-[INFO] Scan 72 files header done in 1.506s.
-[INFO] 
- * update header on 72 files.
-[INFO] 
-[INFO] --- license-maven-plugin:2.0.0:update-project-license (license-management) @ context-monitoring ---
-[INFO] Adding a license repository jar:file:/Users/philippe/.m2/repository/org/codehaus/mojo/license-maven-plugin/2.0.0/license-maven-plugin-2.0.0.jar!/META-INF/licenses
-[INFO] register GNU Free Documentation License (FDL) version 1.3
-[INFO] register GNU General Lesser Public License (LGPL) version 3.0
-[INFO] register GNU Affero General Public License (AGPL) version 3.0
-[INFO] register GNU General Public License (GPL) version 3.0
-[INFO] register GNU General Public License (GPL) version 2.0
-[INFO] register GNU General Public License (GPL) version 1.0
-[INFO] register Apache License version 2.0
-[INFO] register Eclipse Public License - v 2.0 with Secondary License
-[INFO] register Eclipse Public License - v 2.0
-[INFO] register Eclipse Public License - v 1.0
-[INFO] register Eclipse Public + Distribution License - v 1.0
-[INFO] register COMMON DEVELOPMENT AND DISTRIBUTION LICENSE (CDDL) Version 1.0
-[INFO] register GNU General Lesser Public License (LGPL) version 2.1
-[INFO] register MIT-License
-[INFO] register BSD 2-Clause License
-[INFO] register BSD 3-Clause License
-[INFO] register European Union Public License v1.1
-[INFO] Will create or update license file [epl_only_v2] to /Users/philippe/git/smartclide-context/context-monitoring/LICENSE
-[INFO] 
-[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ context-monitoring ---
-[INFO] Changes detected - recompiling the module!
-[INFO] Compiling 72 source files to /Users/philippe/git/smartclide-context/context-monitoring/target/classes
-[INFO] /Users/philippe/git/smartclide-context/context-monitoring/src/main/java/de/atb/context/services/PersistenceUnitService.java: /Users/philippe/git/smartclide-context/context-monitoring/src/main/java/de/atb/context/services/PersistenceUnitService.java uses or overrides a deprecated API.
-[INFO] /Users/philippe/git/smartclide-context/context-monitoring/src/main/java/de/atb/context/services/PersistenceUnitService.java: Recompile with -Xlint:deprecation for details.
-[INFO] /Users/philippe/git/smartclide-context/context-monitoring/src/main/java/de/atb/context/monitoring/monitors/file/FileSystemMonitor.java: Some input files use unchecked or unsafe operations.
-[INFO] /Users/philippe/git/smartclide-context/context-monitoring/src/main/java/de/atb/context/monitoring/monitors/file/FileSystemMonitor.java: Recompile with -Xlint:unchecked for details.
-[INFO] 
-[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ context-monitoring ---
-[INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 8 resources
-[INFO] 
-[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ context-monitoring ---
-[INFO] Changes detected - recompiling the module!
-[INFO] Compiling 20 source files to /Users/philippe/git/smartclide-context/context-monitoring/target/test-classes
-[INFO] /Users/philippe/git/smartclide-context/context-monitoring/src/test/java/de/atb/context/services/TestDataRetrieval.java: /Users/philippe/git/smartclide-context/context-monitoring/src/test/java/de/atb/context/services/TestDataRetrieval.java uses unchecked or unsafe operations.
-[INFO] /Users/philippe/git/smartclide-context/context-monitoring/src/test/java/de/atb/context/services/TestDataRetrieval.java: Recompile with -Xlint:unchecked for details.
-[INFO] 
-[INFO] --- maven-surefire-plugin:3.0.0-M5:test (default-test) @ context-monitoring ---
-Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit-platform/3.0.0-M5/surefire-junit-platform-3.0.0-M5.jar
-Progress (1): 4.1/23 kBProgress (1): 8.2/23 kBProgress (1): 12/23 kB Progress (1): 16/23 kBProgress (1): 20/23 kBProgress (1): 23 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit-platform/3.0.0-M5/surefire-junit-platform-3.0.0-M5.jar (23 kB at 163 kB/s)
-Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit-platform/3.0.0-M5/surefire-junit-platform-3.0.0-M5.pom
-Progress (1): 4.1/6.7 kBProgress (1): 6.7 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit-platform/3.0.0-M5/surefire-junit-platform-3.0.0-M5.pom (6.7 kB at 55 kB/s)
-Downloading from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-launcher/1.3.2/junit-platform-launcher-1.3.2.pom
-Progress (1): 2.2 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-launcher/1.3.2/junit-platform-launcher-1.3.2.pom (2.2 kB at 20 kB/s)
-Downloading from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-engine/1.3.2/junit-platform-engine-1.3.2.pom
-Progress (1): 2.4 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-engine/1.3.2/junit-platform-engine-1.3.2.pom (2.4 kB at 19 kB/s)
-Downloading from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-commons/1.3.2/junit-platform-commons-1.3.2.pom
-Progress (1): 2.0 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-commons/1.3.2/junit-platform-commons-1.3.2.pom (2.0 kB at 15 kB/s)
-Downloading from central: https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter-engine/5.3.2/junit-jupiter-engine-5.3.2.pom
-Progress (1): 2.4 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter-engine/5.3.2/junit-jupiter-engine-5.3.2.pom (2.4 kB at 21 kB/s)
-Downloading from central: https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter-api/5.3.2/junit-jupiter-api-5.3.2.pom
-Progress (1): 2.4 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter-api/5.3.2/junit-jupiter-api-5.3.2.pom (2.4 kB at 20 kB/s)
-Downloading from central: https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter-params/5.3.2/junit-jupiter-params-5.3.2.pom
-Progress (1): 2.2 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter-params/5.3.2/junit-jupiter-params-5.3.2.pom (2.2 kB at 21 kB/s)
-Downloading from central: https://repo.maven.apache.org/maven2/org/mockito/mockito-core/2.28.2/mockito-core-2.28.2.pom
-Progress (1): 4.1/20 kBProgress (1): 8.2/20 kBProgress (1): 12/20 kB Progress (1): 16/20 kBProgress (1): 20 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/mockito/mockito-core/2.28.2/mockito-core-2.28.2.pom (20 kB at 130 kB/s)
-Downloading from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy/1.9.10/byte-buddy-1.9.10.pom
-Progress (1): 4.1/10 kBProgress (1): 8.2/10 kBProgress (1): 10 kB                       Downloaded from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy/1.9.10/byte-buddy-1.9.10.pom (10 kB at 90 kB/s)
-Downloading from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy-parent/1.9.10/byte-buddy-parent-1.9.10.pom
-Progress (1): 4.1/36 kBProgress (1): 8.2/36 kBProgress (1): 12/36 kB Progress (1): 16/36 kBProgress (1): 20/36 kBProgress (1): 25/36 kBProgress (1): 29/36 kBProgress (1): 33/36 kBProgress (1): 36 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy-parent/1.9.10/byte-buddy-parent-1.9.10.pom (36 kB at 213 kB/s)
-Downloading from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy-agent/1.9.10/byte-buddy-agent-1.9.10.pom
-Progress (1): 4.1/6.0 kBProgress (1): 6.0 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy-agent/1.9.10/byte-buddy-agent-1.9.10.pom (6.0 kB at 51 kB/s)
-Downloading from central: https://repo.maven.apache.org/maven2/org/powermock/powermock-reflect/2.0.5/powermock-reflect-2.0.5.pom
-Progress (1): 4.1/7.2 kBProgress (1): 7.2 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/powermock/powermock-reflect/2.0.5/powermock-reflect-2.0.5.pom (7.2 kB at 59 kB/s)
-Downloading from central: https://repo.maven.apache.org/maven2/org/assertj/assertj-core/3.9.1/assertj-core-3.9.1.pom
-Progress (1): 4.1/10 kBProgress (1): 8.2/10 kBProgress (1): 10 kB                       Downloaded from central: https://repo.maven.apache.org/maven2/org/assertj/assertj-core/3.9.1/assertj-core-3.9.1.pom (10 kB at 91 kB/s)
-Downloading from central: https://repo.maven.apache.org/maven2/org/assertj/assertj-parent-pom/2.1.9/assertj-parent-pom-2.1.9.pom
-Progress (1): 4.1/15 kBProgress (1): 8.2/15 kBProgress (1): 12/15 kB Progress (1): 15 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/assertj/assertj-parent-pom/2.1.9/assertj-parent-pom-2.1.9.pom (15 kB at 71 kB/s)
-Downloading from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-launcher/1.3.2/junit-platform-launcher-1.3.2.jar
-Downloading from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-engine/1.3.2/junit-platform-engine-1.3.2.jar
-Downloading from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-commons/1.3.2/junit-platform-commons-1.3.2.jar
-Progress (1): 2.7/138 kBProgress (1): 5.5/138 kBProgress (1): 8.2/138 kBProgress (1): 11/138 kB Progress (1): 14/138 kBProgress (2): 14/138 kB | 2.7/78 kBProgress (2): 14/138 kB | 5.5/78 kBProgress (2): 14/138 kB | 8.2/78 kBProgress (2): 14/138 kB | 11/78 kB Progress (2): 14/138 kB | 14/78 kBProgress (2): 16/138 kB | 14/78 kBProgress (2): 19/138 kB | 14/78 kBProgress (2): 19/138 kB | 16/78 kBProgress (2): 22/138 kB | 16/78 kBProgress (2): 22/138 kB | 19/78 kBProgress (2): 25/138 kB | 19/78 kBProgress (2): 27/138 kB | 19/78 kBProgress (2): 30/138 kB | 19/78 kBProgress (2): 30/138 kB | 22/78 kBProgress (2): 33/138 kB | 22/78 kBProgress (2): 33/138 kB | 25/78 kBProgress (2): 36/138 kB | 25/78 kBProgress (2): 36/138 kB | 27/78 kBProgress (2): 38/138 kB | 27/78 kBProgress (2): 41/138 kB | 27/78 kBProgress (3): 41/138 kB | 27/78 kB | 4.1/95 kBProgress (3): 41/138 kB | 27/78 kB | 8.2/95 kBProgress (3): 44/138 kB | 27/78 kB | 8.2/95 kBProgress (3): 44/138 kB | 27/78 kB | 12/95 kB Progress (3): 47/138 kB | 27/78 kB | 12/95 kBProgress (3): 47/138 kB | 30/78 kB | 12/95 kBProgress (3): 49/138 kB | 30/78 kB | 12/95 kBProgress (3): 49/138 kB | 30/78 kB | 16/95 kBProgress (3): 49/138 kB | 33/78 kB | 16/95 kBProgress (3): 52/138 kB | 33/78 kB | 16/95 kBProgress (3): 55/138 kB | 33/78 kB | 16/95 kBProgress (3): 58/138 kB | 33/78 kB | 16/95 kBProgress (3): 60/138 kB | 33/78 kB | 16/95 kBProgress (3): 63/138 kB | 33/78 kB | 16/95 kBProgress (3): 66/138 kB | 33/78 kB | 16/95 kBProgress (3): 69/138 kB | 33/78 kB | 16/95 kBProgress (3): 71/138 kB | 33/78 kB | 16/95 kBProgress (3): 74/138 kB | 33/78 kB | 16/95 kBProgress (3): 77/138 kB | 33/78 kB | 16/95 kBProgress (3): 80/138 kB | 33/78 kB | 16/95 kBProgress (3): 82/138 kB | 33/78 kB | 16/95 kBProgress (3): 85/138 kB | 33/78 kB | 16/95 kBProgress (3): 85/138 kB | 36/78 kB | 16/95 kBProgress (3): 85/138 kB | 36/78 kB | 20/95 kBProgress (3): 85/138 kB | 36/78 kB | 25/95 kBProgress (3): 85/138 kB | 36/78 kB | 29/95 kBProgress (3): 85/138 kB | 36/78 kB | 33/95 kBProgress (3): 88/138 kB | 36/78 kB | 33/95 kBProgress (3): 90/138 kB | 36/78 kB | 33/95 kBProgress (3): 93/138 kB | 36/78 kB | 33/95 kBProgress (3): 96/138 kB | 36/78 kB | 33/95 kBProgress (3): 99/138 kB | 36/78 kB | 33/95 kBProgress (3): 101/138 kB | 36/78 kB | 33/95 kBProgress (3): 101/138 kB | 36/78 kB | 37/95 kBProgress (3): 101/138 kB | 36/78 kB | 41/95 kBProgress (3): 101/138 kB | 36/78 kB | 45/95 kBProgress (3): 101/138 kB | 36/78 kB | 49/95 kBProgress (3): 104/138 kB | 36/78 kB | 49/95 kBProgress (3): 107/138 kB | 36/78 kB | 49/95 kBProgress (3): 110/138 kB | 36/78 kB | 49/95 kBProgress (3): 112/138 kB | 36/78 kB | 49/95 kBProgress (3): 115/138 kB | 36/78 kB | 49/95 kBProgress (3): 118/138 kB | 36/78 kB | 49/95 kBProgress (3): 121/138 kB | 36/78 kB | 49/95 kBProgress (3): 123/138 kB | 36/78 kB | 49/95 kBProgress (3): 126/138 kB | 36/78 kB | 49/95 kBProgress (3): 126/138 kB | 40/78 kB | 49/95 kBProgress (3): 126/138 kB | 44/78 kB | 49/95 kBProgress (3): 126/138 kB | 48/78 kB | 49/95 kBProgress (3): 126/138 kB | 52/78 kB | 49/95 kBProgress (3): 126/138 kB | 56/78 kB | 49/95 kBProgress (3): 126/138 kB | 60/78 kB | 49/95 kBProgress (3): 126/138 kB | 64/78 kB | 49/95 kBProgress (3): 126/138 kB | 68/78 kB | 49/95 kBProgress (3): 126/138 kB | 73/78 kB | 49/95 kBProgress (3): 129/138 kB | 73/78 kB | 49/95 kBProgress (3): 129/138 kB | 77/78 kB | 49/95 kBProgress (3): 129/138 kB | 78 kB | 49/95 kB   Progress (3): 129/138 kB | 78 kB | 53/95 kBProgress (3): 129/138 kB | 78 kB | 57/95 kBProgress (3): 129/138 kB | 78 kB | 61/95 kBProgress (3): 129/138 kB | 78 kB | 66/95 kBProgress (3): 132/138 kB | 78 kB | 66/95 kBProgress (3): 134/138 kB | 78 kB | 66/95 kBProgress (3): 137/138 kB | 78 kB | 66/95 kBProgress (3): 138 kB | 78 kB | 66/95 kB    Progress (3): 138 kB | 78 kB | 70/95 kBProgress (3): 138 kB | 78 kB | 74/95 kBProgress (3): 138 kB | 78 kB | 78/95 kBProgress (3): 138 kB | 78 kB | 82/95 kB                                       Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-commons/1.3.2/junit-platform-commons-1.3.2.jar (78 kB at 160 kB/s)
-Progress (2): 138 kB | 86/95 kBProgress (2): 138 kB | 90/95 kBProgress (2): 138 kB | 94/95 kB                               Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-engine/1.3.2/junit-platform-engine-1.3.2.jar (138 kB at 280 kB/s)
-Progress (1): 95 kB                   Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-launcher/1.3.2/junit-platform-launcher-1.3.2.jar (95 kB at 171 kB/s)
-Downloading from jenabean: http://jenabean.googlecode.com/svn/trunk/repo/org/junit/platform/junit-platform-launcher/1.7.0/junit-platform-launcher-1.7.0.jar
-Downloading from JBoss-Releases: https://repository.jboss.org/nexus/content/repositories/releases/org/junit/platform/junit-platform-launcher/1.7.0/junit-platform-launcher-1.7.0.jar
-Downloading from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-launcher/1.7.0/junit-platform-launcher-1.7.0.jar
-Progress (1): 4.1/137 kBProgress (1): 8.2/137 kBProgress (1): 12/137 kB Progress (1): 16/137 kBProgress (1): 20/137 kBProgress (1): 25/137 kBProgress (1): 29/137 kBProgress (1): 33/137 kBProgress (1): 37/137 kBProgress (1): 41/137 kBProgress (1): 45/137 kBProgress (1): 49/137 kBProgress (1): 53/137 kBProgress (1): 57/137 kBProgress (1): 61/137 kBProgress (1): 66/137 kBProgress (1): 70/137 kBProgress (1): 74/137 kBProgress (1): 78/137 kBProgress (1): 82/137 kBProgress (1): 86/137 kBProgress (1): 90/137 kBProgress (1): 94/137 kBProgress (1): 98/137 kBProgress (1): 102/137 kBProgress (1): 106/137 kBProgress (1): 111/137 kBProgress (1): 115/137 kBProgress (1): 119/137 kBProgress (1): 123/137 kBProgress (1): 127/137 kBProgress (1): 131/137 kBProgress (1): 135/137 kBProgress (1): 137 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-launcher/1.7.0/junit-platform-launcher-1.7.0.jar (137 kB at 387 kB/s)
-Downloading from jenabean: http://jenabean.googlecode.com/svn/trunk/repo/org/junit/platform/junit-platform-launcher/1.7.0/junit-platform-launcher-1.7.0.pom
-Downloading from JBoss-Releases: https://repository.jboss.org/nexus/content/repositories/releases/org/junit/platform/junit-platform-launcher/1.7.0/junit-platform-launcher-1.7.0.pom
-Downloading from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-launcher/1.7.0/junit-platform-launcher-1.7.0.pom
-Progress (1): 3.0 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-launcher/1.7.0/junit-platform-launcher-1.7.0.pom (3.0 kB at 27 kB/s)
-[INFO] 
-[INFO] -------------------------------------------------------
-[INFO]  T E S T S
-[INFO] -------------------------------------------------------
-[INFO] 
-[INFO] Results:
-[INFO] 
-[INFO] Tests run: 0, Failures: 0, Errors: 0, Skipped: 0
-[INFO] 
-[INFO] 
-[INFO] --- maven-dependency-plugin:3.1.2:copy-dependencies (copy-dependencies) @ context-monitoring ---
-[INFO] Copying context-core-2.0.0.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/context-core-2.0.0.jar
-[INFO] Copying slf4j-api-1.7.30.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/slf4j-api-1.7.30.jar
-[INFO] Copying jcl-over-slf4j-1.7.30.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/jcl-over-slf4j-1.7.30.jar
-[INFO] Copying slf4j-log4j12-1.7.30.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/slf4j-log4j12-1.7.30.jar
-[INFO] Copying log4j-1.2.17.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/log4j-1.2.17.jar
-[INFO] Copying commons-collections4-4.4.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/commons-collections4-4.4.jar
-[INFO] Copying commons-io-2.8.0.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/commons-io-2.8.0.jar
-[INFO] Copying commons-lang3-3.11.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/commons-lang3-3.11.jar
-[INFO] Copying jgoodies-forms-1.9.0.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/jgoodies-forms-1.9.0.jar
-[INFO] Copying jgoodies-common-1.8.1.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/jgoodies-common-1.8.1.jar
-[INFO] Copying log4j-core-2.13.3.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/log4j-core-2.13.3.jar
-[INFO] Copying log4j-api-2.13.3.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/log4j-api-2.13.3.jar
-[INFO] Copying javatuples-1.2.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/javatuples-1.2.jar
-[INFO] Copying jpathwatch-0.95.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/jpathwatch-0.95.jar
-[INFO] Copying lucene-analyzers-common-8.8.0.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/lucene-analyzers-common-8.8.0.jar
-[INFO] Copying lucene-core-8.8.0.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/lucene-core-8.8.0.jar
-[INFO] Copying pellet-jena-2.3.6-ansell.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/pellet-jena-2.3.6-ansell.jar
-[INFO] Copying jena-2.6.4.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/jena-2.6.4.jar
-[INFO] Copying icu4j-3.4.4.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/icu4j-3.4.4.jar
-[INFO] Copying xercesImpl-2.7.1.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/xercesImpl-2.7.1.jar
-[INFO] Copying pellet-core-2.3.6-ansell.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/pellet-core-2.3.6-ansell.jar
-[INFO] Copying pellet-common-2.3.6-ansell.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/pellet-common-2.3.6-ansell.jar
-[INFO] Copying xsdlib-20030225.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/xsdlib-20030225.jar
-[INFO] Copying relaxngDatatype-20030225.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/relaxngDatatype-20030225.jar
-[INFO] Copying pellet-rules-2.3.6-ansell.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/pellet-rules-2.3.6-ansell.jar
-[INFO] Copying pellet-datatypes-2.3.6-ansell.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/pellet-datatypes-2.3.6-ansell.jar
-[INFO] Copying pellet-el-2.3.6-ansell.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/pellet-el-2.3.6-ansell.jar
-[INFO] Copying aterm-java-1.8.2-p1.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/aterm-java-1.8.2-p1.jar
-[INFO] Copying jjtraveler-0.6.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/jjtraveler-0.6.jar
-[INFO] Copying shared-objects-1.4.9-p1.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/shared-objects-1.4.9-p1.jar
-[INFO] Copying jgrapht-jdk1.5-0.7.3.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/jgrapht-jdk1.5-0.7.3.jar
-[INFO] Copying arq-2.8.7.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/arq-2.8.7.jar
-[INFO] Copying iri-0.8.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/iri-0.8.jar
-[INFO] Copying wstx-asl-3.2.9.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/wstx-asl-3.2.9.jar
-[INFO] Copying tdb-0.8.9.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/tdb-0.8.9.jar
-[INFO] Copying sdb-1.3.4.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/sdb-1.3.4.jar
-[INFO] Copying jenabean-1.0.6.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/jenabean-1.0.6.jar
-[INFO] Copying cxf-rt-frontend-jaxws-3.4.2.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/cxf-rt-frontend-jaxws-3.4.2.jar
-[INFO] Copying xml-resolver-1.2.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/xml-resolver-1.2.jar
-[INFO] Copying asm-9.0.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/asm-9.0.jar
-[INFO] Copying cxf-core-3.4.2.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/cxf-core-3.4.2.jar
-[INFO] Copying jaxb-runtime-2.3.3.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/jaxb-runtime-2.3.3.jar
-[INFO] Copying txw2-2.3.3.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/txw2-2.3.3.jar
-[INFO] Copying istack-commons-runtime-3.0.11.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/istack-commons-runtime-3.0.11.jar
-[INFO] Copying woodstox-core-6.2.3.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/woodstox-core-6.2.3.jar
-[INFO] Copying stax2-api-4.2.1.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/stax2-api-4.2.1.jar
-[INFO] Copying xmlschema-core-2.2.5.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/xmlschema-core-2.2.5.jar
-[INFO] Copying cxf-rt-bindings-soap-3.4.2.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/cxf-rt-bindings-soap-3.4.2.jar
-[INFO] Copying cxf-rt-wsdl-3.4.2.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/cxf-rt-wsdl-3.4.2.jar
-[INFO] Copying wsdl4j-1.6.3.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/wsdl4j-1.6.3.jar
-[INFO] Copying cxf-rt-databinding-jaxb-3.4.2.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/cxf-rt-databinding-jaxb-3.4.2.jar
-[INFO] Copying cxf-rt-bindings-xml-3.4.2.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/cxf-rt-bindings-xml-3.4.2.jar
-[INFO] Copying cxf-rt-frontend-simple-3.4.2.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/cxf-rt-frontend-simple-3.4.2.jar
-[INFO] Copying cxf-rt-ws-addr-3.4.2.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/cxf-rt-ws-addr-3.4.2.jar
-[INFO] Copying cxf-rt-ws-policy-3.4.2.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/cxf-rt-ws-policy-3.4.2.jar
-[INFO] Copying neethi-3.1.1.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/neethi-3.1.1.jar
-[INFO] Copying jakarta.annotation-api-1.3.5.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/jakarta.annotation-api-1.3.5.jar
-[INFO] Copying jakarta.xml.ws-api-2.3.3.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/jakarta.xml.ws-api-2.3.3.jar
-[INFO] Copying jakarta.jws-api-2.1.0.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/jakarta.jws-api-2.1.0.jar
-[INFO] Copying jakarta.xml.soap-api-1.4.2.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/jakarta.xml.soap-api-1.4.2.jar
-[INFO] Copying jakarta.activation-1.2.2.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/jakarta.activation-1.2.2.jar
-[INFO] Copying saaj-impl-1.5.2.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/saaj-impl-1.5.2.jar
-[INFO] Copying stax-ex-1.8.3.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/stax-ex-1.8.3.jar
-[INFO] Copying geronimo-jta_1.1_spec-1.1.1.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/geronimo-jta_1.1_spec-1.1.1.jar
-[INFO] Copying jboss-rmi-api_1.0_spec-1.0.6.Final.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/jboss-rmi-api_1.0_spec-1.0.6.Final.jar
-[INFO] Copying cxf-rt-transports-http-jetty-3.4.2.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/cxf-rt-transports-http-jetty-3.4.2.jar
-[INFO] Copying cxf-rt-transports-http-3.4.2.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/cxf-rt-transports-http-3.4.2.jar
-[INFO] Copying jetty-server-9.4.35.v20201120.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/jetty-server-9.4.35.v20201120.jar
-[INFO] Copying javax.servlet-api-4.0.1.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/javax.servlet-api-4.0.1.jar
-[INFO] Copying jetty-util-9.4.35.v20201120.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/jetty-util-9.4.35.v20201120.jar
-[INFO] Copying jetty-io-9.4.35.v20201120.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/jetty-io-9.4.35.v20201120.jar
-[INFO] Copying jetty-security-9.4.35.v20201120.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/jetty-security-9.4.35.v20201120.jar
-[INFO] Copying jetty-continuation-9.4.35.v20201120.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/jetty-continuation-9.4.35.v20201120.jar
-[INFO] Copying jetty-http-9.4.35.v20201120.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/jetty-http-9.4.35.v20201120.jar
-[INFO] Copying cxf-rt-transports-http-hc-3.4.2.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/cxf-rt-transports-http-hc-3.4.2.jar
-[INFO] Copying httpcore-nio-4.4.14.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/httpcore-nio-4.4.14.jar
-[INFO] Copying httpasyncclient-4.1.4.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/httpasyncclient-4.1.4.jar
-[INFO] Copying simple-xml-2.7.1.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/simple-xml-2.7.1.jar
-[INFO] Copying stax-api-1.0.1.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/stax-api-1.0.1.jar
-[INFO] Copying stax-1.2.0.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/stax-1.2.0.jar
-[INFO] Copying xpp3-1.1.3.3.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/xpp3-1.1.3.3.jar
-[INFO] Copying h2-1.4.200.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/h2-1.4.200.jar
-[INFO] Copying swingx-1.6.1.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/swingx-1.6.1.jar
-[INFO] Copying filters-2.0.235.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/filters-2.0.235.jar
-[INFO] Copying swing-worker-1.1.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/swing-worker-1.1.jar
-[INFO] Copying owlapi-distribution-5.1.17.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/owlapi-distribution-5.1.17.jar
-[INFO] Copying owlapi-compatibility-5.1.17.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/owlapi-compatibility-5.1.17.jar
-[INFO] Copying owlapi-apibinding-5.1.17.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/owlapi-apibinding-5.1.17.jar
-[INFO] Copying owlapi-api-5.1.17.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/owlapi-api-5.1.17.jar
-[INFO] Copying owlapi-impl-5.1.17.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/owlapi-impl-5.1.17.jar
-[INFO] Copying owlapi-parsers-5.1.17.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/owlapi-parsers-5.1.17.jar
-[INFO] Copying owlapi-oboformat-5.1.17.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/owlapi-oboformat-5.1.17.jar
-[INFO] Copying owlapi-tools-5.1.17.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/owlapi-tools-5.1.17.jar
-[INFO] Copying owlapi-rio-5.1.17.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/owlapi-rio-5.1.17.jar
-[INFO] Copying commons-rdf-api-0.5.0.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/commons-rdf-api-0.5.0.jar
-[INFO] Copying xz-1.6.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/xz-1.6.jar
-[INFO] Copying rdf4j-model-3.4.3.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/rdf4j-model-3.4.3.jar
-[INFO] Copying rdf4j-rio-api-3.4.3.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/rdf4j-rio-api-3.4.3.jar
-[INFO] Copying rdf4j-rio-languages-3.4.3.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/rdf4j-rio-languages-3.4.3.jar
-[INFO] Copying rdf4j-rio-datatypes-3.4.3.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/rdf4j-rio-datatypes-3.4.3.jar
-[INFO] Copying rdf4j-rio-binary-3.4.3.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/rdf4j-rio-binary-3.4.3.jar
-[INFO] Copying rdf4j-rio-n3-3.4.3.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/rdf4j-rio-n3-3.4.3.jar
-[INFO] Copying rdf4j-rio-nquads-3.4.3.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/rdf4j-rio-nquads-3.4.3.jar
-[INFO] Copying rdf4j-rio-ntriples-3.4.3.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/rdf4j-rio-ntriples-3.4.3.jar
-[INFO] Copying rdf4j-rio-rdfjson-3.4.3.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/rdf4j-rio-rdfjson-3.4.3.jar
-[INFO] Copying rdf4j-rio-jsonld-3.4.3.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/rdf4j-rio-jsonld-3.4.3.jar
-[INFO] Copying httpclient-cache-4.5.13.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/httpclient-cache-4.5.13.jar
-[INFO] Copying rdf4j-rio-rdfxml-3.4.3.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/rdf4j-rio-rdfxml-3.4.3.jar
-[INFO] Copying rdf4j-rio-trix-3.4.3.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/rdf4j-rio-trix-3.4.3.jar
-[INFO] Copying rdf4j-rio-turtle-3.4.3.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/rdf4j-rio-turtle-3.4.3.jar
-[INFO] Copying rdf4j-rio-trig-3.4.3.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/rdf4j-rio-trig-3.4.3.jar
-[INFO] Copying rdf4j-rio-hdt-3.4.3.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/rdf4j-rio-hdt-3.4.3.jar
-[INFO] Copying rdf4j-util-3.4.3.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/rdf4j-util-3.4.3.jar
-[INFO] Copying jsonld-java-0.13.0.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/jsonld-java-0.13.0.jar
-[INFO] Copying httpclient-osgi-4.5.13.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/httpclient-osgi-4.5.13.jar
-[INFO] Copying httpmime-4.5.13.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/httpmime-4.5.13.jar
-[INFO] Copying fluent-hc-4.5.13.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/fluent-hc-4.5.13.jar
-[INFO] Copying httpcore-osgi-4.4.12.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/httpcore-osgi-4.4.12.jar
-[INFO] Copying hppcrt-0.7.5.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/hppcrt-0.7.5.jar
-[INFO] Copying caffeine-2.8.8.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/caffeine-2.8.8.jar
-[INFO] Copying checker-qual-3.8.0.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/checker-qual-3.8.0.jar
-[INFO] Copying error_prone_annotations-2.4.0.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/error_prone_annotations-2.4.0.jar
-[INFO] Copying guava-30.0-jre.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/guava-30.0-jre.jar
-[INFO] Copying failureaccess-1.0.1.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/failureaccess-1.0.1.jar
-[INFO] Copying listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar
-[INFO] Copying j2objc-annotations-1.3.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/j2objc-annotations-1.3.jar
-[INFO] Copying jsr305-3.0.2.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/jsr305-3.0.2.jar
-[INFO] Copying org.protege.editor.owl.codegeneration-1.0.2.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/org.protege.editor.owl.codegeneration-1.0.2.jar
-[INFO] Copying cobertura-2.0.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/cobertura-2.0.jar
-[INFO] Copying oro-2.0.8.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/oro-2.0.8.jar
-[INFO] Copying asm-3.3.1.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/asm-3.3.1.jar
-[INFO] Copying asm-tree-3.3.1.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/asm-tree-3.3.1.jar
-[INFO] Copying asm-commons-3.3.1.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/asm-commons-3.3.1.jar
-[INFO] Copying ant-1.7.0.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/ant-1.7.0.jar
-[INFO] Copying ant-launcher-1.7.0.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/ant-launcher-1.7.0.jar
-[INFO] Copying commons-cli-1.2.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/commons-cli-1.2.jar
-[INFO] Copying org.protege.common-4.3.0.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/org.protege.common-4.3.0.jar
-[INFO] Copying org.apache.felix.main-4.0.3.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/org.apache.felix.main-4.0.3.jar
-[INFO] Copying org.apache.felix.framework-4.0.3.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/org.apache.felix.framework-4.0.3.jar
-[INFO] Copying looks-2.2.2.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/looks-2.2.2.jar
-[INFO] Copying org.protege.editor.core.application-4.3.0.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/org.protege.editor.core.application-4.3.0.jar
-[INFO] Copying registry-3.3.0-v20070522.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/registry-3.3.0-v20070522.jar
-[INFO] Copying common-3.6.200-v20130402-1505.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/common-3.6.200-v20130402-1505.jar
-[INFO] Copying mdock-1.1.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/mdock-1.1.jar
-[INFO] Copying org.protege.editor.owl-4.3.0.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/org.protege.editor.owl-4.3.0.jar
-[INFO] Copying org.eclipse.equinox.registry-3.5.0.v20100503.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/org.eclipse.equinox.registry-3.5.0.v20100503.jar
-[INFO] Copying org.eclipse.core.jobs-3.5.0.v20100515.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/org.eclipse.core.jobs-3.5.0.v20100515.jar
-[INFO] Copying org.eclipse.equinox.common-3.6.0.v20100503.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/org.eclipse.equinox.common-3.6.0.v20100503.jar
-[INFO] Copying org.eclipse.osgi-3.6.0.v20100517.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/org.eclipse.osgi-3.6.0.v20100517.jar
-[INFO] Copying protege-owlapi-extensions-3.2.4.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/protege-owlapi-extensions-3.2.4.jar
-[INFO] Copying org.protege.xmlcatalog-1.0.3.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/org.protege.xmlcatalog-1.0.3.jar
-[INFO] Copying org.semanticweb.hermit-1.3.8.3.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/org.semanticweb.hermit-1.3.8.3.jar
-[INFO] Copying commons-logging-1.1.3.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/commons-logging-1.1.3.jar
-[INFO] Copying axiom-api-1.2.14.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/axiom-api-1.2.14.jar
-[INFO] Copying geronimo-activation_1.1_spec-1.1.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/geronimo-activation_1.1_spec-1.1.jar
-[INFO] Copying geronimo-javamail_1.4_spec-1.7.1.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/geronimo-javamail_1.4_spec-1.7.1.jar
-[INFO] Copying jaxen-1.2.0.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/jaxen-1.2.0.jar
-[INFO] Copying geronimo-stax-api_1.0_spec-1.0.1.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/geronimo-stax-api_1.0_spec-1.0.1.jar
-[INFO] Copying apache-mime4j-core-0.7.2.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/apache-mime4j-core-0.7.2.jar
-[INFO] Copying axiom-c14n-1.2.14.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/axiom-c14n-1.2.14.jar
-[INFO] Copying axiom-impl-1.2.14.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/axiom-impl-1.2.14.jar
-[INFO] Copying woodstox-core-asl-4.1.4.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/woodstox-core-asl-4.1.4.jar
-[INFO] Copying axiom-dom-1.2.14.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/axiom-dom-1.2.14.jar
-[INFO] Copying automaton-1.11-8.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/automaton-1.11-8.jar
-[INFO] Copying jfact-1.0.0.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/jfact-1.0.0.jar
-[INFO] Copying gson-2.8.6.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/gson-2.8.6.jar
-[INFO] Copying super-csv-2.4.0.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/super-csv-2.4.0.jar
-[INFO] Copying lombok-1.18.16.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/lombok-1.18.16.jar
-[INFO] Copying jaxws-api-2.3.1.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/jaxws-api-2.3.1.jar
-[INFO] Copying jaxb-api-2.3.1.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/jaxb-api-2.3.1.jar
-[INFO] Copying javax.activation-api-1.2.0.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/javax.activation-api-1.2.0.jar
-[INFO] Copying javax.xml.soap-api-1.4.0.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/javax.xml.soap-api-1.4.0.jar
-[INFO] Copying javax.annotation-api-1.3.2.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/javax.annotation-api-1.3.2.jar
-[INFO] Copying javax.jws-api-1.1.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/javax.jws-api-1.1.jar
-[INFO] Copying doxia-core-1.9.1.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/doxia-core-1.9.1.jar
-[INFO] Copying doxia-sink-api-1.9.1.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/doxia-sink-api-1.9.1.jar
-[INFO] Copying doxia-logging-api-1.9.1.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/doxia-logging-api-1.9.1.jar
-[INFO] Copying plexus-utils-3.1.0.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/plexus-utils-3.1.0.jar
-[INFO] Copying plexus-container-default-1.7.1.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/plexus-container-default-1.7.1.jar
-[INFO] Copying plexus-classworlds-2.5.1.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/plexus-classworlds-2.5.1.jar
-[INFO] Copying xbean-reflect-3.7.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/xbean-reflect-3.7.jar
-[INFO] Copying google-collections-1.0.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/google-collections-1.0.jar
-[INFO] Copying plexus-component-annotations-1.7.1.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/plexus-component-annotations-1.7.1.jar
-[INFO] Copying httpclient-4.5.13.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/httpclient-4.5.13.jar
-[INFO] Copying commons-codec-1.15.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/commons-codec-1.15.jar
-[INFO] Copying httpcore-4.4.14.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/httpcore-4.4.14.jar
-[INFO] Copying json-simple-1.1.1.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/json-simple-1.1.1.jar
-[INFO] Copying spring-kafka-2.6.5.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/spring-kafka-2.6.5.jar
-[INFO] Copying spring-context-5.3.3.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/spring-context-5.3.3.jar
-[INFO] Copying spring-aop-5.3.3.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/spring-aop-5.3.3.jar
-[INFO] Copying spring-beans-5.3.3.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/spring-beans-5.3.3.jar
-[INFO] Copying spring-expression-5.3.3.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/spring-expression-5.3.3.jar
-[INFO] Copying spring-messaging-5.3.3.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/spring-messaging-5.3.3.jar
-[INFO] Copying spring-tx-5.3.3.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/spring-tx-5.3.3.jar
-[INFO] Copying spring-retry-1.3.1.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/spring-retry-1.3.1.jar
-[INFO] Copying kafka-clients-2.6.0.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/kafka-clients-2.6.0.jar
-[INFO] Copying zstd-jni-1.4.4-7.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/zstd-jni-1.4.4-7.jar
-[INFO] Copying lz4-java-1.7.1.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/lz4-java-1.7.1.jar
-[INFO] Copying snappy-java-1.1.7.3.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/snappy-java-1.1.7.3.jar
-[INFO] Copying spring-boot-starter-web-2.4.2.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/spring-boot-starter-web-2.4.2.jar
-[INFO] Copying spring-boot-starter-2.4.2.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/spring-boot-starter-2.4.2.jar
-[INFO] Copying spring-boot-2.4.2.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/spring-boot-2.4.2.jar
-[INFO] Copying spring-boot-autoconfigure-2.4.2.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/spring-boot-autoconfigure-2.4.2.jar
-[INFO] Copying snakeyaml-1.27.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/snakeyaml-1.27.jar
-[INFO] Copying spring-boot-starter-json-2.4.2.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/spring-boot-starter-json-2.4.2.jar
-[INFO] Copying jackson-datatype-jdk8-2.11.4.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/jackson-datatype-jdk8-2.11.4.jar
-[INFO] Copying jackson-datatype-jsr310-2.11.4.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/jackson-datatype-jsr310-2.11.4.jar
-[INFO] Copying jackson-module-parameter-names-2.11.4.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/jackson-module-parameter-names-2.11.4.jar
-[INFO] Copying spring-boot-starter-tomcat-2.4.2.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/spring-boot-starter-tomcat-2.4.2.jar
-[INFO] Copying tomcat-embed-core-9.0.41.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/tomcat-embed-core-9.0.41.jar
-[INFO] Copying jakarta.el-3.0.3.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/jakarta.el-3.0.3.jar
-[INFO] Copying tomcat-embed-websocket-9.0.41.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/tomcat-embed-websocket-9.0.41.jar
-[INFO] Copying spring-web-5.3.3.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/spring-web-5.3.3.jar
-[INFO] Copying spring-webmvc-5.3.3.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/spring-webmvc-5.3.3.jar
-[INFO] Copying spring-boot-starter-test-2.4.2.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/spring-boot-starter-test-2.4.2.jar
-[INFO] Copying spring-boot-test-2.4.2.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/spring-boot-test-2.4.2.jar
-[INFO] Copying spring-boot-test-autoconfigure-2.4.2.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/spring-boot-test-autoconfigure-2.4.2.jar
-[INFO] Copying json-path-2.4.0.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/json-path-2.4.0.jar
-[INFO] Copying json-smart-2.3.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/json-smart-2.3.jar
-[INFO] Copying accessors-smart-1.2.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/accessors-smart-1.2.jar
-[INFO] Copying jakarta.xml.bind-api-2.3.3.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/jakarta.xml.bind-api-2.3.3.jar
-[INFO] Copying jakarta.activation-api-1.2.2.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/jakarta.activation-api-1.2.2.jar
-[INFO] Copying assertj-core-3.18.1.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/assertj-core-3.18.1.jar
-[INFO] Copying hamcrest-2.2.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/hamcrest-2.2.jar
-[INFO] Copying junit-jupiter-5.7.0.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/junit-jupiter-5.7.0.jar
-[INFO] Copying junit-jupiter-api-5.7.0.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/junit-jupiter-api-5.7.0.jar
-[INFO] Copying apiguardian-api-1.1.0.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/apiguardian-api-1.1.0.jar
-[INFO] Copying opentest4j-1.2.0.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/opentest4j-1.2.0.jar
-[INFO] Copying junit-platform-commons-1.7.0.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/junit-platform-commons-1.7.0.jar
-[INFO] Copying junit-jupiter-params-5.7.0.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/junit-jupiter-params-5.7.0.jar
-[INFO] Copying junit-jupiter-engine-5.7.0.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/junit-jupiter-engine-5.7.0.jar
-[INFO] Copying junit-platform-engine-1.7.0.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/junit-platform-engine-1.7.0.jar
-[INFO] Copying mockito-core-3.6.28.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/mockito-core-3.6.28.jar
-[INFO] Copying byte-buddy-1.10.19.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/byte-buddy-1.10.19.jar
-[INFO] Copying byte-buddy-agent-1.10.19.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/byte-buddy-agent-1.10.19.jar
-[INFO] Copying objenesis-3.1.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/objenesis-3.1.jar
-[INFO] Copying mockito-junit-jupiter-3.6.28.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/mockito-junit-jupiter-3.6.28.jar
-[INFO] Copying jsonassert-1.5.0.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/jsonassert-1.5.0.jar
-[INFO] Copying android-json-0.0.20131108.vaadin1.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/android-json-0.0.20131108.vaadin1.jar
-[INFO] Copying spring-core-5.3.3.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/spring-core-5.3.3.jar
-[INFO] Copying spring-jcl-5.3.3.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/spring-jcl-5.3.3.jar
-[INFO] Copying spring-test-5.3.3.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/spring-test-5.3.3.jar
-[INFO] Copying xmlunit-core-2.7.0.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/xmlunit-core-2.7.0.jar
-[INFO] Copying wicked-charts-highcharts-1.5.0.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/wicked-charts-highcharts-1.5.0.jar
-[INFO] Copying jackson-annotations-2.11.4.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/jackson-annotations-2.11.4.jar
-[INFO] Copying jackson-core-2.11.4.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/jackson-core-2.11.4.jar
-[INFO] Copying jackson-databind-2.11.4.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/jackson-databind-2.11.4.jar
-[INFO] Copying solder-api-3.2.1.Final.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/solder-api-3.2.1.Final.jar
-[INFO] Copying solder-logging-3.2.1.Final.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/solder-logging-3.2.1.Final.jar
-[INFO] Copying cdi-api-2.0.SP1.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/cdi-api-2.0.SP1.jar
-[INFO] Copying javax.el-api-3.0.0.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/javax.el-api-3.0.0.jar
-[INFO] Copying javax.interceptor-api-1.2.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/javax.interceptor-api-1.2.jar
-[INFO] Copying javax.inject-1.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/javax.inject-1.jar
-[INFO] Copying solder-parent-3.2.1.Final.pom to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/solder-parent-3.2.1.Final.pom
-[INFO] Copying joda-time-2.10.9.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/joda-time-2.10.9.jar
-[INFO] Copying ejb-api-3.0.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/ejb-api-3.0.jar
-[INFO] Copying junit-4.13.1.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/junit-4.13.1.jar
-[INFO] Copying hamcrest-core-2.2.jar to /Users/philippe/git/smartclide-context/context-monitoring/target/lib/hamcrest-core-2.2.jar
-[INFO] 
-[INFO] --- maven-jar-plugin:3.2.0:jar (default-jar) @ context-monitoring ---
-[INFO] Building jar: /Users/philippe/git/smartclide-context/context-monitoring/target/context-monitoring-2.0.0.jar
-[INFO] 
-[INFO] --- maven-install-plugin:2.4:install (default-install) @ context-monitoring ---
-[INFO] Installing /Users/philippe/git/smartclide-context/context-monitoring/target/context-monitoring-2.0.0.jar to /Users/philippe/.m2/repository/de/atb/context/context-monitoring/2.0.0/context-monitoring-2.0.0.jar
-[INFO] Installing /Users/philippe/git/smartclide-context/context-monitoring/pom.xml to /Users/philippe/.m2/repository/de/atb/context/context-monitoring/2.0.0/context-monitoring-2.0.0.pom
-[INFO] 
-[INFO] -----------------< de.atb.context:context-extraction >------------------
-[INFO] Building ATB Context Extraction Core Service 2.0.0                 [4/4]
-[INFO] --------------------------------[ jar ]---------------------------------
-[WARNING] Failure to transfer log4j:log4j/maven-metadata.xml from http://openjena.org/repo was cached in the local repository, resolution will not be reattempted until the update interval of repo-jena has elapsed or updates are forced. Original error: Could not transfer metadata log4j:log4j/maven-metadata.xml from/to repo-jena (http://openjena.org/repo): Authorization failed for http://openjena.org/repo/log4j/log4j/maven-metadata.xml 403 Forbidden
-[WARNING] Failure to transfer log4j:log4j/maven-metadata.xml from http://openjena.org/repo-dev was cached in the local repository, resolution will not be reattempted until the update interval of repo-jena-dev has elapsed or updates are forced. Original error: Could not transfer metadata log4j:log4j/maven-metadata.xml from/to repo-jena-dev (http://openjena.org/repo-dev): Authorization failed for http://openjena.org/repo-dev/log4j/log4j/maven-metadata.xml 403 Forbidden
-[INFO] 
-[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ context-extraction ---
-[INFO] Deleting /Users/philippe/git/smartclide-context/context-extraction/target
-[INFO] 
-[INFO] --- maven-enforcer-plugin:3.0.0-M3:enforce (enforce-versions) @ context-extraction ---
-[INFO] 
-[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ context-extraction ---
-[INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 2 resources
-[INFO] 
-[INFO] --- license-maven-plugin:2.0.0:update-file-header (license-management) @ context-extraction ---
-[INFO] Adding a license repository jar:file:/Users/philippe/.m2/repository/org/codehaus/mojo/license-maven-plugin/2.0.0/license-maven-plugin-2.0.0.jar!/META-INF/licenses
-[INFO] register GNU Free Documentation License (FDL) version 1.3
-[INFO] register GNU General Lesser Public License (LGPL) version 3.0
-[INFO] register GNU Affero General Public License (AGPL) version 3.0
-[INFO] register GNU General Public License (GPL) version 3.0
-[INFO] register GNU General Public License (GPL) version 2.0
-[INFO] register GNU General Public License (GPL) version 1.0
-[INFO] register Apache License version 2.0
-[INFO] register Eclipse Public License - v 2.0 with Secondary License
-[INFO] register Eclipse Public License - v 2.0
-[INFO] register Eclipse Public License - v 1.0
-[INFO] register Eclipse Public + Distribution License - v 1.0
-[INFO] register COMMON DEVELOPMENT AND DISTRIBUTION LICENSE (CDDL) Version 1.0
-[INFO] register GNU General Lesser Public License (LGPL) version 2.1
-[INFO] register MIT-License
-[INFO] register BSD 2-Clause License
-[INFO] register BSD 3-Clause License
-[INFO] register European Union Public License v1.1
-[INFO] Will search files to update from root /Users/philippe/git/smartclide-context/context-extraction/src/main/java
-[INFO] Will search files to update from root /Users/philippe/git/smartclide-context/context-extraction/src/main/resources
-[INFO] Scan 24 files header done in 482.828ms.
-[INFO] 
- * update header on 24 files.
-[INFO] 
-[INFO] --- license-maven-plugin:2.0.0:update-project-license (license-management) @ context-extraction ---
-[INFO] Adding a license repository jar:file:/Users/philippe/.m2/repository/org/codehaus/mojo/license-maven-plugin/2.0.0/license-maven-plugin-2.0.0.jar!/META-INF/licenses
-[INFO] register GNU Free Documentation License (FDL) version 1.3
-[INFO] register GNU General Lesser Public License (LGPL) version 3.0
-[INFO] register GNU Affero General Public License (AGPL) version 3.0
-[INFO] register GNU General Public License (GPL) version 3.0
-[INFO] register GNU General Public License (GPL) version 2.0
-[INFO] register GNU General Public License (GPL) version 1.0
-[INFO] register Apache License version 2.0
-[INFO] register Eclipse Public License - v 2.0 with Secondary License
-[INFO] register Eclipse Public License - v 2.0
-[INFO] register Eclipse Public License - v 1.0
-[INFO] register Eclipse Public + Distribution License - v 1.0
-[INFO] register COMMON DEVELOPMENT AND DISTRIBUTION LICENSE (CDDL) Version 1.0
-[INFO] register GNU General Lesser Public License (LGPL) version 2.1
-[INFO] register MIT-License
-[INFO] register BSD 2-Clause License
-[INFO] register BSD 3-Clause License
-[INFO] register European Union Public License v1.1
-[INFO] Will create or update license file [epl_only_v2] to /Users/philippe/git/smartclide-context/context-extraction/LICENSE
-[INFO] 
-[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ context-extraction ---
-[INFO] Changes detected - recompiling the module!
-[INFO] Compiling 24 source files to /Users/philippe/git/smartclide-context/context-extraction/target/classes
-[INFO] /Users/philippe/git/smartclide-context/context-extraction/src/main/java/de/atb/context/services/ContextExtractionService.java: /Users/philippe/git/smartclide-context/context-extraction/src/main/java/de/atb/context/services/ContextExtractionService.java uses or overrides a deprecated API.
-[INFO] /Users/philippe/git/smartclide-context/context-extraction/src/main/java/de/atb/context/services/ContextExtractionService.java: Recompile with -Xlint:deprecation for details.
-[INFO] 
-[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ context-extraction ---
-[INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 9 resources
-[INFO] 
-[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ context-extraction ---
-[INFO] No sources to compile
-[INFO] 
-[INFO] --- maven-surefire-plugin:3.0.0-M5:test (default-test) @ context-extraction ---
-[INFO] 
-[INFO] --- maven-dependency-plugin:3.1.2:copy-dependencies (copy-dependencies) @ context-extraction ---
-[INFO] Copying context-monitoring-2.0.0.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/context-monitoring-2.0.0.jar
-[INFO] Copying context-core-2.0.0.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/context-core-2.0.0.jar
-[INFO] Copying slf4j-api-1.7.30.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/slf4j-api-1.7.30.jar
-[INFO] Copying jcl-over-slf4j-1.7.30.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/jcl-over-slf4j-1.7.30.jar
-[INFO] Copying slf4j-log4j12-1.7.30.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/slf4j-log4j12-1.7.30.jar
-[INFO] Copying log4j-1.2.17.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/log4j-1.2.17.jar
-[INFO] Copying commons-collections4-4.4.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/commons-collections4-4.4.jar
-[INFO] Copying commons-io-2.8.0.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/commons-io-2.8.0.jar
-[INFO] Copying commons-lang3-3.11.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/commons-lang3-3.11.jar
-[INFO] Copying jgoodies-forms-1.9.0.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/jgoodies-forms-1.9.0.jar
-[INFO] Copying jgoodies-common-1.8.1.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/jgoodies-common-1.8.1.jar
-[INFO] Copying log4j-core-2.14.0.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/log4j-core-2.14.0.jar
-[INFO] Copying log4j-api-2.14.0.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/log4j-api-2.14.0.jar
-[INFO] Copying javatuples-1.2.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/javatuples-1.2.jar
-[INFO] Copying jpathwatch-0.95.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/jpathwatch-0.95.jar
-[INFO] Copying lucene-analyzers-common-8.8.0.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/lucene-analyzers-common-8.8.0.jar
-[INFO] Copying lucene-core-8.8.0.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/lucene-core-8.8.0.jar
-[INFO] Copying pellet-jena-2.3.6-ansell.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/pellet-jena-2.3.6-ansell.jar
-[INFO] Copying jena-2.6.4.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/jena-2.6.4.jar
-[INFO] Copying icu4j-3.4.4.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/icu4j-3.4.4.jar
-[INFO] Copying xercesImpl-2.7.1.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/xercesImpl-2.7.1.jar
-[INFO] Copying pellet-core-2.3.6-ansell.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/pellet-core-2.3.6-ansell.jar
-[INFO] Copying pellet-common-2.3.6-ansell.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/pellet-common-2.3.6-ansell.jar
-[INFO] Copying xsdlib-20030225.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/xsdlib-20030225.jar
-[INFO] Copying relaxngDatatype-20030225.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/relaxngDatatype-20030225.jar
-[INFO] Copying pellet-rules-2.3.6-ansell.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/pellet-rules-2.3.6-ansell.jar
-[INFO] Copying pellet-datatypes-2.3.6-ansell.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/pellet-datatypes-2.3.6-ansell.jar
-[INFO] Copying pellet-el-2.3.6-ansell.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/pellet-el-2.3.6-ansell.jar
-[INFO] Copying aterm-java-1.8.2-p1.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/aterm-java-1.8.2-p1.jar
-[INFO] Copying jjtraveler-0.6.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/jjtraveler-0.6.jar
-[INFO] Copying shared-objects-1.4.9-p1.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/shared-objects-1.4.9-p1.jar
-[INFO] Copying jgrapht-jdk1.5-0.7.3.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/jgrapht-jdk1.5-0.7.3.jar
-[INFO] Copying arq-2.8.7.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/arq-2.8.7.jar
-[INFO] Copying iri-0.8.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/iri-0.8.jar
-[INFO] Copying wstx-asl-3.2.9.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/wstx-asl-3.2.9.jar
-[INFO] Copying tdb-0.8.9.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/tdb-0.8.9.jar
-[INFO] Copying sdb-1.3.4.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/sdb-1.3.4.jar
-[INFO] Copying jenabean-1.0.6.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/jenabean-1.0.6.jar
-[INFO] Copying cxf-rt-frontend-jaxws-3.4.2.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/cxf-rt-frontend-jaxws-3.4.2.jar
-[INFO] Copying xml-resolver-1.2.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/xml-resolver-1.2.jar
-[INFO] Copying asm-9.0.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/asm-9.0.jar
-[INFO] Copying cxf-core-3.4.2.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/cxf-core-3.4.2.jar
-[INFO] Copying jaxb-runtime-2.3.3.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/jaxb-runtime-2.3.3.jar
-[INFO] Copying txw2-2.3.3.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/txw2-2.3.3.jar
-[INFO] Copying istack-commons-runtime-3.0.11.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/istack-commons-runtime-3.0.11.jar
-[INFO] Copying woodstox-core-6.2.3.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/woodstox-core-6.2.3.jar
-[INFO] Copying stax2-api-4.2.1.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/stax2-api-4.2.1.jar
-[INFO] Copying xmlschema-core-2.2.5.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/xmlschema-core-2.2.5.jar
-[INFO] Copying jakarta.xml.bind-api-2.3.3.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/jakarta.xml.bind-api-2.3.3.jar
-[INFO] Copying cxf-rt-bindings-soap-3.4.2.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/cxf-rt-bindings-soap-3.4.2.jar
-[INFO] Copying cxf-rt-wsdl-3.4.2.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/cxf-rt-wsdl-3.4.2.jar
-[INFO] Copying wsdl4j-1.6.3.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/wsdl4j-1.6.3.jar
-[INFO] Copying cxf-rt-databinding-jaxb-3.4.2.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/cxf-rt-databinding-jaxb-3.4.2.jar
-[INFO] Copying cxf-rt-bindings-xml-3.4.2.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/cxf-rt-bindings-xml-3.4.2.jar
-[INFO] Copying cxf-rt-frontend-simple-3.4.2.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/cxf-rt-frontend-simple-3.4.2.jar
-[INFO] Copying cxf-rt-ws-addr-3.4.2.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/cxf-rt-ws-addr-3.4.2.jar
-[INFO] Copying cxf-rt-ws-policy-3.4.2.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/cxf-rt-ws-policy-3.4.2.jar
-[INFO] Copying neethi-3.1.1.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/neethi-3.1.1.jar
-[INFO] Copying jakarta.annotation-api-1.3.5.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/jakarta.annotation-api-1.3.5.jar
-[INFO] Copying jakarta.xml.ws-api-2.3.3.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/jakarta.xml.ws-api-2.3.3.jar
-[INFO] Copying jakarta.jws-api-2.1.0.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/jakarta.jws-api-2.1.0.jar
-[INFO] Copying jakarta.xml.soap-api-1.4.2.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/jakarta.xml.soap-api-1.4.2.jar
-[INFO] Copying jakarta.activation-api-1.2.2.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/jakarta.activation-api-1.2.2.jar
-[INFO] Copying jakarta.activation-1.2.2.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/jakarta.activation-1.2.2.jar
-[INFO] Copying saaj-impl-1.5.2.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/saaj-impl-1.5.2.jar
-[INFO] Copying stax-ex-1.8.3.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/stax-ex-1.8.3.jar
-[INFO] Copying geronimo-jta_1.1_spec-1.1.1.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/geronimo-jta_1.1_spec-1.1.1.jar
-[INFO] Copying jboss-rmi-api_1.0_spec-1.0.6.Final.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/jboss-rmi-api_1.0_spec-1.0.6.Final.jar
-[INFO] Copying cxf-rt-transports-http-jetty-3.4.2.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/cxf-rt-transports-http-jetty-3.4.2.jar
-[INFO] Copying cxf-rt-transports-http-3.4.2.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/cxf-rt-transports-http-3.4.2.jar
-[INFO] Copying jetty-server-9.4.35.v20201120.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/jetty-server-9.4.35.v20201120.jar
-[INFO] Copying javax.servlet-api-3.1.0.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/javax.servlet-api-3.1.0.jar
-[INFO] Copying jetty-util-9.4.35.v20201120.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/jetty-util-9.4.35.v20201120.jar
-[INFO] Copying jetty-io-9.4.35.v20201120.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/jetty-io-9.4.35.v20201120.jar
-[INFO] Copying jetty-security-9.4.35.v20201120.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/jetty-security-9.4.35.v20201120.jar
-[INFO] Copying jetty-continuation-9.4.35.v20201120.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/jetty-continuation-9.4.35.v20201120.jar
-[INFO] Copying jetty-http-9.4.35.v20201120.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/jetty-http-9.4.35.v20201120.jar
-[INFO] Copying cxf-rt-transports-http-hc-3.4.2.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/cxf-rt-transports-http-hc-3.4.2.jar
-[INFO] Copying httpcore-nio-4.4.14.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/httpcore-nio-4.4.14.jar
-[INFO] Copying httpasyncclient-4.1.4.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/httpasyncclient-4.1.4.jar
-[INFO] Copying simple-xml-2.7.1.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/simple-xml-2.7.1.jar
-[INFO] Copying stax-api-1.0.1.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/stax-api-1.0.1.jar
-[INFO] Copying stax-1.2.0.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/stax-1.2.0.jar
-[INFO] Copying xpp3-1.1.3.3.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/xpp3-1.1.3.3.jar
-[INFO] Copying h2-1.4.200.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/h2-1.4.200.jar
-[INFO] Copying swingx-1.6.1.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/swingx-1.6.1.jar
-[INFO] Copying filters-2.0.235.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/filters-2.0.235.jar
-[INFO] Copying swing-worker-1.1.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/swing-worker-1.1.jar
-[INFO] Copying owlapi-distribution-5.1.17.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/owlapi-distribution-5.1.17.jar
-[INFO] Copying owlapi-compatibility-5.1.17.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/owlapi-compatibility-5.1.17.jar
-[INFO] Copying owlapi-apibinding-5.1.17.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/owlapi-apibinding-5.1.17.jar
-[INFO] Copying owlapi-api-5.1.17.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/owlapi-api-5.1.17.jar
-[INFO] Copying javax.inject-1.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/javax.inject-1.jar
-[INFO] Copying owlapi-impl-5.1.17.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/owlapi-impl-5.1.17.jar
-[INFO] Copying owlapi-parsers-5.1.17.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/owlapi-parsers-5.1.17.jar
-[INFO] Copying owlapi-oboformat-5.1.17.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/owlapi-oboformat-5.1.17.jar
-[INFO] Copying owlapi-tools-5.1.17.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/owlapi-tools-5.1.17.jar
-[INFO] Copying owlapi-rio-5.1.17.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/owlapi-rio-5.1.17.jar
-[INFO] Copying commons-rdf-api-0.5.0.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/commons-rdf-api-0.5.0.jar
-[INFO] Copying xz-1.6.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/xz-1.6.jar
-[INFO] Copying rdf4j-model-3.4.3.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/rdf4j-model-3.4.3.jar
-[INFO] Copying rdf4j-rio-api-3.4.3.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/rdf4j-rio-api-3.4.3.jar
-[INFO] Copying rdf4j-rio-languages-3.4.3.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/rdf4j-rio-languages-3.4.3.jar
-[INFO] Copying rdf4j-rio-datatypes-3.4.3.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/rdf4j-rio-datatypes-3.4.3.jar
-[INFO] Copying rdf4j-rio-binary-3.4.3.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/rdf4j-rio-binary-3.4.3.jar
-[INFO] Copying rdf4j-rio-n3-3.4.3.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/rdf4j-rio-n3-3.4.3.jar
-[INFO] Copying rdf4j-rio-nquads-3.4.3.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/rdf4j-rio-nquads-3.4.3.jar
-[INFO] Copying rdf4j-rio-ntriples-3.4.3.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/rdf4j-rio-ntriples-3.4.3.jar
-[INFO] Copying rdf4j-rio-rdfjson-3.4.3.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/rdf4j-rio-rdfjson-3.4.3.jar
-[INFO] Copying rdf4j-rio-jsonld-3.4.3.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/rdf4j-rio-jsonld-3.4.3.jar
-[INFO] Copying httpclient-cache-4.5.10.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/httpclient-cache-4.5.10.jar
-[INFO] Copying rdf4j-rio-rdfxml-3.4.3.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/rdf4j-rio-rdfxml-3.4.3.jar
-[INFO] Copying rdf4j-rio-trix-3.4.3.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/rdf4j-rio-trix-3.4.3.jar
-[INFO] Copying rdf4j-rio-turtle-3.4.3.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/rdf4j-rio-turtle-3.4.3.jar
-[INFO] Copying rdf4j-rio-trig-3.4.3.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/rdf4j-rio-trig-3.4.3.jar
-[INFO] Copying rdf4j-rio-hdt-3.4.3.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/rdf4j-rio-hdt-3.4.3.jar
-[INFO] Copying rdf4j-util-3.4.3.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/rdf4j-util-3.4.3.jar
-[INFO] Copying jsonld-java-0.13.0.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/jsonld-java-0.13.0.jar
-[INFO] Copying httpclient-osgi-4.5.10.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/httpclient-osgi-4.5.10.jar
-[INFO] Copying httpmime-4.5.10.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/httpmime-4.5.10.jar
-[INFO] Copying fluent-hc-4.5.10.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/fluent-hc-4.5.10.jar
-[INFO] Copying httpcore-osgi-4.4.12.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/httpcore-osgi-4.4.12.jar
-[INFO] Copying hppcrt-0.7.5.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/hppcrt-0.7.5.jar
-[INFO] Copying caffeine-2.8.1.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/caffeine-2.8.1.jar
-[INFO] Copying checker-qual-3.1.0.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/checker-qual-3.1.0.jar
-[INFO] Copying error_prone_annotations-2.3.4.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/error_prone_annotations-2.3.4.jar
-[INFO] Copying guava-30.0-jre.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/guava-30.0-jre.jar
-[INFO] Copying failureaccess-1.0.1.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/failureaccess-1.0.1.jar
-[INFO] Copying listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar
-[INFO] Copying j2objc-annotations-1.3.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/j2objc-annotations-1.3.jar
-[INFO] Copying jsr305-3.0.2.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/jsr305-3.0.2.jar
-[INFO] Copying org.protege.editor.owl.codegeneration-1.0.2.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/org.protege.editor.owl.codegeneration-1.0.2.jar
-[INFO] Copying cobertura-2.0.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/cobertura-2.0.jar
-[INFO] Copying oro-2.0.8.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/oro-2.0.8.jar
-[INFO] Copying asm-3.3.1.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/asm-3.3.1.jar
-[INFO] Copying asm-tree-3.3.1.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/asm-tree-3.3.1.jar
-[INFO] Copying asm-commons-3.3.1.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/asm-commons-3.3.1.jar
-[INFO] Copying ant-1.7.0.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/ant-1.7.0.jar
-[INFO] Copying ant-launcher-1.7.0.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/ant-launcher-1.7.0.jar
-[INFO] Copying commons-cli-1.2.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/commons-cli-1.2.jar
-[INFO] Copying org.protege.common-4.3.0.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/org.protege.common-4.3.0.jar
-[INFO] Copying org.apache.felix.main-4.0.3.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/org.apache.felix.main-4.0.3.jar
-[INFO] Copying org.apache.felix.framework-4.0.3.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/org.apache.felix.framework-4.0.3.jar
-[INFO] Copying looks-2.2.2.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/looks-2.2.2.jar
-[INFO] Copying org.protege.editor.core.application-4.3.0.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/org.protege.editor.core.application-4.3.0.jar
-[INFO] Copying registry-3.3.0-v20070522.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/registry-3.3.0-v20070522.jar
-[INFO] Copying common-3.6.200-v20130402-1505.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/common-3.6.200-v20130402-1505.jar
-[INFO] Copying mdock-1.1.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/mdock-1.1.jar
-[INFO] Copying org.protege.editor.owl-4.3.0.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/org.protege.editor.owl-4.3.0.jar
-[INFO] Copying org.eclipse.equinox.registry-3.5.0.v20100503.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/org.eclipse.equinox.registry-3.5.0.v20100503.jar
-[INFO] Copying org.eclipse.core.jobs-3.5.0.v20100515.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/org.eclipse.core.jobs-3.5.0.v20100515.jar
-[INFO] Copying org.eclipse.equinox.common-3.6.0.v20100503.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/org.eclipse.equinox.common-3.6.0.v20100503.jar
-[INFO] Copying org.eclipse.osgi-3.6.0.v20100517.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/org.eclipse.osgi-3.6.0.v20100517.jar
-[INFO] Copying protege-owlapi-extensions-3.2.4.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/protege-owlapi-extensions-3.2.4.jar
-[INFO] Copying org.protege.xmlcatalog-1.0.3.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/org.protege.xmlcatalog-1.0.3.jar
-[INFO] Copying org.semanticweb.hermit-1.3.8.3.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/org.semanticweb.hermit-1.3.8.3.jar
-[INFO] Copying axiom-api-1.2.14.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/axiom-api-1.2.14.jar
-[INFO] Copying geronimo-activation_1.1_spec-1.1.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/geronimo-activation_1.1_spec-1.1.jar
-[INFO] Copying geronimo-javamail_1.4_spec-1.7.1.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/geronimo-javamail_1.4_spec-1.7.1.jar
-[INFO] Copying jaxen-1.1.4.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/jaxen-1.1.4.jar
-[INFO] Copying geronimo-stax-api_1.0_spec-1.0.1.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/geronimo-stax-api_1.0_spec-1.0.1.jar
-[INFO] Copying apache-mime4j-core-0.7.2.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/apache-mime4j-core-0.7.2.jar
-[INFO] Copying axiom-c14n-1.2.14.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/axiom-c14n-1.2.14.jar
-[INFO] Copying axiom-impl-1.2.14.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/axiom-impl-1.2.14.jar
-[INFO] Copying woodstox-core-asl-4.1.4.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/woodstox-core-asl-4.1.4.jar
-[INFO] Copying axiom-dom-1.2.14.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/axiom-dom-1.2.14.jar
-[INFO] Copying automaton-1.11-8.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/automaton-1.11-8.jar
-[INFO] Copying jfact-1.0.0.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/jfact-1.0.0.jar
-[INFO] Copying gson-2.8.6.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/gson-2.8.6.jar
-[INFO] Copying super-csv-2.4.0.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/super-csv-2.4.0.jar
-[INFO] Copying lombok-1.18.18.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/lombok-1.18.18.jar
-[INFO] Copying jaxws-api-2.3.1.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/jaxws-api-2.3.1.jar
-[INFO] Copying jaxb-api-2.3.1.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/jaxb-api-2.3.1.jar
-[INFO] Copying javax.activation-api-1.2.0.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/javax.activation-api-1.2.0.jar
-[INFO] Copying javax.xml.soap-api-1.4.0.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/javax.xml.soap-api-1.4.0.jar
-[INFO] Copying javax.annotation-api-1.3.2.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/javax.annotation-api-1.3.2.jar
-[INFO] Copying javax.jws-api-1.1.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/javax.jws-api-1.1.jar
-[INFO] Copying doxia-core-1.9.1.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/doxia-core-1.9.1.jar
-[INFO] Copying doxia-sink-api-1.9.1.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/doxia-sink-api-1.9.1.jar
-[INFO] Copying doxia-logging-api-1.9.1.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/doxia-logging-api-1.9.1.jar
-[INFO] Copying plexus-utils-3.1.0.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/plexus-utils-3.1.0.jar
-[INFO] Copying plexus-container-default-1.7.1.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/plexus-container-default-1.7.1.jar
-[INFO] Copying plexus-classworlds-2.5.1.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/plexus-classworlds-2.5.1.jar
-[INFO] Copying xbean-reflect-3.7.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/xbean-reflect-3.7.jar
-[INFO] Copying google-collections-1.0.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/google-collections-1.0.jar
-[INFO] Copying plexus-component-annotations-1.7.1.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/plexus-component-annotations-1.7.1.jar
-[INFO] Copying httpclient-4.5.8.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/httpclient-4.5.8.jar
-[INFO] Copying commons-logging-1.2.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/commons-logging-1.2.jar
-[INFO] Copying commons-codec-1.11.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/commons-codec-1.11.jar
-[INFO] Copying httpcore-4.4.11.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/httpcore-4.4.11.jar
-[INFO] Copying json-simple-1.1.1.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/json-simple-1.1.1.jar
-[INFO] Copying spring-kafka-2.6.5.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/spring-kafka-2.6.5.jar
-[INFO] Copying spring-context-5.2.12.RELEASE.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/spring-context-5.2.12.RELEASE.jar
-[INFO] Copying spring-aop-5.2.12.RELEASE.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/spring-aop-5.2.12.RELEASE.jar
-[INFO] Copying spring-beans-5.2.12.RELEASE.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/spring-beans-5.2.12.RELEASE.jar
-[INFO] Copying spring-core-5.2.12.RELEASE.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/spring-core-5.2.12.RELEASE.jar
-[INFO] Copying spring-jcl-5.2.12.RELEASE.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/spring-jcl-5.2.12.RELEASE.jar
-[INFO] Copying spring-expression-5.2.12.RELEASE.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/spring-expression-5.2.12.RELEASE.jar
-[INFO] Copying spring-messaging-5.2.12.RELEASE.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/spring-messaging-5.2.12.RELEASE.jar
-[INFO] Copying spring-tx-5.2.12.RELEASE.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/spring-tx-5.2.12.RELEASE.jar
-[INFO] Copying spring-retry-1.3.0.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/spring-retry-1.3.0.jar
-[INFO] Copying kafka-clients-2.6.1.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/kafka-clients-2.6.1.jar
-[INFO] Copying zstd-jni-1.4.4-7.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/zstd-jni-1.4.4-7.jar
-[INFO] Copying lz4-java-1.7.1.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/lz4-java-1.7.1.jar
-[INFO] Copying snappy-java-1.1.7.3.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/snappy-java-1.1.7.3.jar
-[INFO] Copying spring-boot-starter-web-2.4.2.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/spring-boot-starter-web-2.4.2.jar
-[INFO] Copying spring-boot-starter-2.4.2.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/spring-boot-starter-2.4.2.jar
-[INFO] Copying spring-boot-2.4.2.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/spring-boot-2.4.2.jar
-[INFO] Copying spring-boot-autoconfigure-2.4.2.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/spring-boot-autoconfigure-2.4.2.jar
-[INFO] Copying snakeyaml-1.27.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/snakeyaml-1.27.jar
-[INFO] Copying spring-boot-starter-json-2.4.2.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/spring-boot-starter-json-2.4.2.jar
-[INFO] Copying jackson-datatype-jdk8-2.11.4.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/jackson-datatype-jdk8-2.11.4.jar
-[INFO] Copying jackson-datatype-jsr310-2.11.4.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/jackson-datatype-jsr310-2.11.4.jar
-[INFO] Copying jackson-module-parameter-names-2.11.4.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/jackson-module-parameter-names-2.11.4.jar
-[INFO] Copying spring-boot-starter-tomcat-2.4.2.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/spring-boot-starter-tomcat-2.4.2.jar
-[INFO] Copying tomcat-embed-core-9.0.41.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/tomcat-embed-core-9.0.41.jar
-[INFO] Copying jakarta.el-3.0.3.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/jakarta.el-3.0.3.jar
-[INFO] Copying tomcat-embed-websocket-9.0.41.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/tomcat-embed-websocket-9.0.41.jar
-[INFO] Copying spring-web-5.3.3.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/spring-web-5.3.3.jar
-[INFO] Copying spring-webmvc-5.3.3.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/spring-webmvc-5.3.3.jar
-[INFO] Copying wicked-charts-highcharts-1.5.0.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/wicked-charts-highcharts-1.5.0.jar
-[INFO] Copying jackson-annotations-2.0.5.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/jackson-annotations-2.0.5.jar
-[INFO] Copying jackson-core-2.0.5.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/jackson-core-2.0.5.jar
-[INFO] Copying jackson-databind-2.0.5.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/jackson-databind-2.0.5.jar
-[INFO] Copying solder-api-3.2.1.Final.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/solder-api-3.2.1.Final.jar
-[INFO] Copying solder-logging-3.2.1.Final.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/solder-logging-3.2.1.Final.jar
-[INFO] Copying solder-parent-3.2.1.Final.pom to /Users/philippe/git/smartclide-context/context-extraction/target/lib/solder-parent-3.2.1.Final.pom
-[INFO] Copying joda-time-2.10.9.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/joda-time-2.10.9.jar
-[INFO] Copying junit-4.13.1.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/junit-4.13.1.jar
-[INFO] Copying hamcrest-core-1.3.jar to /Users/philippe/git/smartclide-context/context-extraction/target/lib/hamcrest-core-1.3.jar
-[INFO] 
-[INFO] --- maven-jar-plugin:3.2.0:jar (default-jar) @ context-extraction ---
-[INFO] Building jar: /Users/philippe/git/smartclide-context/context-extraction/target/context-extraction-2.0.0.jar
-[INFO] 
-[INFO] --- maven-install-plugin:2.4:install (default-install) @ context-extraction ---
-[INFO] Installing /Users/philippe/git/smartclide-context/context-extraction/target/context-extraction-2.0.0.jar to /Users/philippe/.m2/repository/de/atb/context/context-extraction/2.0.0/context-extraction-2.0.0.jar
-[INFO] Installing /Users/philippe/git/smartclide-context/context-extraction/pom.xml to /Users/philippe/.m2/repository/de/atb/context/context-extraction/2.0.0/context-extraction-2.0.0.pom
-[INFO] ------------------------------------------------------------------------
-[INFO] Reactor Summary for ATB Context Parent 2.0.0:
-[INFO] 
-[INFO] ATB Context Parent ................................. SUCCESS [ 11.275 s]
-[INFO] ATB Context Extraction Core Lib .................... SUCCESS [ 59.881 s]
-[INFO] ATB Context Monitoring Core Services ............... SUCCESS [ 27.934 s]
-[INFO] ATB Context Extraction Core Service ................ SUCCESS [  8.113 s]
-[INFO] ------------------------------------------------------------------------
-[INFO] BUILD SUCCESS
-[INFO] ------------------------------------------------------------------------
-[INFO] Total time:  01:48 min
-[INFO] Finished at: 2021-03-19T14:35:21+01:00
-[INFO] ------------------------------------------------------------------------
-License information could not be automatically verified for the following content:
-
-maven/mavencentral/asm/asm-commons/3.3.1
-maven/mavencentral/asm/asm-tree/3.3.1
-maven/mavencentral/com.fasterxml.jackson.core/jackson-databind/2.0.5
-maven/mavencentral/com.github.ansell.aterms/aterm-java/1.8.2-p1
-maven/mavencentral/com.github.ansell.aterms/shared-objects/1.4.9-p1
-maven/mavencentral/com.github.ansell.jjtraveler/jjtraveler/0.6
-maven/mavencentral/com.github.ansell.pellet/pellet-common/2.3.6-ansell
-maven/mavencentral/com.github.ansell.pellet/pellet-core/2.3.6-ansell
-maven/mavencentral/com.github.ansell.pellet/pellet-datatypes/2.3.6-ansell
-maven/mavencentral/com.github.ansell.pellet/pellet-el/2.3.6-ansell
-maven/mavencentral/com.github.ansell.pellet/pellet-jena/2.3.6-ansell
-maven/mavencentral/com.github.ansell.pellet/pellet-rules/2.3.6-ansell
-maven/mavencentral/com.github.vsonnier/hppcrt/0.7.5
-maven/mavencentral/com.googlecode.mdock/mdock/1.1
-maven/mavencentral/com.hermit-reasoner/org.semanticweb.hermit/1.3.8.3
-maven/mavencentral/com.hp.hpl.jena/arq/2.8.7
-maven/mavencentral/com.hp.hpl.jena/iri/0.8
-maven/mavencentral/com.hp.hpl.jena/jena/2.6.4
-maven/mavencentral/com.hp.hpl.jena/sdb/1.3.4
-maven/mavencentral/com.hp.hpl.jena/tdb/0.8.9
-maven/mavencentral/com.ibm.icu/icu4j/3.4.4
-maven/mavencentral/com.jgoodies/jgoodies-common/1.8.1
-maven/mavencentral/com.jgoodies/jgoodies-forms/1.9.0
-maven/mavencentral/com.jgoodies/looks/2.2.2
-maven/mavencentral/com.thewebsemantic/jenabean/1.0.6
-maven/mavencentral/de.atb.context/context-core/2.0.0
-maven/mavencentral/de.atb.context/context-monitoring/2.0.0
-maven/mavencentral/edu.stanford.protege/org.protege.common/4.3.0
-maven/mavencentral/edu.stanford.protege/org.protege.editor.core.application/4.3.0
-maven/mavencentral/edu.stanford.protege/org.protege.editor.owl.codegeneration/1.0.2
-maven/mavencentral/edu.stanford.protege/org.protege.editor.owl/4.3.0
-maven/mavencentral/edu.stanford.protege/org.protege.xmlcatalog/1.0.3
-maven/mavencentral/edu.stanford.protege/protege-owlapi-extensions/3.2.4
-maven/mavencentral/javax.ejb/ejb-api/3.0
-maven/mavencentral/javax.xml.soap/javax.xml.soap-api/1.4.0
-maven/mavencentral/javax/javaee-web-api/8.0.1
-maven/mavencentral/jaxen/jaxen/1.2.0
-maven/mavencentral/msv/relaxngDatatype/20030225
-maven/mavencentral/msv/xsdlib/20030225
-maven/mavencentral/net.sf.jpathwatch/jpathwatch/0.95
-maven/mavencentral/net.sourceforge.cobertura/cobertura/2.0
-maven/mavencentral/net.sourceforge.owlapi/jfact/1.0.0
-maven/mavencentral/net.sourceforge.owlapi/owlapi-api/5.1.17
-maven/mavencentral/net.sourceforge.owlapi/owlapi-apibinding/5.1.17
-maven/mavencentral/net.sourceforge.owlapi/owlapi-compatibility/5.1.17
-maven/mavencentral/net.sourceforge.owlapi/owlapi-distribution/5.1.17
-maven/mavencentral/net.sourceforge.owlapi/owlapi-impl/5.1.17
-maven/mavencentral/net.sourceforge.owlapi/owlapi-oboformat/5.1.17
-maven/mavencentral/net.sourceforge.owlapi/owlapi-parsers/5.1.17
-maven/mavencentral/net.sourceforge.owlapi/owlapi-rio/5.1.17
-maven/mavencentral/net.sourceforge.owlapi/owlapi-tools/5.1.17
-maven/mavencentral/org.apache.commons/commons-rdf-api/0.5.0
-maven/mavencentral/org.apache.cxf/cxf-core/3.4.2
-maven/mavencentral/org.apache.cxf/cxf-rt-bindings-soap/3.4.2
-maven/mavencentral/org.apache.cxf/cxf-rt-bindings-xml/3.4.2
-maven/mavencentral/org.apache.cxf/cxf-rt-databinding-jaxb/3.4.2
-maven/mavencentral/org.apache.cxf/cxf-rt-frontend-simple/3.4.2
-maven/mavencentral/org.apache.cxf/cxf-rt-transports-http-hc/3.4.2
-maven/mavencentral/org.apache.cxf/cxf-rt-transports-http-jetty/3.4.2
-maven/mavencentral/org.apache.cxf/cxf-rt-transports-http/3.4.2
-maven/mavencentral/org.apache.cxf/cxf-rt-ws-addr/3.4.2
-maven/mavencentral/org.apache.cxf/cxf-rt-ws-policy/3.4.2
-maven/mavencentral/org.apache.cxf/cxf-rt-wsdl/3.4.2
-maven/mavencentral/org.apache.httpcomponents/httpclient-osgi/4.5.10
-maven/mavencentral/org.apache.httpcomponents/httpclient-osgi/4.5.13
-maven/mavencentral/org.apache.kafka/kafka-clients/2.6.1
-maven/mavencentral/org.apache.lucene/lucene-analyzers-common/8.8.0
-maven/mavencentral/org.apache.lucene/lucene-core/8.8.0
-maven/mavencentral/org.apache.ws.commons.axiom/axiom-c14n/1.2.14
-maven/mavencentral/org.jboss.solder/solder-parent/3.2.1.Final
-maven/mavencentral/org.jboss.spec.javax.rmi/jboss-rmi-api_1.0_spec/1.0.6.Final
-maven/mavencentral/org.jgrapht/jgrapht-jdk1.5/0.7.3
-maven/mavencentral/org.swinglabs/swing-worker/1.1
-maven/mavencentral/org.swinglabs/swingx/1.6.1
-maven/mavencentral/org.tukaani/xz/1.6
-maven/mavencentral/stax/stax/1.2.0
-maven/mavencentral/xerces/xercesImpl/2.7.1
-
-This content is either not correctly mapped by the system, or requires review.
-
-
