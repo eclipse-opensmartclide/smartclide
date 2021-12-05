@@ -1,0 +1,51 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------< com.smartclide.intrasoft:cicd >--------------------
+[INFO] Building ci 0.0.1-SNAPSHOT
+[INFO] --------------------------------[ war ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ cicd ---
+[INFO] Deleting /Users/philippe/git/smartclide-cicd/target
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:resources (default-resources) @ cicd ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 1 resource
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ cicd ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 11 source files to /Users/philippe/git/smartclide-cicd/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:testResources (default-testResources) @ cicd ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] skip non existing resourceDirectory /Users/philippe/git/smartclide-cicd/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ cicd ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 3 source files to /Users/philippe/git/smartclide-cicd/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ cicd ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-war-plugin:3.3.1:war (default-war) @ cicd ---
+[INFO] Packaging webapp
+[INFO] Assembling webapp [cicd] in [/Users/philippe/git/smartclide-cicd/target/cicd-0.0.1-SNAPSHOT]
+[INFO] Processing war project
+[INFO] Copying webapp resources [/Users/philippe/git/smartclide-cicd/src/main/webapp]
+[INFO] Building war: /Users/philippe/git/smartclide-cicd/target/cicd-0.0.1-SNAPSHOT.war
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:2.5.3:repackage (repackage) @ cicd ---
+[INFO] Replacing main artifact with repackaged archive
+[INFO] 
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ cicd ---
+[INFO] Installing /Users/philippe/git/smartclide-cicd/target/cicd-0.0.1-SNAPSHOT.war to /Users/philippe/.m2/repository/com/smartclide/intrasoft/cicd/0.0.1-SNAPSHOT/cicd-0.0.1-SNAPSHOT.war
+[INFO] Installing /Users/philippe/git/smartclide-cicd/pom.xml to /Users/philippe/.m2/repository/com/smartclide/intrasoft/cicd/0.0.1-SNAPSHOT/cicd-0.0.1-SNAPSHOT.pom
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  10.998 s
+[INFO] Finished at: 2021-11-26T20:05:56+01:00
+[INFO] ------------------------------------------------------------------------
+Vetted license information was found for all content. No further investigation is required.
