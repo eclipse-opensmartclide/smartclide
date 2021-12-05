@@ -1,0 +1,9 @@
+License information could not be automatically verified for the following content:
+
+npm/npmjs/-/jschardet/2.3.0
+npm/npmjs/-/parse-json/3.0.0
+npm/npmjs/-/typescript/4.3.5
+
+This content is either not correctly mapped by the system, or requires review.
+
+
