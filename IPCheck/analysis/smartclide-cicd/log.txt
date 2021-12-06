@@ -1,8 +1,8 @@
 [INFO] Scanning for projects...
-[INFO] 
-[INFO] -------------------< com.smartclide.intrasoft:cicd >--------------------
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
 [INFO] Building ci 0.0.1-SNAPSHOT
-[INFO] --------------------------------[ war ]---------------------------------
+[INFO] ------------------------------------------------------------------------
 [INFO] 
 [INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ cicd ---
 [INFO] Deleting /Users/philippe/git/smartclide-cicd/target
@@ -45,7 +45,8 @@
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  10.998 s
-[INFO] Finished at: 2021-11-26T20:05:56+01:00
+[INFO] Total time: 27.469 s
+[INFO] Finished at: 2021-12-06T18:09:56+01:00
+[INFO] Final Memory: 30M/114M
 [INFO] ------------------------------------------------------------------------
 Vetted license information was found for all content. No further investigation is required.

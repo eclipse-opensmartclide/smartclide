@@ -1,8 +1,8 @@
 [INFO] Scanning for projects...
-[INFO] 
-[INFO] --------------< com.example:smartclide-service-creation >---------------
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
 [INFO] Building smartclide-service-creation 0.0.1-SNAPSHOT
-[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] ------------------------------------------------------------------------
 [INFO] 
 [INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ smartclide-service-creation ---
 [INFO] Deleting /Users/philippe/git/smartclide-service-creation/target
@@ -40,8 +40,9 @@
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  13.222 s
-[INFO] Finished at: 2021-11-26T20:09:09+01:00
+[INFO] Total time: 35.954 s
+[INFO] Finished at: 2021-12-06T18:17:52+01:00
+[INFO] Final Memory: 34M/128M
 [INFO] ------------------------------------------------------------------------
 License information could not be automatically verified for the following content:
 

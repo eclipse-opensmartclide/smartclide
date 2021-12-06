@@ -9,7 +9,6 @@ npm/npmjs/-/esutils/1.0.0
 npm/npmjs/-/jschardet/2.3.0
 npm/npmjs/-/jsdom/16.7.0
 npm/npmjs/-/nugget/2.0.1
-npm/npmjs/-/parse-json/3.0.0
 npm/npmjs/-/pdfkit/0.12.3
 npm/npmjs/-/pdfmake/0.2.2
 npm/npmjs/-/react-resize-detector/6.7.4

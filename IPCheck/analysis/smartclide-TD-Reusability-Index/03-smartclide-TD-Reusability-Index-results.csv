@@ -9,7 +9,7 @@ maven/mavencentral/com.fasterxml.jackson.datatype/jackson-datatype-jsr310/2.12.3
 maven/mavencentral/com.fasterxml.jackson.module/jackson-module-parameter-names/2.12.3, Apache-2.0, approved, clearlydefined
 maven/mavencentral/com.fasterxml/classmate/1.5.1, Apache-2.0, approved, clearlydefined
 maven/mavencentral/com.sun.istack/istack-commons-runtime/3.0.12, BSD-3-Clause, approved, ee4j.jaxb-impl
-maven/mavencentral/com.sun.xml.messaging.saaj/saaj-impl/1.5.3, NOASSERTION, restricted, clearlydefined
+maven/mavencentral/com.sun.xml.messaging.saaj/saaj-impl/1.5.3, BSD-3-Clause, approved, #1672
 maven/mavencentral/com.zaxxer/HikariCP/4.0.3, Apache-2.0, approved, clearlydefined
 maven/mavencentral/io.netty/netty-buffer/4.1.65.Final, Apache-2.0, approved, CQ21842
 maven/mavencentral/io.netty/netty-codec-dns/4.1.65.Final, Apache-2.0 AND BSD-3-Clause AND MIT, approved, CQ20926

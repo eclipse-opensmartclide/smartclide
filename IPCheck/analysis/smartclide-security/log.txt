@@ -1,16 +1,36 @@
 [INFO] Scanning for projects...
-[WARNING] 
-[WARNING] Some problems were encountered while building the effective model for com.Theia:Theia-BackEnd:jar:0.0.1-SNAPSHOT
-[WARNING] 'dependencies.dependency.version' for org.jetbrains:annotations:jar is either LATEST or RELEASE (both of them are being deprecated) @ line 89, column 22
-[WARNING] 
-[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
-[WARNING] 
-[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
-[WARNING] 
-[INFO] 
-[INFO] ----------------------< com.Theia:Theia-BackEnd >-----------------------
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
 [INFO] Building Theia-BackEnd 0.0.1-SNAPSHOT
-[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] ------------------------------------------------------------------------
+Downloading: https://repo.maven.apache.org/maven2/org/eclipse/platform/org.eclipse.core.resources/maven-metadata.xml
+828/828 B               Downloaded: https://repo.maven.apache.org/maven2/org/eclipse/platform/org.eclipse.core.resources/maven-metadata.xml (828 B at 0.2 KB/sec)
+Downloading: https://repo.maven.apache.org/maven2/org/eclipse/platform/org.eclipse.core.expressions/maven-metadata.xml
+747/747 B               Downloaded: https://repo.maven.apache.org/maven2/org/eclipse/platform/org.eclipse.core.expressions/maven-metadata.xml (747 B at 2.5 KB/sec)
+Downloading: https://repo.maven.apache.org/maven2/org/eclipse/platform/org.eclipse.core.runtime/maven-metadata.xml
+844/844 B               Downloaded: https://repo.maven.apache.org/maven2/org/eclipse/platform/org.eclipse.core.runtime/maven-metadata.xml (844 B at 1.1 KB/sec)
+Downloading: https://repo.maven.apache.org/maven2/org/eclipse/platform/org.eclipse.osgi/maven-metadata.xml
+943/943 B               Downloaded: https://repo.maven.apache.org/maven2/org/eclipse/platform/org.eclipse.osgi/maven-metadata.xml (943 B at 1.0 KB/sec)
+Downloading: https://repo.maven.apache.org/maven2/org/eclipse/platform/org.eclipse.equinox.common/maven-metadata.xml
+816/816 B               Downloaded: https://repo.maven.apache.org/maven2/org/eclipse/platform/org.eclipse.equinox.common/maven-metadata.xml (816 B at 1.4 KB/sec)
+Downloading: https://repo.maven.apache.org/maven2/org/eclipse/platform/org.eclipse.core.jobs/maven-metadata.xml
+912/912 B               Downloaded: https://repo.maven.apache.org/maven2/org/eclipse/platform/org.eclipse.core.jobs/maven-metadata.xml (912 B at 8.4 KB/sec)
+Downloading: https://repo.maven.apache.org/maven2/org/eclipse/platform/org.eclipse.equinox.registry/maven-metadata.xml
+848/848 B               Downloaded: https://repo.maven.apache.org/maven2/org/eclipse/platform/org.eclipse.equinox.registry/maven-metadata.xml (848 B at 2.5 KB/sec)
+Downloading: https://repo.maven.apache.org/maven2/org/eclipse/platform/org.eclipse.equinox.preferences/maven-metadata.xml
+748/748 B               Downloaded: https://repo.maven.apache.org/maven2/org/eclipse/platform/org.eclipse.equinox.preferences/maven-metadata.xml (748 B at 1.9 KB/sec)
+Downloading: https://repo.maven.apache.org/maven2/org/eclipse/platform/org.eclipse.core.contenttype/maven-metadata.xml
+781/781 B               Downloaded: https://repo.maven.apache.org/maven2/org/eclipse/platform/org.eclipse.core.contenttype/maven-metadata.xml (781 B at 3.3 KB/sec)
+Downloading: https://repo.maven.apache.org/maven2/org/eclipse/platform/org.eclipse.equinox.app/maven-metadata.xml
+709/709 B               Downloaded: https://repo.maven.apache.org/maven2/org/eclipse/platform/org.eclipse.equinox.app/maven-metadata.xml (709 B at 1.9 KB/sec)
+Downloading: https://repo.maven.apache.org/maven2/org/eclipse/platform/org.eclipse.core.filesystem/maven-metadata.xml
+684/684 B               Downloaded: https://repo.maven.apache.org/maven2/org/eclipse/platform/org.eclipse.core.filesystem/maven-metadata.xml (684 B at 3.7 KB/sec)
+Downloading: https://repo.maven.apache.org/maven2/org/eclipse/platform/org.eclipse.text/maven-metadata.xml
+802/802 B               Downloaded: https://repo.maven.apache.org/maven2/org/eclipse/platform/org.eclipse.text/maven-metadata.xml (802 B at 5.7 KB/sec)
+Downloading: https://repo.maven.apache.org/maven2/org/eclipse/platform/org.eclipse.core.commands/maven-metadata.xml
+750/750 B               Downloaded: https://repo.maven.apache.org/maven2/org/eclipse/platform/org.eclipse.core.commands/maven-metadata.xml (750 B at 9.0 KB/sec)
+Downloading: https://repo.maven.apache.org/maven2/org/jetbrains/annotations/maven-metadata.xml
+746/746 B               Downloaded: https://repo.maven.apache.org/maven2/org/jetbrains/annotations/maven-metadata.xml (746 B at 2.3 KB/sec)
 [INFO] 
 [INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ Theia-BackEnd ---
 [INFO] Deleting /Users/philippe/git/smartclide-security/Theia-BackEnd/target
@@ -51,12 +71,12 @@
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  14.693 s
-[INFO] Finished at: 2021-11-27T12:38:54+01:00
+[INFO] Total time: 01:54 min
+[INFO] Finished at: 2021-12-06T18:15:37+01:00
+[INFO] Final Memory: 46M/136M
 [INFO] ------------------------------------------------------------------------
 License information could not be automatically verified for the following content:
 
-maven/mavencentral/com.github.mauricioaniche/ck/0.6.3
 maven/mavencentral/commons-chain/commons-chain/1.1
 maven/mavencentral/dom4j/dom4j/1.1
 maven/mavencentral/net.sourceforge.pmd/pmd-core/6.38.0
@@ -65,8 +85,6 @@ maven/mavencentral/net.sourceforge.pmd/pmd-javascript/6.38.0
 maven/mavencentral/net.sourceforge.pmd/pmd-jsp/6.38.0
 maven/mavencentral/org.codehaus.plexus/plexus-i18n/1.0-beta-10
 maven/mavencentral/org.json/json/20210307
-maven/mavencentral/org.sonatype.sisu/sisu-inject-bean/1.4.2
-maven/mavencentral/org.sonatype.sisu/sisu-inject-plexus/1.4.2
 
 This content is either not correctly mapped by the system, or requires review.
 

@@ -774,7 +774,7 @@ npm/npmjs/-/pako/0.2.9, MIT, approved, clearlydefined
 npm/npmjs/-/parallel-transform/1.2.0, MIT, approved, clearlydefined
 npm/npmjs/-/parse-github-repo-url/1.4.1, MIT, approved, clearlydefined
 npm/npmjs/-/parse-json/2.2.0, MIT AND WTFPL, approved, #991
-npm/npmjs/-/parse-json/3.0.0, MIT, restricted, clearlydefined
+npm/npmjs/-/parse-json/3.0.0, MIT AND WTFPL, approved, #1673
 npm/npmjs/-/parse-json/4.0.0, MIT, approved, clearlydefined
 npm/npmjs/-/parse5/6.0.1, MIT, approved, clearlydefined
 npm/npmjs/-/parseurl/1.3.3, MIT, approved, clearlydefined

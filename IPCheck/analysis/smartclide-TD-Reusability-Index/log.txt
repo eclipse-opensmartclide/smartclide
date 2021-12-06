@@ -1,8 +1,8 @@
 [INFO] Scanning for projects...
-[INFO] 
-[INFO] ----------------------< gr.zisis:reusability-api >----------------------
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
 [INFO] Building reusability-api 0.0.1-SNAPSHOT
-[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] ------------------------------------------------------------------------
 [INFO] 
 [INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ reusability-api ---
 [INFO] Deleting /Users/philippe/git/smartclide-TD-Reusability-Index/target
@@ -41,13 +41,8 @@
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  11.142 s
-[INFO] Finished at: 2021-11-26T20:10:05+01:00
+[INFO] Total time: 38.065 s
+[INFO] Finished at: 2021-12-06T18:21:23+01:00
+[INFO] Final Memory: 39M/124M
 [INFO] ------------------------------------------------------------------------
-License information could not be automatically verified for the following content:
-
-maven/mavencentral/com.sun.xml.messaging.saaj/saaj-impl/1.5.3
-
-This content is either not correctly mapped by the system, or requires review.
-
-
+Vetted license information was found for all content. No further investigation is required.

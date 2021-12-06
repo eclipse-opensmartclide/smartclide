@@ -1,16 +1,8 @@
 [INFO] Scanning for projects...
-[WARNING] 
-[WARNING] Some problems were encountered while building the effective model for com.Theia:Theia-BackEnd:jar:0.0.1-SNAPSHOT
-[WARNING] 'dependencies.dependency.version' for org.jetbrains:annotations:jar is either LATEST or RELEASE (both of them are being deprecated) @ line 89, column 22
-[WARNING] 
-[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
-[WARNING] 
-[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
-[WARNING] 
-[INFO] 
-[INFO] ----------------------< com.Theia:Theia-BackEnd >-----------------------
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
 [INFO] Building Theia-BackEnd 0.0.1-SNAPSHOT
-[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] ------------------------------------------------------------------------
 [INFO] 
 [INFO] --- maven-dependency-plugin:3.1.2:list (default-cli) @ Theia-BackEnd ---
 [INFO] Can't extract module name from plexus-container-default-1.0-alpha-30.jar: plexus.container.default: Invalid module name: 'default' is not a Java identifier
@@ -213,6 +205,7 @@
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  8.359 s
-[INFO] Finished at: 2021-11-27T12:39:04+01:00
+[INFO] Total time: 50.626 s
+[INFO] Finished at: 2021-12-06T18:16:43+01:00
+[INFO] Final Memory: 25M/114M
 [INFO] ------------------------------------------------------------------------

@@ -10,7 +10,7 @@ maven/mavencentral/com.fasterxml.jackson.module/jackson-module-jaxb-annotations/
 maven/mavencentral/com.fasterxml.jackson.module/jackson-module-parameter-names/2.12.3, Apache-2.0, approved, clearlydefined
 maven/mavencentral/com.fasterxml/classmate/1.5.1, Apache-2.0, approved, clearlydefined
 maven/mavencentral/com.sun.istack/istack-commons-runtime/3.0.12, BSD-3-Clause, approved, ee4j.jaxb-impl
-maven/mavencentral/com.sun.xml.messaging.saaj/saaj-impl/1.5.3, NOASSERTION, restricted, clearlydefined
+maven/mavencentral/com.sun.xml.messaging.saaj/saaj-impl/1.5.3, BSD-3-Clause, approved, #1672
 maven/mavencentral/com.vladmihalcea/hibernate-types-52/2.14.0, Apache-2.0, approved, clearlydefined
 maven/mavencentral/com.zaxxer/HikariCP/4.0.3, Apache-2.0, approved, clearlydefined
 maven/mavencentral/jakarta.activation/jakarta.activation-api/1.2.2, EPL-2.0 OR BSD-3-Clause OR GPL-2.0-with-classpath-exception, approved, ee4j.jaf
