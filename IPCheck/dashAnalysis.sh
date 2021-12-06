@@ -1,6 +1,20 @@
 #!/bin/sh
+#
+# ********************************************************************************
+# * Copyright (c) 2021, The Eclipse Foundation
+# *
+# * This program and the accompanying materials are made available under the
+# * terms of the Eclipse Public License 2.0 which is available at
+# * http://www.eclipse.org/legal/epl-2.0.
+# *
+# * SPDX-License-Identifier: EPL-2.0
+# *
+# * Contributors:
+# *   phkrief - initial implementation
+# ********************************************************************************
+#
 #--------------------------------------------------------------
-# This script runs a dependency analysis on a Maven repository
+# This script runs the Eclipse DASH dependency analysis on a repository (Maven, Yarn or Nodes)
 #--------------------------------------------------------------
 
 MAVEN="/Users/philippe/Documents/Dev/apache-maven-3.6.3/bin/mvn"
@@ -15,9 +29,10 @@ ECHO "|                    DASH Analysis                    |"
 ECHO "+=====================================================+"
 ECHO
 
-KIND_OF=$1
-REPO=$2
-DEST=$3
+KIND_OF=$1 	# To select between "Maven" | "Nodes" | "Yarn"
+REPO=$2		# Path of the folder containing the file to parse. The repo is supposed to be located under the $GIT folder
+DEST=$3		# If the path of the folder is not the name of the repo then this third argument can specify the name of the repo
+
 SRC_DIR=$GIT$REPO
 
 if [ -n $3 ]
