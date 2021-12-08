@@ -1,8 +1,8 @@
 [INFO] Scanning for projects...
-[INFO] 
-[INFO] ------------------< gr.nikos:smartclide-TD-Principal >------------------
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
 [INFO] Building smartclide-TD-Principal 0.0.1-SNAPSHOT
-[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] ------------------------------------------------------------------------
 [INFO] 
 [INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ smartclide-TD-Principal ---
 [INFO] Deleting /Users/philippe/git/smartclide-TD-Principal/target
@@ -40,7 +40,8 @@
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  6.220 s
-[INFO] Finished at: 2021-11-26T20:10:53+01:00
+[INFO] Total time: 27.656 s
+[INFO] Finished at: 2021-12-06T18:23:32+01:00
+[INFO] Final Memory: 27M/100M
 [INFO] ------------------------------------------------------------------------
 Vetted license information was found for all content. No further investigation is required.

@@ -1,8 +1,8 @@
 [INFO] Scanning for projects...
-[INFO] 
-[INFO] ---------------< com.theo:spring-cloud-gateway-security >---------------
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
 [INFO] Building spring-cloud-gateway-security 0.0.1-SNAPSHOT
-[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] ------------------------------------------------------------------------
 [INFO] 
 [INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ spring-cloud-gateway-security ---
 [INFO] Deleting /Users/philippe/git/smartclide-api-gateway/target
@@ -41,7 +41,8 @@
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  12.142 s
-[INFO] Finished at: 2021-11-26T20:10:32+01:00
+[INFO] Total time: 37.463 s
+[INFO] Finished at: 2021-12-06T18:06:34+01:00
+[INFO] Final Memory: 29M/114M
 [INFO] ------------------------------------------------------------------------
 Vetted license information was found for all content. No further investigation is required.
