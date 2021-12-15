@@ -46,3 +46,64 @@
 [INFO] Final Memory: 34M/106M
 [INFO] ------------------------------------------------------------------------
 Vetted license information was found for all content. No further investigation is required.
+[INFO] Scanning for projects...
+[ERROR] [ERROR] Some problems were encountered while processing the POMs:
+[FATAL] Non-readable POM /smartclide-broker: /smartclide-broker (No such file or directory) @ 
+ @ 
+[ERROR] The build could not read 1 project -> [Help 1]
+[ERROR]   
+[ERROR]   The project  (/smartclide-broker) has 1 error
+[ERROR]     Non-readable POM /smartclide-broker: /smartclide-broker (No such file or directory)
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/ProjectBuildingException
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------< com.example:spring-websocket >--------------------
+[INFO] Building spring-websocket 0.0.1-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ spring-websocket ---
+[INFO] Deleting /Users/philippe/git/smartclide-broker/target
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:resources (default-resources) @ spring-websocket ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 1 resource
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ spring-websocket ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 4 source files to /Users/philippe/git/smartclide-broker/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:testResources (default-testResources) @ spring-websocket ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] skip non existing resourceDirectory /Users/philippe/git/smartclide-broker/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ spring-websocket ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /Users/philippe/git/smartclide-broker/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ spring-websocket ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-jar-plugin:3.2.0:jar (default-jar) @ spring-websocket ---
+[INFO] Building jar: /Users/philippe/git/smartclide-broker/target/spring-websocket-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:2.5.4:repackage (repackage) @ spring-websocket ---
+[INFO] Replacing main artifact with repackaged archive
+[INFO] 
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ spring-websocket ---
+[INFO] Installing /Users/philippe/git/smartclide-broker/target/spring-websocket-0.0.1-SNAPSHOT.jar to /Users/philippe/.m2/repository/com/example/spring-websocket/0.0.1-SNAPSHOT/spring-websocket-0.0.1-SNAPSHOT.jar
+[INFO] Installing /Users/philippe/git/smartclide-broker/pom.xml to /Users/philippe/.m2/repository/com/example/spring-websocket/0.0.1-SNAPSHOT/spring-websocket-0.0.1-SNAPSHOT.pom
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  14.683 s
+[INFO] Finished at: 2021-12-15T11:16:25+01:00
+[INFO] ------------------------------------------------------------------------
+Vetted license information was found for all content. No further investigation is required.

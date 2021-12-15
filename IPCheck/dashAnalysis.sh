@@ -1,17 +1,18 @@
 #!/bin/bash
+#*******************************************************************************
+# Copyright (c) 2021 The Eclipse Foundation
 #
-# ********************************************************************************
-# * Copyright (c) 2021, The Eclipse Foundation
-# *
-# * This program and the accompanying materials are made available under the
-# * terms of the Eclipse Public License 2.0 which is available at
-# * http://www.eclipse.org/legal/epl-2.0.
-# *
-# * SPDX-License-Identifier: EPL-2.0
-# *
-# * Contributors:
-# *   phkrief - initial implementation
-# ********************************************************************************
+# This program and the accompanying materials
+# are made available under the terms of the Eclipse Public License 2.0
+# which accompanies this distribution, and is available at
+# https://www.eclipse.org/legal/epl-2.0/
+#
+# SPDX-License-Identifier: EPL-2.0
+#
+# Contributors:
+#     phkrief - initial API and implementation
+#*******************************************************************************
+
 #
 #--------------------------------------------------------------
 # Runs the Eclipse DASH dependency analysis on a (Maven, Yarn or Nodes) repository 
@@ -79,6 +80,7 @@ if [[ -n $1 ]]; then
 	if [ $KIND_OF = "Maven" ]; then
 		# Analyse Maven project
 		DEP_LIST_FILE=$DEST_DIR"/01-"$DEST"-dependency_list.txt"
+		DEP_TREE_FILE=$DEST_DIR"/01-"$DEST"-dependency_tree.txt"
 		GREP_RESULT_FILE=$DEST_DIR"/02-grep.txt"
 		
 		ECHO ": Starting analysis of:"$SRC_DIR
@@ -87,6 +89,9 @@ if [[ -n $1 ]]; then
 		
 		ECHO ": mvn dependency:list > "$DEP_LIST_FILE
 		$MAVEN dependency:list -f $SRC_DIR > $DEP_LIST_FILE
+		
+		ECHO ": mvn dependency:tree > "$DEP_TREE_FILE
+		$MAVEN dependency:tree -f $SRC_DIR > $DEP_TREE_FILE
 		
 		ECHO ": grep filter and sort > "$GREP_RESULT_FILE
 		grep -ohE '\S+:(system|provided|compile)' $DEP_LIST_FILE | sort | uniq > $GREP_RESULT_FILE

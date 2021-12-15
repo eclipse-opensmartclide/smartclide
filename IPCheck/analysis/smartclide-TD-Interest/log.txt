@@ -46,3 +46,65 @@
 [INFO] Final Memory: 45M/146M
 [INFO] ------------------------------------------------------------------------
 Vetted license information was found for all content. No further investigation is required.
+[INFO] Scanning for projects...
+[ERROR] [ERROR] Some problems were encountered while processing the POMs:
+[FATAL] Non-readable POM /smartclide-TD-Interest: /smartclide-TD-Interest (No such file or directory) @ 
+ @ 
+[ERROR] The build could not read 1 project -> [Help 1]
+[ERROR]   
+[ERROR]   The project  (/smartclide-TD-Interest) has 1 error
+[ERROR]     Non-readable POM /smartclide-TD-Interest: /smartclide-TD-Interest (No such file or directory)
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/ProjectBuildingException
+Vetted license information was found for all content. No further investigation is required.
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------------< gr.zisis:interest-api >------------------------
+[INFO] Building interest-api 0.0.1-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ interest-api ---
+[INFO] Deleting /Users/philippe/git/smartclide-TD-Interest/target
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:resources (default-resources) @ interest-api ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 1 resource
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ interest-api ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 28 source files to /Users/philippe/git/smartclide-TD-Interest/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:testResources (default-testResources) @ interest-api ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 2 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ interest-api ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 5 source files to /Users/philippe/git/smartclide-TD-Interest/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ interest-api ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-jar-plugin:3.2.0:jar (default-jar) @ interest-api ---
+[INFO] Building jar: /Users/philippe/git/smartclide-TD-Interest/target/interest-api-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:2.5.0:repackage (repackage) @ interest-api ---
+[INFO] Replacing main artifact with repackaged archive
+[INFO] 
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ interest-api ---
+[INFO] Installing /Users/philippe/git/smartclide-TD-Interest/target/interest-api-0.0.1-SNAPSHOT.jar to /Users/philippe/.m2/repository/gr/zisis/interest-api/0.0.1-SNAPSHOT/interest-api-0.0.1-SNAPSHOT.jar
+[INFO] Installing /Users/philippe/git/smartclide-TD-Interest/pom.xml to /Users/philippe/.m2/repository/gr/zisis/interest-api/0.0.1-SNAPSHOT/interest-api-0.0.1-SNAPSHOT.pom
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  30.713 s
+[INFO] Finished at: 2021-12-15T11:23:47+01:00
+[INFO] ------------------------------------------------------------------------
+Vetted license information was found for all content. No further investigation is required.

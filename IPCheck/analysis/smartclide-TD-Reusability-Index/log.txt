@@ -46,3 +46,64 @@
 [INFO] Final Memory: 39M/124M
 [INFO] ------------------------------------------------------------------------
 Vetted license information was found for all content. No further investigation is required.
+[INFO] Scanning for projects...
+[ERROR] [ERROR] Some problems were encountered while processing the POMs:
+[FATAL] Non-readable POM /smartclide-TD-Reusability-Index: /smartclide-TD-Reusability-Index (No such file or directory) @ 
+ @ 
+[ERROR] The build could not read 1 project -> [Help 1]
+[ERROR]   
+[ERROR]   The project  (/smartclide-TD-Reusability-Index) has 1 error
+[ERROR]     Non-readable POM /smartclide-TD-Reusability-Index: /smartclide-TD-Reusability-Index (No such file or directory)
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/ProjectBuildingException
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------------< gr.zisis:reusability-api >----------------------
+[INFO] Building reusability-api 0.0.1-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ reusability-api ---
+[INFO] Deleting /Users/philippe/git/smartclide-TD-Reusability-Index/target
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:resources (default-resources) @ reusability-api ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 1 resource
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ reusability-api ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 13 source files to /Users/philippe/git/smartclide-TD-Reusability-Index/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:testResources (default-testResources) @ reusability-api ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] skip non existing resourceDirectory /Users/philippe/git/smartclide-TD-Reusability-Index/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ reusability-api ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 2 source files to /Users/philippe/git/smartclide-TD-Reusability-Index/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ reusability-api ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-jar-plugin:3.2.0:jar (default-jar) @ reusability-api ---
+[INFO] Building jar: /Users/philippe/git/smartclide-TD-Reusability-Index/target/reusability-api-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:2.5.0:repackage (repackage) @ reusability-api ---
+[INFO] Replacing main artifact with repackaged archive
+[INFO] 
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ reusability-api ---
+[INFO] Installing /Users/philippe/git/smartclide-TD-Reusability-Index/target/reusability-api-0.0.1-SNAPSHOT.jar to /Users/philippe/.m2/repository/gr/zisis/reusability-api/0.0.1-SNAPSHOT/reusability-api-0.0.1-SNAPSHOT.jar
+[INFO] Installing /Users/philippe/git/smartclide-TD-Reusability-Index/pom.xml to /Users/philippe/.m2/repository/gr/zisis/reusability-api/0.0.1-SNAPSHOT/reusability-api-0.0.1-SNAPSHOT.pom
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  15.587 s
+[INFO] Finished at: 2021-12-15T11:24:41+01:00
+[INFO] ------------------------------------------------------------------------
+Vetted license information was found for all content. No further investigation is required.

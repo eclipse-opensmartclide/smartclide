@@ -2,15 +2,15 @@
 [INFO] ------------------------------------------------------------------------
 [INFO] Reactor Build Order:
 [INFO] 
-[INFO] ATB Context Parent
-[INFO] ATB Context Extraction Core Lib
-[INFO] ATB Context Monitoring Core Services
-[INFO] ATB Context Extraction Core Service
-[INFO] SmartCLIDE Monitoring
-[INFO]                                                                         
-[INFO] ------------------------------------------------------------------------
-[INFO] Building ATB Context Parent 2.0.0
-[INFO] ------------------------------------------------------------------------
+[INFO] ATB Context Parent                                                 [pom]
+[INFO] ATB Context Extraction Core Lib                                    [jar]
+[INFO] ATB Context Monitoring Core Services                               [jar]
+[INFO] ATB Context Extraction Core Service                                [jar]
+[INFO] SmartCLIDE Monitoring                                              [jar]
+[INFO] 
+[INFO] -----------------------< de.atb.context:parent >------------------------
+[INFO] Building ATB Context Parent 2.0.0                                  [1/5]
+[INFO] --------------------------------[ pom ]---------------------------------
 [INFO] 
 [INFO] --- maven-dependency-plugin:3.2.0:list (default-cli) @ parent ---
 [INFO] 
@@ -18,22 +18,13 @@
 [INFO]    junit:junit:jar:4.13.2:test -- module junit [auto]
 [INFO]    org.hamcrest:hamcrest-core:jar:1.3:test -- module hamcrest.core (auto)
 [INFO] 
-[INFO]                                                                         
-[INFO] ------------------------------------------------------------------------
-[INFO] Building ATB Context Extraction Core Lib 2.0.0
-[INFO] ------------------------------------------------------------------------
-Downloading: http://openjena.org/repo-dev/log4j/log4j/maven-metadata.xml
-Downloading: http://openjena.org/repo/log4j/log4j/maven-metadata.xml
-Downloading: https://repo.maven.apache.org/maven2/log4j/log4j/maven-metadata.xml
-750/750 B               Downloaded: https://repo.maven.apache.org/maven2/log4j/log4j/maven-metadata.xml (750 B at 0.7 KB/sec)
-                        [WARNING] Could not transfer metadata log4j:log4j/maven-metadata.xml from/to repo-jena (http://openjena.org/repo): openjena.org
-[WARNING] Could not transfer metadata log4j:log4j/maven-metadata.xml from/to repo-jena-dev (http://openjena.org/repo-dev): openjena.org: nodename nor servname provided, or not known
+[INFO] 
+[INFO] --------------------< de.atb.context:context-core >---------------------
+[INFO] Building ATB Context Extraction Core Lib 2.0.0                     [2/5]
+[INFO] --------------------------------[ jar ]---------------------------------
 [WARNING] The metadata /Users/philippe/.m2/repository/log4j/log4j/maven-metadata-repo-jena.xml is invalid: unexpected markup <!d (position: START_DOCUMENT seen \n<!d... @2:4) 
 [WARNING] The metadata /Users/philippe/.m2/repository/log4j/log4j/maven-metadata-repo-jena-dev.xml is invalid: unexpected markup <!d (position: START_DOCUMENT seen \n<!d... @2:4) 
-Downloading: https://oss.sonatype.org/content/repositories/snapshots/org/eclipse/equinox/common/maven-metadata.xml
-Downloading: https://repo.maven.apache.org/maven2/org/eclipse/equinox/common/maven-metadata.xml
-383/383 B               Downloaded: https://repo.maven.apache.org/maven2/org/eclipse/equinox/common/maven-metadata.xml (383 B at 1.1 KB/sec)
-            [INFO] 
+[INFO] 
 [INFO] --- maven-dependency-plugin:3.2.0:list (default-cli) @ context-core ---
 [INFO] Can't extract module name from jgrapht-jdk1.5-0.7.3.jar: jgrapht.jdk1.5: Invalid module name: '5' is not a Java identifier
 [INFO] Can't extract module name from geronimo-jta_1.1_spec-1.1.1.jar: geronimo.jta.1.1.spec: Invalid module name: '1' is not a Java identifier
@@ -228,12 +219,10 @@ Downloading: https://repo.maven.apache.org/maven2/org/eclipse/equinox/common/mav
 [INFO]    junit:junit:jar:4.13.2:test -- module junit [auto]
 [INFO]    org.hamcrest:hamcrest-core:jar:1.3:test -- module hamcrest.core (auto)
 [INFO] 
-[INFO]                                                                         
-[INFO] ------------------------------------------------------------------------
-[INFO] Building ATB Context Monitoring Core Services 2.0.0
-[INFO] ------------------------------------------------------------------------
-[WARNING] Failure to transfer log4j:log4j/maven-metadata.xml from http://openjena.org/repo was cached in the local repository, resolution will not be reattempted until the update interval of repo-jena has elapsed or updates are forced. Original error: Could not transfer metadata log4j:log4j/maven-metadata.xml from/to repo-jena (http://openjena.org/repo): openjena.org
-[WARNING] Failure to transfer log4j:log4j/maven-metadata.xml from http://openjena.org/repo-dev was cached in the local repository, resolution will not be reattempted until the update interval of repo-jena-dev has elapsed or updates are forced. Original error: Could not transfer metadata log4j:log4j/maven-metadata.xml from/to repo-jena-dev (http://openjena.org/repo-dev): openjena.org: nodename nor servname provided, or not known
+[INFO] 
+[INFO] -----------------< de.atb.context:context-monitoring >------------------
+[INFO] Building ATB Context Monitoring Core Services 2.0.0                [3/5]
+[INFO] --------------------------------[ jar ]---------------------------------
 [WARNING] The metadata /Users/philippe/.m2/repository/log4j/log4j/maven-metadata-repo-jena.xml is invalid: unexpected markup <!d (position: START_DOCUMENT seen \n<!d... @2:4) 
 [WARNING] The metadata /Users/philippe/.m2/repository/log4j/log4j/maven-metadata-repo-jena-dev.xml is invalid: unexpected markup <!d (position: START_DOCUMENT seen \n<!d... @2:4) 
 [INFO] 
@@ -453,12 +442,10 @@ Downloading: https://repo.maven.apache.org/maven2/org/eclipse/equinox/common/mav
 [INFO]    junit:junit:jar:4.13.2:test -- module junit [auto]
 [INFO]    org.hamcrest:hamcrest-core:jar:1.3:test -- module hamcrest.core (auto)
 [INFO] 
-[INFO]                                                                         
-[INFO] ------------------------------------------------------------------------
-[INFO] Building ATB Context Extraction Core Service 2.0.0
-[INFO] ------------------------------------------------------------------------
-[WARNING] Failure to transfer log4j:log4j/maven-metadata.xml from http://openjena.org/repo was cached in the local repository, resolution will not be reattempted until the update interval of repo-jena has elapsed or updates are forced. Original error: Could not transfer metadata log4j:log4j/maven-metadata.xml from/to repo-jena (http://openjena.org/repo): openjena.org
-[WARNING] Failure to transfer log4j:log4j/maven-metadata.xml from http://openjena.org/repo-dev was cached in the local repository, resolution will not be reattempted until the update interval of repo-jena-dev has elapsed or updates are forced. Original error: Could not transfer metadata log4j:log4j/maven-metadata.xml from/to repo-jena-dev (http://openjena.org/repo-dev): openjena.org: nodename nor servname provided, or not known
+[INFO] 
+[INFO] -----------------< de.atb.context:context-extraction >------------------
+[INFO] Building ATB Context Extraction Core Service 2.0.0                 [4/5]
+[INFO] --------------------------------[ jar ]---------------------------------
 [WARNING] The metadata /Users/philippe/.m2/repository/log4j/log4j/maven-metadata-repo-jena.xml is invalid: unexpected markup <!d (position: START_DOCUMENT seen \n<!d... @2:4) 
 [WARNING] The metadata /Users/philippe/.m2/repository/log4j/log4j/maven-metadata-repo-jena-dev.xml is invalid: unexpected markup <!d (position: START_DOCUMENT seen \n<!d... @2:4) 
 [INFO] 
@@ -670,12 +657,10 @@ Downloading: https://repo.maven.apache.org/maven2/org/eclipse/equinox/common/mav
 [INFO]    junit:junit:jar:4.13.2:test -- module junit [auto]
 [INFO]    org.hamcrest:hamcrest-core:jar:1.3:test -- module hamcrest.core (auto)
 [INFO] 
-[INFO]                                                                         
-[INFO] ------------------------------------------------------------------------
-[INFO] Building SmartCLIDE Monitoring 2.0.0
-[INFO] ------------------------------------------------------------------------
-[WARNING] Failure to transfer log4j:log4j/maven-metadata.xml from http://openjena.org/repo was cached in the local repository, resolution will not be reattempted until the update interval of repo-jena has elapsed or updates are forced. Original error: Could not transfer metadata log4j:log4j/maven-metadata.xml from/to repo-jena (http://openjena.org/repo): openjena.org
-[WARNING] Failure to transfer log4j:log4j/maven-metadata.xml from http://openjena.org/repo-dev was cached in the local repository, resolution will not be reattempted until the update interval of repo-jena-dev has elapsed or updates are forced. Original error: Could not transfer metadata log4j:log4j/maven-metadata.xml from/to repo-jena-dev (http://openjena.org/repo-dev): openjena.org: nodename nor servname provided, or not known
+[INFO] 
+[INFO] ----------------< de.atb.context:smartclide-monitoring >----------------
+[INFO] Building SmartCLIDE Monitoring 2.0.0                               [5/5]
+[INFO] --------------------------------[ jar ]---------------------------------
 [WARNING] The metadata /Users/philippe/.m2/repository/log4j/log4j/maven-metadata-repo-jena.xml is invalid: unexpected markup <!d (position: START_DOCUMENT seen \n<!d... @2:4) 
 [WARNING] The metadata /Users/philippe/.m2/repository/log4j/log4j/maven-metadata-repo-jena-dev.xml is invalid: unexpected markup <!d (position: START_DOCUMENT seen \n<!d... @2:4) 
 [INFO] 
@@ -897,17 +882,16 @@ Downloading: https://repo.maven.apache.org/maven2/org/eclipse/equinox/common/mav
 [INFO]    org.hamcrest:hamcrest-core:jar:1.3:test -- module hamcrest.core (auto)
 [INFO] 
 [INFO] ------------------------------------------------------------------------
-[INFO] Reactor Summary:
+[INFO] Reactor Summary for ATB Context Parent 2.0.0:
 [INFO] 
-[INFO] ATB Context Parent ................................. SUCCESS [  6.581 s]
-[INFO] ATB Context Extraction Core Lib .................... SUCCESS [01:16 min]
-[INFO] ATB Context Monitoring Core Services ............... SUCCESS [  7.758 s]
-[INFO] ATB Context Extraction Core Service ................ SUCCESS [  3.744 s]
-[INFO] SmartCLIDE Monitoring .............................. SUCCESS [  6.117 s]
+[INFO] ATB Context Parent ................................. SUCCESS [  6.891 s]
+[INFO] ATB Context Extraction Core Lib .................... SUCCESS [  8.379 s]
+[INFO] ATB Context Monitoring Core Services ............... SUCCESS [  3.352 s]
+[INFO] ATB Context Extraction Core Service ................ SUCCESS [  1.785 s]
+[INFO] SmartCLIDE Monitoring .............................. SUCCESS [  1.954 s]
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time: 01:47 min
-[INFO] Finished at: 2021-12-06T18:13:05+01:00
-[INFO] Final Memory: 26M/88M
+[INFO] Total time:  24.839 s
+[INFO] Finished at: 2021-12-15T11:20:03+01:00
 [INFO] ------------------------------------------------------------------------

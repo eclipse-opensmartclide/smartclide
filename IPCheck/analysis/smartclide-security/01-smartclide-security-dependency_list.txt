@@ -1,8 +1,16 @@
 [INFO] Scanning for projects...
-[INFO]                                                                         
-[INFO] ------------------------------------------------------------------------
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.Theia:Theia-BackEnd:jar:0.0.1-SNAPSHOT
+[WARNING] 'dependencies.dependency.version' for org.jetbrains:annotations:jar is either LATEST or RELEASE (both of them are being deprecated) @ line 89, column 22
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ----------------------< com.Theia:Theia-BackEnd >-----------------------
 [INFO] Building Theia-BackEnd 0.0.1-SNAPSHOT
-[INFO] ------------------------------------------------------------------------
+[INFO] --------------------------------[ jar ]---------------------------------
 [INFO] 
 [INFO] --- maven-dependency-plugin:3.1.2:list (default-cli) @ Theia-BackEnd ---
 [INFO] Can't extract module name from plexus-container-default-1.0-alpha-30.jar: plexus.container.default: Invalid module name: 'default' is not a Java identifier
@@ -106,17 +114,17 @@
 [INFO]    org.reflections:reflections:jar:0.9.12:compile -- module reflections (auto)
 [INFO]    org.javassist:javassist:jar:3.26.0-GA:compile -- module javassist (auto)
 [INFO]    org.eclipse.jdt:org.eclipse.jdt.core:jar:3.23.0:compile -- module org.eclipse.jdt.core [auto]
-[INFO]    org.eclipse.platform:org.eclipse.core.resources:jar:3.15.100:compile -- module org.eclipse.core.resources [auto]
-[INFO]    org.eclipse.platform:org.eclipse.core.expressions:jar:3.8.0:compile -- module org.eclipse.core.expressions [auto]
-[INFO]    org.eclipse.platform:org.eclipse.core.runtime:jar:3.23.0:compile -- module org.eclipse.core.runtime [auto]
-[INFO]    org.eclipse.platform:org.eclipse.osgi:jar:3.17.0:compile -- module org.eclipse.osgi
-[INFO]    org.eclipse.platform:org.eclipse.equinox.common:jar:3.15.0:compile -- module org.eclipse.equinox.common [auto]
+[INFO]    org.eclipse.platform:org.eclipse.core.resources:jar:3.16.0:compile -- module org.eclipse.core.resources [auto]
+[INFO]    org.eclipse.platform:org.eclipse.core.expressions:jar:3.8.100:compile -- module org.eclipse.core.expressions [auto]
+[INFO]    org.eclipse.platform:org.eclipse.core.runtime:jar:3.24.0:compile -- module org.eclipse.core.runtime [auto]
+[INFO]    org.eclipse.platform:org.eclipse.osgi:jar:3.17.100:compile -- module org.eclipse.osgi
+[INFO]    org.eclipse.platform:org.eclipse.equinox.common:jar:3.15.100:compile -- module org.eclipse.equinox.common [auto]
 [INFO]    org.eclipse.platform:org.eclipse.core.jobs:jar:3.12.0:compile -- module org.eclipse.core.jobs [auto]
-[INFO]    org.eclipse.platform:org.eclipse.equinox.registry:jar:3.11.0:compile -- module org.eclipse.equinox.registry [auto]
-[INFO]    org.eclipse.platform:org.eclipse.equinox.preferences:jar:3.9.0:compile -- module org.eclipse.equinox.preferences [auto]
-[INFO]    org.eclipse.platform:org.eclipse.core.contenttype:jar:3.8.0:compile -- module org.eclipse.core.contenttype [auto]
-[INFO]    org.eclipse.platform:org.eclipse.equinox.app:jar:1.6.0:compile -- module org.eclipse.equinox.app [auto]
-[INFO]    org.eclipse.platform:org.eclipse.core.filesystem:jar:1.9.100:compile -- module org.eclipse.core.filesystem [auto]
+[INFO]    org.eclipse.platform:org.eclipse.equinox.registry:jar:3.11.100:compile -- module org.eclipse.equinox.registry [auto]
+[INFO]    org.eclipse.platform:org.eclipse.equinox.preferences:jar:3.9.100:compile -- module org.eclipse.equinox.preferences [auto]
+[INFO]    org.eclipse.platform:org.eclipse.core.contenttype:jar:3.8.100:compile -- module org.eclipse.core.contenttype [auto]
+[INFO]    org.eclipse.platform:org.eclipse.equinox.app:jar:1.6.100:compile -- module org.eclipse.equinox.app [auto]
+[INFO]    org.eclipse.platform:org.eclipse.core.filesystem:jar:1.9.200:compile -- module org.eclipse.core.filesystem [auto]
 [INFO]    org.eclipse.platform:org.eclipse.text:jar:3.12.0:compile -- module org.eclipse.text [auto]
 [INFO]    org.eclipse.platform:org.eclipse.core.commands:jar:3.10.100:compile -- module org.eclipse.core.commands [auto]
 [INFO]    org.apache.commons:commons-lang3:jar:3.11:compile -- module org.apache.commons.lang3 [auto]
@@ -205,7 +213,6 @@
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time: 50.626 s
-[INFO] Finished at: 2021-12-06T18:16:43+01:00
-[INFO] Final Memory: 25M/114M
+[INFO] Total time:  15.574 s
+[INFO] Finished at: 2021-12-15T11:21:45+01:00
 [INFO] ------------------------------------------------------------------------
