@@ -1,0 +1,56 @@
+: Pull changes from a remote repo into:/Users/philippe/git/smartclide-service-registry-poc/demo
+Already up to date.
+: Starting analysis of: /Users/philippe/git/smartclide-service-registry-poc/demo
+: mvn clean install >> /Users/philippe/git/smartclide/IPCheck/analysis/smartclide-service-registry-poc/log.txt
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< org.smartclide:demo >-------------------------
+[INFO] Building demo 0.0.1-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ demo ---
+[INFO] Deleting /Users/philippe/git/smartclide-service-registry-poc/demo/target
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:resources (default-resources) @ demo ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 1 resource
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ demo ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 3 source files to /Users/philippe/git/smartclide-service-registry-poc/demo/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:testResources (default-testResources) @ demo ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] skip non existing resourceDirectory /Users/philippe/git/smartclide-service-registry-poc/demo/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ demo ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /Users/philippe/git/smartclide-service-registry-poc/demo/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ demo ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-jar-plugin:3.2.0:jar (default-jar) @ demo ---
+[INFO] Building jar: /Users/philippe/git/smartclide-service-registry-poc/demo/target/demo-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:2.4.3:repackage (repackage) @ demo ---
+[INFO] Replacing main artifact with repackaged archive
+[INFO] 
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ demo ---
+[INFO] Installing /Users/philippe/git/smartclide-service-registry-poc/demo/target/demo-0.0.1-SNAPSHOT.jar to /Users/philippe/.m2/repository/org/smartclide/demo/0.0.1-SNAPSHOT/demo-0.0.1-SNAPSHOT.jar
+[INFO] Installing /Users/philippe/git/smartclide-service-registry-poc/demo/pom.xml to /Users/philippe/.m2/repository/org/smartclide/demo/0.0.1-SNAPSHOT/demo-0.0.1-SNAPSHOT.pom
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  8.743 s
+[INFO] Finished at: 2021-12-16T17:57:46+01:00
+[INFO] ------------------------------------------------------------------------
+: mvn dependency:list > /Users/philippe/git/smartclide/IPCheck/analysis/smartclide-service-registry-poc/01-dependency_list.txt
+: mvn dependency:tree > /Users/philippe/git/smartclide/IPCheck/analysis/smartclide-service-registry-poc/01-dependency_tree.txt
+: grep filter and sort > /Users/philippe/git/smartclide/IPCheck/analysis/smartclide-service-registry-poc/02-grep.txt
+: DASH Analysis >  /Users/philippe/git/smartclide/IPCheck/analysis/smartclide-service-registry-poc/03-dash_analysis.csv
+Vetted license information was found for all content. No further investigation is required.
+: End of Analysis of:/Users/philippe/git/smartclide-service-registry-poc/demo

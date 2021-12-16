@@ -1,8 +1,21 @@
+: Pull changes from a remote repo into:/Users/philippe/git/smartclide-design-pattern-selection-theia
+Already up to date.
+: Starting analysis of: /Users/philippe/git/smartclide-design-pattern-selection-theia/yarn.lock
+: DASH Analysis >  /Users/philippe/git/smartclide/IPCheck/analysis/smartclide-design-pattern-selection-theia/03-dash_analysis.csv
 License information could not be automatically verified for the following content:
 
+npm/npmjs/-/copy-anything/2.0.3
+npm/npmjs/-/esprima/2.7.3
+npm/npmjs/-/expand-template/2.0.3
+npm/npmjs/-/extsprintf/1.3.0
+npm/npmjs/-/font-awesome/4.7.0
 npm/npmjs/-/jschardet/2.3.0
+npm/npmjs/-/less/3.13.1
+npm/npmjs/-/moment/2.24.0
+npm/npmjs/-/node-gyp/6.1.0
 npm/npmjs/-/typescript/4.3.5
 
 This content is either not correctly mapped by the system, or requires review.
 
 
+: End of Analysis of:/Users/philippe/git/smartclide-design-pattern-selection-theia

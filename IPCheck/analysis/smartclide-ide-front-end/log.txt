@@ -1,3 +1,7 @@
+: Pull changes from a remote repo into:/Users/philippe/git/smartclide-ide-front-end
+Already up to date.
+: Starting analysis of: /Users/philippe/git/smartclide-ide-front-end/package-lock.json
+: DASH Analysis >  /Users/philippe/git/smartclide/IPCheck/analysis/smartclide-ide-front-end/03-dash_analysis.csv
 License information could not be automatically verified for the following content:
 
 npm/npmjs/-/domain-browser/4.19.0
@@ -6,3 +10,4 @@ npm/npmjs/-/keycloak-js/10.0.2
 This content is either not correctly mapped by the system, or requires review.
 
 
+: End of Analysis of:/Users/philippe/git/smartclide-ide-front-end

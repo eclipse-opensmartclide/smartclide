@@ -17,17 +17,43 @@
 # Runs a dependency analysis on each SmartCLIDE repo
 #--------------------------------------------------------------
 #
-./dashAnalysis.sh "Maven" 	"smartclide-api-gateway"
-./dashAnalysis.sh "Maven" 	"smartclide-broker"
-./dashAnalysis.sh "Maven" 	"smartclide-cicd"
-./dashAnalysis.sh "Maven" 	"smartclide-context"
-#./dashAnalysis.sh "Yarn" 	"smartclide-design-pattern-selection-theia"
-#./dashAnalysis.sh "Nodes" 	"smartclide-ide-front-end"
-#./dashAnalysis.sh "Nodes" 	"smartclide-perftestgen-theia"
-./dashAnalysis.sh "Maven" 	"smartclide-security/Theia-BackEnd" "smartclide-security"
-./dashAnalysis.sh "Maven" 	"smartclide-service-creation"
-#./dashAnalysis.sh "Yarn" 	"smartclide-service-creation-theia"
-./dashAnalysis.sh "Maven" 	"smartclide-TD-Interest"
-./dashAnalysis.sh "Maven" 	"smartclide-TD-Reusability-Index"
-./dashAnalysis.sh "Maven" 	"smartclide-TD-Principal"
-#./dashAnalysis.sh "Yarn" 	"smartclide-td-reusability-theia"
+if [[ -z "$1" ]]; then
+	SRC_REPO="/Users/philippe/git"
+else
+	SRC_REPO=$1
+fi
+
+if [[ -z "$2" ]]; then
+	DST_REPO="/Users/philippe/git/smartclide/IPCheck/analysis"
+else
+	DST_REPO=$2
+fi
+
+
+./dashAnalysis.sh "Maven" 	"$SRC_REPO/smartclide-api-gateway"						"$DST_REPO/smartclide-api-gateway"
+./dashAnalysis.sh "Maven" 	"$SRC_REPO/smartclide-broker"							"$DST_REPO/smartclide-broker"
+./dashAnalysis.sh "Maven" 	"$SRC_REPO/smartclide-cicd"								"$DST_REPO/smartclide-cicd"
+./dashAnalysis.sh "Maven" 	"$SRC_REPO/smartclide-context"							"$DST_REPO/smartclide-context"
+./dashAnalysis.sh "Yarn" 	"$SRC_REPO/smartclide-design-pattern-selection-theia"	"$DST_REPO/smartclide-design-pattern-selection-theia"
+./dashAnalysis.sh "Nodes" 	"$SRC_REPO/smartclide-ide-front-end"					"$DST_REPO/smartclide-ide-front-end"
+./dashAnalysis.sh "Nodes" 	"$SRC_REPO/smartclide-perftestgen-theia"				"$DST_REPO/smartclide-perftestgen-theia"
+./dashAnalysis.sh "Maven" 	"$SRC_REPO/smartclide-security/Theia-BackEnd" 			"$DST_REPO/smartclide-security"
+./dashAnalysis.sh "Maven" 	"$SRC_REPO/smartclide-service-creation"					"$DST_REPO/smartclide-service-creation"
+./dashAnalysis.sh "Yarn" 	"$SRC_REPO/smartclide-service-creation-theia"			"$DST_REPO/smartclide-service-creation-theia"
+./dashAnalysis.sh "Maven" 	"$SRC_REPO/smartclide-service-registry-poc/demo" 		"$DST_REPO/smartclide-service-registry-poc"
+./dashAnalysis.sh "Maven" 	"$SRC_REPO/smartclide-TD-Interest"						"$DST_REPO/smartclide-TD-Interest"
+./dashAnalysis.sh "Maven" 	"$SRC_REPO/smartclide-TD-Reusability-Index"				"$DST_REPO/smartclide-TD-Reusability-Index"
+./dashAnalysis.sh "Maven" 	"$SRC_REPO/smartclide-TD-Principal"						"$DST_REPO/smartclide-TD-Principal"
+./dashAnalysis.sh "Yarn" 	"$SRC_REPO/smartclide-td-reusability-theia"				"$DST_REPO/smartclide-td-reusability-theia"
+
+./dashAnalysis.sh "Docker"	"$SRC_REPO/smartclide-cicd-gitlab"						"$DST_REPO/smartclide-cicd-gitlab"
+./dashAnalysis.sh "Other" 	"$SRC_REPO/smartclide-deployment-extension"				"$DST_REPO/smartclide-deployment-extension"
+./dashAnalysis.sh "Docker"	"$SRC_REPO/smartclide-deployment-service"				"$DST_REPO/smartclide-deployment-service"
+./dashAnalysis.sh "Other" 	"$SRC_REPO/smartclide-docs"								"$DST_REPO/smartclide-docs"
+./dashAnalysis.sh "Other" 	"$SRC_REPO/smartclide-ide-front-end-theme"				"$DST_REPO/smartclide-ide-front-end-theme"
+./dashAnalysis.sh "Docker"	"$SRC_REPO/smartclide-jbpm"								"$DST_REPO/smartclide-jbpm"
+./dashAnalysis.sh "Other" 	"$SRC_REPO/smartclide-RMV"								"$DST_REPO/smartclide-RMV"
+./dashAnalysis.sh "Other" 	"$SRC_REPO/smartclide-Service-Creation-Testing"			"$DST_REPO/smartclide-Service-Creation-Testing"
+./dashAnalysis.sh "Other" 	"$SRC_REPO/smartclide-service-discovery-poc"			"$DST_REPO/smartclide-service-discovery-poc"
+./dashAnalysis.sh "Docker"	"$SRC_REPO/smartclide-smart-assistant"					"$DST_REPO/smartclide-smart-assistant"
+./dashAnalysis.sh "Other" 	"$SRC_REPO/smartclide-task-service-discovery"			"$DST_REPO/smartclide-task-service-discovery"

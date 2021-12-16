@@ -3,6 +3,7 @@ ch.qos.logback:logback-core:jar:1.2.3:compile
 com.fasterxml.jackson.core:jackson-annotations:jar:2.11.4:compile
 com.fasterxml.jackson.core:jackson-core:jar:2.11.4:compile
 com.fasterxml.jackson.core:jackson-databind:jar:2.11.4:compile
+com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:jar:2.11.4:compile
 com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.11.4:compile
 com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.11.4:compile
 com.fasterxml.jackson.jaxrs:jackson-jaxrs-base:jar:2.11.4:compile
@@ -18,14 +19,21 @@ commons-collections:commons-collections:jar:3.2.1:compile
 commons-io:commons-io:jar:2.4:compile
 commons-lang:commons-lang:jar:2.6:compile
 commons-logging:commons-logging:jar:1.1.1:compile
+io.github.classgraph:classgraph:jar:4.8.69:compile
+io.swagger.core.v3:swagger-annotations:jar:2.1.6:compile
+io.swagger.core.v3:swagger-core:jar:2.1.6:compile
+io.swagger.core.v3:swagger-integration:jar:2.1.6:compile
+io.swagger.core.v3:swagger-models:jar:2.1.6:compile
 jakarta.activation:jakarta.activation-api:jar:1.2.2:compile
 jakarta.annotation:jakarta.annotation-api:jar:1.3.5:compile
 jakarta.servlet:jakarta.servlet-api:jar:4.0.4:compile
+jakarta.validation:jakarta.validation-api:jar:2.0.2:compile
 jakarta.ws.rs:jakarta.ws.rs-api:jar:2.1.6:compile
 jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:compile
 jaxen:jaxen:jar:1.2.0:compile
 net.sf.ezmorph:ezmorph:jar:1.0.6:compile
 net.sf.json-lib:json-lib:jar:jdk15:2.4:compile
+org.apache.commons:commons-lang3:jar:3.11:compile
 org.apache.httpcomponents:httpclient:jar:4.5.13:compile
 org.apache.httpcomponents:httpcore:jar:4.4.14:compile
 org.apache.httpcomponents:httpmime:jar:4.5.13:compile
@@ -51,6 +59,9 @@ org.javassist:javassist:jar:3.25.0-GA:compile
 org.jvnet.mimepull:mimepull:jar:1.9.14:compile
 org.slf4j:jul-to-slf4j:jar:1.7.30:compile
 org.slf4j:slf4j-api:jar:1.7.30:compile
+org.springdoc:springdoc-openapi-common:jar:1.5.2:compile
+org.springdoc:springdoc-openapi-ui:jar:1.5.2:compile
+org.springdoc:springdoc-openapi-webmvc-core:jar:1.5.2:compile
 org.springframework.boot:spring-boot-autoconfigure:jar:2.4.5:compile
 org.springframework.boot:spring-boot-starter-json:jar:2.4.5:compile
 org.springframework.boot:spring-boot-starter-logging:jar:2.4.5:compile
@@ -66,5 +77,7 @@ org.springframework:spring-expression:jar:5.3.6:compile
 org.springframework:spring-jcl:jar:5.3.6:compile
 org.springframework:spring-web:jar:5.3.6:compile
 org.springframework:spring-webmvc:jar:5.3.6:compile
+org.webjars:swagger-ui:jar:3.38.0:compile
+org.webjars:webjars-locator-core:jar:0.46:compile
 org.yaml:snakeyaml:jar:1.27:compile
 xml-apis:xml-apis:jar:1.4.01:compile

@@ -1,0 +1,3 @@
+: Pull changes from a remote repo into:/Users/philippe/git/smartclide-cicd-gitlab
+Already up to date.
+: End of Analysis of:/Users/philippe/git/smartclide-cicd-gitlab
