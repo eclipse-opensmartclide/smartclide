@@ -17,6 +17,12 @@
 # Runs a dependency analysis on each SmartCLIDE repo
 #--------------------------------------------------------------
 #
+#--------------------------------------------------------------
+# Runs the Eclipse DASH dependency analysis on all SmartCLIDE repositories 
+#		$1 	: The Path to the folder where the git repos are cloned
+#		$2	: The Path to the folder where the results of the analysis will be stored
+#--------------------------------------------------------------
+#
 if [[ -z "$1" ]]; then
 	SRC_REPO="/Users/philippe/git"
 else
@@ -28,7 +34,6 @@ if [[ -z "$2" ]]; then
 else
 	DST_REPO=$2
 fi
-
 
 ./dashAnalysis.sh "Maven" 	"$SRC_REPO/smartclide-api-gateway"						"$DST_REPO/smartclide-api-gateway"
 ./dashAnalysis.sh "Maven" 	"$SRC_REPO/smartclide-broker"							"$DST_REPO/smartclide-broker"

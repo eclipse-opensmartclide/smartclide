@@ -22,7 +22,8 @@
 #--------------------------------------------------------------
 
 MAVEN="mvn"
-DASH_LIB="./libs/org.eclipse.dash.licenses-0.0.1-SNAPSHOT.jar"
+MAIN_DIR=$(pwd)
+DASH_LIB="$MAIN_DIR/libs/org.eclipse.dash.licenses-0.0.1-SNAPSHOT.jar"
 
 if [[ $# < 3 ]]; then
 	echo "ERROR: Wrong number of arguments"
@@ -52,15 +53,24 @@ echo ": Type:......................"$KIND_OF
 echo ": Results are available in:.."$DEST_DIR
 echo ":"
 echo ":"
+# Check if the SRC_DIR directory does not exist
+if [ ! -d "$SRC_DIR" ] 
+then
+    echo ": ERROR: Directory $SRC_DIR DOES NOT exists." 
+    exit
+fi
+
 mkdir -p $DEST_DIR 
 
 LOG_FILE="$DEST_DIR/log.txt"
 ANALYSIS_RESULT_FILE="$DEST_DIR/03-dash_analysis.csv"
 
 # Pull changes from a remote repo
-echo ": Pull changes from a remote repo into:"$SRC_DIR
-echo ": Pull changes from a remote repo into:"$SRC_DIR > $LOG_FILE
-git pull >> $LOG_FILE
+echo ": Pull all changes from a remote repo into:"$SRC_DIR
+echo ": Pull all changes from a remote repo into:"$SRC_DIR > $LOG_FILE
+
+cd $SRC_DIR
+git pull --force >> $LOG_FILE
 
 # Create the destination Directory
 
