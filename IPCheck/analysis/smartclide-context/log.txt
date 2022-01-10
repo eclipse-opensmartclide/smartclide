@@ -39,7 +39,7 @@ Already up to date.
 [INFO] register BSD 2-Clause License
 [INFO] register BSD 3-Clause License
 [INFO] register European Union Public License v1.1
-[INFO] Scan 0 file header done in 17.12ms.
+[INFO] Scan 0 file header done in 28.662ms.
 [INFO] 
 [INFO] 
 [INFO] --- license-maven-plugin:2.0.0:update-project-license (license-management) @ parent ---
@@ -69,8 +69,17 @@ Already up to date.
 [INFO] --------------------< de.atb.context:context-core >---------------------
 [INFO] Building ATB Context Extraction Core Lib 2.0.0                     [2/5]
 [INFO] --------------------------------[ jar ]---------------------------------
+Downloading from central: https://repo.maven.apache.org/maven2/log4j/log4j/maven-metadata.xml
+Downloading from repo-jena: http://openjena.org/repo/log4j/log4j/maven-metadata.xml
+Downloading from repo-jena-dev: http://openjena.org/repo-dev/log4j/log4j/maven-metadata.xml
+Progress (1): 750 B                   Downloaded from central: https://repo.maven.apache.org/maven2/log4j/log4j/maven-metadata.xml (750 B at 1.0 kB/s)
+[WARNING] Could not transfer metadata log4j:log4j/maven-metadata.xml from/to repo-jena (http://openjena.org/repo): Transfer failed for http://openjena.org/repo/log4j/log4j/maven-metadata.xml
+[WARNING] Could not transfer metadata log4j:log4j/maven-metadata.xml from/to repo-jena-dev (http://openjena.org/repo-dev): Transfer failed for http://openjena.org/repo-dev/log4j/log4j/maven-metadata.xml
 [WARNING] The metadata /Users/philippe/.m2/repository/log4j/log4j/maven-metadata-repo-jena.xml is invalid: unexpected markup <!d (position: START_DOCUMENT seen \n<!d... @2:4) 
 [WARNING] The metadata /Users/philippe/.m2/repository/log4j/log4j/maven-metadata-repo-jena-dev.xml is invalid: unexpected markup <!d (position: START_DOCUMENT seen \n<!d... @2:4) 
+Downloading from sonatype-nexus-snapshots: https://oss.sonatype.org/content/repositories/snapshots/org/eclipse/equinox/common/maven-metadata.xml
+Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/equinox/common/maven-metadata.xml
+Progress (1): 383 B                   Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/equinox/common/maven-metadata.xml (383 B at 3.2 kB/s)
 [INFO] 
 [INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ context-core ---
 [INFO] Deleting /Users/philippe/git/smartclide-context/context-core/target
@@ -102,9 +111,9 @@ Already up to date.
 [INFO] register European Union Public License v1.1
 [INFO] Will search files to update from root /Users/philippe/git/smartclide-context/context-core/src/main/java
 [INFO] Will search files to update from root /Users/philippe/git/smartclide-context/context-core/src/main/resources
-[INFO] Scan 182 files header done in 5.396s.
+[INFO] Scan 183 files header done in 7.429s.
 [INFO] 
- * update header on 182 files.
+ * update header on 183 files.
 [INFO] 
 [INFO] --- license-maven-plugin:2.0.0:update-project-license (license-management) @ context-core ---
 [INFO] Adding a license repository jar:file:/Users/philippe/.m2/repository/org/codehaus/mojo/license-maven-plugin/2.0.0/license-maven-plugin-2.0.0.jar!/META-INF/licenses
@@ -129,7 +138,7 @@ Already up to date.
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ context-core ---
 [INFO] Changes detected - recompiling the module!
-[INFO] Compiling 182 source files to /Users/philippe/git/smartclide-context/context-core/target/classes
+[INFO] Compiling 183 source files to /Users/philippe/git/smartclide-context/context-core/target/classes
 [INFO] /Users/philippe/git/smartclide-context/context-core/src/main/java/de/atb/context/ui/modules/DetailsFrame.java: Some input files use or override a deprecated API.
 [INFO] /Users/philippe/git/smartclide-context/context-core/src/main/java/de/atb/context/ui/modules/DetailsFrame.java: Recompile with -Xlint:deprecation for details.
 [INFO] /Users/philippe/git/smartclide-context/context-core/src/main/java/de/atb/context/services/interfaces/DataInfo.java: Some input files use unchecked or unsafe operations.
@@ -158,6 +167,8 @@ Already up to date.
 [INFO] -----------------< de.atb.context:context-monitoring >------------------
 [INFO] Building ATB Context Monitoring Core Services 2.0.0                [3/5]
 [INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] Failure to transfer log4j:log4j/maven-metadata.xml from http://openjena.org/repo was cached in the local repository, resolution will not be reattempted until the update interval of repo-jena has elapsed or updates are forced. Original error: Could not transfer metadata log4j:log4j/maven-metadata.xml from/to repo-jena (http://openjena.org/repo): Transfer failed for http://openjena.org/repo/log4j/log4j/maven-metadata.xml
+[WARNING] Failure to transfer log4j:log4j/maven-metadata.xml from http://openjena.org/repo-dev was cached in the local repository, resolution will not be reattempted until the update interval of repo-jena-dev has elapsed or updates are forced. Original error: Could not transfer metadata log4j:log4j/maven-metadata.xml from/to repo-jena-dev (http://openjena.org/repo-dev): Transfer failed for http://openjena.org/repo-dev/log4j/log4j/maven-metadata.xml
 [WARNING] The metadata /Users/philippe/.m2/repository/log4j/log4j/maven-metadata-repo-jena.xml is invalid: unexpected markup <!d (position: START_DOCUMENT seen \n<!d... @2:4) 
 [WARNING] The metadata /Users/philippe/.m2/repository/log4j/log4j/maven-metadata-repo-jena-dev.xml is invalid: unexpected markup <!d (position: START_DOCUMENT seen \n<!d... @2:4) 
 [INFO] 
@@ -190,7 +201,7 @@ Already up to date.
 [INFO] register BSD 3-Clause License
 [INFO] register European Union Public License v1.1
 [INFO] Will search files to update from root /Users/philippe/git/smartclide-context/context-monitoring/src/main/java
-[INFO] Scan 83 files header done in 2.412s.
+[INFO] Scan 83 files header done in 3.335s.
 [INFO] 
  * update header on 83 files.
 [INFO] 
@@ -246,6 +257,8 @@ Already up to date.
 [INFO] -----------------< de.atb.context:context-extraction >------------------
 [INFO] Building ATB Context Extraction Core Service 2.0.0                 [4/5]
 [INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] Failure to transfer log4j:log4j/maven-metadata.xml from http://openjena.org/repo was cached in the local repository, resolution will not be reattempted until the update interval of repo-jena has elapsed or updates are forced. Original error: Could not transfer metadata log4j:log4j/maven-metadata.xml from/to repo-jena (http://openjena.org/repo): Transfer failed for http://openjena.org/repo/log4j/log4j/maven-metadata.xml
+[WARNING] Failure to transfer log4j:log4j/maven-metadata.xml from http://openjena.org/repo-dev was cached in the local repository, resolution will not be reattempted until the update interval of repo-jena-dev has elapsed or updates are forced. Original error: Could not transfer metadata log4j:log4j/maven-metadata.xml from/to repo-jena-dev (http://openjena.org/repo-dev): Transfer failed for http://openjena.org/repo-dev/log4j/log4j/maven-metadata.xml
 [WARNING] The metadata /Users/philippe/.m2/repository/log4j/log4j/maven-metadata-repo-jena.xml is invalid: unexpected markup <!d (position: START_DOCUMENT seen \n<!d... @2:4) 
 [WARNING] The metadata /Users/philippe/.m2/repository/log4j/log4j/maven-metadata-repo-jena-dev.xml is invalid: unexpected markup <!d (position: START_DOCUMENT seen \n<!d... @2:4) 
 [INFO] 
@@ -278,7 +291,7 @@ Already up to date.
 [INFO] register BSD 3-Clause License
 [INFO] register European Union Public License v1.1
 [INFO] Will search files to update from root /Users/philippe/git/smartclide-context/context-extraction/src/main/java
-[INFO] Scan 24 files header done in 737.992ms.
+[INFO] Scan 24 files header done in 888.027ms.
 [INFO] 
  * update header on 24 files.
 [INFO] 
@@ -329,6 +342,8 @@ Already up to date.
 [INFO] ----------------< de.atb.context:smartclide-monitoring >----------------
 [INFO] Building SmartCLIDE Monitoring 2.0.0                               [5/5]
 [INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] Failure to transfer log4j:log4j/maven-metadata.xml from http://openjena.org/repo was cached in the local repository, resolution will not be reattempted until the update interval of repo-jena has elapsed or updates are forced. Original error: Could not transfer metadata log4j:log4j/maven-metadata.xml from/to repo-jena (http://openjena.org/repo): Transfer failed for http://openjena.org/repo/log4j/log4j/maven-metadata.xml
+[WARNING] Failure to transfer log4j:log4j/maven-metadata.xml from http://openjena.org/repo-dev was cached in the local repository, resolution will not be reattempted until the update interval of repo-jena-dev has elapsed or updates are forced. Original error: Could not transfer metadata log4j:log4j/maven-metadata.xml from/to repo-jena-dev (http://openjena.org/repo-dev): Transfer failed for http://openjena.org/repo-dev/log4j/log4j/maven-metadata.xml
 [WARNING] The metadata /Users/philippe/.m2/repository/log4j/log4j/maven-metadata-repo-jena.xml is invalid: unexpected markup <!d (position: START_DOCUMENT seen \n<!d... @2:4) 
 [WARNING] The metadata /Users/philippe/.m2/repository/log4j/log4j/maven-metadata-repo-jena-dev.xml is invalid: unexpected markup <!d (position: START_DOCUMENT seen \n<!d... @2:4) 
 [INFO] 
@@ -362,7 +377,7 @@ Already up to date.
 [INFO] register European Union Public License v1.1
 [INFO] Will search files to update from root /Users/philippe/git/smartclide-context/smartclide-monitoring/src/main/java
 [INFO] Will search files to update from root /Users/philippe/git/smartclide-context/smartclide-monitoring/src/main/resources
-[INFO] Scan 10 files header done in 339.091ms.
+[INFO] Scan 10 files header done in 373.477ms.
 [INFO] 
  * update header on 10 files.
 [INFO] 
@@ -390,12 +405,10 @@ Already up to date.
 [INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ smartclide-monitoring ---
 [INFO] Changes detected - recompiling the module!
 [INFO] Compiling 9 source files to /Users/philippe/git/smartclide-context/smartclide-monitoring/target/classes
-[INFO] /Users/philippe/git/smartclide-context/smartclide-monitoring/src/main/java/eu/smartclide/contexthandling/ServiceMain.java: /Users/philippe/git/smartclide-context/smartclide-monitoring/src/main/java/eu/smartclide/contexthandling/ServiceMain.java uses unchecked or unsafe operations.
-[INFO] /Users/philippe/git/smartclide-context/smartclide-monitoring/src/main/java/eu/smartclide/contexthandling/ServiceMain.java: Recompile with -Xlint:unchecked for details.
 [INFO] 
 [INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ smartclide-monitoring ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 5 resources
+[INFO] Copying 4 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ smartclide-monitoring ---
 [INFO] Changes detected - recompiling the module!
@@ -413,16 +426,16 @@ Already up to date.
 [INFO] ------------------------------------------------------------------------
 [INFO] Reactor Summary for ATB Context Parent 2.0.0:
 [INFO] 
-[INFO] ATB Context Parent ................................. SUCCESS [  4.561 s]
-[INFO] ATB Context Extraction Core Lib .................... SUCCESS [ 30.226 s]
-[INFO] ATB Context Monitoring Core Services ............... SUCCESS [  9.225 s]
-[INFO] ATB Context Extraction Core Service ................ SUCCESS [  2.903 s]
-[INFO] SmartCLIDE Monitoring .............................. SUCCESS [  2.918 s]
+[INFO] ATB Context Parent ................................. SUCCESS [  7.608 s]
+[INFO] ATB Context Extraction Core Lib .................... SUCCESS [01:22 min]
+[INFO] ATB Context Monitoring Core Services ............... SUCCESS [ 11.471 s]
+[INFO] ATB Context Extraction Core Service ................ SUCCESS [  3.777 s]
+[INFO] SmartCLIDE Monitoring .............................. SUCCESS [  3.626 s]
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  49.986 s
-[INFO] Finished at: 2021-12-16T17:54:59+01:00
+[INFO] Total time:  01:49 min
+[INFO] Finished at: 2022-01-10T09:19:04+01:00
 [INFO] ------------------------------------------------------------------------
 : mvn dependency:list > /Users/philippe/git/smartclide/IPCheck/analysis/smartclide-context/01-dependency_list.txt
 : mvn dependency:tree > /Users/philippe/git/smartclide/IPCheck/analysis/smartclide-context/01-dependency_tree.txt
@@ -442,6 +455,7 @@ maven/mavencentral/com.github.ansell.pellet/pellet-el/2.3.6-ansell
 maven/mavencentral/com.github.ansell.pellet/pellet-jena/2.3.6-ansell
 maven/mavencentral/com.github.ansell.pellet/pellet-rules/2.3.6-ansell
 maven/mavencentral/com.googlecode.mdock/mdock/1.1
+maven/mavencentral/com.h2database/h2/2.0.206
 maven/mavencentral/com.hermit-reasoner/org.semanticweb.hermit/1.3.8.3
 maven/mavencentral/com.hp.hpl.jena/arq/2.8.7
 maven/mavencentral/com.hp.hpl.jena/iri/0.8
@@ -475,12 +489,23 @@ maven/mavencentral/net.sourceforge.owlapi/owlapi-impl/5.1.19
 maven/mavencentral/net.sourceforge.owlapi/owlapi-parsers/5.1.19
 maven/mavencentral/net.sourceforge.owlapi/owlapi-rio/5.1.19
 maven/mavencentral/net.sourceforge.owlapi/owlapi-tools/5.1.19
-maven/mavencentral/org.apache.ant/ant-launcher/1.7.0
-maven/mavencentral/org.apache.cxf/cxf-rt-transports-http-jetty/3.4.5
-maven/mavencentral/org.apache.cxf/cxf-rt-ws-policy/3.4.5
+maven/mavencentral/org.apache.cxf/cxf-core/3.5.0
+maven/mavencentral/org.apache.cxf/cxf-rt-bindings-soap/3.5.0
+maven/mavencentral/org.apache.cxf/cxf-rt-bindings-xml/3.5.0
+maven/mavencentral/org.apache.cxf/cxf-rt-databinding-jaxb/3.5.0
+maven/mavencentral/org.apache.cxf/cxf-rt-frontend-jaxws/3.5.0
+maven/mavencentral/org.apache.cxf/cxf-rt-frontend-simple/3.5.0
+maven/mavencentral/org.apache.cxf/cxf-rt-transports-http-hc/3.5.0
+maven/mavencentral/org.apache.cxf/cxf-rt-transports-http-jetty/3.5.0
+maven/mavencentral/org.apache.cxf/cxf-rt-transports-http/3.5.0
+maven/mavencentral/org.apache.cxf/cxf-rt-ws-addr/3.5.0
+maven/mavencentral/org.apache.cxf/cxf-rt-ws-policy/3.5.0
+maven/mavencentral/org.apache.cxf/cxf-rt-wsdl/3.5.0
 maven/mavencentral/org.apache.httpcomponents/httpclient-osgi/4.5.10
-maven/mavencentral/org.apache.lucene/lucene-analyzers-common/8.11.0
-maven/mavencentral/org.apache.lucene/lucene-core/8.11.0
+maven/mavencentral/org.apache.logging.log4j/log4j-api/2.17.1
+maven/mavencentral/org.apache.logging.log4j/log4j-slf4j-impl/2.17.1
+maven/mavencentral/org.apache.lucene/lucene-analyzers-common/8.11.1
+maven/mavencentral/org.apache.lucene/lucene-core/8.11.1
 maven/mavencentral/org.jgrapht/jgrapht-jdk1.5/0.7.3
 maven/mavencentral/org.swinglabs/swing-worker/1.1
 maven/mavencentral/org.swinglabs/swingx/1.6.1

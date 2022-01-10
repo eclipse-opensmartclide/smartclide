@@ -37,9 +37,9 @@
 [INFO] The following files have been resolved:
 [INFO]    org.slf4j:jcl-over-slf4j:jar:1.7.32:compile -- module org.apache.commons.logging [auto]
 [INFO]    org.slf4j:slf4j-api:jar:1.7.32:compile -- module org.slf4j [auto]
-[INFO]    org.apache.logging.log4j:log4j-slf4j-impl:jar:2.16.0:compile -- module org.apache.logging.log4j.slf4j [auto]
-[INFO]    org.apache.logging.log4j:log4j-api:jar:2.16.0:compile -- module org.apache.logging.log4j
-[INFO]    org.apache.logging.log4j:log4j-core:jar:2.16.0:runtime -- module org.apache.logging.log4j.core [auto]
+[INFO]    org.apache.logging.log4j:log4j-slf4j-impl:jar:2.17.1:compile -- module org.apache.logging.log4j.slf4j [auto]
+[INFO]    org.apache.logging.log4j:log4j-api:jar:2.17.1:compile -- module org.apache.logging.log4j
+[INFO]    org.apache.logging.log4j:log4j-core:jar:2.17.1:runtime -- module org.apache.logging.log4j.core [auto]
 [INFO]    org.apache.commons:commons-collections4:jar:4.4:compile -- module org.apache.commons.collections4 [auto]
 [INFO]    commons-io:commons-io:jar:2.11.0:compile -- module org.apache.commons.io [auto]
 [INFO]    org.apache.commons:commons-lang3:jar:3.12.0:compile -- module org.apache.commons.lang3 [auto]
@@ -48,8 +48,8 @@
 [INFO]    javax:javaee-web-api:jar:8.0.1:provided -- module javaee.web.api (auto)
 [INFO]    org.javatuples:javatuples:jar:1.2:compile -- module javatuples (auto)
 [INFO]    net.sf.jpathwatch:jpathwatch:jar:0.95:compile -- module jpathwatch (auto)
-[INFO]    org.apache.lucene:lucene-analyzers-common:jar:8.11.0:compile -- module lucene.analyzers.common (auto)
-[INFO]    org.apache.lucene:lucene-core:jar:8.11.0:compile -- module lucene.core (auto)
+[INFO]    org.apache.lucene:lucene-analyzers-common:jar:8.11.1:compile -- module lucene.analyzers.common (auto)
+[INFO]    org.apache.lucene:lucene-core:jar:8.11.1:compile -- module lucene.core (auto)
 [INFO]    com.github.ansell.pellet:pellet-jena:jar:2.3.6-ansell:compile -- module pellet.jena (auto)
 [INFO]    com.hp.hpl.jena:jena:jar:2.6.4:compile -- module jena (auto)
 [INFO]    com.ibm.icu:icu4j:jar:3.4.4:compile -- module icu4j (auto)
@@ -71,26 +71,26 @@
 [INFO]    com.hp.hpl.jena:tdb:jar:0.8.10:compile -- module tdb (auto)
 [INFO]    com.hp.hpl.jena:sdb:jar:1.3.4:compile -- module sdb (auto)
 [INFO]    com.thewebsemantic:jenabean:jar:1.0.6:compile -- module jenabean (auto)
-[INFO]    org.apache.cxf:cxf-rt-frontend-jaxws:jar:3.4.5:compile -- module org.apache.cxf.frontend.jaxws [auto]
+[INFO]    org.apache.cxf:cxf-rt-frontend-jaxws:jar:3.5.0:compile -- module org.apache.cxf.frontend.jaxws [auto]
 [INFO]    xml-resolver:xml-resolver:jar:1.2:compile -- module xml.resolver (auto)
 [INFO]    org.ow2.asm:asm:jar:9.2:compile -- module org.objectweb.asm
-[INFO]    org.apache.cxf:cxf-core:jar:3.4.5:compile -- module org.apache.cxf.core [auto]
-[INFO]    org.glassfish.jaxb:jaxb-runtime:jar:2.3.4:compile -- module org.glassfish.jaxb.runtime
-[INFO]    org.glassfish.jaxb:txw2:jar:2.3.4:compile -- module com.sun.xml.txw2
+[INFO]    org.apache.cxf:cxf-core:jar:3.5.0:compile -- module org.apache.cxf.core [auto]
+[INFO]    org.glassfish.jaxb:jaxb-runtime:jar:2.3.5:compile -- module org.glassfish.jaxb.runtime
+[INFO]    org.glassfish.jaxb:txw2:jar:2.3.5:compile -- module com.sun.xml.txw2
 [INFO]    com.sun.istack:istack-commons-runtime:jar:3.0.12:compile -- module com.sun.istack.runtime
-[INFO]    com.fasterxml.woodstox:woodstox-core:jar:6.2.6:compile -- module com.ctc.wstx
+[INFO]    com.fasterxml.woodstox:woodstox-core:jar:6.2.7:compile -- module com.ctc.wstx
 [INFO]    org.codehaus.woodstox:stax2-api:jar:4.2.1:compile -- module org.codehaus.stax2
-[INFO]    org.apache.ws.xmlschema:xmlschema-core:jar:2.2.5:compile -- module xmlschema.core (auto)
+[INFO]    org.apache.ws.xmlschema:xmlschema-core:jar:2.3.0:compile -- module xmlschema.core (auto)
 [INFO]    jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:compile -- module java.xml.bind
-[INFO]    org.apache.cxf:cxf-rt-bindings-soap:jar:3.4.5:compile -- module org.apache.cxf.binding.soap [auto]
-[INFO]    org.apache.cxf:cxf-rt-wsdl:jar:3.4.5:compile -- module org.apache.cxf.wsdl [auto]
+[INFO]    org.apache.cxf:cxf-rt-bindings-soap:jar:3.5.0:compile -- module org.apache.cxf.binding.soap [auto]
+[INFO]    org.apache.cxf:cxf-rt-wsdl:jar:3.5.0:compile -- module org.apache.cxf.wsdl [auto]
 [INFO]    wsdl4j:wsdl4j:jar:1.6.3:compile -- module wsdl4j (auto)
-[INFO]    org.apache.cxf:cxf-rt-databinding-jaxb:jar:3.4.5:compile -- module org.apache.cxf.databinding.jaxb [auto]
-[INFO]    org.apache.cxf:cxf-rt-bindings-xml:jar:3.4.5:compile -- module org.apache.cxf.binding.xml [auto]
-[INFO]    org.apache.cxf:cxf-rt-frontend-simple:jar:3.4.5:compile -- module org.apache.cxf.frontend.simple [auto]
-[INFO]    org.apache.cxf:cxf-rt-ws-addr:jar:3.4.5:compile -- module org.apache.cxf.ws.addr [auto]
-[INFO]    org.apache.cxf:cxf-rt-ws-policy:jar:3.4.5:compile -- module org.apache.cxf.ws.policy [auto]
-[INFO]    org.apache.neethi:neethi:jar:3.1.1:compile -- module neethi (auto)
+[INFO]    org.apache.cxf:cxf-rt-databinding-jaxb:jar:3.5.0:compile -- module org.apache.cxf.databinding.jaxb [auto]
+[INFO]    org.apache.cxf:cxf-rt-bindings-xml:jar:3.5.0:compile -- module org.apache.cxf.binding.xml [auto]
+[INFO]    org.apache.cxf:cxf-rt-frontend-simple:jar:3.5.0:compile -- module org.apache.cxf.frontend.simple [auto]
+[INFO]    org.apache.cxf:cxf-rt-ws-addr:jar:3.5.0:compile -- module org.apache.cxf.ws.addr [auto]
+[INFO]    org.apache.cxf:cxf-rt-ws-policy:jar:3.5.0:compile -- module org.apache.cxf.ws.policy [auto]
+[INFO]    org.apache.neethi:neethi:jar:3.2.0:compile -- module neethi (auto)
 [INFO]    jakarta.annotation:jakarta.annotation-api:jar:1.3.5:compile -- module java.annotation [auto]
 [INFO]    jakarta.xml.ws:jakarta.xml.ws-api:jar:2.3.3:compile -- module java.xml.ws
 [INFO]    jakarta.jws:jakarta.jws-api:jar:2.1.0:compile -- module java.jws
@@ -100,16 +100,16 @@
 [INFO]    com.sun.xml.messaging.saaj:saaj-impl:jar:1.5.3:runtime -- module com.sun.xml.messaging.saaj
 [INFO]    org.jvnet.staxex:stax-ex:jar:1.8.3:runtime -- module org.jvnet.staxex
 [INFO]    org.apache.geronimo.specs:geronimo-jta_1.1_spec:jar:1.1.1:compile
-[INFO]    org.apache.cxf:cxf-rt-transports-http-jetty:jar:3.4.5:compile -- module org.apache.cxf.transport.http.jetty [auto]
-[INFO]    org.apache.cxf:cxf-rt-transports-http:jar:3.4.5:compile -- module org.apache.cxf.transport.http [auto]
-[INFO]    org.eclipse.jetty:jetty-server:jar:9.4.43.v20210629:compile -- module org.eclipse.jetty.server [auto]
+[INFO]    org.apache.cxf:cxf-rt-transports-http-jetty:jar:3.5.0:compile -- module org.apache.cxf.transport.http.jetty [auto]
+[INFO]    org.apache.cxf:cxf-rt-transports-http:jar:3.5.0:compile -- module org.apache.cxf.transport.http [auto]
+[INFO]    org.eclipse.jetty:jetty-server:jar:9.4.44.v20210927:compile -- module org.eclipse.jetty.server [auto]
 [INFO]    javax.servlet:javax.servlet-api:jar:3.1.0:compile -- module javax.servlet.api (auto)
-[INFO]    org.eclipse.jetty:jetty-util:jar:9.4.43.v20210629:compile -- module org.eclipse.jetty.util [auto]
-[INFO]    org.eclipse.jetty:jetty-io:jar:9.4.43.v20210629:compile -- module org.eclipse.jetty.io [auto]
-[INFO]    org.eclipse.jetty:jetty-security:jar:9.4.43.v20210629:compile -- module org.eclipse.jetty.security [auto]
-[INFO]    org.eclipse.jetty:jetty-continuation:jar:9.4.43.v20210629:compile -- module org.eclipse.jetty.continuation [auto]
-[INFO]    org.eclipse.jetty:jetty-http:jar:9.4.43.v20210629:compile -- module org.eclipse.jetty.http [auto]
-[INFO]    org.apache.cxf:cxf-rt-transports-http-hc:jar:3.4.5:compile -- module org.apache.cxf.transport.http.hc [auto]
+[INFO]    org.eclipse.jetty:jetty-util:jar:9.4.44.v20210927:compile -- module org.eclipse.jetty.util [auto]
+[INFO]    org.eclipse.jetty:jetty-io:jar:9.4.44.v20210927:compile -- module org.eclipse.jetty.io [auto]
+[INFO]    org.eclipse.jetty:jetty-security:jar:9.4.44.v20210927:compile -- module org.eclipse.jetty.security [auto]
+[INFO]    org.eclipse.jetty:jetty-continuation:jar:9.4.44.v20210927:compile -- module org.eclipse.jetty.continuation [auto]
+[INFO]    org.eclipse.jetty:jetty-http:jar:9.4.44.v20210927:compile -- module org.eclipse.jetty.http [auto]
+[INFO]    org.apache.cxf:cxf-rt-transports-http-hc:jar:3.5.0:compile -- module org.apache.cxf.transport.http.hc [auto]
 [INFO]    org.apache.httpcomponents:httpcore-nio:jar:4.4.14:compile -- module org.apache.httpcomponents.httpcore.nio [auto]
 [INFO]    org.apache.httpcomponents:httpcore:jar:4.4.14:compile -- module org.apache.httpcomponents.httpcore [auto]
 [INFO]    org.apache.httpcomponents:httpasyncclient:jar:4.1.4:compile -- module org.apache.httpcomponents.httpasyncclient [auto]
@@ -119,7 +119,7 @@
 [INFO]    stax:stax-api:jar:1.0.1:compile -- module stax.api (auto)
 [INFO]    stax:stax:jar:1.2.0:compile -- module stax (auto)
 [INFO]    xpp3:xpp3:jar:1.1.3.3:compile -- module xpp3 (auto)
-[INFO]    com.h2database:h2:jar:1.4.200:compile -- module com.h2database [auto]
+[INFO]    com.h2database:h2:jar:2.0.206:compile -- module com.h2database [auto]
 [INFO]    org.swinglabs:swingx:jar:1.6.1:compile -- module swingx (auto)
 [INFO]    com.jhlabs:filters:jar:2.0.235:compile -- module filters (auto)
 [INFO]    org.swinglabs:swing-worker:jar:1.1:compile -- module swing.worker (auto)
@@ -240,9 +240,9 @@
 [INFO]    de.atb.context:context-core:jar:2.0.0:compile -- module context.core (auto)
 [INFO]    org.slf4j:jcl-over-slf4j:jar:1.7.32:compile -- module org.apache.commons.logging [auto]
 [INFO]    org.slf4j:slf4j-api:jar:1.7.32:compile -- module org.slf4j [auto]
-[INFO]    org.apache.logging.log4j:log4j-slf4j-impl:jar:2.16.0:compile -- module org.apache.logging.log4j.slf4j [auto]
-[INFO]    org.apache.logging.log4j:log4j-api:jar:2.16.0:compile -- module org.apache.logging.log4j
-[INFO]    org.apache.logging.log4j:log4j-core:jar:2.16.0:runtime -- module org.apache.logging.log4j.core [auto]
+[INFO]    org.apache.logging.log4j:log4j-slf4j-impl:jar:2.17.1:compile -- module org.apache.logging.log4j.slf4j [auto]
+[INFO]    org.apache.logging.log4j:log4j-api:jar:2.17.1:compile -- module org.apache.logging.log4j
+[INFO]    org.apache.logging.log4j:log4j-core:jar:2.17.1:runtime -- module org.apache.logging.log4j.core [auto]
 [INFO]    org.apache.commons:commons-collections4:jar:4.4:compile -- module org.apache.commons.collections4 [auto]
 [INFO]    commons-io:commons-io:jar:2.11.0:compile -- module org.apache.commons.io [auto]
 [INFO]    org.apache.commons:commons-lang3:jar:3.12.0:compile -- module org.apache.commons.lang3 [auto]
@@ -250,8 +250,8 @@
 [INFO]    com.jgoodies:jgoodies-common:jar:1.8.1:compile -- module jgoodies.common (auto)
 [INFO]    org.javatuples:javatuples:jar:1.2:compile -- module javatuples (auto)
 [INFO]    net.sf.jpathwatch:jpathwatch:jar:0.95:compile -- module jpathwatch (auto)
-[INFO]    org.apache.lucene:lucene-analyzers-common:jar:8.11.0:compile -- module lucene.analyzers.common (auto)
-[INFO]    org.apache.lucene:lucene-core:jar:8.11.0:compile -- module lucene.core (auto)
+[INFO]    org.apache.lucene:lucene-analyzers-common:jar:8.11.1:compile -- module lucene.analyzers.common (auto)
+[INFO]    org.apache.lucene:lucene-core:jar:8.11.1:compile -- module lucene.core (auto)
 [INFO]    com.github.ansell.pellet:pellet-jena:jar:2.3.6-ansell:compile -- module pellet.jena (auto)
 [INFO]    com.hp.hpl.jena:jena:jar:2.6.4:compile -- module jena (auto)
 [INFO]    com.ibm.icu:icu4j:jar:3.4.4:compile -- module icu4j (auto)
@@ -273,26 +273,26 @@
 [INFO]    com.hp.hpl.jena:tdb:jar:0.8.10:compile -- module tdb (auto)
 [INFO]    com.hp.hpl.jena:sdb:jar:1.3.4:compile -- module sdb (auto)
 [INFO]    com.thewebsemantic:jenabean:jar:1.0.6:compile -- module jenabean (auto)
-[INFO]    org.apache.cxf:cxf-rt-frontend-jaxws:jar:3.4.5:compile -- module org.apache.cxf.frontend.jaxws [auto]
+[INFO]    org.apache.cxf:cxf-rt-frontend-jaxws:jar:3.5.0:compile -- module org.apache.cxf.frontend.jaxws [auto]
 [INFO]    xml-resolver:xml-resolver:jar:1.2:compile -- module xml.resolver (auto)
 [INFO]    org.ow2.asm:asm:jar:9.2:compile -- module org.objectweb.asm
-[INFO]    org.apache.cxf:cxf-core:jar:3.4.5:compile -- module org.apache.cxf.core [auto]
-[INFO]    org.glassfish.jaxb:jaxb-runtime:jar:2.3.4:compile -- module org.glassfish.jaxb.runtime
-[INFO]    org.glassfish.jaxb:txw2:jar:2.3.4:compile -- module com.sun.xml.txw2
+[INFO]    org.apache.cxf:cxf-core:jar:3.5.0:compile -- module org.apache.cxf.core [auto]
+[INFO]    org.glassfish.jaxb:jaxb-runtime:jar:2.3.5:compile -- module org.glassfish.jaxb.runtime
+[INFO]    org.glassfish.jaxb:txw2:jar:2.3.5:compile -- module com.sun.xml.txw2
 [INFO]    com.sun.istack:istack-commons-runtime:jar:3.0.12:compile -- module com.sun.istack.runtime
-[INFO]    com.fasterxml.woodstox:woodstox-core:jar:6.2.6:compile -- module com.ctc.wstx
+[INFO]    com.fasterxml.woodstox:woodstox-core:jar:6.2.7:compile -- module com.ctc.wstx
 [INFO]    org.codehaus.woodstox:stax2-api:jar:4.2.1:compile -- module org.codehaus.stax2
-[INFO]    org.apache.ws.xmlschema:xmlschema-core:jar:2.2.5:compile -- module xmlschema.core (auto)
+[INFO]    org.apache.ws.xmlschema:xmlschema-core:jar:2.3.0:compile -- module xmlschema.core (auto)
 [INFO]    jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:compile -- module java.xml.bind
-[INFO]    org.apache.cxf:cxf-rt-bindings-soap:jar:3.4.5:compile -- module org.apache.cxf.binding.soap [auto]
-[INFO]    org.apache.cxf:cxf-rt-wsdl:jar:3.4.5:compile -- module org.apache.cxf.wsdl [auto]
+[INFO]    org.apache.cxf:cxf-rt-bindings-soap:jar:3.5.0:compile -- module org.apache.cxf.binding.soap [auto]
+[INFO]    org.apache.cxf:cxf-rt-wsdl:jar:3.5.0:compile -- module org.apache.cxf.wsdl [auto]
 [INFO]    wsdl4j:wsdl4j:jar:1.6.3:compile -- module wsdl4j (auto)
-[INFO]    org.apache.cxf:cxf-rt-databinding-jaxb:jar:3.4.5:compile -- module org.apache.cxf.databinding.jaxb [auto]
-[INFO]    org.apache.cxf:cxf-rt-bindings-xml:jar:3.4.5:compile -- module org.apache.cxf.binding.xml [auto]
-[INFO]    org.apache.cxf:cxf-rt-frontend-simple:jar:3.4.5:compile -- module org.apache.cxf.frontend.simple [auto]
-[INFO]    org.apache.cxf:cxf-rt-ws-addr:jar:3.4.5:compile -- module org.apache.cxf.ws.addr [auto]
-[INFO]    org.apache.cxf:cxf-rt-ws-policy:jar:3.4.5:compile -- module org.apache.cxf.ws.policy [auto]
-[INFO]    org.apache.neethi:neethi:jar:3.1.1:compile -- module neethi (auto)
+[INFO]    org.apache.cxf:cxf-rt-databinding-jaxb:jar:3.5.0:compile -- module org.apache.cxf.databinding.jaxb [auto]
+[INFO]    org.apache.cxf:cxf-rt-bindings-xml:jar:3.5.0:compile -- module org.apache.cxf.binding.xml [auto]
+[INFO]    org.apache.cxf:cxf-rt-frontend-simple:jar:3.5.0:compile -- module org.apache.cxf.frontend.simple [auto]
+[INFO]    org.apache.cxf:cxf-rt-ws-addr:jar:3.5.0:compile -- module org.apache.cxf.ws.addr [auto]
+[INFO]    org.apache.cxf:cxf-rt-ws-policy:jar:3.5.0:compile -- module org.apache.cxf.ws.policy [auto]
+[INFO]    org.apache.neethi:neethi:jar:3.2.0:compile -- module neethi (auto)
 [INFO]    jakarta.annotation:jakarta.annotation-api:jar:1.3.5:compile -- module java.annotation [auto]
 [INFO]    jakarta.xml.ws:jakarta.xml.ws-api:jar:2.3.3:compile -- module java.xml.ws
 [INFO]    jakarta.jws:jakarta.jws-api:jar:2.1.0:compile -- module java.jws
@@ -302,23 +302,23 @@
 [INFO]    com.sun.xml.messaging.saaj:saaj-impl:jar:1.5.3:runtime -- module com.sun.xml.messaging.saaj
 [INFO]    org.jvnet.staxex:stax-ex:jar:1.8.3:runtime -- module org.jvnet.staxex
 [INFO]    org.apache.geronimo.specs:geronimo-jta_1.1_spec:jar:1.1.1:compile
-[INFO]    org.apache.cxf:cxf-rt-transports-http-jetty:jar:3.4.5:compile -- module org.apache.cxf.transport.http.jetty [auto]
-[INFO]    org.apache.cxf:cxf-rt-transports-http:jar:3.4.5:compile -- module org.apache.cxf.transport.http [auto]
-[INFO]    org.eclipse.jetty:jetty-server:jar:9.4.43.v20210629:compile -- module org.eclipse.jetty.server [auto]
+[INFO]    org.apache.cxf:cxf-rt-transports-http-jetty:jar:3.5.0:compile -- module org.apache.cxf.transport.http.jetty [auto]
+[INFO]    org.apache.cxf:cxf-rt-transports-http:jar:3.5.0:compile -- module org.apache.cxf.transport.http [auto]
+[INFO]    org.eclipse.jetty:jetty-server:jar:9.4.44.v20210927:compile -- module org.eclipse.jetty.server [auto]
 [INFO]    javax.servlet:javax.servlet-api:jar:3.1.0:compile -- module javax.servlet.api (auto)
-[INFO]    org.eclipse.jetty:jetty-util:jar:9.4.43.v20210629:compile -- module org.eclipse.jetty.util [auto]
-[INFO]    org.eclipse.jetty:jetty-io:jar:9.4.43.v20210629:compile -- module org.eclipse.jetty.io [auto]
-[INFO]    org.eclipse.jetty:jetty-security:jar:9.4.43.v20210629:compile -- module org.eclipse.jetty.security [auto]
-[INFO]    org.eclipse.jetty:jetty-continuation:jar:9.4.43.v20210629:compile -- module org.eclipse.jetty.continuation [auto]
-[INFO]    org.eclipse.jetty:jetty-http:jar:9.4.43.v20210629:compile -- module org.eclipse.jetty.http [auto]
-[INFO]    org.apache.cxf:cxf-rt-transports-http-hc:jar:3.4.5:compile -- module org.apache.cxf.transport.http.hc [auto]
+[INFO]    org.eclipse.jetty:jetty-util:jar:9.4.44.v20210927:compile -- module org.eclipse.jetty.util [auto]
+[INFO]    org.eclipse.jetty:jetty-io:jar:9.4.44.v20210927:compile -- module org.eclipse.jetty.io [auto]
+[INFO]    org.eclipse.jetty:jetty-security:jar:9.4.44.v20210927:compile -- module org.eclipse.jetty.security [auto]
+[INFO]    org.eclipse.jetty:jetty-continuation:jar:9.4.44.v20210927:compile -- module org.eclipse.jetty.continuation [auto]
+[INFO]    org.eclipse.jetty:jetty-http:jar:9.4.44.v20210927:compile -- module org.eclipse.jetty.http [auto]
+[INFO]    org.apache.cxf:cxf-rt-transports-http-hc:jar:3.5.0:compile -- module org.apache.cxf.transport.http.hc [auto]
 [INFO]    org.apache.httpcomponents:httpcore-nio:jar:4.4.14:compile -- module org.apache.httpcomponents.httpcore.nio [auto]
 [INFO]    org.apache.httpcomponents:httpasyncclient:jar:4.1.4:compile -- module org.apache.httpcomponents.httpasyncclient [auto]
 [INFO]    org.simpleframework:simple-xml:jar:2.7.1:compile -- module simple.xml (auto)
 [INFO]    stax:stax-api:jar:1.0.1:compile -- module stax.api (auto)
 [INFO]    stax:stax:jar:1.2.0:compile -- module stax (auto)
 [INFO]    xpp3:xpp3:jar:1.1.3.3:compile -- module xpp3 (auto)
-[INFO]    com.h2database:h2:jar:1.4.200:compile -- module com.h2database [auto]
+[INFO]    com.h2database:h2:jar:2.0.206:compile -- module com.h2database [auto]
 [INFO]    org.swinglabs:swingx:jar:1.6.1:compile -- module swingx (auto)
 [INFO]    com.jhlabs:filters:jar:2.0.235:compile -- module filters (auto)
 [INFO]    org.swinglabs:swing-worker:jar:1.1:compile -- module swing.worker (auto)
@@ -464,9 +464,9 @@
 [INFO]    de.atb.context:context-core:jar:2.0.0:compile -- module context.core (auto)
 [INFO]    org.slf4j:jcl-over-slf4j:jar:1.7.32:compile -- module org.apache.commons.logging [auto]
 [INFO]    org.slf4j:slf4j-api:jar:1.7.32:compile -- module org.slf4j [auto]
-[INFO]    org.apache.logging.log4j:log4j-slf4j-impl:jar:2.16.0:compile -- module org.apache.logging.log4j.slf4j [auto]
-[INFO]    org.apache.logging.log4j:log4j-api:jar:2.16.0:compile -- module org.apache.logging.log4j
-[INFO]    org.apache.logging.log4j:log4j-core:jar:2.16.0:runtime -- module org.apache.logging.log4j.core [auto]
+[INFO]    org.apache.logging.log4j:log4j-slf4j-impl:jar:2.17.1:compile -- module org.apache.logging.log4j.slf4j [auto]
+[INFO]    org.apache.logging.log4j:log4j-api:jar:2.17.1:compile -- module org.apache.logging.log4j
+[INFO]    org.apache.logging.log4j:log4j-core:jar:2.17.1:runtime -- module org.apache.logging.log4j.core [auto]
 [INFO]    org.apache.commons:commons-collections4:jar:4.4:compile -- module org.apache.commons.collections4 [auto]
 [INFO]    commons-io:commons-io:jar:2.11.0:compile -- module org.apache.commons.io [auto]
 [INFO]    org.apache.commons:commons-lang3:jar:3.12.0:compile -- module org.apache.commons.lang3 [auto]
@@ -474,8 +474,8 @@
 [INFO]    com.jgoodies:jgoodies-common:jar:1.8.1:compile -- module jgoodies.common (auto)
 [INFO]    org.javatuples:javatuples:jar:1.2:compile -- module javatuples (auto)
 [INFO]    net.sf.jpathwatch:jpathwatch:jar:0.95:compile -- module jpathwatch (auto)
-[INFO]    org.apache.lucene:lucene-analyzers-common:jar:8.11.0:compile -- module lucene.analyzers.common (auto)
-[INFO]    org.apache.lucene:lucene-core:jar:8.11.0:compile -- module lucene.core (auto)
+[INFO]    org.apache.lucene:lucene-analyzers-common:jar:8.11.1:compile -- module lucene.analyzers.common (auto)
+[INFO]    org.apache.lucene:lucene-core:jar:8.11.1:compile -- module lucene.core (auto)
 [INFO]    com.github.ansell.pellet:pellet-jena:jar:2.3.6-ansell:compile -- module pellet.jena (auto)
 [INFO]    com.hp.hpl.jena:jena:jar:2.6.4:compile -- module jena (auto)
 [INFO]    com.ibm.icu:icu4j:jar:3.4.4:compile -- module icu4j (auto)
@@ -497,26 +497,26 @@
 [INFO]    com.hp.hpl.jena:tdb:jar:0.8.10:compile -- module tdb (auto)
 [INFO]    com.hp.hpl.jena:sdb:jar:1.3.4:compile -- module sdb (auto)
 [INFO]    com.thewebsemantic:jenabean:jar:1.0.6:compile -- module jenabean (auto)
-[INFO]    org.apache.cxf:cxf-rt-frontend-jaxws:jar:3.4.5:compile -- module org.apache.cxf.frontend.jaxws [auto]
+[INFO]    org.apache.cxf:cxf-rt-frontend-jaxws:jar:3.5.0:compile -- module org.apache.cxf.frontend.jaxws [auto]
 [INFO]    xml-resolver:xml-resolver:jar:1.2:compile -- module xml.resolver (auto)
 [INFO]    org.ow2.asm:asm:jar:9.2:compile -- module org.objectweb.asm
-[INFO]    org.apache.cxf:cxf-core:jar:3.4.5:compile -- module org.apache.cxf.core [auto]
-[INFO]    org.glassfish.jaxb:jaxb-runtime:jar:2.3.4:compile -- module org.glassfish.jaxb.runtime
-[INFO]    org.glassfish.jaxb:txw2:jar:2.3.4:compile -- module com.sun.xml.txw2
+[INFO]    org.apache.cxf:cxf-core:jar:3.5.0:compile -- module org.apache.cxf.core [auto]
+[INFO]    org.glassfish.jaxb:jaxb-runtime:jar:2.3.5:compile -- module org.glassfish.jaxb.runtime
+[INFO]    org.glassfish.jaxb:txw2:jar:2.3.5:compile -- module com.sun.xml.txw2
 [INFO]    com.sun.istack:istack-commons-runtime:jar:3.0.12:compile -- module com.sun.istack.runtime
-[INFO]    com.fasterxml.woodstox:woodstox-core:jar:6.2.6:compile -- module com.ctc.wstx
+[INFO]    com.fasterxml.woodstox:woodstox-core:jar:6.2.7:compile -- module com.ctc.wstx
 [INFO]    org.codehaus.woodstox:stax2-api:jar:4.2.1:compile -- module org.codehaus.stax2
-[INFO]    org.apache.ws.xmlschema:xmlschema-core:jar:2.2.5:compile -- module xmlschema.core (auto)
+[INFO]    org.apache.ws.xmlschema:xmlschema-core:jar:2.3.0:compile -- module xmlschema.core (auto)
 [INFO]    jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:compile -- module java.xml.bind
-[INFO]    org.apache.cxf:cxf-rt-bindings-soap:jar:3.4.5:compile -- module org.apache.cxf.binding.soap [auto]
-[INFO]    org.apache.cxf:cxf-rt-wsdl:jar:3.4.5:compile -- module org.apache.cxf.wsdl [auto]
+[INFO]    org.apache.cxf:cxf-rt-bindings-soap:jar:3.5.0:compile -- module org.apache.cxf.binding.soap [auto]
+[INFO]    org.apache.cxf:cxf-rt-wsdl:jar:3.5.0:compile -- module org.apache.cxf.wsdl [auto]
 [INFO]    wsdl4j:wsdl4j:jar:1.6.3:compile -- module wsdl4j (auto)
-[INFO]    org.apache.cxf:cxf-rt-databinding-jaxb:jar:3.4.5:compile -- module org.apache.cxf.databinding.jaxb [auto]
-[INFO]    org.apache.cxf:cxf-rt-bindings-xml:jar:3.4.5:compile -- module org.apache.cxf.binding.xml [auto]
-[INFO]    org.apache.cxf:cxf-rt-frontend-simple:jar:3.4.5:compile -- module org.apache.cxf.frontend.simple [auto]
-[INFO]    org.apache.cxf:cxf-rt-ws-addr:jar:3.4.5:compile -- module org.apache.cxf.ws.addr [auto]
-[INFO]    org.apache.cxf:cxf-rt-ws-policy:jar:3.4.5:compile -- module org.apache.cxf.ws.policy [auto]
-[INFO]    org.apache.neethi:neethi:jar:3.1.1:compile -- module neethi (auto)
+[INFO]    org.apache.cxf:cxf-rt-databinding-jaxb:jar:3.5.0:compile -- module org.apache.cxf.databinding.jaxb [auto]
+[INFO]    org.apache.cxf:cxf-rt-bindings-xml:jar:3.5.0:compile -- module org.apache.cxf.binding.xml [auto]
+[INFO]    org.apache.cxf:cxf-rt-frontend-simple:jar:3.5.0:compile -- module org.apache.cxf.frontend.simple [auto]
+[INFO]    org.apache.cxf:cxf-rt-ws-addr:jar:3.5.0:compile -- module org.apache.cxf.ws.addr [auto]
+[INFO]    org.apache.cxf:cxf-rt-ws-policy:jar:3.5.0:compile -- module org.apache.cxf.ws.policy [auto]
+[INFO]    org.apache.neethi:neethi:jar:3.2.0:compile -- module neethi (auto)
 [INFO]    jakarta.annotation:jakarta.annotation-api:jar:1.3.5:compile -- module java.annotation [auto]
 [INFO]    jakarta.xml.ws:jakarta.xml.ws-api:jar:2.3.3:compile -- module java.xml.ws
 [INFO]    jakarta.jws:jakarta.jws-api:jar:2.1.0:compile -- module java.jws
@@ -526,23 +526,23 @@
 [INFO]    com.sun.xml.messaging.saaj:saaj-impl:jar:1.5.3:runtime -- module com.sun.xml.messaging.saaj
 [INFO]    org.jvnet.staxex:stax-ex:jar:1.8.3:runtime -- module org.jvnet.staxex
 [INFO]    org.apache.geronimo.specs:geronimo-jta_1.1_spec:jar:1.1.1:compile
-[INFO]    org.apache.cxf:cxf-rt-transports-http-jetty:jar:3.4.5:compile -- module org.apache.cxf.transport.http.jetty [auto]
-[INFO]    org.apache.cxf:cxf-rt-transports-http:jar:3.4.5:compile -- module org.apache.cxf.transport.http [auto]
-[INFO]    org.eclipse.jetty:jetty-server:jar:9.4.43.v20210629:compile -- module org.eclipse.jetty.server [auto]
+[INFO]    org.apache.cxf:cxf-rt-transports-http-jetty:jar:3.5.0:compile -- module org.apache.cxf.transport.http.jetty [auto]
+[INFO]    org.apache.cxf:cxf-rt-transports-http:jar:3.5.0:compile -- module org.apache.cxf.transport.http [auto]
+[INFO]    org.eclipse.jetty:jetty-server:jar:9.4.44.v20210927:compile -- module org.eclipse.jetty.server [auto]
 [INFO]    javax.servlet:javax.servlet-api:jar:3.1.0:compile -- module javax.servlet.api (auto)
-[INFO]    org.eclipse.jetty:jetty-util:jar:9.4.43.v20210629:compile -- module org.eclipse.jetty.util [auto]
-[INFO]    org.eclipse.jetty:jetty-io:jar:9.4.43.v20210629:compile -- module org.eclipse.jetty.io [auto]
-[INFO]    org.eclipse.jetty:jetty-security:jar:9.4.43.v20210629:compile -- module org.eclipse.jetty.security [auto]
-[INFO]    org.eclipse.jetty:jetty-continuation:jar:9.4.43.v20210629:compile -- module org.eclipse.jetty.continuation [auto]
-[INFO]    org.eclipse.jetty:jetty-http:jar:9.4.43.v20210629:compile -- module org.eclipse.jetty.http [auto]
-[INFO]    org.apache.cxf:cxf-rt-transports-http-hc:jar:3.4.5:compile -- module org.apache.cxf.transport.http.hc [auto]
+[INFO]    org.eclipse.jetty:jetty-util:jar:9.4.44.v20210927:compile -- module org.eclipse.jetty.util [auto]
+[INFO]    org.eclipse.jetty:jetty-io:jar:9.4.44.v20210927:compile -- module org.eclipse.jetty.io [auto]
+[INFO]    org.eclipse.jetty:jetty-security:jar:9.4.44.v20210927:compile -- module org.eclipse.jetty.security [auto]
+[INFO]    org.eclipse.jetty:jetty-continuation:jar:9.4.44.v20210927:compile -- module org.eclipse.jetty.continuation [auto]
+[INFO]    org.eclipse.jetty:jetty-http:jar:9.4.44.v20210927:compile -- module org.eclipse.jetty.http [auto]
+[INFO]    org.apache.cxf:cxf-rt-transports-http-hc:jar:3.5.0:compile -- module org.apache.cxf.transport.http.hc [auto]
 [INFO]    org.apache.httpcomponents:httpcore-nio:jar:4.4.14:compile -- module org.apache.httpcomponents.httpcore.nio [auto]
 [INFO]    org.apache.httpcomponents:httpasyncclient:jar:4.1.4:compile -- module org.apache.httpcomponents.httpasyncclient [auto]
 [INFO]    org.simpleframework:simple-xml:jar:2.7.1:compile -- module simple.xml (auto)
 [INFO]    stax:stax-api:jar:1.0.1:compile -- module stax.api (auto)
 [INFO]    stax:stax:jar:1.2.0:compile -- module stax (auto)
 [INFO]    xpp3:xpp3:jar:1.1.3.3:compile -- module xpp3 (auto)
-[INFO]    com.h2database:h2:jar:1.4.200:compile -- module com.h2database [auto]
+[INFO]    com.h2database:h2:jar:2.0.206:compile -- module com.h2database [auto]
 [INFO]    org.swinglabs:swingx:jar:1.6.1:compile -- module swingx (auto)
 [INFO]    com.jhlabs:filters:jar:2.0.235:compile -- module filters (auto)
 [INFO]    org.swinglabs:swing-worker:jar:1.1:compile -- module swing.worker (auto)
@@ -679,9 +679,9 @@
 [INFO]    de.atb.context:context-core:jar:2.0.0:compile -- module context.core (auto)
 [INFO]    org.slf4j:jcl-over-slf4j:jar:1.7.32:compile -- module org.apache.commons.logging [auto]
 [INFO]    org.slf4j:slf4j-api:jar:1.7.32:compile -- module org.slf4j [auto]
-[INFO]    org.apache.logging.log4j:log4j-slf4j-impl:jar:2.16.0:compile -- module org.apache.logging.log4j.slf4j [auto]
-[INFO]    org.apache.logging.log4j:log4j-api:jar:2.16.0:compile -- module org.apache.logging.log4j
-[INFO]    org.apache.logging.log4j:log4j-core:jar:2.16.0:runtime -- module org.apache.logging.log4j.core [auto]
+[INFO]    org.apache.logging.log4j:log4j-slf4j-impl:jar:2.17.1:compile -- module org.apache.logging.log4j.slf4j [auto]
+[INFO]    org.apache.logging.log4j:log4j-api:jar:2.17.1:compile -- module org.apache.logging.log4j
+[INFO]    org.apache.logging.log4j:log4j-core:jar:2.17.1:runtime -- module org.apache.logging.log4j.core [auto]
 [INFO]    org.apache.commons:commons-collections4:jar:4.4:compile -- module org.apache.commons.collections4 [auto]
 [INFO]    commons-io:commons-io:jar:2.11.0:compile -- module org.apache.commons.io [auto]
 [INFO]    org.apache.commons:commons-lang3:jar:3.12.0:compile -- module org.apache.commons.lang3 [auto]
@@ -689,8 +689,8 @@
 [INFO]    com.jgoodies:jgoodies-common:jar:1.8.1:compile -- module jgoodies.common (auto)
 [INFO]    org.javatuples:javatuples:jar:1.2:compile -- module javatuples (auto)
 [INFO]    net.sf.jpathwatch:jpathwatch:jar:0.95:compile -- module jpathwatch (auto)
-[INFO]    org.apache.lucene:lucene-analyzers-common:jar:8.11.0:compile -- module lucene.analyzers.common (auto)
-[INFO]    org.apache.lucene:lucene-core:jar:8.11.0:compile -- module lucene.core (auto)
+[INFO]    org.apache.lucene:lucene-analyzers-common:jar:8.11.1:compile -- module lucene.analyzers.common (auto)
+[INFO]    org.apache.lucene:lucene-core:jar:8.11.1:compile -- module lucene.core (auto)
 [INFO]    com.github.ansell.pellet:pellet-jena:jar:2.3.6-ansell:compile -- module pellet.jena (auto)
 [INFO]    com.hp.hpl.jena:jena:jar:2.6.4:compile -- module jena (auto)
 [INFO]    com.ibm.icu:icu4j:jar:3.4.4:compile -- module icu4j (auto)
@@ -712,26 +712,26 @@
 [INFO]    com.hp.hpl.jena:tdb:jar:0.8.10:compile -- module tdb (auto)
 [INFO]    com.hp.hpl.jena:sdb:jar:1.3.4:compile -- module sdb (auto)
 [INFO]    com.thewebsemantic:jenabean:jar:1.0.6:compile -- module jenabean (auto)
-[INFO]    org.apache.cxf:cxf-rt-frontend-jaxws:jar:3.4.5:compile -- module org.apache.cxf.frontend.jaxws [auto]
+[INFO]    org.apache.cxf:cxf-rt-frontend-jaxws:jar:3.5.0:compile -- module org.apache.cxf.frontend.jaxws [auto]
 [INFO]    xml-resolver:xml-resolver:jar:1.2:compile -- module xml.resolver (auto)
 [INFO]    org.ow2.asm:asm:jar:9.2:compile -- module org.objectweb.asm
-[INFO]    org.apache.cxf:cxf-core:jar:3.4.5:compile -- module org.apache.cxf.core [auto]
-[INFO]    org.glassfish.jaxb:jaxb-runtime:jar:2.3.4:compile -- module org.glassfish.jaxb.runtime
-[INFO]    org.glassfish.jaxb:txw2:jar:2.3.4:compile -- module com.sun.xml.txw2
+[INFO]    org.apache.cxf:cxf-core:jar:3.5.0:compile -- module org.apache.cxf.core [auto]
+[INFO]    org.glassfish.jaxb:jaxb-runtime:jar:2.3.5:compile -- module org.glassfish.jaxb.runtime
+[INFO]    org.glassfish.jaxb:txw2:jar:2.3.5:compile -- module com.sun.xml.txw2
 [INFO]    com.sun.istack:istack-commons-runtime:jar:3.0.12:compile -- module com.sun.istack.runtime
-[INFO]    com.fasterxml.woodstox:woodstox-core:jar:6.2.6:compile -- module com.ctc.wstx
+[INFO]    com.fasterxml.woodstox:woodstox-core:jar:6.2.7:compile -- module com.ctc.wstx
 [INFO]    org.codehaus.woodstox:stax2-api:jar:4.2.1:compile -- module org.codehaus.stax2
-[INFO]    org.apache.ws.xmlschema:xmlschema-core:jar:2.2.5:compile -- module xmlschema.core (auto)
+[INFO]    org.apache.ws.xmlschema:xmlschema-core:jar:2.3.0:compile -- module xmlschema.core (auto)
 [INFO]    jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:compile -- module java.xml.bind
-[INFO]    org.apache.cxf:cxf-rt-bindings-soap:jar:3.4.5:compile -- module org.apache.cxf.binding.soap [auto]
-[INFO]    org.apache.cxf:cxf-rt-wsdl:jar:3.4.5:compile -- module org.apache.cxf.wsdl [auto]
+[INFO]    org.apache.cxf:cxf-rt-bindings-soap:jar:3.5.0:compile -- module org.apache.cxf.binding.soap [auto]
+[INFO]    org.apache.cxf:cxf-rt-wsdl:jar:3.5.0:compile -- module org.apache.cxf.wsdl [auto]
 [INFO]    wsdl4j:wsdl4j:jar:1.6.3:compile -- module wsdl4j (auto)
-[INFO]    org.apache.cxf:cxf-rt-databinding-jaxb:jar:3.4.5:compile -- module org.apache.cxf.databinding.jaxb [auto]
-[INFO]    org.apache.cxf:cxf-rt-bindings-xml:jar:3.4.5:compile -- module org.apache.cxf.binding.xml [auto]
-[INFO]    org.apache.cxf:cxf-rt-frontend-simple:jar:3.4.5:compile -- module org.apache.cxf.frontend.simple [auto]
-[INFO]    org.apache.cxf:cxf-rt-ws-addr:jar:3.4.5:compile -- module org.apache.cxf.ws.addr [auto]
-[INFO]    org.apache.cxf:cxf-rt-ws-policy:jar:3.4.5:compile -- module org.apache.cxf.ws.policy [auto]
-[INFO]    org.apache.neethi:neethi:jar:3.1.1:compile -- module neethi (auto)
+[INFO]    org.apache.cxf:cxf-rt-databinding-jaxb:jar:3.5.0:compile -- module org.apache.cxf.databinding.jaxb [auto]
+[INFO]    org.apache.cxf:cxf-rt-bindings-xml:jar:3.5.0:compile -- module org.apache.cxf.binding.xml [auto]
+[INFO]    org.apache.cxf:cxf-rt-frontend-simple:jar:3.5.0:compile -- module org.apache.cxf.frontend.simple [auto]
+[INFO]    org.apache.cxf:cxf-rt-ws-addr:jar:3.5.0:compile -- module org.apache.cxf.ws.addr [auto]
+[INFO]    org.apache.cxf:cxf-rt-ws-policy:jar:3.5.0:compile -- module org.apache.cxf.ws.policy [auto]
+[INFO]    org.apache.neethi:neethi:jar:3.2.0:compile -- module neethi (auto)
 [INFO]    jakarta.annotation:jakarta.annotation-api:jar:1.3.5:compile -- module java.annotation [auto]
 [INFO]    jakarta.xml.ws:jakarta.xml.ws-api:jar:2.3.3:compile -- module java.xml.ws
 [INFO]    jakarta.jws:jakarta.jws-api:jar:2.1.0:compile -- module java.jws
@@ -741,23 +741,23 @@
 [INFO]    com.sun.xml.messaging.saaj:saaj-impl:jar:1.5.3:runtime -- module com.sun.xml.messaging.saaj
 [INFO]    org.jvnet.staxex:stax-ex:jar:1.8.3:runtime -- module org.jvnet.staxex
 [INFO]    org.apache.geronimo.specs:geronimo-jta_1.1_spec:jar:1.1.1:compile
-[INFO]    org.apache.cxf:cxf-rt-transports-http-jetty:jar:3.4.5:compile -- module org.apache.cxf.transport.http.jetty [auto]
-[INFO]    org.apache.cxf:cxf-rt-transports-http:jar:3.4.5:compile -- module org.apache.cxf.transport.http [auto]
-[INFO]    org.eclipse.jetty:jetty-server:jar:9.4.43.v20210629:compile -- module org.eclipse.jetty.server [auto]
+[INFO]    org.apache.cxf:cxf-rt-transports-http-jetty:jar:3.5.0:compile -- module org.apache.cxf.transport.http.jetty [auto]
+[INFO]    org.apache.cxf:cxf-rt-transports-http:jar:3.5.0:compile -- module org.apache.cxf.transport.http [auto]
+[INFO]    org.eclipse.jetty:jetty-server:jar:9.4.44.v20210927:compile -- module org.eclipse.jetty.server [auto]
 [INFO]    javax.servlet:javax.servlet-api:jar:3.1.0:compile -- module javax.servlet.api (auto)
-[INFO]    org.eclipse.jetty:jetty-util:jar:9.4.43.v20210629:compile -- module org.eclipse.jetty.util [auto]
-[INFO]    org.eclipse.jetty:jetty-io:jar:9.4.43.v20210629:compile -- module org.eclipse.jetty.io [auto]
-[INFO]    org.eclipse.jetty:jetty-security:jar:9.4.43.v20210629:compile -- module org.eclipse.jetty.security [auto]
-[INFO]    org.eclipse.jetty:jetty-continuation:jar:9.4.43.v20210629:compile -- module org.eclipse.jetty.continuation [auto]
-[INFO]    org.eclipse.jetty:jetty-http:jar:9.4.43.v20210629:compile -- module org.eclipse.jetty.http [auto]
-[INFO]    org.apache.cxf:cxf-rt-transports-http-hc:jar:3.4.5:compile -- module org.apache.cxf.transport.http.hc [auto]
+[INFO]    org.eclipse.jetty:jetty-util:jar:9.4.44.v20210927:compile -- module org.eclipse.jetty.util [auto]
+[INFO]    org.eclipse.jetty:jetty-io:jar:9.4.44.v20210927:compile -- module org.eclipse.jetty.io [auto]
+[INFO]    org.eclipse.jetty:jetty-security:jar:9.4.44.v20210927:compile -- module org.eclipse.jetty.security [auto]
+[INFO]    org.eclipse.jetty:jetty-continuation:jar:9.4.44.v20210927:compile -- module org.eclipse.jetty.continuation [auto]
+[INFO]    org.eclipse.jetty:jetty-http:jar:9.4.44.v20210927:compile -- module org.eclipse.jetty.http [auto]
+[INFO]    org.apache.cxf:cxf-rt-transports-http-hc:jar:3.5.0:compile -- module org.apache.cxf.transport.http.hc [auto]
 [INFO]    org.apache.httpcomponents:httpcore-nio:jar:4.4.14:compile -- module org.apache.httpcomponents.httpcore.nio [auto]
 [INFO]    org.apache.httpcomponents:httpasyncclient:jar:4.1.4:compile -- module org.apache.httpcomponents.httpasyncclient [auto]
 [INFO]    org.simpleframework:simple-xml:jar:2.7.1:compile -- module simple.xml (auto)
 [INFO]    stax:stax-api:jar:1.0.1:compile -- module stax.api (auto)
 [INFO]    stax:stax:jar:1.2.0:compile -- module stax (auto)
 [INFO]    xpp3:xpp3:jar:1.1.3.3:compile -- module xpp3 (auto)
-[INFO]    com.h2database:h2:jar:1.4.200:compile -- module com.h2database [auto]
+[INFO]    com.h2database:h2:jar:2.0.206:compile -- module com.h2database [auto]
 [INFO]    org.swinglabs:swingx:jar:1.6.1:compile -- module swingx (auto)
 [INFO]    com.jhlabs:filters:jar:2.0.235:compile -- module filters (auto)
 [INFO]    org.swinglabs:swing-worker:jar:1.1:compile -- module swing.worker (auto)
@@ -884,14 +884,14 @@
 [INFO] ------------------------------------------------------------------------
 [INFO] Reactor Summary for ATB Context Parent 2.0.0:
 [INFO] 
-[INFO] ATB Context Parent ................................. SUCCESS [  4.486 s]
-[INFO] ATB Context Extraction Core Lib .................... SUCCESS [  3.913 s]
-[INFO] ATB Context Monitoring Core Services ............... SUCCESS [  0.912 s]
-[INFO] ATB Context Extraction Core Service ................ SUCCESS [  0.615 s]
-[INFO] SmartCLIDE Monitoring .............................. SUCCESS [  0.656 s]
+[INFO] ATB Context Parent ................................. SUCCESS [  3.129 s]
+[INFO] ATB Context Extraction Core Lib .................... SUCCESS [  3.381 s]
+[INFO] ATB Context Monitoring Core Services ............... SUCCESS [  1.337 s]
+[INFO] ATB Context Extraction Core Service ................ SUCCESS [  1.378 s]
+[INFO] SmartCLIDE Monitoring .............................. SUCCESS [  1.656 s]
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  11.844 s
-[INFO] Finished at: 2021-12-16T17:55:13+01:00
+[INFO] Total time:  12.169 s
+[INFO] Finished at: 2022-01-10T09:19:19+01:00
 [INFO] ------------------------------------------------------------------------

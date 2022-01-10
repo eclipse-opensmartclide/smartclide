@@ -9,6 +9,7 @@ Already up to date.
 [INFO] --------------------------------[ jar ]---------------------------------
 [INFO] 
 [INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ spring-websocket ---
+[INFO] Deleting /Users/philippe/git/smartclide-broker/target
 [INFO] 
 [INFO] --- maven-resources-plugin:3.2.0:resources (default-resources) @ spring-websocket ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
@@ -44,8 +45,8 @@ Already up to date.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  8.448 s
-[INFO] Finished at: 2021-12-16T17:53:29+01:00
+[INFO] Total time:  13.385 s
+[INFO] Finished at: 2022-01-10T09:14:28+01:00
 [INFO] ------------------------------------------------------------------------
 : mvn dependency:list > /Users/philippe/git/smartclide/IPCheck/analysis/smartclide-broker/01-dependency_list.txt
 : mvn dependency:tree > /Users/philippe/git/smartclide/IPCheck/analysis/smartclide-broker/01-dependency_tree.txt

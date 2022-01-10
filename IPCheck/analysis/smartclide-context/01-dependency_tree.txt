@@ -29,9 +29,9 @@
 [INFO] de.atb.context:context-core:jar:2.0.0
 [INFO] +- org.slf4j:jcl-over-slf4j:jar:1.7.32:compile
 [INFO] |  \- org.slf4j:slf4j-api:jar:1.7.32:compile
-[INFO] +- org.apache.logging.log4j:log4j-slf4j-impl:jar:2.16.0:compile
-[INFO] |  +- org.apache.logging.log4j:log4j-api:jar:2.16.0:compile
-[INFO] |  \- org.apache.logging.log4j:log4j-core:jar:2.16.0:runtime
+[INFO] +- org.apache.logging.log4j:log4j-slf4j-impl:jar:2.17.1:compile
+[INFO] |  +- org.apache.logging.log4j:log4j-api:jar:2.17.1:compile
+[INFO] |  \- org.apache.logging.log4j:log4j-core:jar:2.17.1:runtime
 [INFO] +- org.apache.commons:commons-collections4:jar:4.4:compile
 [INFO] +- commons-io:commons-io:jar:2.11.0:compile
 [INFO] +- org.apache.commons:commons-lang3:jar:3.12.0:compile
@@ -40,8 +40,8 @@
 [INFO] +- javax:javaee-web-api:jar:8.0.1:provided
 [INFO] +- org.javatuples:javatuples:jar:1.2:compile
 [INFO] +- net.sf.jpathwatch:jpathwatch:jar:0.95:compile
-[INFO] +- org.apache.lucene:lucene-analyzers-common:jar:8.11.0:compile
-[INFO] |  \- org.apache.lucene:lucene-core:jar:8.11.0:compile
+[INFO] +- org.apache.lucene:lucene-analyzers-common:jar:8.11.1:compile
+[INFO] |  \- org.apache.lucene:lucene-core:jar:8.11.1:compile
 [INFO] +- com.github.ansell.pellet:pellet-jena:jar:2.3.6-ansell:compile
 [INFO] |  +- com.hp.hpl.jena:jena:jar:2.6.4:compile
 [INFO] |  |  +- com.ibm.icu:icu4j:jar:3.4.4:compile
@@ -63,26 +63,26 @@
 [INFO] +- com.hp.hpl.jena:tdb:jar:0.8.10:compile
 [INFO] +- com.hp.hpl.jena:sdb:jar:1.3.4:compile
 [INFO] +- com.thewebsemantic:jenabean:jar:1.0.6:compile
-[INFO] +- org.apache.cxf:cxf-rt-frontend-jaxws:jar:3.4.5:compile
+[INFO] +- org.apache.cxf:cxf-rt-frontend-jaxws:jar:3.5.0:compile
 [INFO] |  +- xml-resolver:xml-resolver:jar:1.2:compile
 [INFO] |  +- org.ow2.asm:asm:jar:9.2:compile
-[INFO] |  +- org.apache.cxf:cxf-core:jar:3.4.5:compile
-[INFO] |  |  +- org.glassfish.jaxb:jaxb-runtime:jar:2.3.4:compile
-[INFO] |  |  |  +- org.glassfish.jaxb:txw2:jar:2.3.4:compile
+[INFO] |  +- org.apache.cxf:cxf-core:jar:3.5.0:compile
+[INFO] |  |  +- org.glassfish.jaxb:jaxb-runtime:jar:2.3.5:compile
+[INFO] |  |  |  +- org.glassfish.jaxb:txw2:jar:2.3.5:compile
 [INFO] |  |  |  \- com.sun.istack:istack-commons-runtime:jar:3.0.12:compile
-[INFO] |  |  +- com.fasterxml.woodstox:woodstox-core:jar:6.2.6:compile
+[INFO] |  |  +- com.fasterxml.woodstox:woodstox-core:jar:6.2.7:compile
 [INFO] |  |  |  \- org.codehaus.woodstox:stax2-api:jar:4.2.1:compile
-[INFO] |  |  +- org.apache.ws.xmlschema:xmlschema-core:jar:2.2.5:compile
+[INFO] |  |  +- org.apache.ws.xmlschema:xmlschema-core:jar:2.3.0:compile
 [INFO] |  |  \- jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:compile
-[INFO] |  +- org.apache.cxf:cxf-rt-bindings-soap:jar:3.4.5:compile
-[INFO] |  |  +- org.apache.cxf:cxf-rt-wsdl:jar:3.4.5:compile
+[INFO] |  +- org.apache.cxf:cxf-rt-bindings-soap:jar:3.5.0:compile
+[INFO] |  |  +- org.apache.cxf:cxf-rt-wsdl:jar:3.5.0:compile
 [INFO] |  |  |  \- wsdl4j:wsdl4j:jar:1.6.3:compile
-[INFO] |  |  \- org.apache.cxf:cxf-rt-databinding-jaxb:jar:3.4.5:compile
-[INFO] |  +- org.apache.cxf:cxf-rt-bindings-xml:jar:3.4.5:compile
-[INFO] |  +- org.apache.cxf:cxf-rt-frontend-simple:jar:3.4.5:compile
-[INFO] |  +- org.apache.cxf:cxf-rt-ws-addr:jar:3.4.5:compile
-[INFO] |  |  \- org.apache.cxf:cxf-rt-ws-policy:jar:3.4.5:compile
-[INFO] |  |     \- org.apache.neethi:neethi:jar:3.1.1:compile
+[INFO] |  |  \- org.apache.cxf:cxf-rt-databinding-jaxb:jar:3.5.0:compile
+[INFO] |  +- org.apache.cxf:cxf-rt-bindings-xml:jar:3.5.0:compile
+[INFO] |  +- org.apache.cxf:cxf-rt-frontend-simple:jar:3.5.0:compile
+[INFO] |  +- org.apache.cxf:cxf-rt-ws-addr:jar:3.5.0:compile
+[INFO] |  |  \- org.apache.cxf:cxf-rt-ws-policy:jar:3.5.0:compile
+[INFO] |  |     \- org.apache.neethi:neethi:jar:3.2.0:compile
 [INFO] |  +- jakarta.annotation:jakarta.annotation-api:jar:1.3.5:compile
 [INFO] |  +- jakarta.xml.ws:jakarta.xml.ws-api:jar:2.3.3:compile
 [INFO] |  +- jakarta.jws:jakarta.jws-api:jar:2.1.0:compile
@@ -92,16 +92,16 @@
 [INFO] |  +- com.sun.xml.messaging.saaj:saaj-impl:jar:1.5.3:runtime
 [INFO] |  |  \- org.jvnet.staxex:stax-ex:jar:1.8.3:runtime
 [INFO] |  \- org.apache.geronimo.specs:geronimo-jta_1.1_spec:jar:1.1.1:compile
-[INFO] +- org.apache.cxf:cxf-rt-transports-http-jetty:jar:3.4.5:compile
-[INFO] |  +- org.apache.cxf:cxf-rt-transports-http:jar:3.4.5:compile
-[INFO] |  +- org.eclipse.jetty:jetty-server:jar:9.4.43.v20210629:compile
+[INFO] +- org.apache.cxf:cxf-rt-transports-http-jetty:jar:3.5.0:compile
+[INFO] |  +- org.apache.cxf:cxf-rt-transports-http:jar:3.5.0:compile
+[INFO] |  +- org.eclipse.jetty:jetty-server:jar:9.4.44.v20210927:compile
 [INFO] |  |  \- javax.servlet:javax.servlet-api:jar:3.1.0:compile
-[INFO] |  +- org.eclipse.jetty:jetty-util:jar:9.4.43.v20210629:compile
-[INFO] |  +- org.eclipse.jetty:jetty-io:jar:9.4.43.v20210629:compile
-[INFO] |  +- org.eclipse.jetty:jetty-security:jar:9.4.43.v20210629:compile
-[INFO] |  +- org.eclipse.jetty:jetty-continuation:jar:9.4.43.v20210629:compile
-[INFO] |  \- org.eclipse.jetty:jetty-http:jar:9.4.43.v20210629:compile
-[INFO] +- org.apache.cxf:cxf-rt-transports-http-hc:jar:3.4.5:compile
+[INFO] |  +- org.eclipse.jetty:jetty-util:jar:9.4.44.v20210927:compile
+[INFO] |  +- org.eclipse.jetty:jetty-io:jar:9.4.44.v20210927:compile
+[INFO] |  +- org.eclipse.jetty:jetty-security:jar:9.4.44.v20210927:compile
+[INFO] |  +- org.eclipse.jetty:jetty-continuation:jar:9.4.44.v20210927:compile
+[INFO] |  \- org.eclipse.jetty:jetty-http:jar:9.4.44.v20210927:compile
+[INFO] +- org.apache.cxf:cxf-rt-transports-http-hc:jar:3.5.0:compile
 [INFO] |  +- org.apache.httpcomponents:httpcore-nio:jar:4.4.14:compile
 [INFO] |  |  \- org.apache.httpcomponents:httpcore:jar:4.4.14:compile
 [INFO] |  \- org.apache.httpcomponents:httpasyncclient:jar:4.1.4:compile
@@ -111,7 +111,7 @@
 [INFO] |  +- stax:stax-api:jar:1.0.1:compile
 [INFO] |  +- stax:stax:jar:1.2.0:compile
 [INFO] |  \- xpp3:xpp3:jar:1.1.3.3:compile
-[INFO] +- com.h2database:h2:jar:1.4.200:compile
+[INFO] +- com.h2database:h2:jar:2.0.206:compile
 [INFO] +- org.swinglabs:swingx:jar:1.6.1:compile
 [INFO] |  +- com.jhlabs:filters:jar:2.0.235:compile
 [INFO] |  \- org.swinglabs:swing-worker:jar:1.1:compile
@@ -224,9 +224,9 @@
 [INFO] +- de.atb.context:context-core:jar:2.0.0:compile
 [INFO] |  +- org.slf4j:jcl-over-slf4j:jar:1.7.32:compile
 [INFO] |  |  \- org.slf4j:slf4j-api:jar:1.7.32:compile
-[INFO] |  +- org.apache.logging.log4j:log4j-slf4j-impl:jar:2.16.0:compile
-[INFO] |  |  +- org.apache.logging.log4j:log4j-api:jar:2.16.0:compile
-[INFO] |  |  \- org.apache.logging.log4j:log4j-core:jar:2.16.0:runtime
+[INFO] |  +- org.apache.logging.log4j:log4j-slf4j-impl:jar:2.17.1:compile
+[INFO] |  |  +- org.apache.logging.log4j:log4j-api:jar:2.17.1:compile
+[INFO] |  |  \- org.apache.logging.log4j:log4j-core:jar:2.17.1:runtime
 [INFO] |  +- org.apache.commons:commons-collections4:jar:4.4:compile
 [INFO] |  +- commons-io:commons-io:jar:2.11.0:compile
 [INFO] |  +- org.apache.commons:commons-lang3:jar:3.12.0:compile
@@ -234,8 +234,8 @@
 [INFO] |  |  \- com.jgoodies:jgoodies-common:jar:1.8.1:compile
 [INFO] |  +- org.javatuples:javatuples:jar:1.2:compile
 [INFO] |  +- net.sf.jpathwatch:jpathwatch:jar:0.95:compile
-[INFO] |  +- org.apache.lucene:lucene-analyzers-common:jar:8.11.0:compile
-[INFO] |  |  \- org.apache.lucene:lucene-core:jar:8.11.0:compile
+[INFO] |  +- org.apache.lucene:lucene-analyzers-common:jar:8.11.1:compile
+[INFO] |  |  \- org.apache.lucene:lucene-core:jar:8.11.1:compile
 [INFO] |  +- com.github.ansell.pellet:pellet-jena:jar:2.3.6-ansell:compile
 [INFO] |  |  +- com.hp.hpl.jena:jena:jar:2.6.4:compile
 [INFO] |  |  |  +- com.ibm.icu:icu4j:jar:3.4.4:compile
@@ -257,26 +257,26 @@
 [INFO] |  +- com.hp.hpl.jena:tdb:jar:0.8.10:compile
 [INFO] |  +- com.hp.hpl.jena:sdb:jar:1.3.4:compile
 [INFO] |  +- com.thewebsemantic:jenabean:jar:1.0.6:compile
-[INFO] |  +- org.apache.cxf:cxf-rt-frontend-jaxws:jar:3.4.5:compile
+[INFO] |  +- org.apache.cxf:cxf-rt-frontend-jaxws:jar:3.5.0:compile
 [INFO] |  |  +- xml-resolver:xml-resolver:jar:1.2:compile
 [INFO] |  |  +- org.ow2.asm:asm:jar:9.2:compile
-[INFO] |  |  +- org.apache.cxf:cxf-core:jar:3.4.5:compile
-[INFO] |  |  |  +- org.glassfish.jaxb:jaxb-runtime:jar:2.3.4:compile
-[INFO] |  |  |  |  +- org.glassfish.jaxb:txw2:jar:2.3.4:compile
+[INFO] |  |  +- org.apache.cxf:cxf-core:jar:3.5.0:compile
+[INFO] |  |  |  +- org.glassfish.jaxb:jaxb-runtime:jar:2.3.5:compile
+[INFO] |  |  |  |  +- org.glassfish.jaxb:txw2:jar:2.3.5:compile
 [INFO] |  |  |  |  \- com.sun.istack:istack-commons-runtime:jar:3.0.12:compile
-[INFO] |  |  |  +- com.fasterxml.woodstox:woodstox-core:jar:6.2.6:compile
+[INFO] |  |  |  +- com.fasterxml.woodstox:woodstox-core:jar:6.2.7:compile
 [INFO] |  |  |  |  \- org.codehaus.woodstox:stax2-api:jar:4.2.1:compile
-[INFO] |  |  |  +- org.apache.ws.xmlschema:xmlschema-core:jar:2.2.5:compile
+[INFO] |  |  |  +- org.apache.ws.xmlschema:xmlschema-core:jar:2.3.0:compile
 [INFO] |  |  |  \- jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:compile
-[INFO] |  |  +- org.apache.cxf:cxf-rt-bindings-soap:jar:3.4.5:compile
-[INFO] |  |  |  +- org.apache.cxf:cxf-rt-wsdl:jar:3.4.5:compile
+[INFO] |  |  +- org.apache.cxf:cxf-rt-bindings-soap:jar:3.5.0:compile
+[INFO] |  |  |  +- org.apache.cxf:cxf-rt-wsdl:jar:3.5.0:compile
 [INFO] |  |  |  |  \- wsdl4j:wsdl4j:jar:1.6.3:compile
-[INFO] |  |  |  \- org.apache.cxf:cxf-rt-databinding-jaxb:jar:3.4.5:compile
-[INFO] |  |  +- org.apache.cxf:cxf-rt-bindings-xml:jar:3.4.5:compile
-[INFO] |  |  +- org.apache.cxf:cxf-rt-frontend-simple:jar:3.4.5:compile
-[INFO] |  |  +- org.apache.cxf:cxf-rt-ws-addr:jar:3.4.5:compile
-[INFO] |  |  |  \- org.apache.cxf:cxf-rt-ws-policy:jar:3.4.5:compile
-[INFO] |  |  |     \- org.apache.neethi:neethi:jar:3.1.1:compile
+[INFO] |  |  |  \- org.apache.cxf:cxf-rt-databinding-jaxb:jar:3.5.0:compile
+[INFO] |  |  +- org.apache.cxf:cxf-rt-bindings-xml:jar:3.5.0:compile
+[INFO] |  |  +- org.apache.cxf:cxf-rt-frontend-simple:jar:3.5.0:compile
+[INFO] |  |  +- org.apache.cxf:cxf-rt-ws-addr:jar:3.5.0:compile
+[INFO] |  |  |  \- org.apache.cxf:cxf-rt-ws-policy:jar:3.5.0:compile
+[INFO] |  |  |     \- org.apache.neethi:neethi:jar:3.2.0:compile
 [INFO] |  |  +- jakarta.annotation:jakarta.annotation-api:jar:1.3.5:compile
 [INFO] |  |  +- jakarta.xml.ws:jakarta.xml.ws-api:jar:2.3.3:compile
 [INFO] |  |  +- jakarta.jws:jakarta.jws-api:jar:2.1.0:compile
@@ -286,23 +286,23 @@
 [INFO] |  |  +- com.sun.xml.messaging.saaj:saaj-impl:jar:1.5.3:runtime
 [INFO] |  |  |  \- org.jvnet.staxex:stax-ex:jar:1.8.3:runtime
 [INFO] |  |  \- org.apache.geronimo.specs:geronimo-jta_1.1_spec:jar:1.1.1:compile
-[INFO] |  +- org.apache.cxf:cxf-rt-transports-http-jetty:jar:3.4.5:compile
-[INFO] |  |  +- org.apache.cxf:cxf-rt-transports-http:jar:3.4.5:compile
-[INFO] |  |  +- org.eclipse.jetty:jetty-server:jar:9.4.43.v20210629:compile
+[INFO] |  +- org.apache.cxf:cxf-rt-transports-http-jetty:jar:3.5.0:compile
+[INFO] |  |  +- org.apache.cxf:cxf-rt-transports-http:jar:3.5.0:compile
+[INFO] |  |  +- org.eclipse.jetty:jetty-server:jar:9.4.44.v20210927:compile
 [INFO] |  |  |  \- javax.servlet:javax.servlet-api:jar:3.1.0:compile
-[INFO] |  |  +- org.eclipse.jetty:jetty-util:jar:9.4.43.v20210629:compile
-[INFO] |  |  +- org.eclipse.jetty:jetty-io:jar:9.4.43.v20210629:compile
-[INFO] |  |  +- org.eclipse.jetty:jetty-security:jar:9.4.43.v20210629:compile
-[INFO] |  |  +- org.eclipse.jetty:jetty-continuation:jar:9.4.43.v20210629:compile
-[INFO] |  |  \- org.eclipse.jetty:jetty-http:jar:9.4.43.v20210629:compile
-[INFO] |  +- org.apache.cxf:cxf-rt-transports-http-hc:jar:3.4.5:compile
+[INFO] |  |  +- org.eclipse.jetty:jetty-util:jar:9.4.44.v20210927:compile
+[INFO] |  |  +- org.eclipse.jetty:jetty-io:jar:9.4.44.v20210927:compile
+[INFO] |  |  +- org.eclipse.jetty:jetty-security:jar:9.4.44.v20210927:compile
+[INFO] |  |  +- org.eclipse.jetty:jetty-continuation:jar:9.4.44.v20210927:compile
+[INFO] |  |  \- org.eclipse.jetty:jetty-http:jar:9.4.44.v20210927:compile
+[INFO] |  +- org.apache.cxf:cxf-rt-transports-http-hc:jar:3.5.0:compile
 [INFO] |  |  +- org.apache.httpcomponents:httpcore-nio:jar:4.4.14:compile
 [INFO] |  |  \- org.apache.httpcomponents:httpasyncclient:jar:4.1.4:compile
 [INFO] |  +- org.simpleframework:simple-xml:jar:2.7.1:compile
 [INFO] |  |  +- stax:stax-api:jar:1.0.1:compile
 [INFO] |  |  +- stax:stax:jar:1.2.0:compile
 [INFO] |  |  \- xpp3:xpp3:jar:1.1.3.3:compile
-[INFO] |  +- com.h2database:h2:jar:1.4.200:compile
+[INFO] |  +- com.h2database:h2:jar:2.0.206:compile
 [INFO] |  +- org.swinglabs:swingx:jar:1.6.1:compile
 [INFO] |  |  +- com.jhlabs:filters:jar:2.0.235:compile
 [INFO] |  |  \- org.swinglabs:swing-worker:jar:1.1:compile
@@ -440,9 +440,9 @@
 [INFO] |  +- de.atb.context:context-core:jar:2.0.0:compile
 [INFO] |  |  +- org.slf4j:jcl-over-slf4j:jar:1.7.32:compile
 [INFO] |  |  |  \- org.slf4j:slf4j-api:jar:1.7.32:compile
-[INFO] |  |  +- org.apache.logging.log4j:log4j-slf4j-impl:jar:2.16.0:compile
-[INFO] |  |  |  +- org.apache.logging.log4j:log4j-api:jar:2.16.0:compile
-[INFO] |  |  |  \- org.apache.logging.log4j:log4j-core:jar:2.16.0:runtime
+[INFO] |  |  +- org.apache.logging.log4j:log4j-slf4j-impl:jar:2.17.1:compile
+[INFO] |  |  |  +- org.apache.logging.log4j:log4j-api:jar:2.17.1:compile
+[INFO] |  |  |  \- org.apache.logging.log4j:log4j-core:jar:2.17.1:runtime
 [INFO] |  |  +- org.apache.commons:commons-collections4:jar:4.4:compile
 [INFO] |  |  +- commons-io:commons-io:jar:2.11.0:compile
 [INFO] |  |  +- org.apache.commons:commons-lang3:jar:3.12.0:compile
@@ -450,8 +450,8 @@
 [INFO] |  |  |  \- com.jgoodies:jgoodies-common:jar:1.8.1:compile
 [INFO] |  |  +- org.javatuples:javatuples:jar:1.2:compile
 [INFO] |  |  +- net.sf.jpathwatch:jpathwatch:jar:0.95:compile
-[INFO] |  |  +- org.apache.lucene:lucene-analyzers-common:jar:8.11.0:compile
-[INFO] |  |  |  \- org.apache.lucene:lucene-core:jar:8.11.0:compile
+[INFO] |  |  +- org.apache.lucene:lucene-analyzers-common:jar:8.11.1:compile
+[INFO] |  |  |  \- org.apache.lucene:lucene-core:jar:8.11.1:compile
 [INFO] |  |  +- com.github.ansell.pellet:pellet-jena:jar:2.3.6-ansell:compile
 [INFO] |  |  |  +- com.hp.hpl.jena:jena:jar:2.6.4:compile
 [INFO] |  |  |  |  +- com.ibm.icu:icu4j:jar:3.4.4:compile
@@ -473,26 +473,26 @@
 [INFO] |  |  +- com.hp.hpl.jena:tdb:jar:0.8.10:compile
 [INFO] |  |  +- com.hp.hpl.jena:sdb:jar:1.3.4:compile
 [INFO] |  |  +- com.thewebsemantic:jenabean:jar:1.0.6:compile
-[INFO] |  |  +- org.apache.cxf:cxf-rt-frontend-jaxws:jar:3.4.5:compile
+[INFO] |  |  +- org.apache.cxf:cxf-rt-frontend-jaxws:jar:3.5.0:compile
 [INFO] |  |  |  +- xml-resolver:xml-resolver:jar:1.2:compile
 [INFO] |  |  |  +- org.ow2.asm:asm:jar:9.2:compile
-[INFO] |  |  |  +- org.apache.cxf:cxf-core:jar:3.4.5:compile
-[INFO] |  |  |  |  +- org.glassfish.jaxb:jaxb-runtime:jar:2.3.4:compile
-[INFO] |  |  |  |  |  +- org.glassfish.jaxb:txw2:jar:2.3.4:compile
+[INFO] |  |  |  +- org.apache.cxf:cxf-core:jar:3.5.0:compile
+[INFO] |  |  |  |  +- org.glassfish.jaxb:jaxb-runtime:jar:2.3.5:compile
+[INFO] |  |  |  |  |  +- org.glassfish.jaxb:txw2:jar:2.3.5:compile
 [INFO] |  |  |  |  |  \- com.sun.istack:istack-commons-runtime:jar:3.0.12:compile
-[INFO] |  |  |  |  +- com.fasterxml.woodstox:woodstox-core:jar:6.2.6:compile
+[INFO] |  |  |  |  +- com.fasterxml.woodstox:woodstox-core:jar:6.2.7:compile
 [INFO] |  |  |  |  |  \- org.codehaus.woodstox:stax2-api:jar:4.2.1:compile
-[INFO] |  |  |  |  +- org.apache.ws.xmlschema:xmlschema-core:jar:2.2.5:compile
+[INFO] |  |  |  |  +- org.apache.ws.xmlschema:xmlschema-core:jar:2.3.0:compile
 [INFO] |  |  |  |  \- jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:compile
-[INFO] |  |  |  +- org.apache.cxf:cxf-rt-bindings-soap:jar:3.4.5:compile
-[INFO] |  |  |  |  +- org.apache.cxf:cxf-rt-wsdl:jar:3.4.5:compile
+[INFO] |  |  |  +- org.apache.cxf:cxf-rt-bindings-soap:jar:3.5.0:compile
+[INFO] |  |  |  |  +- org.apache.cxf:cxf-rt-wsdl:jar:3.5.0:compile
 [INFO] |  |  |  |  |  \- wsdl4j:wsdl4j:jar:1.6.3:compile
-[INFO] |  |  |  |  \- org.apache.cxf:cxf-rt-databinding-jaxb:jar:3.4.5:compile
-[INFO] |  |  |  +- org.apache.cxf:cxf-rt-bindings-xml:jar:3.4.5:compile
-[INFO] |  |  |  +- org.apache.cxf:cxf-rt-frontend-simple:jar:3.4.5:compile
-[INFO] |  |  |  +- org.apache.cxf:cxf-rt-ws-addr:jar:3.4.5:compile
-[INFO] |  |  |  |  \- org.apache.cxf:cxf-rt-ws-policy:jar:3.4.5:compile
-[INFO] |  |  |  |     \- org.apache.neethi:neethi:jar:3.1.1:compile
+[INFO] |  |  |  |  \- org.apache.cxf:cxf-rt-databinding-jaxb:jar:3.5.0:compile
+[INFO] |  |  |  +- org.apache.cxf:cxf-rt-bindings-xml:jar:3.5.0:compile
+[INFO] |  |  |  +- org.apache.cxf:cxf-rt-frontend-simple:jar:3.5.0:compile
+[INFO] |  |  |  +- org.apache.cxf:cxf-rt-ws-addr:jar:3.5.0:compile
+[INFO] |  |  |  |  \- org.apache.cxf:cxf-rt-ws-policy:jar:3.5.0:compile
+[INFO] |  |  |  |     \- org.apache.neethi:neethi:jar:3.2.0:compile
 [INFO] |  |  |  +- jakarta.annotation:jakarta.annotation-api:jar:1.3.5:compile
 [INFO] |  |  |  +- jakarta.xml.ws:jakarta.xml.ws-api:jar:2.3.3:compile
 [INFO] |  |  |  +- jakarta.jws:jakarta.jws-api:jar:2.1.0:compile
@@ -502,23 +502,23 @@
 [INFO] |  |  |  +- com.sun.xml.messaging.saaj:saaj-impl:jar:1.5.3:runtime
 [INFO] |  |  |  |  \- org.jvnet.staxex:stax-ex:jar:1.8.3:runtime
 [INFO] |  |  |  \- org.apache.geronimo.specs:geronimo-jta_1.1_spec:jar:1.1.1:compile
-[INFO] |  |  +- org.apache.cxf:cxf-rt-transports-http-jetty:jar:3.4.5:compile
-[INFO] |  |  |  +- org.apache.cxf:cxf-rt-transports-http:jar:3.4.5:compile
-[INFO] |  |  |  +- org.eclipse.jetty:jetty-server:jar:9.4.43.v20210629:compile
+[INFO] |  |  +- org.apache.cxf:cxf-rt-transports-http-jetty:jar:3.5.0:compile
+[INFO] |  |  |  +- org.apache.cxf:cxf-rt-transports-http:jar:3.5.0:compile
+[INFO] |  |  |  +- org.eclipse.jetty:jetty-server:jar:9.4.44.v20210927:compile
 [INFO] |  |  |  |  \- javax.servlet:javax.servlet-api:jar:3.1.0:compile
-[INFO] |  |  |  +- org.eclipse.jetty:jetty-util:jar:9.4.43.v20210629:compile
-[INFO] |  |  |  +- org.eclipse.jetty:jetty-io:jar:9.4.43.v20210629:compile
-[INFO] |  |  |  +- org.eclipse.jetty:jetty-security:jar:9.4.43.v20210629:compile
-[INFO] |  |  |  +- org.eclipse.jetty:jetty-continuation:jar:9.4.43.v20210629:compile
-[INFO] |  |  |  \- org.eclipse.jetty:jetty-http:jar:9.4.43.v20210629:compile
-[INFO] |  |  +- org.apache.cxf:cxf-rt-transports-http-hc:jar:3.4.5:compile
+[INFO] |  |  |  +- org.eclipse.jetty:jetty-util:jar:9.4.44.v20210927:compile
+[INFO] |  |  |  +- org.eclipse.jetty:jetty-io:jar:9.4.44.v20210927:compile
+[INFO] |  |  |  +- org.eclipse.jetty:jetty-security:jar:9.4.44.v20210927:compile
+[INFO] |  |  |  +- org.eclipse.jetty:jetty-continuation:jar:9.4.44.v20210927:compile
+[INFO] |  |  |  \- org.eclipse.jetty:jetty-http:jar:9.4.44.v20210927:compile
+[INFO] |  |  +- org.apache.cxf:cxf-rt-transports-http-hc:jar:3.5.0:compile
 [INFO] |  |  |  +- org.apache.httpcomponents:httpcore-nio:jar:4.4.14:compile
 [INFO] |  |  |  \- org.apache.httpcomponents:httpasyncclient:jar:4.1.4:compile
 [INFO] |  |  +- org.simpleframework:simple-xml:jar:2.7.1:compile
 [INFO] |  |  |  +- stax:stax-api:jar:1.0.1:compile
 [INFO] |  |  |  +- stax:stax:jar:1.2.0:compile
 [INFO] |  |  |  \- xpp3:xpp3:jar:1.1.3.3:compile
-[INFO] |  |  +- com.h2database:h2:jar:1.4.200:compile
+[INFO] |  |  +- com.h2database:h2:jar:2.0.206:compile
 [INFO] |  |  +- org.swinglabs:swingx:jar:1.6.1:compile
 [INFO] |  |  |  +- com.jhlabs:filters:jar:2.0.235:compile
 [INFO] |  |  |  \- org.swinglabs:swing-worker:jar:1.1:compile
@@ -647,9 +647,9 @@
 [INFO] |  +- de.atb.context:context-core:jar:2.0.0:compile
 [INFO] |  |  +- org.slf4j:jcl-over-slf4j:jar:1.7.32:compile
 [INFO] |  |  |  \- org.slf4j:slf4j-api:jar:1.7.32:compile
-[INFO] |  |  +- org.apache.logging.log4j:log4j-slf4j-impl:jar:2.16.0:compile
-[INFO] |  |  |  +- org.apache.logging.log4j:log4j-api:jar:2.16.0:compile
-[INFO] |  |  |  \- org.apache.logging.log4j:log4j-core:jar:2.16.0:runtime
+[INFO] |  |  +- org.apache.logging.log4j:log4j-slf4j-impl:jar:2.17.1:compile
+[INFO] |  |  |  +- org.apache.logging.log4j:log4j-api:jar:2.17.1:compile
+[INFO] |  |  |  \- org.apache.logging.log4j:log4j-core:jar:2.17.1:runtime
 [INFO] |  |  +- org.apache.commons:commons-collections4:jar:4.4:compile
 [INFO] |  |  +- commons-io:commons-io:jar:2.11.0:compile
 [INFO] |  |  +- org.apache.commons:commons-lang3:jar:3.12.0:compile
@@ -657,8 +657,8 @@
 [INFO] |  |  |  \- com.jgoodies:jgoodies-common:jar:1.8.1:compile
 [INFO] |  |  +- org.javatuples:javatuples:jar:1.2:compile
 [INFO] |  |  +- net.sf.jpathwatch:jpathwatch:jar:0.95:compile
-[INFO] |  |  +- org.apache.lucene:lucene-analyzers-common:jar:8.11.0:compile
-[INFO] |  |  |  \- org.apache.lucene:lucene-core:jar:8.11.0:compile
+[INFO] |  |  +- org.apache.lucene:lucene-analyzers-common:jar:8.11.1:compile
+[INFO] |  |  |  \- org.apache.lucene:lucene-core:jar:8.11.1:compile
 [INFO] |  |  +- com.github.ansell.pellet:pellet-jena:jar:2.3.6-ansell:compile
 [INFO] |  |  |  +- com.hp.hpl.jena:jena:jar:2.6.4:compile
 [INFO] |  |  |  |  +- com.ibm.icu:icu4j:jar:3.4.4:compile
@@ -680,26 +680,26 @@
 [INFO] |  |  +- com.hp.hpl.jena:tdb:jar:0.8.10:compile
 [INFO] |  |  +- com.hp.hpl.jena:sdb:jar:1.3.4:compile
 [INFO] |  |  +- com.thewebsemantic:jenabean:jar:1.0.6:compile
-[INFO] |  |  +- org.apache.cxf:cxf-rt-frontend-jaxws:jar:3.4.5:compile
+[INFO] |  |  +- org.apache.cxf:cxf-rt-frontend-jaxws:jar:3.5.0:compile
 [INFO] |  |  |  +- xml-resolver:xml-resolver:jar:1.2:compile
 [INFO] |  |  |  +- org.ow2.asm:asm:jar:9.2:compile
-[INFO] |  |  |  +- org.apache.cxf:cxf-core:jar:3.4.5:compile
-[INFO] |  |  |  |  +- org.glassfish.jaxb:jaxb-runtime:jar:2.3.4:compile
-[INFO] |  |  |  |  |  +- org.glassfish.jaxb:txw2:jar:2.3.4:compile
+[INFO] |  |  |  +- org.apache.cxf:cxf-core:jar:3.5.0:compile
+[INFO] |  |  |  |  +- org.glassfish.jaxb:jaxb-runtime:jar:2.3.5:compile
+[INFO] |  |  |  |  |  +- org.glassfish.jaxb:txw2:jar:2.3.5:compile
 [INFO] |  |  |  |  |  \- com.sun.istack:istack-commons-runtime:jar:3.0.12:compile
-[INFO] |  |  |  |  +- com.fasterxml.woodstox:woodstox-core:jar:6.2.6:compile
+[INFO] |  |  |  |  +- com.fasterxml.woodstox:woodstox-core:jar:6.2.7:compile
 [INFO] |  |  |  |  |  \- org.codehaus.woodstox:stax2-api:jar:4.2.1:compile
-[INFO] |  |  |  |  +- org.apache.ws.xmlschema:xmlschema-core:jar:2.2.5:compile
+[INFO] |  |  |  |  +- org.apache.ws.xmlschema:xmlschema-core:jar:2.3.0:compile
 [INFO] |  |  |  |  \- jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:compile
-[INFO] |  |  |  +- org.apache.cxf:cxf-rt-bindings-soap:jar:3.4.5:compile
-[INFO] |  |  |  |  +- org.apache.cxf:cxf-rt-wsdl:jar:3.4.5:compile
+[INFO] |  |  |  +- org.apache.cxf:cxf-rt-bindings-soap:jar:3.5.0:compile
+[INFO] |  |  |  |  +- org.apache.cxf:cxf-rt-wsdl:jar:3.5.0:compile
 [INFO] |  |  |  |  |  \- wsdl4j:wsdl4j:jar:1.6.3:compile
-[INFO] |  |  |  |  \- org.apache.cxf:cxf-rt-databinding-jaxb:jar:3.4.5:compile
-[INFO] |  |  |  +- org.apache.cxf:cxf-rt-bindings-xml:jar:3.4.5:compile
-[INFO] |  |  |  +- org.apache.cxf:cxf-rt-frontend-simple:jar:3.4.5:compile
-[INFO] |  |  |  +- org.apache.cxf:cxf-rt-ws-addr:jar:3.4.5:compile
-[INFO] |  |  |  |  \- org.apache.cxf:cxf-rt-ws-policy:jar:3.4.5:compile
-[INFO] |  |  |  |     \- org.apache.neethi:neethi:jar:3.1.1:compile
+[INFO] |  |  |  |  \- org.apache.cxf:cxf-rt-databinding-jaxb:jar:3.5.0:compile
+[INFO] |  |  |  +- org.apache.cxf:cxf-rt-bindings-xml:jar:3.5.0:compile
+[INFO] |  |  |  +- org.apache.cxf:cxf-rt-frontend-simple:jar:3.5.0:compile
+[INFO] |  |  |  +- org.apache.cxf:cxf-rt-ws-addr:jar:3.5.0:compile
+[INFO] |  |  |  |  \- org.apache.cxf:cxf-rt-ws-policy:jar:3.5.0:compile
+[INFO] |  |  |  |     \- org.apache.neethi:neethi:jar:3.2.0:compile
 [INFO] |  |  |  +- jakarta.annotation:jakarta.annotation-api:jar:1.3.5:compile
 [INFO] |  |  |  +- jakarta.xml.ws:jakarta.xml.ws-api:jar:2.3.3:compile
 [INFO] |  |  |  +- jakarta.jws:jakarta.jws-api:jar:2.1.0:compile
@@ -709,23 +709,23 @@
 [INFO] |  |  |  +- com.sun.xml.messaging.saaj:saaj-impl:jar:1.5.3:runtime
 [INFO] |  |  |  |  \- org.jvnet.staxex:stax-ex:jar:1.8.3:runtime
 [INFO] |  |  |  \- org.apache.geronimo.specs:geronimo-jta_1.1_spec:jar:1.1.1:compile
-[INFO] |  |  +- org.apache.cxf:cxf-rt-transports-http-jetty:jar:3.4.5:compile
-[INFO] |  |  |  +- org.apache.cxf:cxf-rt-transports-http:jar:3.4.5:compile
-[INFO] |  |  |  +- org.eclipse.jetty:jetty-server:jar:9.4.43.v20210629:compile
+[INFO] |  |  +- org.apache.cxf:cxf-rt-transports-http-jetty:jar:3.5.0:compile
+[INFO] |  |  |  +- org.apache.cxf:cxf-rt-transports-http:jar:3.5.0:compile
+[INFO] |  |  |  +- org.eclipse.jetty:jetty-server:jar:9.4.44.v20210927:compile
 [INFO] |  |  |  |  \- javax.servlet:javax.servlet-api:jar:3.1.0:compile
-[INFO] |  |  |  +- org.eclipse.jetty:jetty-util:jar:9.4.43.v20210629:compile
-[INFO] |  |  |  +- org.eclipse.jetty:jetty-io:jar:9.4.43.v20210629:compile
-[INFO] |  |  |  +- org.eclipse.jetty:jetty-security:jar:9.4.43.v20210629:compile
-[INFO] |  |  |  +- org.eclipse.jetty:jetty-continuation:jar:9.4.43.v20210629:compile
-[INFO] |  |  |  \- org.eclipse.jetty:jetty-http:jar:9.4.43.v20210629:compile
-[INFO] |  |  +- org.apache.cxf:cxf-rt-transports-http-hc:jar:3.4.5:compile
+[INFO] |  |  |  +- org.eclipse.jetty:jetty-util:jar:9.4.44.v20210927:compile
+[INFO] |  |  |  +- org.eclipse.jetty:jetty-io:jar:9.4.44.v20210927:compile
+[INFO] |  |  |  +- org.eclipse.jetty:jetty-security:jar:9.4.44.v20210927:compile
+[INFO] |  |  |  +- org.eclipse.jetty:jetty-continuation:jar:9.4.44.v20210927:compile
+[INFO] |  |  |  \- org.eclipse.jetty:jetty-http:jar:9.4.44.v20210927:compile
+[INFO] |  |  +- org.apache.cxf:cxf-rt-transports-http-hc:jar:3.5.0:compile
 [INFO] |  |  |  +- org.apache.httpcomponents:httpcore-nio:jar:4.4.14:compile
 [INFO] |  |  |  \- org.apache.httpcomponents:httpasyncclient:jar:4.1.4:compile
 [INFO] |  |  +- org.simpleframework:simple-xml:jar:2.7.1:compile
 [INFO] |  |  |  +- stax:stax-api:jar:1.0.1:compile
 [INFO] |  |  |  +- stax:stax:jar:1.2.0:compile
 [INFO] |  |  |  \- xpp3:xpp3:jar:1.1.3.3:compile
-[INFO] |  |  +- com.h2database:h2:jar:1.4.200:compile
+[INFO] |  |  +- com.h2database:h2:jar:2.0.206:compile
 [INFO] |  |  +- org.swinglabs:swingx:jar:1.6.1:compile
 [INFO] |  |  |  +- com.jhlabs:filters:jar:2.0.235:compile
 [INFO] |  |  |  \- org.swinglabs:swing-worker:jar:1.1:compile
@@ -851,14 +851,14 @@
 [INFO] ------------------------------------------------------------------------
 [INFO] Reactor Summary for ATB Context Parent 2.0.0:
 [INFO] 
-[INFO] ATB Context Parent ................................. SUCCESS [  1.505 s]
-[INFO] ATB Context Extraction Core Lib .................... SUCCESS [  1.449 s]
-[INFO] ATB Context Monitoring Core Services ............... SUCCESS [  0.324 s]
-[INFO] ATB Context Extraction Core Service ................ SUCCESS [  0.221 s]
-[INFO] SmartCLIDE Monitoring .............................. SUCCESS [  0.295 s]
+[INFO] ATB Context Parent ................................. SUCCESS [  4.124 s]
+[INFO] ATB Context Extraction Core Lib .................... SUCCESS [  2.868 s]
+[INFO] ATB Context Monitoring Core Services ............... SUCCESS [  0.958 s]
+[INFO] ATB Context Extraction Core Service ................ SUCCESS [  0.628 s]
+[INFO] SmartCLIDE Monitoring .............................. SUCCESS [  0.451 s]
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  4.356 s
-[INFO] Finished at: 2021-12-16T17:55:19+01:00
+[INFO] Total time:  10.166 s
+[INFO] Finished at: 2022-01-10T09:19:32+01:00
 [INFO] ------------------------------------------------------------------------

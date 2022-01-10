@@ -44,8 +44,8 @@ Already up to date.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  7.489 s
-[INFO] Finished at: 2021-12-16T17:59:32+01:00
+[INFO] Total time:  20.858 s
+[INFO] Finished at: 2022-01-10T09:26:22+01:00
 [INFO] ------------------------------------------------------------------------
 : mvn dependency:list > /Users/philippe/git/smartclide/IPCheck/analysis/smartclide-TD-Principal/01-dependency_list.txt
 : mvn dependency:tree > /Users/philippe/git/smartclide/IPCheck/analysis/smartclide-TD-Principal/01-dependency_tree.txt

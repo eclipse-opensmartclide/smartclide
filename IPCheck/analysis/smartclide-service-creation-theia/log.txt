@@ -4,26 +4,9 @@ Already up to date.
 : DASH Analysis >  /Users/philippe/git/smartclide/IPCheck/analysis/smartclide-service-creation-theia/03-dash_analysis.csv
 License information could not be automatically verified for the following content:
 
-npm/npmjs/-/binaryextensions/2.3.0
-npm/npmjs/-/copy-anything/2.0.3
-npm/npmjs/-/date-fns/1.30.1
-npm/npmjs/-/editions/2.3.1
-npm/npmjs/-/errlop/2.2.0
-npm/npmjs/-/esprima/2.7.3
-npm/npmjs/-/expand-template/2.0.3
-npm/npmjs/-/extsprintf/1.3.0
-npm/npmjs/-/font-awesome/4.7.0
 npm/npmjs/-/jschardet/2.3.0
-npm/npmjs/-/jscodeshift/0.5.1
-npm/npmjs/-/less/3.13.1
-npm/npmjs/-/moment/2.24.0
-npm/npmjs/-/node-gyp/6.1.0
 npm/npmjs/-/nugget/2.0.1
-npm/npmjs/-/prettier/1.19.1
-npm/npmjs/-/regenerator-transform/0.10.1
-npm/npmjs/-/rxjs/5.5.12
 npm/npmjs/-/through2/0.2.3
-npm/npmjs/-/typescript/4.2.4
 
 This content is either not correctly mapped by the system, or requires review.
 
