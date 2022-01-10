@@ -24,7 +24,7 @@ else
 fi
 
 if [[ -z "$2" ]]; then
-	DST_REPO="/Users/philippe/git/smartclide/IPCheck/analysis"
+	DST_REPO="/Users/philippe/temp/smartclide/IPCheck/analysis"
 else
 	DST_REPO=$2
 fi

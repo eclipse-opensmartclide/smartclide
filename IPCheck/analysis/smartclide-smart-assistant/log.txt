@@ -1,4 +1,0 @@
-: Pull changes from a remote repo into:/Users/philippe/git/smartclide-smart-assistant
-Already up to date.
-: DASH Analysis >  /Users/philippe/git/smartclide/IPCheck/analysis/smartclide-smart-assistant/03-dash_analysis.csv
-: End of Analysis of:/Users/philippe/git/smartclide-smart-assistant
