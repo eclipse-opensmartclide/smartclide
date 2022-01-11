@@ -18,22 +18,22 @@
 #--------------------------------------------------------------
 #
 #--------------------------------------------------------------
-# Runs the Eclipse DASH dependency analysis on all SmartCLIDE repositories 
+# Runs the Eclipse DASH dependency analysis on all SmartCLIDE repositories
 #		$1 	: The Path to the folder where the git repos are cloned
 #		$2	: The Path to the folder where the results of the analysis will be stored
 #--------------------------------------------------------------
 #
-if [[ -z "$1" ]]; then
-	SRC_REPO="/Users/philippe/git"
-else
-	SRC_REPO=$1
+if [[ $# < 2 ]]; then
+	echo "ERROR: Wrong number of arguments"
+	echo "Syntax: parseAll.sh <source> <destination>"
+	echo '  with:   <source>       = The Path to the folder where the git repos are cloned'
+	echo '          <destination>  = The Path to the folder where the results of the analysis will be stored'
+	exit
 fi
 
-if [[ -z "$2" ]]; then
-	DST_REPO="/Users/philippe/temp/smartclide/IPCheck/analysis"
-else
-	DST_REPO=$2
-fi
+# Grab arguments
+SRC_REPO=$1
+DST_REPO=$2
 
 ./dashAnalysis.sh "Maven" 	"$SRC_REPO/smartclide-api-gateway"						"$DST_REPO/smartclide-api-gateway"
 ./dashAnalysis.sh "Maven" 	"$SRC_REPO/smartclide-broker"							"$DST_REPO/smartclide-broker"
