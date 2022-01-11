@@ -1,91 +1,0 @@
-[INFO] Scanning for projects...
-[INFO]                                                                         
-[INFO] ------------------------------------------------------------------------
-[INFO] Building Theia-BackEnd 0.0.1-SNAPSHOT
-[INFO] ------------------------------------------------------------------------
-Downloading: https://repo.maven.apache.org/maven2/org/eclipse/platform/org.eclipse.core.resources/maven-metadata.xml
-828/828 B               Downloaded: https://repo.maven.apache.org/maven2/org/eclipse/platform/org.eclipse.core.resources/maven-metadata.xml (828 B at 0.2 KB/sec)
-Downloading: https://repo.maven.apache.org/maven2/org/eclipse/platform/org.eclipse.core.expressions/maven-metadata.xml
-747/747 B               Downloaded: https://repo.maven.apache.org/maven2/org/eclipse/platform/org.eclipse.core.expressions/maven-metadata.xml (747 B at 2.5 KB/sec)
-Downloading: https://repo.maven.apache.org/maven2/org/eclipse/platform/org.eclipse.core.runtime/maven-metadata.xml
-844/844 B               Downloaded: https://repo.maven.apache.org/maven2/org/eclipse/platform/org.eclipse.core.runtime/maven-metadata.xml (844 B at 1.1 KB/sec)
-Downloading: https://repo.maven.apache.org/maven2/org/eclipse/platform/org.eclipse.osgi/maven-metadata.xml
-943/943 B               Downloaded: https://repo.maven.apache.org/maven2/org/eclipse/platform/org.eclipse.osgi/maven-metadata.xml (943 B at 1.0 KB/sec)
-Downloading: https://repo.maven.apache.org/maven2/org/eclipse/platform/org.eclipse.equinox.common/maven-metadata.xml
-816/816 B               Downloaded: https://repo.maven.apache.org/maven2/org/eclipse/platform/org.eclipse.equinox.common/maven-metadata.xml (816 B at 1.4 KB/sec)
-Downloading: https://repo.maven.apache.org/maven2/org/eclipse/platform/org.eclipse.core.jobs/maven-metadata.xml
-912/912 B               Downloaded: https://repo.maven.apache.org/maven2/org/eclipse/platform/org.eclipse.core.jobs/maven-metadata.xml (912 B at 8.4 KB/sec)
-Downloading: https://repo.maven.apache.org/maven2/org/eclipse/platform/org.eclipse.equinox.registry/maven-metadata.xml
-848/848 B               Downloaded: https://repo.maven.apache.org/maven2/org/eclipse/platform/org.eclipse.equinox.registry/maven-metadata.xml (848 B at 2.5 KB/sec)
-Downloading: https://repo.maven.apache.org/maven2/org/eclipse/platform/org.eclipse.equinox.preferences/maven-metadata.xml
-748/748 B               Downloaded: https://repo.maven.apache.org/maven2/org/eclipse/platform/org.eclipse.equinox.preferences/maven-metadata.xml (748 B at 1.9 KB/sec)
-Downloading: https://repo.maven.apache.org/maven2/org/eclipse/platform/org.eclipse.core.contenttype/maven-metadata.xml
-781/781 B               Downloaded: https://repo.maven.apache.org/maven2/org/eclipse/platform/org.eclipse.core.contenttype/maven-metadata.xml (781 B at 3.3 KB/sec)
-Downloading: https://repo.maven.apache.org/maven2/org/eclipse/platform/org.eclipse.equinox.app/maven-metadata.xml
-709/709 B               Downloaded: https://repo.maven.apache.org/maven2/org/eclipse/platform/org.eclipse.equinox.app/maven-metadata.xml (709 B at 1.9 KB/sec)
-Downloading: https://repo.maven.apache.org/maven2/org/eclipse/platform/org.eclipse.core.filesystem/maven-metadata.xml
-684/684 B               Downloaded: https://repo.maven.apache.org/maven2/org/eclipse/platform/org.eclipse.core.filesystem/maven-metadata.xml (684 B at 3.7 KB/sec)
-Downloading: https://repo.maven.apache.org/maven2/org/eclipse/platform/org.eclipse.text/maven-metadata.xml
-802/802 B               Downloaded: https://repo.maven.apache.org/maven2/org/eclipse/platform/org.eclipse.text/maven-metadata.xml (802 B at 5.7 KB/sec)
-Downloading: https://repo.maven.apache.org/maven2/org/eclipse/platform/org.eclipse.core.commands/maven-metadata.xml
-750/750 B               Downloaded: https://repo.maven.apache.org/maven2/org/eclipse/platform/org.eclipse.core.commands/maven-metadata.xml (750 B at 9.0 KB/sec)
-Downloading: https://repo.maven.apache.org/maven2/org/jetbrains/annotations/maven-metadata.xml
-746/746 B               Downloaded: https://repo.maven.apache.org/maven2/org/jetbrains/annotations/maven-metadata.xml (746 B at 2.3 KB/sec)
-[INFO] 
-[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ Theia-BackEnd ---
-[INFO] Deleting /Users/philippe/git/smartclide-security/Theia-BackEnd/target
-[INFO] 
-[INFO] --- maven-resources-plugin:3.2.0:resources (default-resources) @ Theia-BackEnd ---
-[INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Using 'UTF-8' encoding to copy filtered properties files.
-[INFO] Copying 1 resource
-[INFO] Copying 1 resource
-[INFO] 
-[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ Theia-BackEnd ---
-[INFO] Changes detected - recompiling the module!
-[INFO] Compiling 12 source files to /Users/philippe/git/smartclide-security/Theia-BackEnd/target/classes
-[INFO] /Users/philippe/git/smartclide-security/Theia-BackEnd/src/main/java/com/theia/service/VPService.java: Some input files use unchecked or unsafe operations.
-[INFO] /Users/philippe/git/smartclide-security/Theia-BackEnd/src/main/java/com/theia/service/VPService.java: Recompile with -Xlint:unchecked for details.
-[INFO] 
-[INFO] --- maven-resources-plugin:3.2.0:testResources (default-testResources) @ Theia-BackEnd ---
-[INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Using 'UTF-8' encoding to copy filtered properties files.
-[INFO] skip non existing resourceDirectory /Users/philippe/git/smartclide-security/Theia-BackEnd/src/test/resources
-[INFO] 
-[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ Theia-BackEnd ---
-[INFO] Changes detected - recompiling the module!
-[INFO] Compiling 8 source files to /Users/philippe/git/smartclide-security/Theia-BackEnd/target/test-classes
-[INFO] 
-[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ Theia-BackEnd ---
-[INFO] Tests are skipped.
-[INFO] 
-[INFO] --- maven-jar-plugin:3.2.0:jar (default-jar) @ Theia-BackEnd ---
-[INFO] Building jar: /Users/philippe/git/smartclide-security/Theia-BackEnd/target/Theia-BackEnd-0.0.1-SNAPSHOT.jar
-[INFO] 
-[INFO] --- spring-boot-maven-plugin:2.4.3:repackage (repackage) @ Theia-BackEnd ---
-[INFO] Replacing main artifact with repackaged archive
-[INFO] 
-[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ Theia-BackEnd ---
-[INFO] Installing /Users/philippe/git/smartclide-security/Theia-BackEnd/target/Theia-BackEnd-0.0.1-SNAPSHOT.jar to /Users/philippe/.m2/repository/com/Theia/Theia-BackEnd/0.0.1-SNAPSHOT/Theia-BackEnd-0.0.1-SNAPSHOT.jar
-[INFO] Installing /Users/philippe/git/smartclide-security/Theia-BackEnd/pom.xml to /Users/philippe/.m2/repository/com/Theia/Theia-BackEnd/0.0.1-SNAPSHOT/Theia-BackEnd-0.0.1-SNAPSHOT.pom
-[INFO] ------------------------------------------------------------------------
-[INFO] BUILD SUCCESS
-[INFO] ------------------------------------------------------------------------
-[INFO] Total time: 01:54 min
-[INFO] Finished at: 2021-12-06T18:15:37+01:00
-[INFO] Final Memory: 46M/136M
-[INFO] ------------------------------------------------------------------------
-License information could not be automatically verified for the following content:
-
-maven/mavencentral/commons-chain/commons-chain/1.1
-maven/mavencentral/dom4j/dom4j/1.1
-maven/mavencentral/net.sourceforge.pmd/pmd-core/6.38.0
-maven/mavencentral/net.sourceforge.pmd/pmd-java/6.38.0
-maven/mavencentral/net.sourceforge.pmd/pmd-javascript/6.38.0
-maven/mavencentral/net.sourceforge.pmd/pmd-jsp/6.38.0
-maven/mavencentral/org.codehaus.plexus/plexus-i18n/1.0-beta-10
-maven/mavencentral/org.json/json/20210307
-
-This content is either not correctly mapped by the system, or requires review.
-
-

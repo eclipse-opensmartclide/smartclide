@@ -1,8 +1,0 @@
-License information could not be automatically verified for the following content:
-
-npm/npmjs/-/domain-browser/4.19.0
-npm/npmjs/-/keycloak-js/10.0.2
-
-This content is either not correctly mapped by the system, or requires review.
-
-

@@ -1,118 +1,140 @@
 #!/bin/bash
+#*******************************************************************************
+# Copyright (c) 2021 The Eclipse Foundation
 #
-# ********************************************************************************
-# * Copyright (c) 2021, The Eclipse Foundation
-# *
-# * This program and the accompanying materials are made available under the
-# * terms of the Eclipse Public License 2.0 which is available at
-# * http://www.eclipse.org/legal/epl-2.0.
-# *
-# * SPDX-License-Identifier: EPL-2.0
-# *
-# * Contributors:
-# *   phkrief - initial implementation
-# ********************************************************************************
+# This program and the accompanying materials
+# are made available under the terms of the Eclipse Public License 2.0
+# which accompanies this distribution, and is available at
+# https://www.eclipse.org/legal/epl-2.0/
+#
+# SPDX-License-Identifier: EPL-2.0
+#
+# Contributors:
+#     phkrief - initial API and implementation
+#*******************************************************************************
+
 #
 #--------------------------------------------------------------
-# Runs the Eclipse DASH dependency analysis on a (Maven, Yarn or Nodes) repository 
+# Runs the Eclipse DASH dependency analysis on a (Maven, Yarn or Nodes) repository
 #		$1 	: To select between "Maven" | "Nodes" | "Yarn"
-#		$2	: Path of the folder containing the file to parse. The repo is supposed to be located under the $GIT_REPOS folder
-#		$3	: Optional - If the path of the folder is not the name of the repo then this third argument can specify the name of the repo
+#		$2	: Path to the folder containing the config file
+#		$3	: Path of the folder where the results will be stored
 #--------------------------------------------------------------
 
 MAVEN="mvn"
-DASH_LIB="libs/org.eclipse.dash.licenses-0.0.1-SNAPSHOT.jar"
+MAIN_DIR=$(pwd)
+DASH_LIB="$MAIN_DIR/libs/org.eclipse.dash.licenses-0.0.1-SNAPSHOT.jar"
 
-if [[ -z GIT_REPOS ]]; then
-	echo "Please define the variable env. GIT_REPOS with the path to the folder containing all your GIT clones!"
-	exit
-fi 
-
-if [[ -z $1 ]]; then
-	echo "Syntax: dashAnalysis.sh <type> <repo-name> [<destination>]"
-	echo '  with:   <type>         ="Maven" or "Nodes" or "Yarn"'
-	echo '          <repo-name>    = Name of the git repo or path to the folder containing the pom.xml file'
-	echo '          <destination>  = If the path of the folder is not the name of the repo then this third argument specifies the name of the repo'
+if [[ $# < 3 ]]; then
+	echo "ERROR: Wrong number of arguments"
+	echo "Syntax: dashAnalysis.sh <type> <source> <destination>"
+	echo '  with:   <type>         = "Maven" or "Nodes" or "Yarn"'
+	echo '          <source>       = Path to the folder containing the config file'
+	echo '          <destination>  = Path of the folder where the results will be stored'
 	exit
 fi
 
-RES="./analysis"
-
-ECHO
-ECHO "+=====================================================+"
-ECHO "|                                                     |"
-ECHO "|                    DASH Analysis                    |"
-ECHO "|                                                     |"
-ECHO "+=====================================================+"
-ECHO
+echo
+echo "+=====================================================+"
+echo "|                                                     |"
+echo "|         Eclipse DASH License Tool Analysis          |"
+echo "|                                                     |"
+echo "+=====================================================+"
+echo
 
 # Grab arguments
-KIND_OF=$1 	# To select between "Maven" | "Nodes" | "Yarn"
-REPO=$2		# Path of the folder containing the file to parse. The repo is supposed to be located under the $GIT_REPOS folder
-DEST=$3		# If the path of the folder is not the name of the repo then this third argument can specify the name of the repo
+KIND_OF=$1 		# To select between "Maven" | "Nodes" | "Yarn"
+SRC_DIR=$2		# Path to the folder containing the config file
+DEST_DIR=$3		# Path of the folder where the results will be stored
 
-# Set source directory
-SRC_DIR=$GIT_REPOS"/"$REPO
+echo ":"
+echo ": DASH analysis of:.........."$SRC_DIR
+echo ": Type:......................"$KIND_OF
+echo ": Results are available in:.."$DEST_DIR
+echo ":"
+echo ":"
+# Check if the SRC_DIR directory does not exist
+if [ ! -d "$SRC_DIR" ]
+then
+    echo ": ERROR: Directory $SRC_DIR DOES NOT exists."
+    exit
+fi
 
-# Set Destination directory
-if [[ -n $3 ]]; then
-	DEST=$3
+mkdir -p $DEST_DIR
+
+LOG_FILE="$DEST_DIR/log.txt"
+ANALYSIS_RESULT_FILE="$DEST_DIR/03-dash_analysis.csv"
+
+# Pull changes from a remote repo
+echo ": Pull all changes from a remote repo into:"$SRC_DIR
+echo ": Pull all changes from a remote repo into:"$SRC_DIR > $LOG_FILE
+
+cd $SRC_DIR
+git pull --force >> $LOG_FILE
+
+# Create the destination Directory
+
+if [ $KIND_OF = "Maven" ]; then
+	# Analyse Maven project
+	DEP_LIST_FILE="$DEST_DIR/01-dependency_list.txt"
+	DEP_TREE_FILE="$DEST_DIR/01-dependency_tree.txt"
+	GREP_RESULT_FILE="$DEST_DIR/02-grep.txt"
+
+	echo ": Starting analysis of: "$SRC_DIR
+	echo ": Starting analysis of: "$SRC_DIR >> $LOG_FILE
+
+	echo ": mvn clean install >> "$LOG_FILE
+	echo ": mvn clean install >> "$LOG_FILE >> $LOG_FILE
+	$MAVEN clean install -DskipTests -fae -f $SRC_DIR >> $LOG_FILE
+
+	echo ": mvn dependency:list > "$DEP_LIST_FILE
+	echo ": mvn dependency:list > "$DEP_LIST_FILE >> $LOG_FILE
+	$MAVEN dependency:list -f $SRC_DIR > $DEP_LIST_FILE
+
+	echo ": mvn dependency:tree > "$DEP_TREE_FILE
+	echo ": mvn dependency:tree > "$DEP_TREE_FILE >> $LOG_FILE
+	$MAVEN dependency:tree -f $SRC_DIR > $DEP_TREE_FILE
+
+	echo ": grep filter and sort > "$GREP_RESULT_FILE
+	echo ": grep filter and sort > "$GREP_RESULT_FILE >> $LOG_FILE
+	grep -ohE '\S+:(system|provided|compile)' $DEP_LIST_FILE | sort | uniq > $GREP_RESULT_FILE
+
+	echo ": DASH Analysis > " $ANALYSIS_RESULT_FILE
+	echo ": DASH Analysis > " $ANALYSIS_RESULT_FILE >> $LOG_FILE
+	java -jar $DASH_LIB $GREP_RESULT_FILE -summary $ANALYSIS_RESULT_FILE >> $LOG_FILE
+	cp $SRC_DIR/pom.xml $DEST_DIR
+
+elif [ $KIND_OF = "Nodes" ]; then
+	# Analyse Nodes project
+	JSON_FILE="$SRC_DIR/package-lock.json"
+	echo ": Starting analysis of: "$JSON_FILE
+	echo ": Starting analysis of: "$JSON_FILE >> $LOG_FILE
+
+	echo ": DASH Analysis > " $ANALYSIS_RESULT_FILE
+	echo ": DASH Analysis > " $ANALYSIS_RESULT_FILE >> $LOG_FILE
+	java -jar $DASH_LIB $JSON_FILE -summary $ANALYSIS_RESULT_FILE >> $LOG_FILE
+	cp $SRC_DIR/package-lock.json $DEST_DIR
+
+elif [ $KIND_OF = "Yarn" ]; then
+	# Analyse Yarn project
+	YARN_FILE="$SRC_DIR/yarn.lock"
+	echo ": Starting analysis of: "$YARN_FILE
+	echo ": Starting analysis of: "$YARN_FILE >> $LOG_FILE
+
+	echo ": DASH Analysis > " $ANALYSIS_RESULT_FILE
+	echo ": DASH Analysis > " $ANALYSIS_RESULT_FILE >> $LOG_FILE
+	# Reduce the size of the batch (from 1000 to 500) to avoid a time out with ClearlyDefined
+	java -jar $DASH_LIB $YARN_FILE -summary $ANALYSIS_RESULT_FILE -batch 500 >> $LOG_FILE
+	cp $SRC_DIR/yarn.lock $DEST_DIR
+
 else
-	DEST=$REPO
-fi
-DEST_DIR=$RES"/"$DEST
-
-# Start Analysis
-if [[ -n $1 ]]; then
-	ECHO ":"
-	ECHO ": DASH analysis of:......."$SRC_DIR
-	ECHO ": Type:..................."$KIND_OF
-	ECHO ": Results are available:.."$DEST_DIR
-	ECHO ":"
-	ECHO ":"
-	LOG_FILE=$DEST_DIR"/log.txt"
-	ANALYSIS_RESULT_FILE=$DEST_DIR"/03-"$DEST"-results.csv"
-	
-	# Create the destination Directory
-	MKDIR -p $DEST_DIR 
-	
-	if [ $KIND_OF = "Maven" ]; then
-		# Analyse Maven project
-		DEP_LIST_FILE=$DEST_DIR"/01-"$DEST"-dependency_list.txt"
-		GREP_RESULT_FILE=$DEST_DIR"/02-grep.txt"
-		
-		ECHO ": Starting analysis of:"$SRC_DIR
-		ECHO ": mvn clean install >> "$LOG_FILE
-		$MAVEN clean install -DskipTests -fae -f $SRC_DIR >> $LOG_FILE
-		
-		ECHO ": mvn dependency:list > "$DEP_LIST_FILE
-		$MAVEN dependency:list -f $SRC_DIR > $DEP_LIST_FILE
-		
-		ECHO ": grep filter and sort > "$GREP_RESULT_FILE
-		grep -ohE '\S+:(system|provided|compile)' $DEP_LIST_FILE | sort | uniq > $GREP_RESULT_FILE
-		
-		ECHO ": DASH Analysis > " $ANALYSIS_RESULT_FILE
-		java -jar $DASH_LIB $GREP_RESULT_FILE -summary $ANALYSIS_RESULT_FILE >> $LOG_FILE
-		
-	elif [ $KIND_OF = "Nodes" ]; then
-		# Analyse Nodes project
-		JSON_FILE=$SRC_DIR"/package-lock.json"
-		ECHO ": Starting analysis of:"$JSON_FILE
-		
-		ECHO ": DASH Analysis > " $ANALYSIS_RESULT_FILE
-		java -jar $DASH_LIB $JSON_FILE -summary $ANALYSIS_RESULT_FILE >> $LOG_FILE
-		
-	elif [ $KIND_OF = "Yarn" ]; then
-		# Analyse Yarn project
-		YARN_FILE=$SRC_DIR"/yarn.lock"
-		ECHO ": Starting analysis of:"$YARN_FILE
-		
-		ECHO ": DASH Analysis > " $ANALYSIS_RESULT_FILE
-		java -jar $DASH_LIB $YARN_FILE -summary $ANALYSIS_RESULT_FILE >> $LOG_FILE
-	fi
-	
-	ECHO ":"
-	ECHO ": End of Analysis of:"$SRC_DIR
+	# Unsupported project type
+	echo ": DASH Analysis > " $ANALYSIS_RESULT_FILE
+	echo ": DASH Analysis > " $ANALYSIS_RESULT_FILE >> $LOG_FILE
+	echo ">> Unsupported project type \"${KIND_OF}\" cannot be analysed!"
+	echo ">> Unsupported project type \"${KIND_OF}\" cannot be analysed!" >> $LOG_FILE
 fi
 
-
+echo ":"
+echo ": End of Analysis of:"$SRC_DIR
+echo ": End of Analysis of:"$SRC_DIR >> $LOG_FILE
