@@ -113,7 +113,8 @@ elif [ $KIND_OF = "Nodes" ]; then
 	echo ": DASH Analysis > " $ANALYSIS_RESULT_FILE
 	echo ": DASH Analysis > " $ANALYSIS_RESULT_FILE >> $LOG_FILE
 	java -jar $DASH_LIB $JSON_FILE -summary $ANALYSIS_RESULT_FILE >> $LOG_FILE
-	cp $SRC_DIR/package-lock.json $DEST_DIR
+	cp $SRC_DIR/package.json $DEST_DIR
+	cp $SRC_DIR/yarn.lock $DEST_DIR
 
 elif [ $KIND_OF = "Yarn" ]; then
 	# Analyse Yarn project
@@ -125,6 +126,7 @@ elif [ $KIND_OF = "Yarn" ]; then
 	echo ": DASH Analysis > " $ANALYSIS_RESULT_FILE >> $LOG_FILE
 	# Reduce the size of the batch (from 1000 to 500) to avoid a time out with ClearlyDefined
 	java -jar $DASH_LIB $YARN_FILE -summary $ANALYSIS_RESULT_FILE -batch 500 >> $LOG_FILE
+	cp $SRC_DIR/package.json $DEST_DIR
 	cp $SRC_DIR/yarn.lock $DEST_DIR
 
 else
