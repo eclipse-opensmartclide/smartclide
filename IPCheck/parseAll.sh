@@ -37,6 +37,7 @@ DST_REPO=$2
 
 ./dashAnalysis.sh "Maven" 	"$SRC_REPO/smartclide-api-gateway"						"$DST_REPO/smartclide-api-gateway"
 ./dashAnalysis.sh "Maven" 	"$SRC_REPO/smartclide-broker"							"$DST_REPO/smartclide-broker"
+#./dashAnalysis.sh "??" 	"$SRC_REPO/smartclide-che-theia"						"$DST_REPO/smartclide-che-theia"
 ./dashAnalysis.sh "Maven" 	"$SRC_REPO/smartclide-cicd"								"$DST_REPO/smartclide-cicd"
 ./dashAnalysis.sh "Docker"	"$SRC_REPO/smartclide-cicd-gitlab"						"$DST_REPO/smartclide-cicd-gitlab"
 ./dashAnalysis.sh "Maven" 	"$SRC_REPO/smartclide-context"							"$DST_REPO/smartclide-context"
@@ -45,6 +46,7 @@ DST_REPO=$2
 ./dashAnalysis.sh "Maven" 	"$SRC_REPO/smartclide-context/context-monitoring"		"$DST_REPO/smartclide-context-monitoring"
 ./dashAnalysis.sh "Maven" 	"$SRC_REPO/smartclide-context/smartclide-monitoring"	"$DST_REPO/smartclide-smartclide-monitoring"
 ./dashAnalysis.sh "Yarn" 	"$SRC_REPO/smartclide-deployment-extension"				"$DST_REPO/smartclide-deployment-extension"
+#./dashAnalysis.sh "??" 	"$SRC_REPO/smartclide-deployment-interpreter-theia"		"$DST_REPO/smartclide-deployment-interpreter-theia"
 ./dashAnalysis.sh "Docker"	"$SRC_REPO/smartclide-deployment-service"				"$DST_REPO/smartclide-deployment-service"
 ./dashAnalysis.sh "Yarn" 	"$SRC_REPO/smartclide-design-pattern-selection-theia"	"$DST_REPO/smartclide-design-pattern-selection-theia"
 ./dashAnalysis.sh "Other" 	"$SRC_REPO/smartclide-docs"								"$DST_REPO/smartclide-docs"
@@ -65,3 +67,10 @@ DST_REPO=$2
 ./dashAnalysis.sh "Maven" 	"$SRC_REPO/smartclide-TD-Principal"						"$DST_REPO/smartclide-TD-Principal"
 ./dashAnalysis.sh "Maven" 	"$SRC_REPO/smartclide-TD-Reusability-Index"				"$DST_REPO/smartclide-TD-Reusability-Index"
 ./dashAnalysis.sh "Yarn" 	"$SRC_REPO/smartclide-td-reusability-theia"				"$DST_REPO/smartclide-td-reusability-theia"
+
+
+#eclipse-researchlabs/kie-wb-common
+#eclipse-researchlabs/kie-wb-distributions
+#eclipse-researchlabs/smartclide
+#eclipse-researchlabs/smartclide-devfiles
+#eclipse-researchlabs/smartclide-security-patterns
