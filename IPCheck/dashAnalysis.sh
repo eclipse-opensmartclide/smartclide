@@ -56,7 +56,7 @@ echo ":"
 # Check if the SRC_DIR directory does not exist
 if [ ! -d "$SRC_DIR" ]
 then
-    echo ": ERROR: Directory $SRC_DIR DOES NOT exists."
+    echo ": ERROR: Directory $SRC_DIR DOES NOT exists. Clone the repo first!"
     exit
 fi
 
