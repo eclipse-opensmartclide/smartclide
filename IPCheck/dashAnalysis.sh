@@ -56,7 +56,7 @@ echo ":"
 # Check if the SRC_DIR directory does not exist
 if [ ! -d "$SRC_DIR" ]
 then
-    echo ": ERROR: Directory $SRC_DIR DOES NOT exists."
+    echo ": ERROR: Directory $SRC_DIR DOES NOT exists. Clone the repo first!"
     exit
 fi
 
@@ -101,7 +101,7 @@ if [ $KIND_OF = "Maven" ]; then
 
 	echo ": DASH Analysis > " $ANALYSIS_RESULT_FILE
 	echo ": DASH Analysis > " $ANALYSIS_RESULT_FILE >> $LOG_FILE
-	java -jar $DASH_LIB $GREP_RESULT_FILE -summary $ANALYSIS_RESULT_FILE >> $LOG_FILE
+	java -jar $DASH_LIB $GREP_RESULT_FILE -summary $ANALYSIS_RESULT_FILE -batch 500 >> $LOG_FILE
 	cp $SRC_DIR/pom.xml $DEST_DIR
 
 elif [ $KIND_OF = "Nodes" ]; then
@@ -112,8 +112,9 @@ elif [ $KIND_OF = "Nodes" ]; then
 
 	echo ": DASH Analysis > " $ANALYSIS_RESULT_FILE
 	echo ": DASH Analysis > " $ANALYSIS_RESULT_FILE >> $LOG_FILE
-	java -jar $DASH_LIB $JSON_FILE -summary $ANALYSIS_RESULT_FILE >> $LOG_FILE
-	cp $SRC_DIR/package-lock.json $DEST_DIR
+	java -jar $DASH_LIB $JSON_FILE -summary $ANALYSIS_RESULT_FILE -batch 500 >> $LOG_FILE
+	cp $SRC_DIR/package.json $DEST_DIR
+	cp $SRC_DIR/yarn.lock $DEST_DIR
 
 elif [ $KIND_OF = "Yarn" ]; then
 	# Analyse Yarn project
@@ -125,6 +126,7 @@ elif [ $KIND_OF = "Yarn" ]; then
 	echo ": DASH Analysis > " $ANALYSIS_RESULT_FILE >> $LOG_FILE
 	# Reduce the size of the batch (from 1000 to 500) to avoid a time out with ClearlyDefined
 	java -jar $DASH_LIB $YARN_FILE -summary $ANALYSIS_RESULT_FILE -batch 500 >> $LOG_FILE
+	cp $SRC_DIR/package.json $DEST_DIR
 	cp $SRC_DIR/yarn.lock $DEST_DIR
 
 else
